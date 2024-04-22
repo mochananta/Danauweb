@@ -60,7 +60,7 @@
         </div>
         <!-- End Preloader -->
 		
-		<!-- Get Pro Button -->
+		{{-- <!-- Get Pro Button -->
 		<ul class="pro-features">
 			<a class="get-pro" href="#">Get Pro</a>
 			<li class="big-title">Pro Version Available on Themeforest</li>
@@ -74,7 +74,7 @@
 				<a href="http://preview.themeforest.net/item/mediplus-medical-and-doctor-html-template/full_screen_preview/26665910?_ga=2.145092285.888558928.1591971968-344530658.1588061879" target="_blank" class="btn">Pro Version Demo</a>
 				<a href="https://themeforest.net/item/mediplus-medical-and-doctor-html-template/26665910" target="_blank" class="btn">Buy Pro Version</a>
 			</div>
-		</ul> 
+		</ul>  --}}
 	
 		<!-- Header Area -->
 		<header class="header" >
@@ -131,7 +131,7 @@
 											<li><a href="{{ route('user.berita')}}">Berita</a></li>											
 											<li><a href="#">Our Team<i class="icofont-rounded-down"></i></a>
 												<ul class="dropdown">
-													<li><a href="404.html">Team all</a></li>
+													<li><a href="{{ route('user.team')}}">Team all</a></li>
 												</ul>
 											</li>
 											<li><a href="">Contact Us</a></li>

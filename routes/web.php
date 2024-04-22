@@ -22,6 +22,7 @@ Route::get('/', function () {
 });
 Route::get('/about', [UserController::class,'aboutview'])->name('user.about');
 Route::get('/faq', [UserController::class,'faqview'])->name('user.faq');
+Route::get('/team', [UserController::class,'teamview'])->name('user.team');
 Route::get('/berita', [BeritaController::class,'Berita'])->name('user.berita');
 Route::get('/detailberita/{id}', [BeritaController::class,'BeritaShow'])->name('user.detailberita');
 
