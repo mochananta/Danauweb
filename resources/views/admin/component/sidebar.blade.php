@@ -25,6 +25,12 @@
               <i class="bi bi-circle"></i><span>Data RecentPost Berita</span>
             </a>
           </li>
+          
+          <li>
+            <a href="{{ route('kegiatan.view') }}">
+              <i class="bi bi-circle"></i><span>Data Kegiatan</span>
+            </a>
+          </li>
           {{-- <li>
             <a href="tables-data.html">
               <i class="bi bi-circle"></i><span>Data Tables</span>
