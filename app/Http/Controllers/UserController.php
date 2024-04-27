@@ -17,4 +17,9 @@ class UserController extends Controller
     {
         return view('user.faq');
     }
+
+    public function teamview()
+    {
+        return view('user.team');
+    }
 }
