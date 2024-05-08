@@ -43,20 +43,6 @@ class KegiatanController extends Controller
         return redirect()->route('kegiatan.store');
     }
 
-    public function show(string $id)
-    {
-        //
-    }
-
-    public function edit(string $id)
-    {
-        $editData = Kegiatan::Find($id);
-        return view('admin.kegiatan.edit_kegiatan', compact('editData'));
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
         $data = Kegiatan::find($id);
