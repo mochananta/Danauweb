@@ -22,15 +22,15 @@
                 @csrf
                 <div class="form-group">
                     <label for="Judul">Judul</label>
-                    <input type="text" name="judulpost" class="form-control" id="judulpost" value="{{$editData->judulpost}}" required>
+                    <input type="text" name="judulkegiatan" class="form-control" value="{{$editData->judulkegiatan}}" required>
                 </div>
                 <div class="form-group">
                     <label for="Tanggal">Tanggal</label>
-                    <input type="date" name="tanggalpost" class="form-control" id="tanggalpost" value="{{$editData->tanggalpost}}" required>
+                    <input type="date" name="tanggalkegiatan" class="form-control"  value="{{$editData->tanggalkegiatan}}" required>
                 </div>
                 <div class="form-group">
                     <label for="Photo">Photo Post</label>
-                    <input type="file" name="photopost" class="form-control-file" id="photopost" value="{{$editData->photopost}}" required>
+                    <input type="file" name="photokegiatan" class="form-control-file" value="{{$editData->photokegiatan}}" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Simpan</button>
             </form>

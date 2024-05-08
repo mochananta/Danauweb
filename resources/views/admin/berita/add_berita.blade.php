@@ -18,7 +18,7 @@
             <h6 class="m-0 font-weight-bold text-primary">Form Tambah Berita</h6>
         </div>
         <div class="card-body">
-            <form id="validate" method="GET" action="{{ route('berita.store') }}" enctype="multipart/form-data">
+            <form id="validate" method="POST" action="{{ route('berita.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label for="judulBerita">Judul Berita</label>

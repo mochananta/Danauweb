@@ -5,6 +5,7 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\RecentpostController;
 use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,11 +30,7 @@ Route::get('/detailberita/{id}', [BeritaController::class, 'BeritaShow'])->name(
 
 
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',])->group(function () {
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
     })->name('admin.dashboard');
@@ -45,20 +42,22 @@ Route::middleware([
     Route::post('/berita_update/{id}', [BeritaController::class, 'update'])->name('berita.update');
     Route::delete('/delete/{id}', [BeritaController::class, 'destroy'])->name('berita.delete');
 
-    //CRUD KEGIATAN
     Route::get('/kegiatan', [KegiatanController::class, 'index'])->name('kegiatan.view');
-    Route::get('/kegiatan_add', [KegiatanController::class, 'create'])->name('kegiatan.view');
+    Route::get('/kegiatan_add', [KegiatanController::class, 'create'])->name('kegiatan.add');
     Route::post('/kegiatan_store', [KegiatanController::class, 'store'])->name('kegiatan.store');
     Route::get('/kegiatan_edit/{id}', [KegiatanController::class, 'edit'])->name('kegiatan.edit');
     Route::post('/kegiatan_update/{id}', [KegiatanController::class, 'update'])->name('kegiatan.update');
     Route::delete('/deletekegiatan/{id}', [KegiatanController::class, 'destroy'])->name('kegiatan.delete');
-
-    //CRUD POSTINGAN TERBARU
-    Route::get('/recentpost', [RecentpostController::class, 'index'])->name('recentpost.view');
-    Route::get('/recentpost_add', [RecentpostController::class, 'create'])->name('recentpost.add');
-    Route::post('/recentpost_store', [RecentpostController::class, 'store'])->name('recentpost.store');
-    Route::get('/recentpost_edit/{id}', [RecentpostController::class, 'edit'])->name('recentpost.edit');
-    Route::post('/recentpost_update/{id}', [RecentpostController::class, 'update'])->name('recentpost.update');
-    Route::delete('/deleterecentpost/{id}', [RecentpostController::class, 'destroy'])->name('recentpost.delete');
 });
+
+
+
+//     //CRUD POSTINGAN TERBARU
+//     // Route::get('/recentpost', [RecentpostController::class, 'index'])->name('recentpost.view');
+//     // Route::get('/recentpost_add', [RecentpostController::class, 'create'])->name('recentpost.add');
+//     // Route::post('/recentpost_store', [RecentpostController::class, 'store'])->name('recentpost.store');
+//     // Route::get('/recentpost_edit/{id}', [RecentpostController::class, 'edit'])->name('recentpost.edit');
+//     // Route::post('/recentpost_update/{id}', [RecentpostController::class, 'update'])->name('recentpost.update');
+//     // Route::delete('/deleterecentpost/{id}', [RecentpostController::class, 'destroy'])->name('recentpost.delete');
+// });
 Route::get('/auth/logout', [AuthController::class, 'logout'])->name('admin.logout')->middleware('auth');

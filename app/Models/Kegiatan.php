@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Kegiatan extends Model
 {
     use HasFactory;
-    protected $table = 'berita';
+    protected $table = 'kegiatans';
     protected $primaryKey = 'id';
     public $timestamps = true;
 }

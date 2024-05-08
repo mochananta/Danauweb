@@ -18,19 +18,19 @@
             <h6 class="m-0 font-weight-bold text-primary">Form Kegiatan</h6>
         </div>
         <div class="card-body">
-            <form id="validate" method="post" action="{{ route('kegiatan.store') }}" enctype="multipart/form-data">
+            <form id="validate" method="POST" action="{{route('kegiatan.store')}}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label for="judulkegiatan">Judul</label>
-                    <input type="text" name="judulkegiatan" class="form-control" id="judulkegiatan" required>
+                    <input type="text" name="judulkegiatan" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="tanggalkegiatan">Tanggal</label>
-                    <input type="date" name="tanggalkegiatan" class="form-control" id="tanggalkegiatan" required>
+                    <input type="date" name="tanggalkegiatan" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="photokegiatan">Photo Post</label>
-                    <input type="file" name="photokegiatan" class="form-control-file" id="photokegiatan" required>
+                    <input type="file" name="photokegiatan" class="form-control-file" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Tambah</button>
             </form>

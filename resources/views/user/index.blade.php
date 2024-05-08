@@ -258,10 +258,6 @@
 					<div class="col-lg-12 col-12">
 						<div class="owl-carousel portfolio-slider">
 							<div class="single-pf">
-								<img src="{{ asset('user/img/pf1.jpg')}}" alt="#"> 
-								<a href="portfolio-details.html" class="btn">View Details</a>
-							</div>
-							<div class="single-pf">
 								<img src="{{ asset('user/img/pf2.jpg')}}" alt="#">
 								<a href="portfolio-details.html" class="btn">View Details</a>
 							</div>

@@ -9,9 +9,6 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class KegiatanController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         $data = Kegiatan::all();
@@ -20,6 +17,13 @@ class KegiatanController extends Controller
         confirmDelete($title, $text);
         return view('admin.kegiatan.view_kegiatan', compact('data'));
     }
+
+    // public function kegiatan()
+    // {
+    //     $post = Kegiatan::all();
+    //     return view('user/index', compact('post'));
+    // }
+
     public function create()
     {
         return view('admin.kegiatan.add_kegiatan');
@@ -27,11 +31,15 @@ class KegiatanController extends Controller
 
     /**
      * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
+        // dd($request->all());
         $data = new Kegiatan();
-        $data->judulkegiatan = $request->judulkegaitan;
+        $data->judulkegiatan = $request->judulkegiatan;
         $data->tanggalkegiatan = $request->tanggalkegiatan;
         if ($request->hasFile('photokegiatan')) {
             $photo_kegiatan = $request->file('photokegiatan')->store('photokegiatan');
@@ -40,18 +48,35 @@ class KegiatanController extends Controller
         $data->save();
 
         Alert::success('Success', 'Tambah data Berhasil!')->showConfirmButton('OK');
-        return redirect()->route('kegiatan.store');
+        return redirect()->route('kegiatan.view');
     }
 
+    public function show(string $id)
+    {
+        //
+    }
+
+    public function edit(string $id)
+    {
+        $editData = Kegiatan::Find($id);
+        return view('admin.kegiatan.edit_kegiatan', compact('editData'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *  @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function update(Request $request, string $id)
     {
         $data = Kegiatan::find($id);
-        $data->judulpost = $request->judulpost;
-        if ($request->hasFile('photopost')) {
-            $photo_post = $request->file('photopost')->store('photopost');
-            $data->photopost = $photo_post;
+        $data->judulkegiatan = $request->judulkegiatan;
+        $data->tanggalkegiatan = $request->tanggalkegiatan;
+        if ($request->hasFile('photokegiatan')) {
+            $photo_kegiatan = $request->file('photokegiatan')->store('photokegiatan');
+            $data->photokegiatan = $photo_kegiatan;
         }
-        $data->tanggalpost = $request->tanggalpost;
         $data->update();
         return redirect()->route('kegiatan.view')->with('Success', 'Update Data Berhasil!!');
     }
@@ -59,8 +84,8 @@ class KegiatanController extends Controller
     public function destroy(string $id)
     {
         $data = Kegiatan::find($id);
-        if ($data->photopost != null || $data->photopost = '') {
-            Storage::delete($data->photopost);
+        if ($data->photokegiatan != null || $data->photokegiatan = '') {
+            Storage::delete($data->photokegiatan);
         }
         $data->delete();
         return redirect()->route('kegiatan.view');
