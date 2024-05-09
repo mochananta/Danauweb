@@ -25,11 +25,11 @@
               <i class="bi bi-circle"></i><span>Data RecentPost Berita</span>
             </a>
           </li>
-          {{-- <li>
-            <a href="tables-data.html">
-              <i class="bi bi-circle"></i><span>Data Tables</span>
+          <li>
+            <a href="{{ route('promo.view')}}">
+              <i class="bi bi-circle"></i><span>Data Promo</span>
             </a>
-          </li> --}}
+          </li>
         </ul>
       </li><!-- End Tables Nav -->
 

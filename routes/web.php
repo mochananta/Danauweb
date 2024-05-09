@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\KegiatanController;
+use App\Http\Controllers\PromoController;
 use App\Http\Controllers\RecentpostController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -17,9 +19,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('user.index');
-});
+
+Route::get('/', [UserController::class,'userview'])->name('user.index');
 Route::get('/about', [UserController::class,'aboutview'])->name('user.about');
 Route::get('/faq', [UserController::class,'faqview'])->name('user.faq');
 Route::get('/team', [UserController::class,'teamview'])->name('user.team');
@@ -51,6 +52,14 @@ Route::middleware([
     Route::get('/recentpost_edit/{id}', [RecentpostController::class, 'edit'])->name('recentpost.edit');
     Route::post('/recentpost_update/{id}', [RecentpostController::class, 'update'])->name('recentpost.update');
     Route::delete('/deleterecentpost/{id}', [RecentpostController::class, 'destroy'])->name('recentpost.delete');
+
+        //CRUD PROMO
+    Route::get('/promo', [PromoController::class, 'index'])->name('promo.view');
+    Route::get('/promo_add', [PromoController::class, 'create'])->name('promo.add');
+    Route::post('/promo_store', [PromoController::class, 'store'])->name('promo.store');
+    Route::get('/promo_edit/{id}', [PromoController::class, 'edit'])->name('promo.edit');
+    Route::post('/promo_update/{id}', [PromoController::class, 'update'])->name('promo.update');
+    Route::delete('/deletepromo/{id}', [PromoController::class, 'destroy'])->name('promo.delete');
 
 });
 Route::get('/auth/logout', [AuthController::class, 'logout'])->name('admin.logout')->middleware('auth');

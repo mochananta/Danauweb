@@ -197,7 +197,7 @@
 								<div class="col-lg-6">
 									<div class="flex-container">
 										<div class="small-box">
-											<img src="{{ asset('user/img/mobil.png')}}" alt="Motorcycle Icon">
+											<img src="{{ asset('user/img/group 139.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
 											<p>Maecenas vitae luctus nibh.</p>
@@ -207,7 +207,7 @@
 								<div class="col-lg-6">
 									<div class="flex-container">
 										<div class="small-box">
-											<img src="{{ asset('user/img/mobil.png')}}" alt="Motorcycle Icon">
+											<img src="{{ asset('user/img/group 140.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
 											<p>Maecenas vitae luctus nibh.</p>
@@ -217,17 +217,7 @@
 								<div class="col-lg-6">
 									<div class="flex-container">
 										<div class="small-box">
-											<img src="{{ asset('user/img/mobil.png')}}" alt="Motorcycle Icon">
-										</div>
-										<div class="text-container">
-											<p>Maecenas vitae luctus nibh.</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="flex-container">
-										<div class="small-box">
-											<img src="{{ asset('user/img/mobil.png')}}" alt="Motorcycle Icon">
+											<img src="{{ asset('user/img/group 141.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
 											<p>Maecenas vitae luctus nibh.</p>
@@ -251,22 +241,24 @@
 		<section class="custom-pricing-table section">
 			<div class="container">
 				<div class="row">
+					@foreach ($promos as $promo)
 					<div class="col-md-6">
 						<div class="promo-text">
-							<h2>Promo Terbaru Danau Emas</h2>
-							<p>Gunakan kode promo dan dapatkan kesempatan untuk mendapat potongan dan hadiah menarik lainnya</p>
+							<h2>{{ $promo->temapromo }}</h2>
+							<p>{{ $promo->despromo }}</p>
 							<span class="link-text" onclick="window.location.href='https://www.example.com'">Lihat Semua Promo</span>						
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="image-container">
-							<img src="{{ asset('user/img/Gajian-Emas.jpeg')}}" alt="Right Image">
+							<img src="{{ asset('storage/' . $promo->fotopromo) }}" alt="Right Image">
 						</div>
-					</div>
+					</div>	
+					@endforeach
 				</div>
 			</div>  
 		</section>		
-		<!--/ End Pricing Table -->			
+		<!--/ End Pricing Table -->				
 
 		<!-- Start Why choose -->
 		{{-- <section class="why-choose section" >
