@@ -51,5 +51,8 @@ Route::middleware([
     Route::post('/recentpost_update/{id}', [RecentpostController::class, 'update'])->name('recentpost.update');
     Route::delete('/deleterecentpost/{id}', [RecentpostController::class, 'destroy'])->name('recentpost.delete');
 
+    // CRUD PROFILE
+    
+
 });
 Route::get('/auth/logout', [AuthController::class, 'logout'])->name('admin.logout')->middleware('auth');
