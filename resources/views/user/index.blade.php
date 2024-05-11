@@ -178,11 +178,7 @@
 								<div class="col-lg-6">
 									<div class="flex-container">
 										<div class="small-box">
-<<<<<<< HEAD
 											<img src="{{ asset('user/img/group 139.png')}}" alt="Motorcycle Icon">
-=======
-											<img src="{{ asset('user/img/transportasi.png')}}" alt="Motorcycle Icon">
->>>>>>> 6592e5cd5424068c75cb757473e72ee8e67584df
 										</div>
 										<div class="text-container">
 											<p>GADAI KENDARAAN BERMOTOR</p>
@@ -192,11 +188,7 @@
 								<div class="col-lg-6">
 									<div class="flex-container">
 										<div class="small-box">
-<<<<<<< HEAD
 											<img src="{{ asset('user/img/group 140.png')}}" alt="Motorcycle Icon">
-=======
-											<img src="{{ asset('user/img/emas.png')}}" alt="Motorcycle Icon">
->>>>>>> 6592e5cd5424068c75cb757473e72ee8e67584df
 										</div>
 										<div class="text-container">
 											<p>GADAI EMAS</p>
@@ -206,23 +198,13 @@
 								<div class="col-lg-6">
 									<div class="flex-container">
 										<div class="small-box">
-<<<<<<< HEAD
 											<img src="{{ asset('user/img/group 141.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
 											<p>Maecenas vitae luctus nibh.</p>
 										</div>
 									</div>
-								</div>												
-=======
-											<img src="{{ asset('user/img/elektronik.png')}}" alt="Motorcycle Icon">
-										</div>
-										<div class="text-container">
-											<p>GADAI ELEKTRONIK</p>
-										</div>
-									</div>
-								</div>
->>>>>>> 6592e5cd5424068c75cb757473e72ee8e67584df
+								</div>											
 							</div>
 						</div>
 						<!-- End Choose Left -->
@@ -258,9 +240,7 @@
 				</div>
 			</div>  
 		</section>		
-<<<<<<< HEAD
 		<!--/ End Pricing Table -->				
-=======
 		<!--/ End Promo -->			
 		
 		<!-- Start foto kegiatan -->
@@ -280,44 +260,57 @@
 				<div class="row">
 					<div class="col-lg-12 col-12">
 						<div class="owl-carousel portfolio-slider">
+							@foreach ($kegiatans as $kegiatan)
 							<div class="single-pf">
-								<img src="{{ asset('user/img/pf1.jpg')}}" alt="#"> 
-								<a href="portfolio-details.html" class="btn">View Details</a>
+								<img src="{{ asset('storage/' . $kegiatan->potokegiatan1) }}" alt="#"> 
+								<a href="{{ route('user.detailkegiatan', $kegiatan->id) }}" class="btn">View Details</a>
 							</div>
-							<div class="single-pf">
-								<img src="{{ asset('user/img/pf2.jpg')}}" alt="#">
-								<a href="portfolio-details.html" class="btn">View Details</a>
-							</div>
-							<div class="single-pf">
-								<img src="{{ asset('user/img/pf3.jpg')}}" alt="#"> 
-								<a href="portfolio-details.html" class="btn">View Details</a>
-							</div>
-							<div class="single-pf">
-								<img src="{{ asset('user/img/pf4.jpg')}}" alt="#">
-								<a href="portfolio-details.html" class="btn">View Details</a>
-							</div>
-							<div class="single-pf">
-								<img src="{{ asset('user/img/pf1.jpg')}}" alt="#">
-								<a href="portfolio-details.html" class="btn">View Details</a>
-							</div>
-							<div class="single-pf">
-								<img src="{{ asset('user/img/pf2.jpg')}}" alt="#">
-								<a href="portfolio-details.html" class="btn">View Details</a>
-							</div>
-							<div class="single-pf">
-								<img src="{{ asset('user/img/pf3.jpg')}}" alt="#">
-								<a href="portfolio-details.html" class="btn">View Details</a>
-							</div>
-							<div class="single-pf">
-								<img src="{{ asset('user/img/pf4.jpg')}}" alt="#">
-								<a href="portfolio-details.html" class="btn">View Details</a>
-							</div>
+							@endforeach
 						</div>
 					</div>
 				</div>
 			</div>
+			
 		</section>
 		<!--/ End foto kegiatan -->
+
+
+		<!-- Start Blog Area -->
+		<section class="blog section" id="blog">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Keep up with Our Most Recent Medical News.</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					@foreach ($beritas as $berita)
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<a href="{{ route('user.detailberita', $berita->id) }}">
+								<img src="{{ asset('storage/' . $berita->fotoberita) }}" alt="#">
+								</a>
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div class="date">{{ $berita->tanggal }}</div>
+									<h2><a href="{{ route('user.detailberita', $berita->id) }}">{{ $berita->judulberita }}</a></h2>
+									<p class="text">{{ Str::limit($berita->deskripsi, 116) }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					@endforeach
+				</div>
+			</div>
+		</section>
+		<!-- End Blog Area -->
+
 		
 		<!-- Start layanan -->
 		<section class="services section">
@@ -384,9 +377,9 @@
 							<div class="member-img">
 								<img src="{{ asset('user/img/person.jpg')}}" alt="#">
 								<div class="social-icons">
-									{{-- <a href="#"><i class="fa fa-instagram"></i></a>
+									<a href="#"><i class="fa fa-instagram"></i></a>
 									<a href="#"><i class="fa fa-whatsapp"></i></a>
-									<a href="#"><i class="fa fa-linkedin"></i></a> --}}
+									<a href="#"><i class="fa fa-linkedin"></i></a>
 								</div>
 							</div>
 							<div class="member-details">
@@ -401,8 +394,6 @@
 			</div>
 		</section>
 		<!-- End Our Team Area -->
->>>>>>> 6592e5cd5424068c75cb757473e72ee8e67584df
-
 
 		<!-- Start clients -->
 		<div class="clients overlay">
@@ -444,14 +435,13 @@
 		</div>
 		<!--/Ens clients -->
 		
-		<!-- Start Customer Service -->
-		<section id="appointment">
+		<!-- Start Appointment -->
+		<section class="appointment">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>Kami Selalu Siap Untuk Membantu Anda. Hubungi kami disini</h2>
-							{{-- <img src="{{ asset('user/img/person.png')}}" alt="#">  --}}
+							<h2>Kami Selalu Siap Untuk Membantu Anda. Hubungi Kami Disini</h2>
 							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
 						</div>
 					</div>
@@ -475,7 +465,7 @@
 										<input name="phone" type="text" placeholder="Phone">
 									</div>
 								</div>
-								{{-- <div class="col-lg-6 col-md-6 col-12">
+								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
 										<div class="nice-select form-control wide" tabindex="0"><span class="current">Department</span>
 											<ul class="list">
@@ -487,8 +477,8 @@
 											</ul>
 										</div>
 									</div>
-								</div> --}}
-								{{-- <div class="col-lg-6 col-md-6 col-12">
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
 										<div class="nice-select form-control wide" tabindex="0"><span class="current">Doctor</span>
 											<ul class="list">
@@ -499,12 +489,12 @@
 											</ul>
 										</div>
 									</div>
-								</div> --}}
-								{{-- <div class="col-lg-6 col-md-6 col-12">
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
 										<input type="text" placeholder="Date" id="datepicker">
 									</div>
-								</div> --}}
+								</div>
 								<div class="col-lg-12 col-md-12 col-12">
 									<div class="form-group">
 										<textarea name="message" placeholder="Write Your Message Here....."></textarea>
@@ -515,7 +505,7 @@
 								<div class="col-lg-5 col-md-4 col-12">
 									<div class="form-group">
 										<div class="button">
-											<button type="submit" class="btn">Submit</button>
+											<button type="submit" class="btn">Book An Appointment</button>
 										</div>
 									</div>
 								</div>
@@ -527,7 +517,7 @@
 					</div>
 					<div class="col-lg-6 col-md-12 ">
 						<div class="appointment-image">
-							<img src="{{ asset('user/img/person.jpg')}}" alt="#"> 
+							<img src="img/contact-img.png" alt="#">
 						</div>
 					</div>
 				</div>

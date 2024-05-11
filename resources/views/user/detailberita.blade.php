@@ -36,33 +36,18 @@
 									<!-- Meta -->
 									<div class="meta">
 										<div class="meta-left">
+											<span class="author"><a href="#"><img src="{{ asset('user/img/profile.png')}}" alt="#">Virgianita</a></span>
 											<span class="date"><i class="fa fa-clock-o"></i>{{$berita->tanggal}}</span>
+										</div>
+										<div class="meta-right">
+											<span class="comments"><a href="#"><i class="fa fa-comments"></i>05 Comments</a></span>
+											<span class="views"><i class="fa fa-eye"></i>{{ $berita->views }} Views</span>
 										</div>
 									</div>
 									<!-- News Text -->
 									<div class="news-text">
-										<p>{{$berita->deskripsi}}</p>
-										{{-- <div class="image-gallery">
-											<div class="row">
-												<div class="col-lg-6 col-md-6 col-12">
-													<div class="single-image">
-														<img src="{{ asset('user/img/blog2.jpg')}}" alt="#"> 
-													</div>
-												</div>
-												<div class="col-lg-6 col-md-6 col-12">
-													<div class="single-image">
-														<img src="{{ asset('user/img/blog3.jpg')}}" alt="#">
-													</div>
-												</div>
-											</div>
-										</div>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis ultricies tortor, nec sollicitudin lorem sagittis vitae. Curabitur rhoncus commodo rutrum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam nec lacus pulvinar, laoreet dolor quis, pellentesque ante. Cras nulla orci, pharetra at dictum consequat, pretium pretium nulla. Suspendisse porttitor nunc a sodales tempor. Mauris sed felis maximus, interdum metus vel, tincidunt diam.</p>
-										<blockquote class="overlay">
-											<p>Aliquam nec lacus pulvinar, laoreet dolor quis, pellentesque ante. Cras nulla orci, pharetra at dictum consequat, pretium pretium nulla. Suspendisse porttitor nunc a sodales tempor. Mauris sed felis maximus, interdum metus vel, tincidunt diam. Nam ac risus vitae sem vehicula egestas. Sed velit nulla, viverra non commodo et, sodales</p>					
-										</blockquote>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis ultricies tortor, nec sollicitudin lorem sagittis vitae. Curabitur rhoncus commodo rutrum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam nec lacus pulvinar, laoreet dolor quis, pellentesque ante. Cras nulla orci, pharetra at dictum consequat, pretium pretium nulla. Suspendisse porttitor nunc a sodales tempor. Mauris sed felis maximus, interdum metus vel, tincidunt diam. Nam ac risus vitae sem vehicula egestas. Sed velit nulla, viverra non commodo et, sodales id dui.</p>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis ultricies tortor, nec sollicitudin lorem sagittis vitae. Curabitur rhoncus commodo rutrum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam nec lacus pulvinar, laoreet dolor quis, pellentesque ante. Cras nulla orci, pharetra at dictum consequat, pretium pretium nulla. Suspendisse</p> --}}
-									</div>
+										{!! nl2br($berita->deskripsi) !!}
+									</div>									
 									<div class="blog-bottom">
 										<!-- Social Share -->
 										<ul class="social-share">
@@ -178,12 +163,10 @@
 					<div class="col-lg-4 col-12">
 						<div class="main-sidebar">
 							<!-- Single Widget -->
-							{{-- <div class="single-widget search">
-								<div class="form">
-									<input type="email" placeholder="Search Here...">
-									<a class="button" href="#"><i class="fa fa-search"></i></a>
-								</div>
-							</div> --}}
+							<div class="single-widget search">
+								<input type="text" name="keyword" placeholder="Search Here...">
+								<button type="submit" class="button"><i class="fa fa-search"></i></button>
+							</div>							
 							<!--/ End Single Widget -->
 							<!-- Single Widget -->
 							{{-- <div class="single-widget category">

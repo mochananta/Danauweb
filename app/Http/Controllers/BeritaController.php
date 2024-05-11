@@ -25,8 +25,8 @@ class BeritaController extends Controller
     
     public function Berita()
     {
-        $data = Berita::all();
-        return view('user.berita', compact('data'));
+        $beritas = Berita::all();
+        return view('user.berita', compact('beritas'));
     }
 
     /**
@@ -90,13 +90,33 @@ class BeritaController extends Controller
         $data->update();
         return redirect()->route('berita.view')->with('Success', 'Update Data Berhasil!!');
     }
-    public function BeritaShow(string $id)
-    {
-        $berita = Berita::find($id);
-        $recentPosts = Recentpost::all();
+    // public function BeritaShow(string $id)
+    // {
+    //     $berita = Berita::find($id);
+    //     $recentPosts = Recentpost::all();
         
+    //     return view('user.detailberita', compact('berita', 'recentPosts'));
+    // }
+
+    public function BeritaShow($id)
+    {
+        // Dapatkan berita berdasarkan ID
+        $berita = Berita::find($id);
+    
+        // Pastikan berita ditemukan
+        if (!$berita) {
+            abort(404); // Tampilkan halaman 404 jika berita tidak ditemukan
+        }
+    
+        // Tambahkan view
+        $berita->increment('views');
+    
+        // Ambil daftar recent posts (atau postingan terbaru)
+        $recentPosts = Recentpost::all();
+    
+        // Tampilkan halaman detail berita beserta recent posts
         return view('user.detailberita', compact('berita', 'recentPosts'));
-    }
+    }    
 
     public function showRecentPost($id)
     {

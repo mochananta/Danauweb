@@ -26,6 +26,8 @@ Route::get('/faq', [UserController::class,'faqview'])->name('user.faq');
 Route::get('/team', [UserController::class,'teamview'])->name('user.team');
 Route::get('/berita', [BeritaController::class,'Berita'])->name('user.berita');
 Route::get('/detailberita/{id}', [BeritaController::class,'BeritaShow'])->name('user.detailberita');
+Route::get('/search', [BeritaController::class, 'search'])->name('search');
+Route::get('/detailkegiatan/{id}', [KegiatanController::class,'KegiatanShow'])->name('user.detailkegiatan');
 
 
 
@@ -53,13 +55,20 @@ Route::middleware([
     Route::post('/recentpost_update/{id}', [RecentpostController::class, 'update'])->name('recentpost.update');
     Route::delete('/deleterecentpost/{id}', [RecentpostController::class, 'destroy'])->name('recentpost.delete');
 
-        //CRUD PROMO
+    //CRUD PROMO
     Route::get('/promo', [PromoController::class, 'index'])->name('promo.view');
     Route::get('/promo_add', [PromoController::class, 'create'])->name('promo.add');
     Route::post('/promo_store', [PromoController::class, 'store'])->name('promo.store');
     Route::get('/promo_edit/{id}', [PromoController::class, 'edit'])->name('promo.edit');
     Route::post('/promo_update/{id}', [PromoController::class, 'update'])->name('promo.update');
     Route::delete('/deletepromo/{id}', [PromoController::class, 'destroy'])->name('promo.delete');
+
+    Route::get('/kegiatan', [KegiatanController::class, 'index'])->name('kegiatan.view');
+    Route::get('/kegiatan_add', [KegiatanController::class, 'create'])->name('kegiatan.add');
+    Route::post('/kegiatan_store', [KegiatanController::class, 'store'])->name('kegiatan.store');
+    Route::get('/kegiatan_edit/{id}', [KegiatanController::class, 'edit'])->name('kegiatan.edit');
+    Route::post('/kegiatan_update/{id}', [KegiatanController::class, 'update'])->name('kegiatan.update');
+    Route::delete('/deletekegiatan/{id}', [KegiatanController::class, 'destroy'])->name('kegiatan.delete');
 
 });
 Route::get('/auth/logout', [AuthController::class, 'logout'])->name('admin.logout')->middleware('auth');
