@@ -55,10 +55,6 @@ Route::middleware([
     Route::post('/recentpost_update/{id}', [RecentpostController::class, 'update'])->name('recentpost.update');
     Route::delete('/deleterecentpost/{id}', [RecentpostController::class, 'destroy'])->name('recentpost.delete');
 
-<<<<<<< HEAD
-    // CRUD PROFILE
-    
-=======
     //CRUD PROMO
     Route::get('/promo', [PromoController::class, 'index'])->name('promo.view');
     Route::get('/promo_add', [PromoController::class, 'create'])->name('promo.add');
@@ -73,7 +69,5 @@ Route::middleware([
     Route::get('/kegiatan_edit/{id}', [KegiatanController::class, 'edit'])->name('kegiatan.edit');
     Route::post('/kegiatan_update/{id}', [KegiatanController::class, 'update'])->name('kegiatan.update');
     Route::delete('/deletekegiatan/{id}', [KegiatanController::class, 'destroy'])->name('kegiatan.delete');
->>>>>>> f3cbf4024004090fd6c2adb7a88b4b0acca08fcc
-
 });
 Route::get('/auth/logout', [AuthController::class, 'logout'])->name('admin.logout')->middleware('auth');
