@@ -25,7 +25,20 @@
               <i class="bi bi-circle"></i><span>Input Postingan</span>
             </a>
           </li>
+<<<<<<< HEAD
           
+=======
+          <li>
+            <a href="{{ route('promo.view')}}">
+              <i class="bi bi-circle"></i><span>Data Promo</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{ route('kegiatan.view')}}">
+              <i class="bi bi-circle"></i><span>Data Kegiatan</span>
+            </a>
+          </li>
+>>>>>>> f3cbf4024004090fd6c2adb7a88b4b0acca08fcc
         </ul>
       </li><!-- End Tables Nav -->
 

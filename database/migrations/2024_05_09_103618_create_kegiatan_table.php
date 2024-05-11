@@ -11,13 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('beritas', function (Blueprint $table) {
+        Schema::create('kegiatans', function (Blueprint $table) {
             $table->id();
-            $table->string('judulberita');
-            $table->string('tanggal');
-            $table->string('fotoberita');
-            $table->text('deskripsi'); 
-            $table->unsignedInteger('views')->default(0);   
+            $table->string('topik');
+            $table->string('tanggalkegiatan');
+            $table->string('potokegiatan1');
+            $table->string('potokegiatan2');
+            $table->string('judulkegiatan');
+            $table->string('deskegiatan');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('beritas');
+        Schema::dropIfExists('kegiatans');
     }
 };
