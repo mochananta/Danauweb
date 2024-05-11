@@ -2,10 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kegiatan;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+
+    public function userview()
+    {
+        $data = Kegiatan::all();
+        return view('user.index', compact('data'));   
+        @dd($data); 
+    }
+
     //Halaman FAQ View
     public function aboutview()
     {

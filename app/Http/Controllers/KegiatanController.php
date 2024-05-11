@@ -18,10 +18,10 @@ class KegiatanController extends Controller
         return view('admin.kegiatan.view_kegiatan', compact('data'));
     }
 
-    // public function kegiatan()
+    // public function Kegiatan()
     // {
-    //     $post = Kegiatan::all();
-    //     return view('user/index', compact('post'));
+    //     $data = Kegiatan::all();
+    //     return view('user.index', compact('data'));
     // }
 
     public function create()

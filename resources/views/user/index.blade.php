@@ -255,13 +255,15 @@
 			</div>
 			<div class="container-fluid">
 				<div class="row">
+					@foreach ($data as $row)
 					<div class="col-lg-12 col-12">
 						<div class="owl-carousel portfolio-slider">
 							<div class="single-pf">
-								<img src="{{ asset('user/img/pf2.jpg')}}" alt="#">
+								<img src="{{ asset('storage/' . $row->photokegiatan) }}" alt="#">
 								<a href="portfolio-details.html" class="btn">View Details</a>
+								<div class="date">{{ $row->tanggalkegiatan }}</div>
 							</div>
-							<div class="single-pf">
+							{{-- <div class="single-pf">
 								<img src="{{ asset('user/img/pf3.jpg')}}" alt="#"> 
 								<a href="portfolio-details.html" class="btn">View Details</a>
 							</div>
@@ -284,9 +286,10 @@
 							<div class="single-pf">
 								<img src="{{ asset('user/img/pf4.jpg')}}" alt="#">
 								<a href="portfolio-details.html" class="btn">View Details</a>
-							</div>
+							</div> --}}
 						</div>
 					</div>
+					@endforeach
 				</div>
 			</div>
 		</section>

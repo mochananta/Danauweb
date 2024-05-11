@@ -19,9 +19,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('user.index');
-});
+Route::get('/', [UserController::class, 'userview'])->name('user.index');
 Route::get('/about', [UserController::class, 'aboutview'])->name('user.about');
 Route::get('/faq', [UserController::class, 'faqview'])->name('user.faq');
 Route::get('/team', [UserController::class, 'teamview'])->name('user.team');
