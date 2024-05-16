@@ -200,10 +200,10 @@
 							<div class="single-footer">
 								<h2>Newsletter</h2>
 								<p>subscribe to our newsletter to get allour news in your inbox.. Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
-								<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-									<input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''"
-										onblur="this.placeholder = 'Your email address'" required="" type="email">
-									<button class="button"><i class="icofont icofont-paper-plane"></i></button>
+								<form action="{{ route('subscribe') }}" method="POST" target="_blank" class="newsletter-inner">
+									@csrf
+									<input type="email" id="email" name="email" placeholder="Email Address" class="common-input" required>
+									<button type="submit" class="button"><i class="icofont icofont-paper-plane"></i></button>
 								</form>
 							</div>
 						</div>

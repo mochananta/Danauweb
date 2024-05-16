@@ -1,6 +1,7 @@
 <!-- ======= Header ======= -->
 <header id="header" class="header fixed-top d-flex align-items-center">
 
+
   <div class="d-flex align-items-center justify-content-between">
     <a href="index.html" class="logo d-flex align-items-center">
       <img src="{{ asset('user/img/logo-pt.png')}}" alt="">
@@ -8,6 +9,8 @@
     </a>
     <i class="bi bi-list toggle-sidebar-btn"></i>
   </div><!-- End Logo -->
+
+
 
 </header><!-- End Header -->
 
@@ -176,11 +179,26 @@
         {{-- </li> --}}
         <!-- End Messages Nav -->
 
+<<<<<<< HEAD
         {{-- <li class="dropdown-header">
               <h6>Kevin Anderson</h6>
               <span>Web Designer</span>
             </li> --}}
             {{-- <li>
+=======
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="{{ asset('user/img/profile.png')}}" alt="Profile" class="rounded-circle">
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            {{-- <li class="dropdown-header">
+              <h6>Kevin Anderson</h6>
+              <span>Web Designer</span>
+            </li> --}}
+            <li>
+>>>>>>> 753b6dbd0ec5792e4aa99d1d0c1a0e122d00dbc2
               <hr class="dropdown-divider">
             </li> --}}
 

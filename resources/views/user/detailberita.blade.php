@@ -59,8 +59,16 @@
 										</ul>
 										<!-- Next Prev -->
 										<ul class="prev-next">
-											<li class="prev"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
-											<li class="next"><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+											<li class="prev">
+												@if ($previousBerita)
+													<a href="{{ route('user.detailberita', $previousBerita->id) }}"><i class="fa fa-angle-double-left"></i></a>
+												@endif
+											</li>
+											<li class="next">
+												@if ($nextBerita)
+													<a href="{{ route('user.detailberita', $nextBerita->id) }}"><i class="fa fa-angle-double-right"></i></a>
+												@endif
+											</li>
 										</ul>
 										<!--/ End Next Prev -->
 									</div>
@@ -70,92 +78,64 @@
 								<div class="blog-comments">
 									<h2>All Comments</h2>
 									<div class="comments-body">
-										<!-- Single Comments -->
+										@foreach($komentars as $komentar)
+										<!-- Single Comment -->
 										<div class="single-comments">
 											<div class="main">
 												<div class="head">
-													<img src="{{ asset('user/img/author1.jpg')}}" alt="#"/> 
+													<img src="{{ asset('user/img/user.png')}}" alt="#"/>
 												</div>
 												<div class="body">
-													<h4>Afsana Mimi</h4>
-													<div class="comment-meta"><span class="meta"><i class="fa fa-calendar"></i>March 05, 2019</span><span class="meta"><i class="fa fa-clock-o"></i>03:38 AM</span></div>
-													<p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas</p>
+													<h4>{{ $komentar->nama }}</h4>
+													<div class="comment-meta">
+														<span class="meta"><i class="fa fa-calendar"></i>{{ $komentar->created_at->format('F d, Y') }}</span>
+														<span class="meta"><i class="fa fa-clock-o"></i>{{ $komentar->created_at->format('H:i') }}</span>
+													</div>
+													<p>{{ $komentar->teks }}</p>
 													<a href="#"><i class="fa fa-reply"></i>replay</a>
 												</div>
 											</div>
-										</div>		
-										<!--/ End Single Comments -->
-										<!-- Single Comments -->
-										<div class="single-comments left">
-											<div class="main">
-												<div class="head">
-													<img src="{{ asset('user/img/author2.jpg')}}" alt="#"/> 
-												</div>
-												<div class="body">
-													<h4>Naimur Rahman</h4>
-													<div class="comment-meta"><span class="meta"><i class="fa fa-calendar"></i>March 05, 2019</span><span class="meta"><i class="fa fa-clock-o"></i>03:38 AM</span></div>
-													<p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas</p>
-													<a href="#"><i class="fa fa-reply"></i>replay</a>
-												</div>
-											</div>
-										</div>		
-										<!--/ End Single Comments -->
-										<!-- Single Comments -->
-										<div class="single-comments">
-											<div class="main">
-												<div class="head">
-													<img src="{{ asset('user/img/author3.jpg')}}" alt="#"/>
-												</div>
-												<div class="body">
-													<h4>Suriya Molharta</h4>
-													<div class="comment-meta"><span class="meta"><i class="fa fa-calendar"></i>March 05, 2019</span><span class="meta"><i class="fa fa-clock-o"></i>03:38 AM</span></div>
-													<p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas</p>
-													<a href="#"><i class="fa fa-reply"></i>replay</a>
-												</div>
-											</div>
-										</div>		
-										<!--/ End Single Comments -->											
+										</div>      
+										<!--/ End Single Comment -->
+										@endforeach
 									</div>
 								</div>
 							</div>
+
 							<div class="col-12">
 								<div class="comments-form">
 									<h2>Leave Comments</h2>
-									<!-- Contact Form -->
-									<form class="form" method="post" action="mail/mail.php">
+									<!-- Form Komentar -->
+									<form class="form" method="post" action="{{ route('komentar.store') }}">
+										@csrf
+										<input type="hidden" name="berita_id" value="{{ $berita->id }}">
 										<div class="row">
 											<div class="col-lg-4 col-md-4 col-12">
 												<div class="form-group">
 													<i class="fa fa-user"></i>
-													<input type="text" name="first-name" placeholder="First name" required="required">
+													<input type="text" name="nama" placeholder="Nama" required="required">
 												</div>
 											</div>
 											<div class="col-lg-4 col-md-4 col-12">
 												<div class="form-group">
 													<i class="fa fa-envelope"></i>
-													<input type="text" name="last-name" placeholder="Last name" required="required">
-												</div>
-											</div>
-											<div class="col-lg-4 col-md-4 col-12">
-												<div class="form-group">
-													<i class="fa fa-envelope"></i>
-													<input type="email" name="email" placeholder="Your Email" required="required">
+													<input type="email" name="email" placeholder="Email" required="required">
 												</div>
 											</div>
 											<div class="col-12">
 												<div class="form-group message">
 													<i class="fa fa-pencil"></i>
-													<textarea name="message" rows="7" placeholder="Type Your Message Here" ></textarea>
+													<textarea name="teks" rows="7" placeholder="Tulis Komentar Anda" required></textarea>
 												</div>
 											</div>
 											<div class="col-12">
-												<div class="form-group button">	
+												<div class="form-group button">    
 													<button type="submit" class="btn primary"><i class="fa fa-send"></i>Submit Comment</button>
 												</div>
 											</div>
 										</div>
 									</form>
-									<!--/ End Contact Form -->
+									<!--/ End Form Komentar -->
 								</div>
 							</div>
 						</div>
@@ -190,7 +170,7 @@
 										<img src="{{ asset('storage/' . $post->photopost) }}" alt="#"> 
 									</div>
 									<div class="content">
-										<h5><a href="{{ route('user.detailberita', ['id' => $post->id]) }}">{{ $post->judulpost }}</a></h5>
+										<h5><a href="{{ route('user.detailberita', ['id' => $post->id]) }}">{{ Str::limit($post->judulpost, 20) }}</a></h5>
 										<ul class="comment">
 											<li><i class="fa fa-calendar" aria-hidden="true"></i>{{ $post->tanggalpost }}</li>
 											<li><i class="fa fa-commenting-o" aria-hidden="true"></i>35</li>

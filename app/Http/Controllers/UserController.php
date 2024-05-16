@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Berita;
 use App\Models\Kegiatan;
+use App\Models\Komentar;
 use App\Models\Promo;
+use App\Models\Subscribe;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -39,5 +41,37 @@ class UserController extends Controller
     public function teamview()
     {
         return view('user.team');
+    }
+
+    public function subscribe(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email|unique:subscribers,email'
+        ]);
+
+        Subscribe::create([
+            'email' => $request->email
+        ]);
+
+        return redirect()->back()->with('success', 'Terima Kasih, Tunggu Informasi Selanjutnya');
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'berita_id' => 'required|exists:beritas,id',
+            'nama' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'teks' => 'required|string',
+        ]);
+
+        Komentar::create([
+            'berita_id' => $request->berita_id,
+            'nama' => $request->nama,
+            'email' => $request->email,
+            'teks' => $request->teks,
+        ]);
+
+        return redirect()->back()->with('success', 'Komentar berhasil ditambahkan.');
     }
 }
