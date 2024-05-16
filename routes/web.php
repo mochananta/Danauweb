@@ -6,11 +6,8 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\PromoController;
 use App\Http\Controllers\RecentpostController;
-<<<<<<< HEAD
 use App\Http\Controllers\KegiatanController;
-=======
 use App\Http\Controllers\SubscribeController;
->>>>>>> cfb2683c6d86f8993c9fe9cc0d6310284931e9a7
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -26,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-<<<<<<< HEAD
+
 Route::get('/', [UserController::class, 'userview'])->name('user.index');
 Route::get('/about', [UserController::class, 'aboutview'])->name('user.about');
 Route::get('/faq', [UserController::class, 'faqview'])->name('user.faq');
@@ -37,10 +34,8 @@ Route::get('/detailberita/{id}', [BeritaController::class, 'BeritaShow'])->name(
 
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('admin.dashboard');
-    })->name('admin.dashboard');
-=======
+    Route::get('/dashboard', function () {return view('admin.dashboard');})->name('admin.dashboard');
+
 
 Route::get('/', [UserController::class,'userview'])->name('user.index');
 Route::get('/about', [UserController::class,'aboutview'])->name('user.about');
@@ -59,7 +54,7 @@ Route::middleware([
 ])->group(function () {
 
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
->>>>>>> cfb2683c6d86f8993c9fe9cc0d6310284931e9a7
+
     //CRUD BERITA
     Route::get('/view', [BeritaController::class, 'index'])->name('berita.view');
     Route::get('/berita_add', [BeritaController::class, 'create'])->name('berita.add');
@@ -68,8 +63,8 @@ Route::middleware([
     Route::post('/berita_update/{id}', [BeritaController::class, 'update'])->name('berita.update');
     Route::delete('/delete/{id}', [BeritaController::class, 'destroy'])->name('berita.delete');
 
-<<<<<<< HEAD
-=======
+
+
     //CRUD POSTINGAN TERBARU
     Route::get('/recentpost', [RecentpostController::class, 'index'])->name('recentpost.view');
     Route::get('/recentpost_add', [RecentpostController::class, 'create'])->name('recentpost.add');
@@ -86,7 +81,7 @@ Route::middleware([
     Route::post('/promo_update/{id}', [PromoController::class, 'update'])->name('promo.update');
     Route::delete('/deletepromo/{id}', [PromoController::class, 'destroy'])->name('promo.delete');
 
->>>>>>> cfb2683c6d86f8993c9fe9cc0d6310284931e9a7
+
     Route::get('/kegiatan', [KegiatanController::class, 'index'])->name('kegiatan.view');
     Route::get('/kegiatan_add', [KegiatanController::class, 'create'])->name('kegiatan.add');
     Route::post('/kegiatan_store', [KegiatanController::class, 'store'])->name('kegiatan.store');

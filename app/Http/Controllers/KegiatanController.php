@@ -9,7 +9,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class KegiatanController extends Controller
 {
-<<<<<<< HEAD
+
     public function index()
     {
         $data = Kegiatan::all();
@@ -25,7 +25,7 @@ class KegiatanController extends Controller
     //     return view('user.index', compact('data'));
     // }
 
-=======
+
     /**
      * Display a listing of the resource.
      */
@@ -41,7 +41,6 @@ class KegiatanController extends Controller
     /**
      * Show the form for creating a new resource.
      */
->>>>>>> cfb2683c6d86f8993c9fe9cc0d6310284931e9a7
     public function create()
     {
         return view('admin.kegiatan.add_kegiatan');
@@ -49,7 +48,7 @@ class KegiatanController extends Controller
 
     /**
      * Store a newly created resource in storage.
-<<<<<<< HEAD
+
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -65,9 +64,9 @@ class KegiatanController extends Controller
             $data->photokegiatan = $photo_kegiatan;
         }
         $data->save();
+    }
 
-=======
-     */
+
     public function store(Request $request)
     {
         $kegiatans = new Kegiatan();
@@ -83,28 +82,25 @@ class KegiatanController extends Controller
         $kegiatans->deskegiatan = $request->deskegiatan;
         $kegiatans->save();
     
->>>>>>> cfb2683c6d86f8993c9fe9cc0d6310284931e9a7
+
         Alert::success('Success', 'Tambah data Berhasil!')->showConfirmButton('OK');
         return redirect()->route('kegiatan.view');
     }
 
-<<<<<<< HEAD
-=======
+
     /**
      * Display the specified resource.
      */
->>>>>>> cfb2683c6d86f8993c9fe9cc0d6310284931e9a7
+
     public function show(string $id)
     {
         //
     }
 
-<<<<<<< HEAD
-=======
+
     /**
      * Show the form for editing the specified resource.
      */
->>>>>>> cfb2683c6d86f8993c9fe9cc0d6310284931e9a7
     public function edit(string $id)
     {
         $editData = Kegiatan::Find($id);
@@ -113,7 +109,7 @@ class KegiatanController extends Controller
 
     /**
      * Update the specified resource in storage.
-<<<<<<< HEAD
+
      *  @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -138,8 +134,8 @@ class KegiatanController extends Controller
             Storage::delete($data->photokegiatan);
         }
         $data->delete();
-=======
-     */
+    }
+
     public function update(Request $request, string $id)
     {
         $kegiatans = Kegiatan::find($id);
@@ -178,7 +174,6 @@ class KegiatanController extends Controller
                 Storage::delete($kegiatans->potokegiatan2);        
             }
         $kegiatans->delete();
->>>>>>> cfb2683c6d86f8993c9fe9cc0d6310284931e9a7
         return redirect()->route('kegiatan.view');
     }
 }

@@ -2,27 +2,25 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
+
 use App\Models\Kegiatan;
-=======
 use App\Models\Berita;
-use App\Models\Kegiatan;
 use App\Models\Komentar;
 use App\Models\Promo;
 use App\Models\Subscribe;
->>>>>>> cfb2683c6d86f8993c9fe9cc0d6310284931e9a7
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
 
-<<<<<<< HEAD
+
     public function userview()
     {
         $data = Kegiatan::all();
         return view('user.index', compact('data'));   
         @dd($data); 
-=======
+    }
+
     //Halaman FAQ View
     public function userview()
     {
@@ -30,7 +28,7 @@ class UserController extends Controller
         $kegiatans = Kegiatan::all();
         $beritas = Berita::take(3)->get();
         return view('user.index', compact('promos','beritas','kegiatans'));
->>>>>>> cfb2683c6d86f8993c9fe9cc0d6310284931e9a7
+
     }
 
     //Halaman FAQ View
