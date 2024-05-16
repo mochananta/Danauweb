@@ -3,12 +3,12 @@
 <main id="main" class="main">
 
   <div class="pagetitle">
-    <h1>Tabel Artikel</h1>
+    <h1>Tabel Promo</h1>
     <nav>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{{url('/dashboard')}}">Dashboard</a></li>
-        <li class="breadcrumb-item">Konten</li>
-        <li class="breadcrumb-item active">Artikel</li>
+        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+        <li class="breadcrumb-item">Tables</li>
+        <li class="breadcrumb-item active">Promo</li>
       </ol>
     </nav>
   </div><!-- End Page Title -->
@@ -17,7 +17,7 @@
     <div class="card-header py-3">
         <div class="row">
             <div class="co">
-                <a href="{{route('berita.add')}}" class="btn btn-warning btn-icon-split"><span class="icon text-white-50">
+                <a href="{{ route('promo.add')}}" class="btn btn-warning btn-icon-split"><span class="icon text-white-50">
                         <i class="fas fa-plus"></i>
                     </span>
                     <span class="text">Tambah Data</span></a>
@@ -29,24 +29,23 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr class="text-center">
-                        <th>Photo</th>
-                        <th>Judul</th>
-                        <th>Tanggal</th>
+                        <th>TemaPromo</th>
                         <th>Deskripsi</th>
+                        <th>Photo</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($data as $item)
                     <tr class="text-center">
-                        <td><img src=" {{asset('storage/'.$item->fotoberita)}}" width="100px" alt="photo" /></td>
-                        <td>{{$item->judulberita}}</td>
-                        <td>{{$item->tanggal}}</td>
-                        <td>{{$item->deskripsi}}</td>
+                        <td>{{$item->temapromo}}</td>
+                        <td>{{$item->despromo}}</td>
+                        <td><img src=" {{asset('storage/'.$item->fotopromo)}}" width="100px" alt="photo" /></td>
                         <td>
                             <div class="row">
-                                <a href="{{route('berita.edit',$item->id)}}" class="col btn btn-success" style="margin:10px">Edit</a>
-                                    <a href="{{route('berita.delete',$item->id)}}" class="col btn btn-danger" style="margin:10px" data-confirm-delete="true">Hapus</a>
+                                <a href="{{route('promo.edit',$item->id)}}" class="col btn btn-success"
+                                    style="margin:10px">Edit</a>
+                                    <a href="{{route('promo.delete',$item->id)}}" class="col btn btn-danger" style="margin:10px" data-confirm-delete="true">Hapus</a>
                             </div>
                         </td>
                     </tr>

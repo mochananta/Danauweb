@@ -32,20 +32,20 @@
 					</div>
 				</div>
 				<div class="row">
-					@foreach ($data as $item)
+					@foreach ($beritas as $berita)
 					<div class="col-lg-4 col-md-6 col-12">
 						<!-- Single Blog -->
 						<div class="single-news">
 							<div class="news-head">
-							<a href="{{ route('user.detailberita', $item->id) }}">
-								<img src="{{ asset('storage/' . $item->fotoberita) }}" alt="#">
+							<a href="{{ route('user.detailberita', $berita->id) }}">
+								<img src="{{ asset('storage/' . $berita->fotoberita) }}" alt="#">
 							</a>
 							</div>
 							<div class="news-body">
 								<div class="news-content">
-									<div class="date">{{ $item->tanggal }}</div>
-									<h2>{{ $item->judulberita }}</h2>
-									<p class="text">{{ $item->deskripsi }}</p>
+									<div class="date">{{ $berita->tanggal }}</div>
+									<h2>{{ $berita->judulberita }}</h2>
+									<p class="text">{{ Str::limit($berita->deskripsi, 116) }}</p>
 								</div>
 							</div>
 						</div>

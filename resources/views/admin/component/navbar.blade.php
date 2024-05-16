@@ -1,31 +1,51 @@
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top d-flex align-items-center">
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top d-flex align-items-center">
 
+<<<<<<< HEAD
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="{{ route('admin.dashboard')}}" class="logo d-flex align-items-center">
         <img src="{{ asset('user/img/logo-pt.png')}}" alt="">
         <span class="d-none d-lg-block">Admin</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
+=======
+  <div class="d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center">
+      <img src="{{ asset('user/img/logo-pt.png')}}" alt="">
+      <span class="d-none d-lg-block">Admin</span>
+    </a>
+    <i class="bi bi-list toggle-sidebar-btn"></i>
+  </div><!-- End Logo -->
+>>>>>>> 0743c1b80f38422a5b8e07faf5f826b367cca4e3
 
-    <nav class="header-nav ms-auto">
-      <ul class="d-flex align-items-center">
+</header><!-- End Header -->
 
-        <li class="nav-item d-block d-lg-none">
+
+
+    
+
+  <!--KODE TIDAK DIPAKAI-->
+  <!--Search Icon-->
+        {{-- <li class="nav-item d-block d-lg-none">
           <a class="nav-link nav-icon search-bar-toggle " href="#">
             <i class="bi bi-search"></i>
           </a>
-        </li><!-- End Search Icon-->
+        </li> --}}
+        <!-- End Search Icon-->
 
-        <li class="nav-item dropdown">
+        <!-- Notification Nav -->
+        {{-- <li class="nav-item dropdown"> --}}
 
-          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+          <!--Notification Icon-->
+          {{-- <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="bi bi-bell"></i>
             <span class="badge bg-primary badge-number">4</span>
-          </a><!-- End Notification Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+          </a> --}}
+          <!-- End Notification Icon -->
+          
+          <!-- Notification Dropdown Items -->
+          {{-- <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
             <li class="dropdown-header">
               You have 4 new notifications
               <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
@@ -89,17 +109,22 @@
               <a href="#">Show all notifications</a>
             </li>
 
-          </ul><!-- End Notification Dropdown Items -->
+          </ul> --}}
+          <!-- End Notification Dropdown Items -->
 
-        </li><!-- End Notification Nav -->
+        {{-- </li> --}}
+        <!-- End Notification Nav -->
 
-        <li class="nav-item dropdown">
+        {{-- <li class="nav-item dropdown">
 
+          <!-- Messages Icon -->
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="bi bi-chat-left-text"></i>
             <span class="badge bg-success badge-number">3</span>
-          </a><!-- End Messages Icon -->
+          </a>
+          <!-- End Messages Icon -->
 
+          <!-- Messages Nav -->
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
             <li class="dropdown-header">
               You have 3 new messages
@@ -155,33 +180,42 @@
               <a href="#">Show all messages</a>
             </li>
 
-          </ul><!-- End Messages Dropdown Items -->
+          </ul>
+          <!-- End Messages Dropdown Items --> --}}
 
-        </li><!-- End Messages Nav -->
+        {{-- </li> --}}
+        <!-- End Messages Nav -->
 
+<<<<<<< HEAD
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="{{ asset('admin/img/profile-img.jpg')}}" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+            <img src="{{ asset('user/img/profile.png')}}" alt="Profile" class="rounded-circle">
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-            <li class="dropdown-header">
+            {{-- <li class="dropdown-header">
               <h6>Kevin Anderson</h6>
               <span>Web Designer</span>
-            </li>
+            </li> --}}
             <li>
+=======
+        {{-- <li class="dropdown-header">
+              <h6>Kevin Anderson</h6>
+              <span>Web Designer</span>
+            </li> --}}
+            {{-- <li>
+>>>>>>> 0743c1b80f38422a5b8e07faf5f826b367cca4e3
               <hr class="dropdown-divider">
-            </li>
+            </li> --}}
 
-            <li>
+            {{-- <li>
               <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
                 <i class="bi bi-person"></i>
                 <span>My Profile</span>
               </a>
-            </li>
-            <li>
+            </li> --}}
+            {{-- <li>
               <hr class="dropdown-divider">
             </li>
 
@@ -203,9 +237,24 @@
             </li>
             <li>
               <hr class="dropdown-divider">
-            </li>
+            </li> --}}
 
-            <li>
+            {{-- <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item dropdown pe-3"> --}}
+
+          <!-- Profile Image Icon -->
+          {{-- <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="{{ asset('admin/img/profile-img.jpg')}}" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+          </a> --}}
+          <!-- End Profile Iamge Icon -->
+
+          {{-- <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile"> --}}
+            
+
+            {{-- <li>
               <a class="dropdown-item d-flex align-items-center" type="submit" href="{{ route('admin.logout') }}">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
@@ -218,4 +267,4 @@
       </ul>
     </nav><!-- End Icons Navigation -->
 
-  </header><!-- End Header -->
+  </header><!-- End Header --> --}} 

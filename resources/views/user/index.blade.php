@@ -201,10 +201,10 @@
 											<img src="{{ asset('user/img/elektronik.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
-											<p>GADAI ELEKTRONIK</p>
+											<p>Maecenas vitae luctus nibh.</p>
 										</div>
 									</div>
-								</div>
+								</div>											
 							</div>
 						</div>
 						<!-- End Choose Left -->
@@ -223,21 +223,24 @@
 		<section class="custom-pricing-table section">
 			<div class="container">
 				<div class="row">
+					@foreach ($promos as $promo)
 					<div class="col-md-6">
 						<div class="promo-text">
-							<h2>Promo Terbaru Danau Emas</h2>
-							<p>Gunakan kode promo dan dapatkan kesempatan untuk mendapat potongan dan hadiah menarik lainnya</p>
+							<h2>{{ $promo->temapromo }}</h2>
+							<p>{{ $promo->despromo }}</p>
 							<span class="link-text" onclick="window.location.href='https://www.example.com'">Lihat Semua Promo</span>						
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="image-container">
-							<img src="{{ asset('user/img/Gajian-Emas.jpeg')}}" alt="Right Image">
+							<img src="{{ asset('storage/' . $promo->fotopromo) }}" alt="Right Image">
 						</div>
-					</div>
+					</div>	
+					@endforeach
 				</div>
 			</div>  
 		</section>		
+		<!--/ End Pricing Table -->				
 		<!--/ End Promo -->			
 		
 		<!-- Start foto kegiatan -->
@@ -258,6 +261,7 @@
 					{{-- @foreach ($data as $row) --}}
 					<div class="col-lg-12 col-12">
 						<div class="owl-carousel portfolio-slider">
+<<<<<<< HEAD
 							{{-- <div class="single-pf">
 								<img src="{{ asset('storage/' . $row->photokegiatan) }}" alt="#">
 								<a href="portfolio-details.html" class="btn">View Details</a>
@@ -287,13 +291,60 @@
 								<img src="{{ asset('user/img/pf4.jpg')}}" alt="#">
 								<a href="portfolio-details.html" class="btn">View Details</a>
 							</div> --}}
+=======
+							@foreach ($kegiatans as $kegiatan)
+							<div class="single-pf">
+								<img src="{{ asset('storage/' . $kegiatan->potokegiatan1) }}" alt="#"> 
+								<a href="{{ route('user.detailkegiatan', $kegiatan->id) }}" class="btn">View Details</a>
+							</div>
+							@endforeach
+>>>>>>> cfb2683c6d86f8993c9fe9cc0d6310284931e9a7
 						</div>
 					</div>
 					{{-- @endforeach --}}
 				</div>
 			</div>
+			
 		</section>
 		<!--/ End foto kegiatan -->
+
+
+		<!-- Start Blog Area -->
+		<section class="blog section" id="blog">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Keep up with Our Most Recent Medical News.</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					@foreach ($beritas as $berita)
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<a href="{{ route('user.detailberita', $berita->id) }}">
+								<img src="{{ asset('storage/' . $berita->fotoberita) }}" alt="#">
+								</a>
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div class="date">{{ $berita->tanggal }}</div>
+									<h2><a href="{{ route('user.detailberita', $berita->id) }}">{{ $berita->judulberita }}</a></h2>
+									<p class="text">{{ Str::limit($berita->deskripsi, 116) }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					@endforeach
+				</div>
+			</div>
+		</section>
+		<!-- End Blog Area -->
+
 		
 		<!-- Start layanan -->
 		<section class="services section">
@@ -360,9 +411,9 @@
 							<div class="member-img">
 								<img src="{{ asset('user/img/person.jpg')}}" alt="#">
 								<div class="social-icons">
-									{{-- <a href="#"><i class="fa fa-instagram"></i></a>
+									<a href="#"><i class="fa fa-instagram"></i></a>
 									<a href="#"><i class="fa fa-whatsapp"></i></a>
-									<a href="#"><i class="fa fa-linkedin"></i></a> --}}
+									<a href="#"><i class="fa fa-linkedin"></i></a>
 								</div>
 							</div>
 							<div class="member-details">
@@ -377,7 +428,6 @@
 			</div>
 		</section>
 		<!-- End Our Team Area -->
-
 
 		<!-- Start clients -->
 		<div class="clients overlay">
@@ -419,14 +469,13 @@
 		</div>
 		<!--/Ens clients -->
 		
-		<!-- Start Customer Service -->
-		<section id="appointment">
+		<!-- Start Appointment -->
+		<section class="appointment">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>Kami Selalu Siap Untuk Membantu Anda. Hubungi kami disini</h2>
-							{{-- <img src="{{ asset('user/img/person.png')}}" alt="#">  --}}
+							<h2>Kami Selalu Siap Untuk Membantu Anda. Hubungi Kami Disini</h2>
 							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
 						</div>
 					</div>
@@ -450,7 +499,7 @@
 										<input name="phone" type="text" placeholder="Phone">
 									</div>
 								</div>
-								{{-- <div class="col-lg-6 col-md-6 col-12">
+								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
 										<div class="nice-select form-control wide" tabindex="0"><span class="current">Department</span>
 											<ul class="list">
@@ -462,8 +511,8 @@
 											</ul>
 										</div>
 									</div>
-								</div> --}}
-								{{-- <div class="col-lg-6 col-md-6 col-12">
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
 										<div class="nice-select form-control wide" tabindex="0"><span class="current">Doctor</span>
 											<ul class="list">
@@ -474,12 +523,12 @@
 											</ul>
 										</div>
 									</div>
-								</div> --}}
-								{{-- <div class="col-lg-6 col-md-6 col-12">
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
 										<input type="text" placeholder="Date" id="datepicker">
 									</div>
-								</div> --}}
+								</div>
 								<div class="col-lg-12 col-md-12 col-12">
 									<div class="form-group">
 										<textarea name="message" placeholder="Write Your Message Here....."></textarea>
@@ -490,7 +539,7 @@
 								<div class="col-lg-5 col-md-4 col-12">
 									<div class="form-group">
 										<div class="button">
-											<button type="submit" class="btn">Submit</button>
+											<button type="submit" class="btn">Book An Appointment</button>
 										</div>
 									</div>
 								</div>
@@ -502,7 +551,7 @@
 					</div>
 					<div class="col-lg-6 col-md-12 ">
 						<div class="appointment-image">
-							<img src="{{ asset('user/img/person.jpg')}}" alt="#"> 
+							<img src="img/contact-img.png" alt="#">
 						</div>
 					</div>
 				</div>
@@ -513,35 +562,35 @@
 		<!-- Start Newsletter Area -->
 		 <section class="newsletter section">
 			<div class="container">
-				{{-- <div class="row ">
+				<div class="row ">
 					<div class="col-lg-6  col-12">
 						<!-- Start Newsletter Form -->
 						<div class="subscribe-text ">
-							<h6>Sign up for newsletter</h6>
-							<p class="">Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu,<br> homero alterum.</p>
+							<h6>Subscribe Sekarang</h6>
+							<p class="">Dan Dapatkan Informasi Terbaru dari<br> Danau Emas Gadai Jatim.</p>
 						</div>
 						<!-- End Newsletter Form -->
 					</div>
 					<div class="col-lg-6  col-12">
 						<!-- Start Newsletter Form -->
 						<div class="subscribe-form ">
-							<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-								<input name="EMAIL" placeholder="Your email address" class="common-input" onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Your email address'" required="" type="email">
-								<button class="btn">Subscribe</button>
+							@if(session('success'))
+							<div>{{ session('success') }}</div>
+							@endif
+							<form action="{{ route('subscribe') }}" method="POST">
+								@csrf
+								<input type="email" id="email" name="email" placeholder="Your Email" class="common-input" required>
+								<button type="submit" class="btn">Subscribe</button>
 							</form>
 						</div>
 						<!-- End Newsletter Form -->
 					</div>
-				</div> --}}
+				</div>
 			</div>
 		</section>
 		<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f1e7a459-985a-4cf7-8bfb-bcbf1bde08c6";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 
-		<!-- /End Newsletter Area -->  
 @endsection
-
-
 {{-- KODE TIDAK DIPAKAI SEMENTARA --}}
 <!-- Start Why choose -->
 		{{-- <section class="why-choose section" >

@@ -27,9 +27,8 @@
 						<div class="inner-content">
 							<div class="image-slider">
 								<div class="pf-details-slider">
-									<img src="{{ asset('user/img/call-bg.jpg')}}" alt="#">  
-									<img src="{{ asset('user/img/call-bg.jpg')}}" alt="#">
-									<img src="{{ asset('user/img/call-bg.jpg')}}" alt="#">
+									<img src="{{ asset('user/img/danauemas.png')}}" alt="#">  
+									<img src="{{ asset('user/img/Gajian-Emas.jpeg')}}" alt="#">
 								</div>
 							</div>
 							<div class="date">

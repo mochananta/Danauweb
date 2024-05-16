@@ -9,6 +9,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class KegiatanController extends Controller
 {
+<<<<<<< HEAD
     public function index()
     {
         $data = Kegiatan::all();
@@ -24,6 +25,23 @@ class KegiatanController extends Controller
     //     return view('user.index', compact('data'));
     // }
 
+=======
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
+        $kegiatans = Kegiatan::all();
+        $title = 'Delete Data!';
+        $text = "Apakah Kamu Yakin Akan Menghapus Data Ini?";
+        confirmDelete($title, $text);
+        return view('admin.kegiatan.view_kegiatan', compact('kegiatans'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+>>>>>>> cfb2683c6d86f8993c9fe9cc0d6310284931e9a7
     public function create()
     {
         return view('admin.kegiatan.add_kegiatan');
@@ -31,6 +49,7 @@ class KegiatanController extends Controller
 
     /**
      * Store a newly created resource in storage.
+<<<<<<< HEAD
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -47,15 +66,45 @@ class KegiatanController extends Controller
         }
         $data->save();
 
+=======
+     */
+    public function store(Request $request)
+    {
+        $kegiatans = new Kegiatan();
+        $kegiatans->topik = $request->topik;
+        $kegiatans->tanggalkegiatan = $request->tanggalkegiatan;
+        $kegiatans->judulkegiatan = $request->judulkegiatan;
+        if ($request->hasFile('potokegiatan1') && $request->hasFile('potokegiatan2')) {
+            $poto_kegiatan1 = $request->file('potokegiatan1')->store('potokegiatan1');
+            $poto_kegiatan2 = $request->file('potokegiatan2')->store('potokegiatan2');
+            $kegiatans->potokegiatan1 = $poto_kegiatan1;
+            $kegiatans->potokegiatan2 = $poto_kegiatan2;        
+        }
+        $kegiatans->deskegiatan = $request->deskegiatan;
+        $kegiatans->save();
+    
+>>>>>>> cfb2683c6d86f8993c9fe9cc0d6310284931e9a7
         Alert::success('Success', 'Tambah data Berhasil!')->showConfirmButton('OK');
         return redirect()->route('kegiatan.view');
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * Display the specified resource.
+     */
+>>>>>>> cfb2683c6d86f8993c9fe9cc0d6310284931e9a7
     public function show(string $id)
     {
         //
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * Show the form for editing the specified resource.
+     */
+>>>>>>> cfb2683c6d86f8993c9fe9cc0d6310284931e9a7
     public function edit(string $id)
     {
         $editData = Kegiatan::Find($id);
@@ -64,6 +113,7 @@ class KegiatanController extends Controller
 
     /**
      * Update the specified resource in storage.
+<<<<<<< HEAD
      *  @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -88,6 +138,47 @@ class KegiatanController extends Controller
             Storage::delete($data->photokegiatan);
         }
         $data->delete();
+=======
+     */
+    public function update(Request $request, string $id)
+    {
+        $kegiatans = Kegiatan::find($id);
+        $kegiatans->topik = $request->topik;
+        $kegiatans->tanggalkegiatan = $request->tanggalkegiatan;
+        $kegiatans->judulkegiatan = $request->judulkegiatan;
+        if ($request->hasFile('potokegiatan1') && $request->hasFile('potokegiatan2')) {
+            $poto_kegiatan1 = $request->file('potokegiatan1')->store('potokegiatan1');
+            $poto_kegiatan2 = $request->file('potokegiatan2')->store('potokegiatan2');
+            $kegiatans->potokegiatan1 = $poto_kegiatan1;
+            $kegiatans->potokegiatan2 = $poto_kegiatan2;        
+            $kegiatans->save();
+        }
+        $kegiatans->deskegiatan = $request->deskegiatan;
+        $kegiatans->update();
+        return redirect()->route('kegiatan.view')->with('Success', 'Update Data Berhasil!!');
+    }
+
+    public function KegiatanShow(string $id)
+    {
+        $kegiatan = Kegiatan::find($id);        
+        return view('user.detailkegiatan', compact('kegiatan'));
+    }
+
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        $kegiatans = Kegiatan::find($id);
+            if ($kegiatans->potokegiatan1) {
+                Storage::delete($kegiatans->potokegiatan1);
+            }
+            if ($kegiatans->potokegiatan2) {
+                Storage::delete($kegiatans->potokegiatan2);        
+            }
+        $kegiatans->delete();
+>>>>>>> cfb2683c6d86f8993c9fe9cc0d6310284931e9a7
         return redirect()->route('kegiatan.view');
     }
 }

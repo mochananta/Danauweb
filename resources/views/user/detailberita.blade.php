@@ -36,33 +36,18 @@
 									<!-- Meta -->
 									<div class="meta">
 										<div class="meta-left">
+											<span class="author"><a href="#"><img src="{{ asset('user/img/profile.png')}}" alt="#">Virgianita</a></span>
 											<span class="date"><i class="fa fa-clock-o"></i>{{$berita->tanggal}}</span>
+										</div>
+										<div class="meta-right">
+											<span class="comments"><a href="#"><i class="fa fa-comments"></i>05 Comments</a></span>
+											<span class="views"><i class="fa fa-eye"></i>{{ $berita->views }} Views</span>
 										</div>
 									</div>
 									<!-- News Text -->
 									<div class="news-text">
-										<p>{{$berita->deskripsi}}</p>
-										{{-- <div class="image-gallery">
-											<div class="row">
-												<div class="col-lg-6 col-md-6 col-12">
-													<div class="single-image">
-														<img src="{{ asset('user/img/blog2.jpg')}}" alt="#"> 
-													</div>
-												</div>
-												<div class="col-lg-6 col-md-6 col-12">
-													<div class="single-image">
-														<img src="{{ asset('user/img/blog3.jpg')}}" alt="#">
-													</div>
-												</div>
-											</div>
-										</div>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis ultricies tortor, nec sollicitudin lorem sagittis vitae. Curabitur rhoncus commodo rutrum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam nec lacus pulvinar, laoreet dolor quis, pellentesque ante. Cras nulla orci, pharetra at dictum consequat, pretium pretium nulla. Suspendisse porttitor nunc a sodales tempor. Mauris sed felis maximus, interdum metus vel, tincidunt diam.</p>
-										<blockquote class="overlay">
-											<p>Aliquam nec lacus pulvinar, laoreet dolor quis, pellentesque ante. Cras nulla orci, pharetra at dictum consequat, pretium pretium nulla. Suspendisse porttitor nunc a sodales tempor. Mauris sed felis maximus, interdum metus vel, tincidunt diam. Nam ac risus vitae sem vehicula egestas. Sed velit nulla, viverra non commodo et, sodales</p>					
-										</blockquote>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis ultricies tortor, nec sollicitudin lorem sagittis vitae. Curabitur rhoncus commodo rutrum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam nec lacus pulvinar, laoreet dolor quis, pellentesque ante. Cras nulla orci, pharetra at dictum consequat, pretium pretium nulla. Suspendisse porttitor nunc a sodales tempor. Mauris sed felis maximus, interdum metus vel, tincidunt diam. Nam ac risus vitae sem vehicula egestas. Sed velit nulla, viverra non commodo et, sodales id dui.</p>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis ultricies tortor, nec sollicitudin lorem sagittis vitae. Curabitur rhoncus commodo rutrum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam nec lacus pulvinar, laoreet dolor quis, pellentesque ante. Cras nulla orci, pharetra at dictum consequat, pretium pretium nulla. Suspendisse</p> --}}
-									</div>
+										{!! nl2br($berita->deskripsi) !!}
+									</div>									
 									<div class="blog-bottom">
 										<!-- Social Share -->
 										<ul class="social-share">
@@ -74,8 +59,16 @@
 										</ul>
 										<!-- Next Prev -->
 										<ul class="prev-next">
-											<li class="prev"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
-											<li class="next"><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+											<li class="prev">
+												@if ($previousBerita)
+													<a href="{{ route('user.detailberita', $previousBerita->id) }}"><i class="fa fa-angle-double-left"></i></a>
+												@endif
+											</li>
+											<li class="next">
+												@if ($nextBerita)
+													<a href="{{ route('user.detailberita', $nextBerita->id) }}"><i class="fa fa-angle-double-right"></i></a>
+												@endif
+											</li>
 										</ul>
 										<!--/ End Next Prev -->
 									</div>
@@ -85,92 +78,64 @@
 								<div class="blog-comments">
 									<h2>All Comments</h2>
 									<div class="comments-body">
-										<!-- Single Comments -->
+										@foreach($komentars as $komentar)
+										<!-- Single Comment -->
 										<div class="single-comments">
 											<div class="main">
 												<div class="head">
-													<img src="{{ asset('user/img/author1.jpg')}}" alt="#"/> 
+													<img src="{{ asset('user/img/user.png')}}" alt="#"/>
 												</div>
 												<div class="body">
-													<h4>Afsana Mimi</h4>
-													<div class="comment-meta"><span class="meta"><i class="fa fa-calendar"></i>March 05, 2019</span><span class="meta"><i class="fa fa-clock-o"></i>03:38 AM</span></div>
-													<p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas</p>
+													<h4>{{ $komentar->nama }}</h4>
+													<div class="comment-meta">
+														<span class="meta"><i class="fa fa-calendar"></i>{{ $komentar->created_at->format('F d, Y') }}</span>
+														<span class="meta"><i class="fa fa-clock-o"></i>{{ $komentar->created_at->format('H:i') }}</span>
+													</div>
+													<p>{{ $komentar->teks }}</p>
 													<a href="#"><i class="fa fa-reply"></i>replay</a>
 												</div>
 											</div>
-										</div>		
-										<!--/ End Single Comments -->
-										<!-- Single Comments -->
-										<div class="single-comments left">
-											<div class="main">
-												<div class="head">
-													<img src="{{ asset('user/img/author2.jpg')}}" alt="#"/> 
-												</div>
-												<div class="body">
-													<h4>Naimur Rahman</h4>
-													<div class="comment-meta"><span class="meta"><i class="fa fa-calendar"></i>March 05, 2019</span><span class="meta"><i class="fa fa-clock-o"></i>03:38 AM</span></div>
-													<p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas</p>
-													<a href="#"><i class="fa fa-reply"></i>replay</a>
-												</div>
-											</div>
-										</div>		
-										<!--/ End Single Comments -->
-										<!-- Single Comments -->
-										<div class="single-comments">
-											<div class="main">
-												<div class="head">
-													<img src="{{ asset('user/img/author3.jpg')}}" alt="#"/>
-												</div>
-												<div class="body">
-													<h4>Suriya Molharta</h4>
-													<div class="comment-meta"><span class="meta"><i class="fa fa-calendar"></i>March 05, 2019</span><span class="meta"><i class="fa fa-clock-o"></i>03:38 AM</span></div>
-													<p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas</p>
-													<a href="#"><i class="fa fa-reply"></i>replay</a>
-												</div>
-											</div>
-										</div>		
-										<!--/ End Single Comments -->											
+										</div>      
+										<!--/ End Single Comment -->
+										@endforeach
 									</div>
 								</div>
 							</div>
+
 							<div class="col-12">
 								<div class="comments-form">
 									<h2>Leave Comments</h2>
-									<!-- Contact Form -->
-									<form class="form" method="post" action="mail/mail.php">
+									<!-- Form Komentar -->
+									<form class="form" method="post" action="{{ route('komentar.store') }}">
+										@csrf
+										<input type="hidden" name="berita_id" value="{{ $berita->id }}">
 										<div class="row">
 											<div class="col-lg-4 col-md-4 col-12">
 												<div class="form-group">
 													<i class="fa fa-user"></i>
-													<input type="text" name="first-name" placeholder="First name" required="required">
+													<input type="text" name="nama" placeholder="Nama" required="required">
 												</div>
 											</div>
 											<div class="col-lg-4 col-md-4 col-12">
 												<div class="form-group">
 													<i class="fa fa-envelope"></i>
-													<input type="text" name="last-name" placeholder="Last name" required="required">
-												</div>
-											</div>
-											<div class="col-lg-4 col-md-4 col-12">
-												<div class="form-group">
-													<i class="fa fa-envelope"></i>
-													<input type="email" name="email" placeholder="Your Email" required="required">
+													<input type="email" name="email" placeholder="Email" required="required">
 												</div>
 											</div>
 											<div class="col-12">
 												<div class="form-group message">
 													<i class="fa fa-pencil"></i>
-													<textarea name="message" rows="7" placeholder="Type Your Message Here" ></textarea>
+													<textarea name="teks" rows="7" placeholder="Tulis Komentar Anda" required></textarea>
 												</div>
 											</div>
 											<div class="col-12">
-												<div class="form-group button">	
+												<div class="form-group button">    
 													<button type="submit" class="btn primary"><i class="fa fa-send"></i>Submit Comment</button>
 												</div>
 											</div>
 										</div>
 									</form>
-									<!--/ End Contact Form -->
+									<!--/ End Form Komentar -->
 								</div>
 							</div>
 						</div>
@@ -178,12 +143,10 @@
 					<div class="col-lg-4 col-12">
 						<div class="main-sidebar">
 							<!-- Single Widget -->
-							{{-- <div class="single-widget search">
-								<div class="form">
-									<input type="email" placeholder="Search Here...">
-									<a class="button" href="#"><i class="fa fa-search"></i></a>
-								</div>
-							</div> --}}
+							<div class="single-widget search">
+								<input type="text" name="keyword" placeholder="Search Here...">
+								<button type="submit" class="button"><i class="fa fa-search"></i></button>
+							</div>							
 							<!--/ End Single Widget -->
 							<!-- Single Widget -->
 							{{-- <div class="single-widget category">
@@ -207,7 +170,7 @@
 										<img src="{{ asset('storage/' . $post->photopost) }}" alt="#"> 
 									</div>
 									<div class="content">
-										<h5><a href="{{ route('user.detailberita', ['id' => $post->id]) }}">{{ $post->judulpost }}</a></h5>
+										<h5><a href="{{ route('user.detailberita', ['id' => $post->id]) }}">{{ Str::limit($post->judulpost, 20) }}</a></h5>
 										<ul class="comment">
 											<li><i class="fa fa-calendar" aria-hidden="true"></i>{{ $post->tanggalpost }}</li>
 											<li><i class="fa fa-commenting-o" aria-hidden="true"></i>35</li>

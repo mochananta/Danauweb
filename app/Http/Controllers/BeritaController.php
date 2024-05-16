@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Berita;
+use App\Models\Komentar;
 use App\Models\Recentpost;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -25,8 +26,8 @@ class BeritaController extends Controller
     
     public function Berita()
     {
-        $data = Berita::all();
-        return view('user.berita', compact('data'));
+        $beritas = Berita::all();
+        return view('user.berita', compact('beritas'));
     }
 
     /**
@@ -90,13 +91,31 @@ class BeritaController extends Controller
         $data->update();
         return redirect()->route('berita.view')->with('Success', 'Update Data Berhasil!!');
     }
-    public function BeritaShow(string $id)
-    {
-        $berita = Berita::find($id);
-        $recentPosts = Recentpost::all();
+    // public function BeritaShow(string $id)
+    // {
+    //     $berita = Berita::find($id);
+    //     $recentPosts = Recentpost::all();
         
-        return view('user.detailberita', compact('berita', 'recentPosts'));
+    //     return view('user.detailberita', compact('berita', 'recentPosts'));
+    // }
+
+    public function BeritaShow($id)
+    {
+        // Dapatkan berita berdasarkan ID
+        $berita = Berita::find($id);
+        if (!$berita) {
+            return response()->view('errors.404', [], 404);
+        }
+    
+        $berita->increment('views');
+        $previousBerita = Berita::where('id', '<', $berita->id)->orderBy('id', 'desc')->first();
+        $nextBerita = Berita::where('id', '>', $berita->id)->orderBy('id')->first();
+        $recentPosts = Recentpost::all();
+        $komentars = Komentar::where('berita_id', $id)->get();
+    
+        return view('user.detailberita', compact('berita', 'recentPosts', 'komentars', 'previousBerita', 'nextBerita'));
     }
+        
 
     public function showRecentPost($id)
     {
