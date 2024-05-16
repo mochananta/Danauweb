@@ -528,35 +528,35 @@
 		<!-- Start Newsletter Area -->
 		 <section class="newsletter section">
 			<div class="container">
-				{{-- <div class="row ">
+				<div class="row ">
 					<div class="col-lg-6  col-12">
 						<!-- Start Newsletter Form -->
 						<div class="subscribe-text ">
-							<h6>Sign up for newsletter</h6>
-							<p class="">Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu,<br> homero alterum.</p>
+							<h6>Subscribe Sekarang</h6>
+							<p class="">Dan Dapatkan Informasi Terbaru dari<br> Danau Emas Gadai Jatim.</p>
 						</div>
 						<!-- End Newsletter Form -->
 					</div>
 					<div class="col-lg-6  col-12">
 						<!-- Start Newsletter Form -->
 						<div class="subscribe-form ">
-							<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-								<input name="EMAIL" placeholder="Your email address" class="common-input" onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Your email address'" required="" type="email">
-								<button class="btn">Subscribe</button>
+							@if(session('success'))
+							<div>{{ session('success') }}</div>
+							@endif
+							<form action="{{ route('subscribe') }}" method="POST">
+								@csrf
+								<input type="email" id="email" name="email" placeholder="Your Email" class="common-input" required>
+								<button type="submit" class="btn">Subscribe</button>
 							</form>
 						</div>
 						<!-- End Newsletter Form -->
 					</div>
-				</div> --}}
+				</div>
 			</div>
 		</section>
 		<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f1e7a459-985a-4cf7-8bfb-bcbf1bde08c6";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 
-		<!-- /End Newsletter Area -->  
 @endsection
-
-
 {{-- KODE TIDAK DIPAKAI SEMENTARA --}}
 <!-- Start Why choose -->
 		{{-- <section class="why-choose section" >

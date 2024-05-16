@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\PromoController;
 use App\Http\Controllers\RecentpostController;
+use App\Http\Controllers\SubscribeController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,19 +28,17 @@ Route::get('/faq', [UserController::class,'faqview'])->name('user.faq');
 Route::get('/team', [UserController::class,'teamview'])->name('user.team');
 Route::get('/berita', [BeritaController::class,'Berita'])->name('user.berita');
 Route::get('/detailberita/{id}', [BeritaController::class,'BeritaShow'])->name('user.detailberita');
-Route::get('/search', [BeritaController::class, 'search'])->name('search');
 Route::get('/detailkegiatan/{id}', [KegiatanController::class,'KegiatanShow'])->name('user.detailkegiatan');
-
-
+Route::post('/subscribe', [UserController::class, 'subscribe'])->name('subscribe');
+Route::post('/komentar', [UserController::class, 'store'])->name('komentar.store');
 
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('admin.dashboard');
-    })->name('admin.dashboard');
+
+    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
     //CRUD BERITA
     Route::get('/view', [BeritaController::class, 'index'])->name('berita.view');
     Route::get('/berita_add', [BeritaController::class, 'create'])->name('berita.add');
