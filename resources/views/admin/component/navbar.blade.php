@@ -3,6 +3,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div class="d-flex align-items-center justify-content-between">
       <a href="{{ route('admin.dashboard')}}" class="logo d-flex align-items-center">
         <img src="{{ asset('user/img/logo-pt.png')}}" alt="">
@@ -14,6 +15,9 @@
 =======
 
 >>>>>>> e60dea2ab1945bcf0f1291b66578f06eec0a21e9
+=======
+
+>>>>>>> 9cc1f71a352ce230adc5aa87ddfa62212d486ff3
   <div class="d-flex align-items-center justify-content-between">
     <a href="index.html" class="logo d-flex align-items-center">
       <img src="{{ asset('user/img/logo-pt.png')}}" alt="">
@@ -21,6 +25,7 @@
     </a>
     <i class="bi bi-list toggle-sidebar-btn"></i>
   </div><!-- End Logo -->
+<<<<<<< HEAD
 >>>>>>> 0743c1b80f38422a5b8e07faf5f826b367cca4e3
 
 
@@ -279,11 +284,9 @@
                 <span>Sign Out</span>
               </a>
             </li>
+=======
+>>>>>>> 9cc1f71a352ce230adc5aa87ddfa62212d486ff3
 
-          </ul><!-- End Profile Dropdown Items -->
-        </li><!-- End Profile Nav -->
 
-      </ul>
-    </nav><!-- End Icons Navigation -->
 
-  </header><!-- End Header --> --}} 
+</header><!-- End Header -->
