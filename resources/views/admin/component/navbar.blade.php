@@ -2,6 +2,7 @@
 <header id="header" class="header fixed-top d-flex align-items-center">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div class="d-flex align-items-center justify-content-between">
       <a href="{{ route('admin.dashboard')}}" class="logo d-flex align-items-center">
         <img src="{{ asset('user/img/logo-pt.png')}}" alt="">
@@ -10,6 +11,9 @@
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
 =======
+=======
+
+>>>>>>> e60dea2ab1945bcf0f1291b66578f06eec0a21e9
   <div class="d-flex align-items-center justify-content-between">
     <a href="index.html" class="logo d-flex align-items-center">
       <img src="{{ asset('user/img/logo-pt.png')}}" alt="">
@@ -18,6 +22,8 @@
     <i class="bi bi-list toggle-sidebar-btn"></i>
   </div><!-- End Logo -->
 >>>>>>> 0743c1b80f38422a5b8e07faf5f826b367cca4e3
+
+
 
 </header><!-- End Header -->
 
@@ -187,6 +193,15 @@
         <!-- End Messages Nav -->
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        {{-- <li class="dropdown-header">
+              <h6>Kevin Anderson</h6>
+              <span>Web Designer</span>
+            </li> --}}
+            {{-- <li>
+=======
+>>>>>>> e60dea2ab1945bcf0f1291b66578f06eec0a21e9
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
@@ -199,6 +214,7 @@
               <span>Web Designer</span>
             </li> --}}
             <li>
+<<<<<<< HEAD
 =======
         {{-- <li class="dropdown-header">
               <h6>Kevin Anderson</h6>
@@ -206,6 +222,9 @@
             </li> --}}
             {{-- <li>
 >>>>>>> 0743c1b80f38422a5b8e07faf5f826b367cca4e3
+=======
+>>>>>>> 753b6dbd0ec5792e4aa99d1d0c1a0e122d00dbc2
+>>>>>>> e60dea2ab1945bcf0f1291b66578f06eec0a21e9
               <hr class="dropdown-divider">
             </li> --}}
 

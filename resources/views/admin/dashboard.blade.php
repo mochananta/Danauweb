@@ -15,6 +15,10 @@
     <section class="section dashboard">
       <div class="row">
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e60dea2ab1945bcf0f1291b66578f06eec0a21e9
         <!-- Left side columns -->
         <div class="col-lg-8">
           <div class="row">
@@ -89,6 +93,7 @@
               </div>
             </div><!-- End Revenue Card -->
 
+<<<<<<< HEAD
             <!-- Customers Card -->
             <div class="col-xxl-4 col-xl-12">
 
@@ -509,6 +514,9 @@
             </div>
           </div><!-- End Budget Report -->
 
+=======
+   
+>>>>>>> e60dea2ab1945bcf0f1291b66578f06eec0a21e9
           <!-- Website Traffic -->
           <div class="card">
             <div class="filter">
@@ -585,7 +593,9 @@
               </script>
 
             </div>
-          </div><!-- End Website Traffic -->
+          </div>
+          
+
 
           <!-- News & Updates Traffic -->
           <div class="card">
@@ -596,6 +606,7 @@
                   <h6>Filter</h6>
                 </li>
 
+<<<<<<< HEAD
                 <li><a class="dropdown-item" href="#">Today</a></li>
                 <li><a class="dropdown-item" href="#">This Month</a></li>
                 <li><a class="dropdown-item" href="#">This Year</a></li>
@@ -642,9 +653,12 @@
           </div><!-- End News & Updates -->
 
         </div><!-- End Right side columns -->
+=======
+        </div>
+>>>>>>> e60dea2ab1945bcf0f1291b66578f06eec0a21e9
 
       </div>
     </section>
 
-  </main><!-- End #main -->
+  </main>
 @endsection
