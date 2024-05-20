@@ -91,13 +91,4 @@ Route::middleware([
 });
 
 
-
-//     //CRUD POSTINGAN TERBARU
-//     // Route::get('/recentpost', [RecentpostController::class, 'index'])->name('recentpost.view');
-//     // Route::get('/recentpost_add', [RecentpostController::class, 'create'])->name('recentpost.add');
-//     // Route::post('/recentpost_store', [RecentpostController::class, 'store'])->name('recentpost.store');
-//     // Route::get('/recentpost_edit/{id}', [RecentpostController::class, 'edit'])->name('recentpost.edit');
-//     // Route::post('/recentpost_update/{id}', [RecentpostController::class, 'update'])->name('recentpost.update');
-//     // Route::delete('/deleterecentpost/{id}', [RecentpostController::class, 'destroy'])->name('recentpost.delete');
-// });
 Route::get('/auth/logout', [AuthController::class, 'logout'])->name('admin.logout')->middleware('auth');
