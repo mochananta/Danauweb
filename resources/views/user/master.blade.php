@@ -45,21 +45,17 @@
     <body>
 	
 		<!-- Preloader -->
-        <div class="preloader">
-            <div class="loader">
-                <div class="loader-outter"></div>
-                <div class="loader-inner"></div>
+		{{-- <div class="preloader flex-column justify-content-center align-items-center">
+            <img class="img-circle" src="{{ asset('user/img/logo-pt.png') }}" alt="PT. Danau Emas Gadai Jatim"
+                height="60" width="60">
+        </div> --}}
 
-                <div class="indicator"> 
-                    <svg width="16px" height="12px">
-                        <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
-                        <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
-                    </svg>
-                </div>
-            </div>
+        <div class="preloader flex-column justify-content-center align-items-center">
+            <img class="img-circle" src="{{ asset('user/img/logo-pt.png') }}" alt="PT. Danau Emas Gadai Jatim"
+                height="250" width="250">
         </div>
+		
         <!-- End Preloader -->
-<<<<<<< HEAD
 		{{-- <!-- Get Pro Button -->
 		<ul class="pro-features">
 			<a class="get-pro" href="#">Get Pro</a>
@@ -75,9 +71,6 @@
 				<a href="https://themeforest.net/item/mediplus-medical-and-doctor-html-template/26665910" target="_blank" class="btn">Buy Pro Version</a>
 			</div>
 		</ul>  --}}
-=======
->>>>>>> cfb2683c6d86f8993c9fe9cc0d6310284931e9a7
-	
 		<!-- Header Area -->
 		<header class="header" >
 			<!-- Topbar -->

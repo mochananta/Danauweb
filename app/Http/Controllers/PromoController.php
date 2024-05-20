@@ -30,7 +30,7 @@ class PromoController extends Controller
     //      $data = Promo::all();
     //      return view('user.index', compact('data'));
     //  }
- 
+
 
     public function create()
     {
@@ -50,7 +50,7 @@ class PromoController extends Controller
         }
         $data->despromo = $request->despromo;
         $data->save();
-    
+
         Alert::success('Success', 'Tambah data Berhasil!')->showConfirmButton('OK');
         return redirect()->route('promo.view');
     }
@@ -100,7 +100,7 @@ class PromoController extends Controller
     public function destroy(string $id)
     {
         $data = Promo::find($id);
-        if ($data->fotopromo != null || $data->fotopromo ='' ){
+        if ($data->fotopromo != null || $data->fotopromo = '') {
             Storage::delete($data->fotopromo);
         }
         $data->delete();

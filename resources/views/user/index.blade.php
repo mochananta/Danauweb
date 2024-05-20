@@ -261,7 +261,6 @@
 					{{-- @foreach ($data as $row) --}}
 					<div class="col-lg-12 col-12">
 						<div class="owl-carousel portfolio-slider">
-<<<<<<< HEAD
 							{{-- <div class="single-pf">
 								<img src="{{ asset('storage/' . $row->photokegiatan) }}" alt="#">
 								<a href="portfolio-details.html" class="btn">View Details</a>
@@ -291,14 +290,12 @@
 								<img src="{{ asset('user/img/pf4.jpg')}}" alt="#">
 								<a href="portfolio-details.html" class="btn">View Details</a>
 							</div> --}}
-=======
 							@foreach ($kegiatans as $kegiatan)
 							<div class="single-pf">
 								<img src="{{ asset('storage/' . $kegiatan->potokegiatan1) }}" alt="#"> 
 								<a href="{{ route('user.detailkegiatan', $kegiatan->id) }}" class="btn">View Details</a>
 							</div>
 							@endforeach
->>>>>>> cfb2683c6d86f8993c9fe9cc0d6310284931e9a7
 						</div>
 					</div>
 					{{-- @endforeach --}}
