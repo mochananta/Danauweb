@@ -14,15 +14,6 @@
 
     <section class="section dashboard">
       <div class="row">
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e60dea2ab1945bcf0f1291b66578f06eec0a21e9
-=======
-
->>>>>>> 9cc1f71a352ce230adc5aa87ddfa62212d486ff3
         <!-- Left side columns -->
         <div class="col-lg-8">
           <div class="row">
@@ -50,9 +41,7 @@
 
             <!-- Sales Card -->
             <div class="col-xxl-4 col-md-6">
-<<<<<<< HEAD
               <div class="card info-card revenue-card">
-
                 <div class="filter">
                   <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
@@ -83,8 +72,6 @@
 
               </div>
             </div><!-- End Revenue Card -->
-
-<<<<<<< HEAD
             <!-- Customers Card -->
             <div class="col-xxl-4 col-xl-12">
 
@@ -102,9 +89,7 @@
                     <li><a class="dropdown-item" href="#">This Year</a></li>
                   </ul>
                 </div>
-=======
               <div class="card info-card sales-card">
->>>>>>> 9cc1f71a352ce230adc5aa87ddfa62212d486ff3
 
                 <div class="card-body">
                   <h5 class="card-title">Jumlah Data Kegiatan</h5>
@@ -122,14 +107,6 @@
 
               </div>
             </div><!-- End Sales Card -->
-
-<<<<<<< HEAD
-=======
-   
->>>>>>> e60dea2ab1945bcf0f1291b66578f06eec0a21e9
-=======
-   
->>>>>>> 9cc1f71a352ce230adc5aa87ddfa62212d486ff3
           <!-- Website Traffic -->
           <div class="card">
             <div class="filter">
@@ -216,10 +193,6 @@
 
             </div>
           </div>
-          
-<<<<<<< HEAD
-
-
           <!-- News & Updates Traffic -->
           <div class="card">
             <div class="filter">
@@ -228,8 +201,6 @@
                 <li class="dropdown-header text-start">
                   <h6>Filter</h6>
                 </li>
-
-<<<<<<< HEAD
                 <li><a class="dropdown-item" href="#">Today</a></li>
                 <li><a class="dropdown-item" href="#">This Month</a></li>
                 <li><a class="dropdown-item" href="#">This Year</a></li>
@@ -269,19 +240,10 @@
                   <h4><a href="#">Et dolores corrupti quae illo quod dolor</a></h4>
                   <p>Odit ut eveniet modi reiciendis. Atque cupiditate libero beatae dignissimos eius...</p>
                 </div>
-=======
->>>>>>> 9cc1f71a352ce230adc5aa87ddfa62212d486ff3
-
-
-
-<<<<<<< HEAD
-        </div><!-- End Right side columns -->
-=======
         </div>
->>>>>>> e60dea2ab1945bcf0f1291b66578f06eec0a21e9
-=======
+
         </div>
->>>>>>> 9cc1f71a352ce230adc5aa87ddfa62212d486ff3
+        </div>
 
       </div>
     </section>

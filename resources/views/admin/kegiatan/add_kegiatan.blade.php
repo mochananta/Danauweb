@@ -3,36 +3,6 @@
 @section('admin')
 <main id="main" class="main">
     <div class="pagetitle">
-<<<<<<< HEAD
-        <h1>Tabel Kegiatan</h1>
-        <nav>
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-            <li class="breadcrumb-item">Tables</li>
-            <li class="breadcrumb-item active">Tambah Recent Post</li>
-          </ol>
-        </nav>
-      </div><!-- End Page Title -->
-
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Form Kegiatan</h6>
-        </div>
-        <div class="card-body">
-            <form id="validate" method="POST" action="{{route('kegiatan.store')}}" enctype="multipart/form-data">
-                @csrf
-                <div class="form-group">
-                    <label for="judulkegiatan">Judul</label>
-                    <input type="text" name="judulkegiatan" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="tanggalkegiatan">Tanggal</label>
-                    <input type="date" name="tanggalkegiatan" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="photokegiatan">Photo Post</label>
-                    <input type="file" name="photokegiatan" class="form-control-file" required>
-=======
         <h1>Tambah Data Kegiatan</h1>
         <nav>
             <ol class="breadcrumb">
@@ -77,7 +47,6 @@
                 <div class="form-group">
                     <label for="potokegiatan2">Foto Tambahan</label>
                     <input type="file" name="potokegiatan2" class="form-control-file" id="potokegiatan2" required>
->>>>>>> cfb2683c6d86f8993c9fe9cc0d6310284931e9a7
                 </div>
                 <button type="submit" class="btn btn-primary">Tambah</button>
             </form>
@@ -87,35 +56,4 @@
 @endsection
 
 @push('js')
-<<<<<<< HEAD
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $("#validate").validate({
-                rules: {
-                    judulkegiatan: {
-                        required: true,
-                    },
-                    tanggalkegiatan: {
-                        required: true,
-                    },
-                    photokegiatan: {
-                        required: true,
-                    },
-                },
-                messages: {
-                    judulkegiatan: {
-                        required: "Judul harus diisi.",
-                    },
-                    tanggalkegiatan: {
-                        required: "Tanggal harus diisi.",
-                    },
-                    photokegiatan: {
-                        required: "Photo harus diunggah.",
-                    },
-                },
-            });
-        });
-    </script>
-=======
->>>>>>> cfb2683c6d86f8993c9fe9cc0d6310284931e9a7
 @endpush

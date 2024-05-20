@@ -10,8 +10,6 @@
       </a>
     </li>
     <!-- End Dashboard Nav -->
-
-<<<<<<< HEAD
       <!-- Tables Nav -->
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
@@ -28,8 +26,6 @@
               <i class="bi bi-circle"></i><span>Data Postingan</span>
             </a>
           </li>
-<<<<<<< HEAD
-          
           <li>
             <a href="{{ route('kegiatan.view') }}">
               <i class="bi bi-circle"></i><span>Data Kegiatan</span>
@@ -44,9 +40,6 @@
       </li><!-- End Tables Nav -->
 
       <li class="nav-heading">Pages</li>
-=======
->>>>>>> cfb2683c6d86f8993c9fe9cc0d6310284931e9a7
-=======
     <!-- Tables Nav -->
     <li class="nav-item">
       <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
@@ -63,9 +56,6 @@
             <i class="bi bi-circle"></i><span>Data Postingan</span>
           </a>
         </li>
->>>>>>> 9cc1f71a352ce230adc5aa87ddfa62212d486ff3
-
-        
         <li>
           <a href="{{ route('promo.view')}}">
             <i class="bi bi-circle"></i><span>Data Promo</span>

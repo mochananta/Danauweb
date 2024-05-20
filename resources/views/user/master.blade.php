@@ -50,10 +50,10 @@
                 height="60" width="60">
         </div> --}}
 
-        <div class="preloader flex-column justify-content-center align-items-center">
+        {{-- <div class="preloader flex-column justify-content-center align-items-center">
             <img class="img-circle" src="{{ asset('user/img/logo-pt.png') }}" alt="PT. Danau Emas Gadai Jatim"
                 height="250" width="250">
-        </div>
+        </div> --}}
 		
         <!-- End Preloader -->
 		{{-- <!-- Get Pro Button -->

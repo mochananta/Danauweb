@@ -178,30 +178,30 @@
 								<div class="col-lg-6">
 									<div class="flex-container">
 										<div class="small-box">
-											<img src="{{ asset('user/img/transportasi.png')}}" alt="Motorcycle Icon">
+											<img src="{{ asset('user/img/Group 139.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
-											<p>GADAI KENDARAAN BERMOTOR</p>
+											<p>GADAI EMAS</p>
 										</div>
 									</div>
 								</div>	
 								<div class="col-lg-6">
 									<div class="flex-container">
 										<div class="small-box">
-											<img src="{{ asset('user/img/emas.png')}}" alt="Motorcycle Icon">
+											<img src="{{ asset('user/img/Group 140.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
-											<p>GADAI EMAS</p>
+											<p>GADAI KENDARAAN</p>
 										</div>
 									</div>
 								</div>
 								<div class="col-lg-6">
 									<div class="flex-container">
 										<div class="small-box">
-											<img src="{{ asset('user/img/elektronik.png')}}" alt="Motorcycle Icon">
+											<img src="{{ asset('user/img/Group 141.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
-											<p>Maecenas vitae luctus nibh.</p>
+											<p>GADAI ALAT ELEKTRONIK.</p>
 										</div>
 									</div>
 								</div>											
