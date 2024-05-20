@@ -6,10 +6,8 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\PromoController;
 use App\Http\Controllers\RecentpostController;
-use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\SubscribeController;
 use App\Http\Controllers\UserController;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,19 +20,6 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-
-Route::get('/', [UserController::class, 'userview'])->name('user.index');
-Route::get('/about', [UserController::class, 'aboutview'])->name('user.about');
-Route::get('/faq', [UserController::class, 'faqview'])->name('user.faq');
-Route::get('/team', [UserController::class, 'teamview'])->name('user.team');
-Route::get('/berita', [BeritaController::class, 'Berita'])->name('user.berita');
-Route::get('/detailberita/{id}', [BeritaController::class, 'BeritaShow'])->name('user.detailberita');
-
-
-
-Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',])->group(function () {
-    Route::get('/dashboard', function () {return view('admin.dashboard');})->name('admin.dashboard');
 
 
 Route::get('/', [UserController::class,'userview'])->name('user.index');
@@ -54,7 +39,6 @@ Route::middleware([
 ])->group(function () {
 
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
-
     //CRUD BERITA
     Route::get('/view', [BeritaController::class, 'index'])->name('berita.view');
     Route::get('/berita_add', [BeritaController::class, 'create'])->name('berita.add');
@@ -62,8 +46,6 @@ Route::middleware([
     Route::get('/berita_edit/{id}', [BeritaController::class, 'edit'])->name('berita.edit');
     Route::post('/berita_update/{id}', [BeritaController::class, 'update'])->name('berita.update');
     Route::delete('/delete/{id}', [BeritaController::class, 'destroy'])->name('berita.delete');
-
-
 
     //CRUD POSTINGAN TERBARU
     Route::get('/recentpost', [RecentpostController::class, 'index'])->name('recentpost.view');
@@ -81,7 +63,6 @@ Route::middleware([
     Route::post('/promo_update/{id}', [PromoController::class, 'update'])->name('promo.update');
     Route::delete('/deletepromo/{id}', [PromoController::class, 'destroy'])->name('promo.delete');
 
-
     Route::get('/kegiatan', [KegiatanController::class, 'index'])->name('kegiatan.view');
     Route::get('/kegiatan_add', [KegiatanController::class, 'create'])->name('kegiatan.add');
     Route::post('/kegiatan_store', [KegiatanController::class, 'store'])->name('kegiatan.store');
@@ -89,6 +70,4 @@ Route::middleware([
     Route::post('/kegiatan_update/{id}', [KegiatanController::class, 'update'])->name('kegiatan.update');
     Route::delete('/deletekegiatan/{id}', [KegiatanController::class, 'destroy'])->name('kegiatan.delete');
 });
-
-
 Route::get('/auth/logout', [AuthController::class, 'logout'])->name('admin.logout')->middleware('auth');
