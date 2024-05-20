@@ -24,6 +24,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [UserController::class,'userview'])->name('user.index');
 Route::get('/about', [UserController::class,'aboutview'])->name('user.about');
+Route::get('/contact', [UserController::class,'contactview'])->name('user.contact');
 Route::get('/faq', [UserController::class,'faqview'])->name('user.faq');
 Route::get('/team', [UserController::class,'teamview'])->name('user.team');
 Route::get('/berita', [BeritaController::class,'Berita'])->name('user.berita');

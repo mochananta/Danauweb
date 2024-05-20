@@ -27,6 +27,12 @@ class UserController extends Controller
         return view('user.about');
     }
 
+        //Halaman FAQ View
+    public function contactview()
+    {
+        return view('user.contact');
+    }
+
     public function kegiatan()
     {
         return view('user.detailkegiatan');
