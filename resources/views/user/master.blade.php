@@ -118,7 +118,7 @@
 													<li><a href="{{ route('user.team')}}">Team all</a></li>
 												</ul>
 											</li>
-											<li><a href="#appointment">Contact Us</a></li>
+											<li><a href="{{ route('user.contact')}}">Contact Us</a></li>
 										</ul>
 									</nav>
 								</div>
@@ -138,7 +138,11 @@
 		<!-- End Header Area -->
 		
         @yield('user')
-		
+		@if(session('success'))
+		<div class="alert alert-success">
+			{{ session('success') }}
+		</div>
+		@endif		
 		<!-- Footer Area -->
 		<footer id="footer" class="footer ">
 			<!-- Footer Top -->

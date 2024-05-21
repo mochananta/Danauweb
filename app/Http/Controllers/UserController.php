@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Session;
 use App\Models\Berita;
+use App\Models\Contact;
 use App\Models\Kegiatan;
 use App\Models\Komentar;
 use App\Models\Promo;
 use App\Models\Subscribe;
 use Illuminate\Http\Request;
-
 class UserController extends Controller
 {
 
@@ -43,6 +44,11 @@ class UserController extends Controller
         return view('user.team');
     }
 
+    public function contactview()
+    {
+        return view('user.contact');
+    }
+
     public function subscribe(Request $request)
     {
         $request->validate([
@@ -73,5 +79,19 @@ class UserController extends Controller
         ]);
 
         return redirect()->back()->with('success', 'Komentar berhasil ditambahkan.');
+    }
+
+    public function contactstore(Request $request)
+    {
+        $validatedData = $request->validate([
+            'nama' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'descontact' => 'required',
+        ]);
+
+        Contact::create($validatedData);
+        Session::flash('success', 'Pesan telah berhasil terkirim!');        
+        return redirect()->route('user.contact');
     }
 }
