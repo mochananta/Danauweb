@@ -60,7 +60,6 @@
                 </div>
 
               </div>
-<<<<<<< HEAD
             </div>
             
             <div class="col-xxl-4 col-md-6">
@@ -103,9 +102,6 @@
               </div>
             </div>
             <!-- End Sales Card -->
-=======
-            </div><!-- End Sales Card -->
->>>>>>> 92ca6a3f55a7322e95ad7e294dda7feb2f2bf7ce
 
    
           <!-- Website Traffic -->

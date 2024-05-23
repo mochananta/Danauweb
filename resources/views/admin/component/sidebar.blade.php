@@ -64,10 +64,6 @@
 
   </ul>
   
-<<<<<<< HEAD
-
- 
-=======
 </aside>
 <!-- End Sidebar-->
->>>>>>> 92ca6a3f55a7322e95ad7e294dda7feb2f2bf7ce
+
