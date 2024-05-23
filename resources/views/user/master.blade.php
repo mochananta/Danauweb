@@ -138,6 +138,9 @@
 		<!-- End Header Area -->
 		
         @yield('user')
+		@if(@session('success'))
+		<div class="alert alert-success">{{session('success')}}</div>
+		@endif
 		
 		<!-- Footer Area -->
 		<footer id="footer" class="footer ">

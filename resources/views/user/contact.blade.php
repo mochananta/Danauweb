@@ -27,8 +27,11 @@
 					<div class="row"> 
 						<div class="col-lg-6">
 							<div class="contact-us-left">
+
 								<!--Start Google-map -->
-								<div id="myMap"></div>
+								<div>
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.4654870809577!2d112.67234967442565!3d-7.301483971777262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fc51bf64abdb%3A0x455426ee1e347d5f!2sUnesa%20Lake!5e0!3m2!1sen!2sid!4v1716264442446!5m2!1sen!2sid" width=600" height="700" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+								</div>
 								<!--/End Google-map -->
 							</div>
 						</div>
@@ -36,8 +39,10 @@
 							<div class="contact-us-form">
 								<h2>Contact With Us</h2>
 								<p>If you have any questions please fell free to contact with us.</p>
+
 								<!-- Form -->
-								<form class="form" method="post" action="mail/mail.php">
+								<form class="form" method="post" action="{{route('contact.store')}}">
+									@csrf
 									<div class="row">
 										<div class="col-lg-6">
 											<div class="form-group">
@@ -54,11 +59,11 @@
 												<input type="text" name="phone" placeholder="Phone" required="">
 											</div>
 										</div>
-										<div class="col-lg-6">
+										{{-- <div class="col-lg-6">
 											<div class="form-group">
 												<input type="text" name="subject" placeholder="Subject" required="">
 											</div>
-										</div>
+										</div> --}}
 										<div class="col-lg-12">
 											<div class="form-group">
 												<textarea name="message" placeholder="Your Message" required=""></textarea>

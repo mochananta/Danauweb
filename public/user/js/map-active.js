@@ -7,8 +7,8 @@ $(document).ready(function(){
 	var map;
 	map = new GMaps({
 		el: '#myMap',
-		lat: -6.2088, // Contoh latitude untuk Jakarta, Indonesia
-		lng: 106.8456, // Contoh longitude untuk Jakarta, Indonesia
+		lat: 51.507351, // Contoh latitude untuk Jakarta, Indonesia
+		lng: -0.127758, // Contoh longitude untuk Jakarta, Indonesia
 		scrollwheel: false,
 		zoom: 15,
 		zoomControl: false,
@@ -21,8 +21,8 @@ $(document).ready(function(){
 	
 	var image = 'img/map-marker.png';
 	map.addMarker({
-		lat: -6.2088,
-		lng: 106.8456,
+		lat: 51.507351,
+		lng: -0.127758,
 		icon: image,
 		animation: google.maps.Animation.DROP,
 		verticalAlign: 'bottom',
@@ -78,5 +78,6 @@ $(document).ready(function(){
 	});
 	
 	map.setStyle("map_style");
-	
+}());
+
 });

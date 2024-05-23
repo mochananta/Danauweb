@@ -8,6 +8,7 @@ use App\Models\Komentar;
 use App\Models\Promo;
 use App\Models\Subscribe;
 use Illuminate\Http\Request;
+use App\Models\Contacts;
 
 class UserController extends Controller
 {
@@ -80,4 +81,27 @@ class UserController extends Controller
 
         return redirect()->back()->with('success', 'Komentar berhasil ditambahkan.');
     }
+
+
+    public function contactstore(Request $request)
+    {
+        $request->validate([
+            'id' => 'required|exists:beritas,id',
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone' => 'required|string|max:255',
+            'message' => 'required|string',
+        ]);
+
+        Contacts::create([
+            'id' => $request->id,
+            'name' => $request->nama,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'message' => $request->message,
+        ]);
+
+        return redirect()->back()->with('success', 'Pesan berhasil dikirim.');
+    }
 }
+
