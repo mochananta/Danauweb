@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Session;
 use App\Models\Berita;
+use App\Models\Contact;
 use App\Models\Kegiatan;
 use App\Models\Komentar;
 use App\Models\Promo;
 use App\Models\Subscribe;
 use Illuminate\Http\Request;
-use App\Models\Contacts;
 
 class UserController extends Controller
 {
@@ -28,12 +29,6 @@ class UserController extends Controller
         return view('user.about');
     }
 
-        //Halaman FAQ View
-    public function contactview()
-    {
-        return view('user.contact');
-    }
-
     public function kegiatan()
     {
         return view('user.detailkegiatan');
@@ -48,6 +43,11 @@ class UserController extends Controller
     public function teamview()
     {
         return view('user.team');
+    }
+
+    public function contactview()
+    {
+        return view('user.contact');
     }
 
     public function subscribe(Request $request)
@@ -85,23 +85,17 @@ class UserController extends Controller
 
     public function contactstore(Request $request)
     {
-        $request->validate([
-            'id' => 'required|exists:beritas,id',
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'phone' => 'required|string|max:255',
-            'message' => 'required|string',
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'message' => 'required',
         ]);
 
-        Contacts::create([
-            'id' => $request->id,
-            'name' => $request->nama,
-            'email' => $request->email,
-            'phone' => $request->phone,
-            'message' => $request->message,
-        ]);
 
-        return redirect()->back()->with('success', 'Pesan berhasil dikirim.');
+        Contact::create($validatedData);
+        Session::flash('success', 'Pesan telah berhasil terkirim!');        
+        return redirect()->route('user.contact');
     }
 }
 

@@ -3,10 +3,8 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BeritaController;
-use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\PromoController;
 use App\Http\Controllers\RecentpostController;
-use App\Http\Controllers\SubscribeController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,6 +25,8 @@ Route::get('/about', [UserController::class,'aboutview'])->name('user.about');
 Route::get('/contact', [UserController::class,'contactview'])->name('user.contact');
 Route::get('/faq', [UserController::class,'faqview'])->name('user.faq');
 Route::get('/team', [UserController::class,'teamview'])->name('user.team');
+Route::get('/contact', [UserController::class, 'contactview'])->name('user.contact');
+Route::post('/contact', [UserController::class, 'contactstore'])->name('contact.store');
 Route::get('/berita', [BeritaController::class,'Berita'])->name('user.berita');
 Route::get('/detailberita/{id}', [BeritaController::class,'BeritaShow'])->name('user.detailberita');
 Route::get('/detailkegiatan/{id}', [KegiatanController::class,'KegiatanShow'])->name('user.detailkegiatan');

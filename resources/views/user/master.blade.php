@@ -138,8 +138,9 @@
 		<!-- End Header Area -->
 		
         @yield('user')
+
 		@if(@session('success'))
-		<div class="alert alert-success">{{session('success')}}</div>
+		<div class="alert alert-success">{{ session('success') }}</div>
 		@endif
 		
 		<!-- Footer Area -->
