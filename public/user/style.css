@@ -1007,15 +1007,6 @@ body{
 	padding-bottom:20px;
 	margin-bottom:24px;
 }
-.why-choose .choose-left h3:before{
-	position:absolute;
-	content:"";
-	left:0;
-	bottom:0;
-	height:2px;
-	width:50px;
-	background:#FEE315;
-}
 .why-choose .choose-left p{
 	margin-bottom:35px;
 }
@@ -1093,18 +1084,6 @@ body{
 	margin-left: -100px;
 	top: 50%;
 	margin-top: -100px;
-}
-.why-choose .video-image .waves-block .wave-1 {
-    -webkit-animation-delay: 0s;
-    animation-delay: 0s;
-}
-.why-choose .video-image .waves-block .wave-2 {
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-}
-.why-choose .video-image .waves-block .wave-3 {
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
 }
 /*=======================
 	End Why choose CSS

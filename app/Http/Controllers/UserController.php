@@ -78,7 +78,7 @@ class UserController extends Controller
             'teks' => $request->teks,
         ]);
 
-        return redirect()->back()->with('success', 'Komentar berhasil ditambahkan.');
+        Session::flash('success', 'Komentar telah berhasil terkirim!');        
     }
 
     public function contactstore(Request $request)
