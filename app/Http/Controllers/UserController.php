@@ -86,10 +86,10 @@ class UserController extends Controller
     public function contactstore(Request $request)
     {
         $validatedData = $request->validate([
-            'name' => 'required',
+            'nama' => 'required',
             'email' => 'required|email',
             'phone' => 'required',
-            'message' => 'required',
+            'descontact' => 'required',
         ]);
 
 

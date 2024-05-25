@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\PromoController;
 use App\Http\Controllers\RecentpostController;
 use App\Http\Controllers\UserController;
@@ -33,7 +34,7 @@ Route::get('/detailkegiatan/{id}', [KegiatanController::class,'KegiatanShow'])->
 Route::post('/subscribe', [UserController::class, 'subscribe'])->name('subscribe');
 Route::post('/komentar', [UserController::class, 'store'])->name('komentar.store');
 Route::post('/contact', [UserController::class, 'contactview'])->name('user.contact');
-Route::post('/contact', [UserController::class, 'contactstrore'])->name('contact.store');
+Route::post('/contact', [UserController::class, 'contactstore'])->name('contact.store');
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
