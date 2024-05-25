@@ -392,14 +392,14 @@
 		<section class="unit-details section">
 			<div class="container">
 				<div class="section-title">
-					<h2>Keep up with Our Most Recent Medical News.</h2>
+					<h2>Kunjungi Kami Di Unit Terdekatmu.</h2>
 				</div>				
 				<div class="row">
 					<!-- Card for Unit 1 -->
 					<div class="col-lg-4 col-md-6 col-sm-12">
 						<div class="card">
 							<div class="card-header">
-								<h4>Unit 1</h4>
+								<h4>Unit Penjaringan Sari</h4>
 							</div>
 							<div class="card-footer">
 								<!-- Embed Google Maps iframe -->
@@ -418,7 +418,7 @@
 					<div class="col-lg-4 col-md-6 col-sm-12">
 						<div class="card">
 							<div class="card-header">
-								<h4>Unit 2</h4>
+								<h4>Unit Tambahrejo</h4>
 							</div>
 							<div class="card-footer">
 								<!-- Embed Google Maps iframe -->
@@ -438,7 +438,7 @@
 					<div class="col-lg-4 col-md-6 col-sm-12">
 						<div class="card">
 							<div class="card-header">
-								<h4>Unit 2</h4>
+								<h4>Unit Tuban Gajahmada</h4>
 							</div>
 							<div class="card-footer">
 								<!-- Embed Google Maps iframe -->
@@ -454,6 +454,85 @@
 						</div>
 					</div>
 					<!-- Continue adding cards for other units as needed -->
+					<!-- Card for Unit 2 -->
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h4>Unit Tuban Ronggolawe</h4>
+							</div>
+							<div class="card-footer">
+								<!-- Embed Google Maps iframe -->
+								<iframe 
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.546932430138!2d106.84599961433347!3d-6.2089089955033985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f164a4e87d17%3A0x2e22b95639d56dd0!2sYour%20Location!5e0!3m2!1sen!2sid!4v1621781775001!5m2!1sen!2sidhttps://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.9652669153193!2d112.05549826842882!3d-6.894758052203037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e77bd59e4e2cf51%3A0x4a20273f0aafa0de!2sPt.Danau%20Emas%20Gadai%20Jatim!5e0!3m2!1sen!2sid!4v1716624622387!5m2!1sen!2sid" 
+									width="100%" 
+									height="200" 
+									style="border:0;" 
+									allowfullscreen="" 
+									loading="lazy">
+								</iframe>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card for Unit 2 -->
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h4>Unit Banyuwangi</h4>
+							</div>
+							<div class="card-footer">
+								<!-- Embed Google Maps iframe -->
+								<iframe 
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.791623247427!2d114.36951647381309!3d-8.223698882540988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd15baf0784fcfb%3A0x2e1cbb1f678fed8e!2sPT%20DANAU%20EMAS%20GADAI%20JATIM%20BANYUWANGI!5e0!3m2!1sen!2sid!4v1716624466292!5m2!1sen!2sid" 
+									width="100%" 
+									height="200" 
+									style="border:0;" 
+									allowfullscreen="" 
+									loading="lazy">
+								</iframe>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card for Unit 2 -->
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h4>Unit Rogojampi</h4>
+							</div>
+							<div class="card-footer">
+								<!-- Embed Google Maps iframe -->
+								<iframe 
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.9592564236727!2d114.29200707381464!3d-8.306847883579595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd1518c0e709b55%3A0x8dd2ef0a61d9b5fb!2sPT%20DANAU%20EMAS%20GADAI%20JATIM%20ROGOJAMPI!5e0!3m2!1sen!2sid!4v1716624255841!5m2!1sen!2sid" 
+									width="100%" 
+									height="200" 
+									style="border:0;" 
+									allowfullscreen="" 
+									loading="lazy">
+								</iframe>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card for Unit 2 -->
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h4>Unit Muncar</h4>
+							</div>
+							<div class="card-footer">
+								<!-- Embed Google Maps iframe -->
+								<iframe 
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.6786641178264!2d114.3348251738171!3d-8.433182585179265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd3e366f6898a25%3A0x1b41bfbf12c9f713!2sPT%20Danau%20Emas%20Gadai%20Jatim!5e0!3m2!1sen!2sid!4v1716624395685!5m2!1sen!2sid" 
+									width="100%" 
+									height="200" 
+									style="border:0;" 
+									allowfullscreen="" 
+									loading="lazy">
+								</iframe>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>

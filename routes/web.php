@@ -6,7 +6,6 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\PromoController;
 use App\Http\Controllers\RecentpostController;
-use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
