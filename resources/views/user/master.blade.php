@@ -41,11 +41,18 @@
         <link rel="stylesheet" href="{{ asset('user/style.css')}}">
         <link rel="stylesheet" href="{{ asset('user/css/responsive.css')}}">
 
+		<link rel="stylesheet" href="{{ asset('user/css/fonts/icomoon/style.css')}}" />
+    	<link rel="stylesheet" href="{{ asset('user/css/fonts/flaticon/font/flaticon.css')}}" />
+
+   		 <link rel="stylesheet" href="{{ asset('user/css/tiny-slider.css')}}" />
+  		 <link rel="stylesheet" href="{{ asset('user/css/aos.css')}}" />
+   		 <link rel="stylesheet" href="{{ asset('user/css/style.css')}}" />
+
     </head>
     <body>
 	
 		<!-- Preloader -->
-        <div class="preloader">
+        <!-- <div class="preloader">
             <div class="loader">
                 <div class="loader-outter"></div>
                 <div class="loader-inner"></div>
@@ -57,7 +64,7 @@
                     </svg>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- End Preloader -->
 	
 		<!-- Header Area -->

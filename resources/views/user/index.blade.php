@@ -67,7 +67,7 @@
 										<span>OPERASIONAL JAM</span>
 										<h4>Jam Buka</h4>
 										<ul class="time-sidual">
-											<li class="day">Senin-Jum’at <span>8.00-17.00</span></li>
+											<li class="day">Senin-Jum’at <span>08.00-17.00</span></li>
 											<li class="day">Sabtu <span>8.00-13.00</span></li>
 											<li class="day">Minggu & Hari Besar, Libur</span></li>
 										</ul>
@@ -181,7 +181,7 @@
 											<img src="{{ asset('user/img/group 139.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
-											<p>GADAI KENDARAAN BERMOTOR</p>
+											<p>GADAI EMAS</p>
 										</div>
 									</div>
 								</div>	
@@ -191,7 +191,7 @@
 											<img src="{{ asset('user/img/group 140.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
-											<p>GADAI EMAS</p>
+											<p>GADAI KENDARAAN BERMOTOR</p>
 										</div>
 									</div>
 								</div>
@@ -201,7 +201,7 @@
 											<img src="{{ asset('user/img/group 141.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
-											<p>Maecenas vitae luctus nibh.</p>
+											<p>GADAI ELEKTRONIK</p>
 										</div>
 									</div>
 								</div>											
@@ -212,7 +212,7 @@
 					<div class="col-lg-6 col-12">
 						<div class="choose-kedua">
 							{{-- ganti foto BA --}}
-							<img src="{{ asset('user/img/imm.png')}}" class="choose-right-img" alt="Deskripsi Gambar">
+							<img src="{{ asset('user/img/imm.jpeg')}}" class="choose-right-img" alt="Deskripsi Gambar">
 						</div>					
 					</div>
 				</div>
@@ -281,7 +281,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>Keep up with Our Most Recent Medical News.</h2>
+							<h2>Akan Ditampilkan video profil DEGJ</h2>
 							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
 						</div>
 					</div>
