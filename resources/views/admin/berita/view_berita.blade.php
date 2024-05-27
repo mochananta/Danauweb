@@ -3,12 +3,12 @@
 <main id="main" class="main">
 
   <div class="pagetitle">
-    <h1>Tabel Article</h1>
+    <h1>Tabel Artikel</h1>
     <nav>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-        <li class="breadcrumb-item">Tables</li>
-        <li class="breadcrumb-item active">Berita</li>
+        <li class="breadcrumb-item"><a href="{{url('/dashboard')}}">Dashboard</a></li>
+        <li class="breadcrumb-item">Konten</li>
+        <li class="breadcrumb-item active">Artikel</li>
       </ol>
     </nav>
   </div><!-- End Page Title -->
@@ -45,8 +45,7 @@
                         <td>{{$item->deskripsi}}</td>
                         <td>
                             <div class="row">
-                                <a href="{{route('berita.edit',$item->id)}}" class="col btn btn-success"
-                                    style="margin: 0 10px">Edit</a>
+                                <a href="{{route('berita.edit',$item->id)}}" class="col btn btn-success" style="margin:10px">Edit</a>
                                     <a href="{{route('berita.delete',$item->id)}}" class="col btn btn-danger" style="margin:10px" data-confirm-delete="true">Hapus</a>
                             </div>
                         </td>

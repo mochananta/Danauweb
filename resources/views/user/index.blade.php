@@ -178,7 +178,7 @@
 								<div class="col-lg-6">
 									<div class="flex-container">
 										<div class="small-box">
-											<img src="{{ asset('user/img/group 139.png')}}" alt="Motorcycle Icon">
+											<img src="{{ asset('user/img/Group 139.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
 											<p>GADAI EMAS</p>
@@ -188,7 +188,7 @@
 								<div class="col-lg-6">
 									<div class="flex-container">
 										<div class="small-box">
-											<img src="{{ asset('user/img/group 140.png')}}" alt="Motorcycle Icon">
+											<img src="{{ asset('user/img/Group 140.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
 											<p>GADAI KENDARAAN BERMOTOR</p>
@@ -198,7 +198,7 @@
 								<div class="col-lg-6">
 									<div class="flex-container">
 										<div class="small-box">
-											<img src="{{ asset('user/img/group 141.png')}}" alt="Motorcycle Icon">
+											<img src="{{ asset('user/img/Group 141.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
 											<p>GADAI ELEKTRONIK</p>
@@ -319,7 +319,6 @@
 					<div class="col-lg-12">
 						<div class="section-title">
 							<h2>Halaman layanan</h2>
-							<img src="{{ asset('user/img/section-img.png')}}" alt="#">
 							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
 						</div>
 					</div>
@@ -356,7 +355,190 @@
 			</div>
 		</section>
 		<!--/ End service -->
-			
+
+		<!-- Start frame youtube -->
+		<section class="why-choose section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Lorem ipsum dolor sit amet</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-12">
+						<!-- Start Choose Left -->
+						<div class="choose-pertama">
+							<h3>Lorem ipsum dolor sit amet,</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<!-- End Choose Left -->
+					</div>
+					<div class="col-lg-6 col-12">
+						<div class="choose-kedua">
+							<!-- Ganti foto dengan link YouTube -->
+							<div class="embed-responsive embed-responsive-16by9">
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/72H3CF2ZxuI" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Youtube -->
+
+		<section class="unit-details section">
+			<div class="container">
+				<div class="section-title">
+					<h2>Kunjungi Kami Di Unit Terdekatmu.</h2>
+				</div>				
+				<div class="row">
+					<!-- Card for Unit 1 -->
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h4>Unit Penjaringan Sari</h4>
+							</div>
+							<div class="card-footer">
+								<!-- Embed Google Maps iframe -->
+								<iframe 
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.546932430138!2d106.84599961433347!3d-6.2089089955033985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f164a4e87d17%3A0x2e22b95639d56dd0!2sYour%20Location!5e0!3m2!1sen!2sid!4v1621781775001!5m2!1sen!2sid" 
+									width="100%" 
+									height="200" 
+									style="border:0;" 
+									allowfullscreen="" 
+									loading="lazy">
+								</iframe>
+							</div>
+						</div>
+					</div>
+					<!-- Card for Unit 2 -->
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h4>Unit Tambahrejo</h4>
+							</div>
+							<div class="card-footer">
+								<!-- Embed Google Maps iframe -->
+								<iframe 
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.546932430138!2d106.84599961433347!3d-6.2089089955033985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f164a4e87d17%3A0x2e22b95639d56dd0!2sYour%20Location!5e0!3m2!1sen!2sid!4v1621781775001!5m2!1sen!2sid" 
+									width="100%" 
+									height="200" 
+									style="border:0;" 
+									allowfullscreen="" 
+									loading="lazy">
+								</iframe>
+							</div>
+						</div>
+					</div>
+					<!-- Continue adding cards for other units as needed -->
+					<!-- Card for Unit 2 -->
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h4>Unit Tuban Gajahmada</h4>
+							</div>
+							<div class="card-footer">
+								<!-- Embed Google Maps iframe -->
+								<iframe 
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.546932430138!2d106.84599961433347!3d-6.2089089955033985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f164a4e87d17%3A0x2e22b95639d56dd0!2sYour%20Location!5e0!3m2!1sen!2sid!4v1621781775001!5m2!1sen!2sid" 
+									width="100%" 
+									height="200" 
+									style="border:0;" 
+									allowfullscreen="" 
+									loading="lazy">
+								</iframe>
+							</div>
+						</div>
+					</div>
+					<!-- Continue adding cards for other units as needed -->
+					<!-- Card for Unit 2 -->
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h4>Unit Tuban Ronggolawe</h4>
+							</div>
+							<div class="card-footer">
+								<!-- Embed Google Maps iframe -->
+								<iframe 
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.546932430138!2d106.84599961433347!3d-6.2089089955033985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f164a4e87d17%3A0x2e22b95639d56dd0!2sYour%20Location!5e0!3m2!1sen!2sid!4v1621781775001!5m2!1sen!2sidhttps://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.9652669153193!2d112.05549826842882!3d-6.894758052203037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e77bd59e4e2cf51%3A0x4a20273f0aafa0de!2sPt.Danau%20Emas%20Gadai%20Jatim!5e0!3m2!1sen!2sid!4v1716624622387!5m2!1sen!2sid" 
+									width="100%" 
+									height="200" 
+									style="border:0;" 
+									allowfullscreen="" 
+									loading="lazy">
+								</iframe>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card for Unit 2 -->
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h4>Unit Banyuwangi</h4>
+							</div>
+							<div class="card-footer">
+								<!-- Embed Google Maps iframe -->
+								<iframe 
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.791623247427!2d114.36951647381309!3d-8.223698882540988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd15baf0784fcfb%3A0x2e1cbb1f678fed8e!2sPT%20DANAU%20EMAS%20GADAI%20JATIM%20BANYUWANGI!5e0!3m2!1sen!2sid!4v1716624466292!5m2!1sen!2sid" 
+									width="100%" 
+									height="200" 
+									style="border:0;" 
+									allowfullscreen="" 
+									loading="lazy">
+								</iframe>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card for Unit 2 -->
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h4>Unit Rogojampi</h4>
+							</div>
+							<div class="card-footer">
+								<!-- Embed Google Maps iframe -->
+								<iframe 
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.9592564236727!2d114.29200707381464!3d-8.306847883579595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd1518c0e709b55%3A0x8dd2ef0a61d9b5fb!2sPT%20DANAU%20EMAS%20GADAI%20JATIM%20ROGOJAMPI!5e0!3m2!1sen!2sid!4v1716624255841!5m2!1sen!2sid" 
+									width="100%" 
+									height="200" 
+									style="border:0;" 
+									allowfullscreen="" 
+									loading="lazy">
+								</iframe>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card for Unit 2 -->
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h4>Unit Muncar</h4>
+							</div>
+							<div class="card-footer">
+								<!-- Embed Google Maps iframe -->
+								<iframe 
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.6786641178264!2d114.3348251738171!3d-8.433182585179265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd3e366f6898a25%3A0x1b41bfbf12c9f713!2sPT%20Danau%20Emas%20Gadai%20Jatim!5e0!3m2!1sen!2sid!4v1716624395685!5m2!1sen!2sid" 
+									width="100%" 
+									height="200" 
+									style="border:0;" 
+									allowfullscreen="" 
+									loading="lazy">
+								</iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End of Main Content -->
+		
+		
 		
 	
 		<!-- Start Our Team Area -->
@@ -448,11 +630,12 @@
 				</div>
 				<div class="row">
 					<div class="col-lg-6 col-md-12 col-12">
-						<form class="form" action="#">
+						<form class="form" method="POST" action="{{ route('contact.store') }}">
+							@csrf
 							<div class="row">
 								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
-										<input name="name" type="text" placeholder="Name">
+										<input name="nama" type="text" placeholder="Name">
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6 col-12">
@@ -465,39 +648,9 @@
 										<input name="phone" type="text" placeholder="Phone">
 									</div>
 								</div>
-								<div class="col-lg-6 col-md-6 col-12">
-									<div class="form-group">
-										<div class="nice-select form-control wide" tabindex="0"><span class="current">Department</span>
-											<ul class="list">
-												<li data-value="1" class="option selected ">Department</li>
-												<li data-value="2" class="option">Cardiac Clinic</li>
-												<li data-value="3" class="option">Neurology</li>
-												<li data-value="4" class="option">Dentistry</li>
-												<li data-value="5" class="option">Gastroenterology</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-12">
-									<div class="form-group">
-										<div class="nice-select form-control wide" tabindex="0"><span class="current">Doctor</span>
-											<ul class="list">
-												<li data-value="1" class="option selected ">Doctor</li>
-												<li data-value="2" class="option">Dr. Akther Hossain</li>
-												<li data-value="3" class="option">Dr. Dery Alex</li>
-												<li data-value="4" class="option">Dr. Jovis Karon</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-12">
-									<div class="form-group">
-										<input type="text" placeholder="Date" id="datepicker">
-									</div>
-								</div>
 								<div class="col-lg-12 col-md-12 col-12">
 									<div class="form-group">
-										<textarea name="message" placeholder="Write Your Message Here....."></textarea>
+										<textarea name="descontact" placeholder="Write Your Message Here....."></textarea>
 									</div>
 								</div>
 							</div>
@@ -528,35 +681,35 @@
 		<!-- Start Newsletter Area -->
 		 <section class="newsletter section">
 			<div class="container">
-				{{-- <div class="row ">
+				<div class="row ">
 					<div class="col-lg-6  col-12">
 						<!-- Start Newsletter Form -->
 						<div class="subscribe-text ">
-							<h6>Sign up for newsletter</h6>
-							<p class="">Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu,<br> homero alterum.</p>
+							<h6>Subscribe Sekarang</h6>
+							<p class="">Dan Dapatkan Informasi Terbaru dari<br> Danau Emas Gadai Jatim.</p>
 						</div>
 						<!-- End Newsletter Form -->
 					</div>
 					<div class="col-lg-6  col-12">
 						<!-- Start Newsletter Form -->
 						<div class="subscribe-form ">
-							<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-								<input name="EMAIL" placeholder="Your email address" class="common-input" onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Your email address'" required="" type="email">
-								<button class="btn">Subscribe</button>
+							@if(session('success'))
+							<div>{{ session('success') }}</div>
+							@endif
+							<form action="{{ route('subscribe') }}" method="POST">
+								@csrf
+								<input type="email" id="email" name="email" placeholder="Your Email" class="common-input" required>
+								<button type="submit" class="btn">Subscribe</button>
 							</form>
 						</div>
 						<!-- End Newsletter Form -->
 					</div>
-				</div> --}}
+				</div>
 			</div>
 		</section>
 		<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f1e7a459-985a-4cf7-8bfb-bcbf1bde08c6";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 
-		<!-- /End Newsletter Area -->  
 @endsection
-
-
 {{-- KODE TIDAK DIPAKAI SEMENTARA --}}
 <!-- Start Why choose -->
 		{{-- <section class="why-choose section" >

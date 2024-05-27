@@ -125,7 +125,7 @@
 													<li><a href="{{ route('user.team')}}">Team all</a></li>
 												</ul>
 											</li>
-											<li><a href="#appointment">Contact Us</a></li>
+											<li><a href="{{ route('user.contact')}}">Contact Us</a></li>
 										</ul>
 									</nav>
 								</div>
@@ -145,6 +145,10 @@
 		<!-- End Header Area -->
 		
         @yield('user')
+
+		@if(@session('success'))
+		<div class="alert alert-success">{{ session('success') }}</div>
+		@endif
 		
 		<!-- Footer Area -->
 		<footer id="footer" class="footer ">
@@ -207,10 +211,10 @@
 							<div class="single-footer">
 								<h2>Newsletter</h2>
 								<p>subscribe to our newsletter to get allour news in your inbox.. Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
-								<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-									<input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''"
-										onblur="this.placeholder = 'Your email address'" required="" type="email">
-									<button class="button"><i class="icofont icofont-paper-plane"></i></button>
+								<form action="{{ route('subscribe') }}" method="POST" target="_blank" class="newsletter-inner">
+									@csrf
+									<input type="email" id="email" name="email" placeholder="Email Address" class="common-input" required>
+									<button type="submit" class="button"><i class="icofont icofont-paper-plane"></i></button>
 								</form>
 							</div>
 						</div>
@@ -270,6 +274,8 @@
 		<script src="{{ asset('user/js/jquery.magnific-popup.min.js')}}"></script>
 		<!-- Counter Up CDN JS -->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+
+		<script src="https://maps.google.com/maps/api/js?key=AWNVXaacmoDrNYbs5"></script>
 		<!-- Bootstrap JS -->
 		<script src="{{ asset('user/js/bootstrap.min.js')}}"></script>
 		<!-- Main JS -->

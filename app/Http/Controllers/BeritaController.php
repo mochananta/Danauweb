@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Berita;
+use App\Models\Komentar;
 use App\Models\Recentpost;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -102,21 +103,19 @@ class BeritaController extends Controller
     {
         // Dapatkan berita berdasarkan ID
         $berita = Berita::find($id);
-    
-        // Pastikan berita ditemukan
         if (!$berita) {
-            abort(404); // Tampilkan halaman 404 jika berita tidak ditemukan
+            return response()->view('errors.404', [], 404);
         }
     
-        // Tambahkan view
         $berita->increment('views');
-    
-        // Ambil daftar recent posts (atau postingan terbaru)
+        $previousBerita = Berita::where('id', '<', $berita->id)->orderBy('id', 'desc')->first();
+        $nextBerita = Berita::where('id', '>', $berita->id)->orderBy('id')->first();
         $recentPosts = Recentpost::all();
+        $komentars = Komentar::where('berita_id', $id)->get();
     
-        // Tampilkan halaman detail berita beserta recent posts
-        return view('user.detailberita', compact('berita', 'recentPosts'));
-    }    
+        return view('user.detailberita', compact('berita', 'recentPosts', 'komentars', 'previousBerita', 'nextBerita'));
+    }
+        
 
     public function showRecentPost($id)
     {
