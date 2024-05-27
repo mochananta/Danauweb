@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Berita;
 use App\Models\Kegiatan;
 use App\Models\Promo;
+use App\Models\Recentpost;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -19,7 +20,10 @@ class AdminController extends Controller
 
             $jumlahPromo = Promo::count(); 
             $dataPromo = Promo::all(); 
+
+            $jumlahPostingan = Recentpost::count();
+            $dataPostingan = Recentpost::all();
         
-            return view('admin.dashboard', compact('dataBerita', 'jumlahBerita', 'dataKegiatan', 'jumlahKegiatan', 'jumlahPromo', 'dataPromo'));
+            return view('admin.dashboard', compact('dataBerita', 'jumlahBerita', 'dataKegiatan', 'jumlahKegiatan', 'jumlahPromo', 'dataPromo', 'jumlahPostingan', 'dataPostingan'));
         }    
 }

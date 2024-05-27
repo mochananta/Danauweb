@@ -136,7 +136,7 @@
 													<li><a href="{{ route('user.team')}}">Team all</a></li>
 												</ul>
 											</li>
-											<li><a href="#appointment">Contact Us</a></li>
+											<li><a href="{{ route('user.contact')}}">Contact Us</a></li>
 										</ul>
 									</nav>
 								</div>
@@ -156,6 +156,10 @@
 		<!-- End Header Area -->
 		
         @yield('user')
+
+		@if(@session('success'))
+		<div class="alert alert-success">{{ session('success') }}</div>
+		@endif
 		
 		<!-- Footer Area -->
 		<footer id="footer" class="footer ">
@@ -281,6 +285,8 @@
 		<script src="{{ asset('user/js/jquery.magnific-popup.min.js')}}"></script>
 		<!-- Counter Up CDN JS -->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+
+		<script src="https://maps.google.com/maps/api/js?key=AWNVXaacmoDrNYbs5"></script>
 		<!-- Bootstrap JS -->
 		<script src="{{ asset('user/js/bootstrap.min.js')}}"></script>
 		<!-- Main JS -->

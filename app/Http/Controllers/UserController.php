@@ -2,7 +2,13 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 
+=======
+use Illuminate\Support\Facades\Session;
+use App\Models\Berita;
+use App\Models\Contact;
+>>>>>>> ace934e02a33ae0b2bde16a1a1da26717f2090c2
 use App\Models\Kegiatan;
 use App\Models\Berita;
 use App\Models\Komentar;
@@ -44,6 +50,11 @@ class UserController extends Controller
         return view('user.team');
     }
 
+    public function contactview()
+    {
+        return view('user.contact');
+    }
+
     public function subscribe(Request $request)
     {
         $request->validate([
@@ -73,6 +84,23 @@ class UserController extends Controller
             'teks' => $request->teks,
         ]);
 
-        return redirect()->back()->with('success', 'Komentar berhasil ditambahkan.');
+        Session::flash('success', 'Komentar telah berhasil terkirim!');        
+    }
+
+
+    public function contactstore(Request $request)
+    {
+        $validatedData = $request->validate([
+            'nama' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'descontact' => 'required',
+        ]);
+
+
+        Contact::create($validatedData);
+        Session::flash('success', 'Pesan telah berhasil terkirim!');        
+        return redirect()->route('user.contact');
     }
 }
+
