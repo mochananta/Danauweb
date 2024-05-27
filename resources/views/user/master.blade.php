@@ -41,6 +41,14 @@
         <link rel="stylesheet" href="{{ asset('user/style.css')}}">
         <link rel="stylesheet" href="{{ asset('user/css/responsive.css')}}">
 
+		<!-- ABOUT CSS ---->
+		<link rel="stylesheet" href="{{ asset('user/css/fonts/icomoon/style.css')}}" />
+		<link rel="stylesheet" href="{{ asset('user/css/fonts/flaticon/flaticon.css')}}" />
+
+		<link rel="stylesheet" href="{{ asset ('user/css/tiny-slider.css')}}" />
+		<link rel="stylesheet" href="{{ asset ('user/css/css/aos.css')}}"/>
+		<link rel="stylesheet" href="{{ asset ('user/css/style.css')}}"/>
+
     </head>
     <body>
 	
@@ -81,7 +89,6 @@
 							<!-- Contact -->
 							<ul class="top-link">
 								<li><a href="{{ route('user.about') }}">About</a></li>
-								{{-- <li><a href="#">Berita</a></li> --}}
 								<li><a href="">Contact</a></li>
 								<li><a href="{{ route('user.faq') }}">FAQ</a></li>
 							</ul>
