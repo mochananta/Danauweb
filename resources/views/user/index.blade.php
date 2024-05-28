@@ -389,79 +389,84 @@
 		</section>
 		<!-- End Youtube -->
 
+		<!-- Start Unit -->
 		<section class="unit-details section">
 			<div class="container">
-				<div class="section-title">
-					<h2>Keep up with Our Most Recent Medical News.</h2>
-				</div>				
 				<div class="row">
-					<!-- Card for Unit 1 -->
-					<div class="col-lg-4 col-md-6 col-sm-12">
-						<div class="card">
-							<div class="card-header">
-								<h4>Unit 1</h4>
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Kunjungi Kami Di Unit Terdekatmu.</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12 col-12">
+						<div class="owl-carousel unit-slider owl-theme">
+							<div class="item">
+								<div class="card">
+									<img src="{{ asset('user/img/unit1.jpeg')}}" class="card-img-left" alt="Unit Penjaringan Sari">
+									<div class="card-body">
+										<h3 class="card-title">Penjaringan Sari</h3>
+										<p class="card-text">Jl. Penjaringan Sari IID No.31, Rungkut, Surabaya, Jawa Timur <a href="https://www.example.com">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
+									</div>
+								</div>
 							</div>
-							<div class="card-footer">
-								<!-- Embed Google Maps iframe -->
-								<iframe 
-									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.546932430138!2d106.84599961433347!3d-6.2089089955033985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f164a4e87d17%3A0x2e22b95639d56dd0!2sYour%20Location!5e0!3m2!1sen!2sid!4v1621781775001!5m2!1sen!2sid" 
-									width="100%" 
-									height="200" 
-									style="border:0;" 
-									allowfullscreen="" 
-									loading="lazy">
-								</iframe>
+							<div class="item">
+								<div class="card">
+									<img src="{{ asset('user/img/unit3.jpeg')}}" class="card-img-left" alt="Unit Tuban Gajahmada">
+									<div class="card-body">
+										<h3 class="card-title">Tuban Gajahmada</h3>
+										<p class="card-text">Jl. Gajahmada No.25, Kebonsari, Tuban, Jawa Timur <a href="https://www.example.com">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="card">
+									<img src="{{ asset('user/img/unit3.jpeg')}}" class="card-img-left" alt="Unit Tambahrejo">
+									<div class="card-body">
+										<h3 class="card-title">Tambahrejo</h3>
+										<p class="card-text">Jl. Tambah Rejo Blok B No.17, Tambakrejo, Simokerto, Surabaya <a href="https://www.example.com">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="card">
+									<img src="{{ asset('user/img/unit5.jpg')}}" class="card-img-left" alt="Unit Tambahrejo">
+									<div class="card-body">
+										<h3 class="card-title">Banyuwangi Kota</h3>
+										<p class="card-text">Jl. Kolonel Sugiono, Kertosari, Tukangkayu, Banyuwangi, Jawa Timur 68462 <a href="https://www.example.com">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="card">
+									<img src="{{ asset('user/img/unit6.jpg')}}" class="card-img-left" alt="Unit Tambahrejo">
+									<div class="card-body">
+										<h3 class="card-title">Muncar</h3>
+										<p class="card-text">Jl. Raya Muncar, Dusun Muncar, Tembokrejo, Muncar, Banyuwangi, Jawa Timur 68472 <a href="https://www.example.com">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="card">
+									<img src="{{ asset('user/img/unit7.jpg')}}" class="card-img-left" alt="Unit Tambahrejo">
+									<div class="card-body">
+										<h3 class="card-title">Rogojampi</h3>
+										<p class="card-text">Jl. Ps. Ruko No.11, Pancoran Kulon, Rogojampi, Banyuwangi, Jawa Timur 68462 <a href="https://www.example.com">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<!-- Card for Unit 2 -->
-					<div class="col-lg-4 col-md-6 col-sm-12">
-						<div class="card">
-							<div class="card-header">
-								<h4>Unit 2</h4>
-							</div>
-							<div class="card-footer">
-								<!-- Embed Google Maps iframe -->
-								<iframe 
-									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.546932430138!2d106.84599961433347!3d-6.2089089955033985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f164a4e87d17%3A0x2e22b95639d56dd0!2sYour%20Location!5e0!3m2!1sen!2sid!4v1621781775001!5m2!1sen!2sid" 
-									width="100%" 
-									height="200" 
-									style="border:0;" 
-									allowfullscreen="" 
-									loading="lazy">
-								</iframe>
-							</div>
-						</div>
-					</div>
-					<!-- Continue adding cards for other units as needed -->
-					<!-- Card for Unit 2 -->
-					<div class="col-lg-4 col-md-6 col-sm-12">
-						<div class="card">
-							<div class="card-header">
-								<h4>Unit 2</h4>
-							</div>
-							<div class="card-footer">
-								<!-- Embed Google Maps iframe -->
-								<iframe 
-									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.546932430138!2d106.84599961433347!3d-6.2089089955033985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f164a4e87d17%3A0x2e22b95639d56dd0!2sYour%20Location!5e0!3m2!1sen!2sid!4v1621781775001!5m2!1sen!2sid" 
-									width="100%" 
-									height="200" 
-									style="border:0;" 
-									allowfullscreen="" 
-									loading="lazy">
-								</iframe>
-							</div>
-						</div>
-					</div>
-					<!-- Continue adding cards for other units as needed -->
 				</div>
 			</div>
 		</section>
-		<!-- End of Main Content -->
-		
-		
-		
-	
+		<!-- End Unit -->
+
+			
 		<!-- Start Our Team Area -->
 		<section class="our-team section" id="our-team">
 			<div class="container">
@@ -583,15 +588,12 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-lg-7 col-md-8 col-12">
-									<p>( We will be confirm by an Text Message )</p>
-								</div>
 							</div>
 						</form>
 					</div>
 					<div class="col-lg-6 col-md-12 ">
 						<div class="appointment-image">
-							<img src="img/contact-img.png" alt="#">
+							<img src="{{asset('user/img/imm.png')}}" alt="#">
 						</div>
 					</div>
 				</div>
