@@ -15,6 +15,7 @@
         <link rel="icon" href="{{ asset('user/img/logo-pt.png')}}">
 		
 		<!-- Google Fonts -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
 		<!-- Bootstrap CSS -->
@@ -273,6 +274,26 @@
 		<script src="{{ asset('user/js/bootstrap.min.js')}}"></script>
 		<!-- Main JS -->
 		<script src="{{ asset('user/js/main.js')}}"></script>
-
+		<script>
+    $(document).ready(function(){
+        $(".unit-slider").owlCarousel({
+            loop: true,
+            margin: 10,
+            dots: true, // Enable dots navigation
+            nav: false, // Disable next and prev buttons
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+    });
+		</script>
     </body>
 </html>

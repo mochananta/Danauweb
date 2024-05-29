@@ -1089,6 +1089,84 @@ body{
 	End Why choose CSS
 =========================*/
 
+/* CSS untuk kartu */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 10px;
+}
+
+.card-img-left {
+    width: 100px; /* sesuaikan ukuran gambar sesuai kebutuhan */
+    height: auto;
+    margin-right: 20px;
+    border-bottom: 2px solid #FEE315;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-text {
+    margin-bottom: 0;
+    color: #666;
+}
+
+.card-text a {
+    color: #FEE315;
+    text-decoration: none;
+}
+
+.card-text a:hover {
+    color: #f1d818;
+}
+
+/* Owl Carousel */
+.unit-slider .owl-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.unit-slider .owl-prev {
+    left: 10px;
+}
+
+.unit-slider .owl-next {
+    right: 10px;
+}
+
+.unit-slider .owl-prev,
+.unit-slider .owl-next {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.unit-slider .owl-prev:hover,
+.unit-slider .owl-next:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Adjust navigation icons */
+.unit-slider .owl-prev i,
+.unit-slider .owl-next i {
+    font-size: 24px;
+}
+
 /*===============================
 	Start Call to action CSS
 =================================*/
