@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-<<<<<<< HEAD
+
 Route::get('/', [UserController::class, 'userview'])->name('user.index');
 Route::get('/about', [UserController::class, 'aboutview'])->name('user.about');
 Route::get('/faq', [UserController::class, 'faqview'])->name('user.faq');
@@ -29,7 +29,7 @@ Route::get('/team', [UserController::class, 'teamview'])->name('user.team');
 Route::get('/berita', [BeritaController::class, 'Berita'])->name('user.berita');
 Route::get('/detailberita/{id}', [BeritaController::class, 'BeritaShow'])->name('user.detailberita');
 Route::get('/detailkegiatan/{id}', [KegiatanController::class, 'KegiatanShow'])->name('user.detailkegiatan');
-=======
+
 Route::get('/', [UserController::class,'userview'])->name('user.index');
 Route::get('/about', [UserController::class,'aboutview'])->name('user.about');
 Route::get('/contact', [UserController::class,'contactview'])->name('user.contact');
@@ -40,7 +40,7 @@ Route::post('/contact', [UserController::class, 'contactstore'])->name('contact.
 Route::get('/berita', [BeritaController::class,'Berita'])->name('user.berita');
 Route::get('/detailberita/{id}', [BeritaController::class,'BeritaShow'])->name('user.detailberita');
 Route::get('/detailkegiatan/{id}', [KegiatanController::class,'KegiatanShow'])->name('user.detailkegiatan');
->>>>>>> ace934e02a33ae0b2bde16a1a1da26717f2090c2
+
 Route::post('/subscribe', [UserController::class, 'subscribe'])->name('subscribe');
 Route::post('/komentar', [UserController::class, 'store'])->name('komentar.store');
 Route::post('/contact', [UserController::class, 'contactview'])->name('user.contact');

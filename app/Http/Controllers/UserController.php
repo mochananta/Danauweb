@@ -1,16 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
-<<<<<<< HEAD
-
-=======
 use Illuminate\Support\Facades\Session;
 use App\Models\Berita;
 use App\Models\Contact;
->>>>>>> ace934e02a33ae0b2bde16a1a1da26717f2090c2
 use App\Models\Kegiatan;
-use App\Models\Berita;
 use App\Models\Komentar;
 use App\Models\Promo;
 use App\Models\Subscribe;

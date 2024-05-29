@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('potokegiatan1');
             $table->string('potokegiatan2');
             $table->string('judulkegiatan');
-            $table->string('deskegiatan');
+            $table->text('deskegiatan');
             $table->timestamps();
         });
     }
