@@ -43,12 +43,12 @@
         <link rel="stylesheet" href="{{ asset('user/css/responsive.css')}}">
 
 		<!-- ABOUT CSS ---->
-		<link rel="stylesheet" href="{{ asset('user/css/fonts/icomoon/style.css')}}" />
+		{{-- <link rel="stylesheet" href="{{ asset('user/css/fonts/icomoon/style.css')}}" />
 		<link rel="stylesheet" href="{{ asset('user/css/fonts/flaticon/flaticon.css')}}" />
 
 		<link rel="stylesheet" href="{{ asset ('user/css/tiny-slider.css')}}" />
 		<link rel="stylesheet" href="{{ asset ('user/css/css/aos.css')}}"/>
-		<link rel="stylesheet" href="{{ asset ('user/css/style.css')}}"/>
+		<link rel="stylesheet" href="{{ asset ('user/css/style.css')}}"/> --}}
 
     </head>
     <body>
