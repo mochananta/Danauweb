@@ -153,7 +153,7 @@
 						<div class="col-lg-3 col-md-6 col-12">
 							<div class="single-footer">
 								<h2>About Us</h2>
-								<p>Lorem ipsum dolor sit am consectetur adipisicing elit do eiusmod tempor incididunt ut labore dolore magna.</p>
+								<p>PT Danau Emas Gadai Emas Jatim, pegadaian terpercaya di bawah naungan INKOPPOL dan OJK, siap membantu Anda mengatasi masalah keuangan dengan proses gadai yang cepat, aman, dan mudah. Tak perlu khawatir, Danau Emas adalah solusi cerdas untuk masalah keuangan Anda. Urusan gadai cepat dan mudah, masalah keuangan pun teratasi.</p>
 								<!-- Social -->
 								<ul class="social">
 									<li><a href="#"><i class="icofont-facebook"></i></a></li>
@@ -171,20 +171,16 @@
 								<div class="row">
 									<div class="col-lg-6 col-md-6 col-12">
 										<ul>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Our Cases</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Other Links</a></li>	
+											<li><a href="{{ route('user.index')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
+											<li><a href="{{ route('user.about')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+											<li><a href="{{ route('user.berita')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Berita</a></li>
 										</ul>
 									</div>
 									<div class="col-lg-6 col-md-6 col-12">
 										<ul>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Consuling</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Finance</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Testimonials</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>	
+											<li><a href="{{route('user.team')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Our Team</a></li>
+											<li><a href="{{route('user.contact')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>
+											<li><a href="{{route('user.faq')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
 										</ul>
 									</div>
 								</div>
@@ -193,23 +189,17 @@
 						<div class="col-lg-3 col-md-6 col-12">
 							<div class="single-footer">
 								<h2>Open Hours</h2>
-								<p>Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.</p>
+								<p>Kami siap melayani anda pada pukul:</p>
 								<ul class="time-sidual">
-									<li class="day">Monday - Fridayp <span>8.00-20.00</span></li>
-									<li class="day">Saturday <span>9.00-18.30</span></li>
-									<li class="day">Monday - Thusday <span>9.00-15.00</span></li>
+									<li class="day">Senin - Jumat <span>08.00-17.00</span></li>
+									<li class="day">Sabtu <span>08.00-13.00</span></li>
+									<li class="day">Minggu & Hari Besar<span>Libur<span></li>
 								</ul>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-6 col-12">
 							<div class="single-footer">
-								<h2>Newsletter</h2>
-								<p>subscribe to our newsletter to get allour news in your inbox.. Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
-								<form action="{{ route('subscribe') }}" method="POST" target="_blank" class="newsletter-inner">
-									@csrf
-									<input type="email" id="email" name="email" placeholder="Email Address" class="common-input" required>
-									<button type="submit" class="button"><i class="icofont icofont-paper-plane"></i></button>
-								</form>
+								<img style="margin-right: 10px" src="{{ asset('user/img/imgfooter.png')}}"></img>
 							</div>
 						</div>
 					</div>
