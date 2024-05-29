@@ -1924,7 +1924,7 @@ body{
 	background-image:url('img/client-bg.jpg');
 	background-size:cover;
 	background-position:center;
-	padding:100px 0px;
+	padding:50px;
 	position:relative;
 }
 .clients .single-clients{
@@ -1935,7 +1935,7 @@ body{
 	cursor: pointer;
 	text-align: center;
 	float: none;
-	padding: 0 35px;
+	padding: 0 15px;
 }
 /*========================
 	End Clients CSS

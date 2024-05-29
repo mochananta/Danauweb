@@ -4,7 +4,7 @@
 		<section class="slider">
 			<div class="hero-slider">
 				<!-- Start Single Slider -->
-				<div class="single-slider" style="background-image:url('{{ asset('user/img/slider4.png')}}')"> 
+				<div class="single-slider" style="background-image:url('{{ asset('user/img/Frame 73.png')}}')"> 
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
@@ -18,7 +18,7 @@
 				</div>
 				<!-- End Single Slider -->
 				<!-- Start Single Slider -->
-				<div class="single-slider" style="background-image:url('{{ asset('user/img/slider5.png')}}')"> 
+				<div class="single-slider" style="background-image:url('{{ asset('user/img/Frame 74.png')}}')"> 
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
@@ -441,7 +441,7 @@
 									<img src="{{ asset('user/img/unit1.jpeg')}}" class="card-img-left" alt="Unit Penjaringan Sari">
 									<div class="card-body">
 										<h3 class="card-title">Penjaringan Sari</h3>
-										<p class="card-text">Jl. Penjaringan Sari IID No.31, Rungkut, Surabaya, Jawa Timur <a href="https://www.example.com">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
+										<p class="card-text">Jl. Penjaringan Sari IID No.31, Rungkut, Surabaya, Jawa Timur <a href="https://maps.app.goo.gl/E4XjVtZ9LxAB62zD9">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
 									</div>
 								</div>
 							</div>
@@ -543,31 +543,28 @@
 					<div class="col-lg-12 col-md-12 col-12">
 						<div class="owl-carousel clients-slider">
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client1.png')}}" alt="#"> 
+								<img src="{{ asset('user/img/client7.png')}}" alt="#"> 
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client2.png')}}" alt="#">
+								<img src="{{ asset('user/img/client7.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client3.png')}}" alt="#">
+								<img src="{{ asset('user/img/client7.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client4.png')}}" alt="#">
+								<img src="{{ asset('user/img/client7.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client5.png')}}" alt="#">
+								<img src="{{ asset('user/img/client7.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client1.png')}}" alt="#">
+								<img src="{{ asset('user/img/client7.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client2.png')}}" alt="#">
+								<img src="{{ asset('user/img/client7.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client3.png')}}" alt="#">
-							</div>
-							<div class="single-clients">
-								<img src="{{ asset('user/img/client4.png')}}" alt="#">
+								<img src="{{ asset('user/img/client7.png')}}" alt="#">
 							</div>
 						</div>
 					</div>
