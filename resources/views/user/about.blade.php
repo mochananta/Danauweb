@@ -27,17 +27,9 @@
 						<div class="inner-content">
 							<div class="image-slider">
 								<div class="pf-details-slider">
-									<img src="{{ asset('user/img/danauemas.png')}}" alt="#">  
+									<img src="{{ asset('user/img/Gajian-Emas.jpeg')}}" alt="#">  
 									<img src="{{ asset('user/img/Gajian-Emas.jpeg')}}" alt="#">
 								</div>
-							</div>
-							<div class="date">
-								<ul>
-									<li><span>Category :</span> Heart Surgery</li>
-									<li><span>Date :</span> April 20, 2019</li>
-									<li><span>Client :</span> Suke Agency</li>
-									<li><span>Ags :</span> Typo</li>
-								</ul>
 							</div>
 							<div class="body-text">
 								<h3>Here is the name of this project here</h3>

@@ -6,7 +6,7 @@
   <div class="d-flex align-items-center justify-content-start">
 
 
-    <a href="index.html" class="logo d-flex align-items-center">
+    <a href="{{ route('user.index')}}" class="logo d-flex align-items-center">
       <img src="{{ asset('user/img/logo-pt.png')}}" alt="">
       <span class="d-none d-lg-block">Admin</span>
     </a>

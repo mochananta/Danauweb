@@ -50,12 +50,12 @@
                 <div class="loader-outter"></div>
                 <div class="loader-inner"></div>
 
-                <div class="indicator"> 
+                {{-- <div class="indicator"> 
                     <svg width="16px" height="12px">
-                        <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
-                        <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                        <polyline id="back" points="12 6 15 6"></polyline>
+                        <polyline id="front" points="12 6 15 6"></polyline>
                     </svg>
-                </div>
+                </div> --}}
             </div>
         </div>
         <!-- End Preloader -->
@@ -71,7 +71,7 @@
 							<ul class="top-link">
 								<li><a href="{{ route('user.about') }}">About</a></li>
 								{{-- <li><a href="#">Berita</a></li> --}}
-								<li><a href="">Contact</a></li>
+								<li><a href="{{ route ('user.contact')}}">Contact</a></li>
 								<li><a href="{{ route('user.faq') }}">FAQ</a></li>
 							</ul>
 							<!-- End Contact -->
@@ -79,8 +79,8 @@
 						<div class="col-lg-6 col-md-7 col-12">
 							<!-- Top Contact -->
 							<ul class="top-contact">
-								<li><i class="fa fa-phone"></i><a href="https://api.whatsapp.com/send?phone=6281357769681" target="_blank">+62 813-5776-9681</a></li>
-								<li><i class="fa fa-envelope"></i><a href="mailto:Danauemascabangbanyuwangi1@gmail.com" >Danauemascabangbanyuwangi1@gmail.com</a></li>
+								<li><i class="fa fa-phone"></i><a href="https://api.whatsapp.com/send?phone=6281357769681" target="_blank">+62 Nomor di ganti</a></li>
+								<li><i class="fa fa-envelope"></i><a href="mailto:Danauemascabangbanyuwangi1@gmail.com" >Email di ganti</a></li>
 							</ul>
 							<!-- End Top Contact -->
 						</div>
@@ -200,7 +200,7 @@
 								</ul>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-6 col-12">
+						{{-- <div class="col-lg-3 col-md-6 col-12">
 							<div class="single-footer">
 								<h2>Newsletter</h2>
 								<p>subscribe to our newsletter to get allour news in your inbox.. Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
@@ -210,7 +210,7 @@
 									<button type="submit" class="button"><i class="icofont icofont-paper-plane"></i></button>
 								</form>
 							</div>
-						</div>
+						</div> --}}
 					</div>
 				</div>
 			</div>

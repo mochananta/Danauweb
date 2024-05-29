@@ -4,7 +4,7 @@
 		<section class="slider">
 			<div class="hero-slider">
 				<!-- Start Single Slider -->
-				<div class="single-slider" style="background-image:url('{{ asset('user/img/slider4.png')}}')"> 
+				<div class="single-slider" style="background-image:url('{{ asset('user/img/Frame 74.png')}}')"> 
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
@@ -18,7 +18,7 @@
 				</div>
 				<!-- End Single Slider -->
 				<!-- Start Single Slider -->
-				<div class="single-slider" style="background-image:url('{{ asset('user/img/slider5.png')}}')"> 
+				<div class="single-slider" style="background-image:url('{{ asset('user/img/Frame 73.png')}}')"> 
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
@@ -397,60 +397,26 @@
 				<div class="row">
 					<!-- Card for Unit 1 -->
 					<div class="col-lg-4 col-md-6 col-sm-12">
-						<div class="card">
-							<div class="card-header">
-								<h4>Unit Penjaringan Sari</h4>
-							</div>
-							<div class="card-footer">
-								<!-- Embed Google Maps iframe -->
-								<iframe 
-									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.546932430138!2d106.84599961433347!3d-6.2089089955033985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f164a4e87d17%3A0x2e22b95639d56dd0!2sYour%20Location!5e0!3m2!1sen!2sid!4v1621781775001!5m2!1sen!2sid" 
-									width="100%" 
-									height="200" 
-									style="border:0;" 
-									allowfullscreen="" 
-									loading="lazy">
-								</iframe>
-							</div>
+						<div class="choose-pertama">
+							<h3>Unit Penjaringan Sari</h3>
+							<p>Jl Penjaringan Sari IID No.31, Rungkut, Surabaya, Jawa Timur. <a href="https://www.example.com" style="color :blue">learn more</a>.</p>
 						</div>
+					</div>
+					
 					</div>
 					<!-- Card for Unit 2 -->
 					<div class="col-lg-4 col-md-6 col-sm-12">
-						<div class="card">
-							<div class="card-header">
-								<h4>Unit Tambahrejo</h4>
-							</div>
-							<div class="card-footer">
-								<!-- Embed Google Maps iframe -->
-								<iframe 
-									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.546932430138!2d106.84599961433347!3d-6.2089089955033985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f164a4e87d17%3A0x2e22b95639d56dd0!2sYour%20Location!5e0!3m2!1sen!2sid!4v1621781775001!5m2!1sen!2sid" 
-									width="100%" 
-									height="200" 
-									style="border:0;" 
-									allowfullscreen="" 
-									loading="lazy">
-								</iframe>
-							</div>
+						<div class="choose-pertama">
+							<h3>Unit Tuban Gajahmada</h3>
+							<p>Jl. Gajahmada No.25, Kebonsari, Tuban, Jawa Timur.<a href="https://www.example.com" style="color :blue">learn more</a>.</p>
 						</div>
 					</div>
 					<!-- Continue adding cards for other units as needed -->
 					<!-- Card for Unit 2 -->
 					<div class="col-lg-4 col-md-6 col-sm-12">
-						<div class="card">
-							<div class="card-header">
-								<h4>Unit Tuban Gajahmada</h4>
-							</div>
-							<div class="card-footer">
-								<!-- Embed Google Maps iframe -->
-								<iframe 
-									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.546932430138!2d106.84599961433347!3d-6.2089089955033985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f164a4e87d17%3A0x2e22b95639d56dd0!2sYour%20Location!5e0!3m2!1sen!2sid!4v1621781775001!5m2!1sen!2sid" 
-									width="100%" 
-									height="200" 
-									style="border:0;" 
-									allowfullscreen="" 
-									loading="lazy">
-								</iframe>
-							</div>
+						<div class="choose-pertama">
+							<h3>Unit Tambahrejo</h3>
+							<p>Jl Tambah Rejo Blok B No.17, Tambakrejo, Simokerto, Surabaya.<a href="https://www.example.com" style="color :blue">learn more</a>.</p>
 						</div>
 					</div>
 					<!-- Continue adding cards for other units as needed -->
@@ -486,7 +452,7 @@
 									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.791623247427!2d114.36951647381309!3d-8.223698882540988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd15baf0784fcfb%3A0x2e1cbb1f678fed8e!2sPT%20DANAU%20EMAS%20GADAI%20JATIM%20BANYUWANGI!5e0!3m2!1sen!2sid!4v1716624466292!5m2!1sen!2sid" 
 									width="100%" 
 									height="200" 
-									style="border:0;" 
+									style="border:0;" 	
 									allowfullscreen="" 
 									loading="lazy">
 								</iframe>
@@ -515,7 +481,7 @@
 					</div>
 
 					<!-- Card for Unit 2 -->
-					<div class="col-lg-4 col-md-6 col-sm-12">
+					{{-- <div class="col-lg-4 col-md-6 col-sm-12">
 						<div class="card">
 							<div class="card-header">
 								<h4>Unit Muncar</h4>
@@ -532,7 +498,7 @@
 								</iframe>
 							</div>
 						</div>
-					</div>
+					</div> --}}
 				</div>
 			</div>
 		</section>
