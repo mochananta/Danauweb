@@ -31,14 +31,14 @@
 									<img src="{{ asset('user/img/Gajian-Emas.jpeg')}}" alt="#">
 								</div>
 							</div>
-							<div class="date">
+							<!-- <div class="date">
 								<ul>
 									<li><span>Category :</span> Heart Surgery</li>
 									<li><span>Date :</span> April 20, 2019</li>
 									<li><span>Client :</span> Suke Agency</li>
 									<li><span>Ags :</span> Typo</li>
 								</ul>
-							</div>
+							</div> -->
 							<div class="body-text">
 								<h3>Here is the name of this project here</h3>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor a ti incididunt ut labore et dolore to in magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.Lorem ipsum dolor sit amet, in a in to in a consectetur.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna in a aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod</p>
