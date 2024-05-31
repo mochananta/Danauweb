@@ -130,7 +130,7 @@
 											</div>
 											<div class="col-12">
 												<div class="form-group button">    
-													<button type="submit" class="btn primary"><i class="fa fa-send"></i>Submit Comment</button>
+													<button type="submit" class="btn primary"><a href=" pt.danauemasgadaijatim@gmail.com"></a><i class="fa fa-send"></i>Submit Comment</button>
 												</div>
 											</div>
 										</div>
@@ -143,10 +143,10 @@
 					<div class="col-lg-4 col-12">
 						<div class="main-sidebar">
 							<!-- Single Widget -->
-							<div class="single-widget search">
+							{{-- <div class="single-widget search">
 								<input type="text" name="keyword" placeholder="Search Here...">
 								<button type="submit" class="button"><i class="fa fa-search"></i></button>
-							</div>							
+							</div>							 --}}
 							<!--/ End Single Widget -->
 							<!-- Single Widget -->
 							{{-- <div class="single-widget category">
@@ -184,7 +184,7 @@
 							<!-- Single Widget -->
 							<!--/ End Single Widget -->
 							<!-- Single Widget -->
-							<div class="single-widget side-tags">
+							{{-- <div class="single-widget side-tags">
 								<h3 class="title">Tags</h3>
 								<ul class="tag">
 									<li><a href="#">business</a></li>
@@ -195,7 +195,7 @@
 									<li><a href="#">template</a></li>
 									<li><a href="#">Ecommerce</a></li>
 								</ul>
-							</div>
+							</div> --}}
 							<!--/ End Single Widget -->
 						</div>
 					</div>

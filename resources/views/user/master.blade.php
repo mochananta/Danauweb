@@ -16,8 +16,7 @@
 		
 		<!-- Google Fonts -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-
+		
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="{{ asset('user/css/bootstrap.min.css')}}">
 		<!-- Nice Select CSS -->
@@ -36,6 +35,8 @@
         <link rel="stylesheet" href="{{ asset('user/css/animate.min.css')}}">
 		<!-- Magnific Popup CSS -->
         <link rel="stylesheet" href="{{ asset('user/css/magnific-popup.css')}}">
+		{{-- BtnWhatsApp --}}
+		<link rel="stylesheet" href="{{ asset('user/css/btnwhatsapp.css')}}">
 		
 		<!-- Medipro CSS -->
         <link rel="stylesheet" href="{{ asset('user/css/normalize.css')}}">  
@@ -51,12 +52,6 @@
                 <div class="loader-outter"></div>
                 <div class="loader-inner"></div>
 
-                {{-- <div class="indicator"> 
-                    <svg width="16px" height="12px">
-                        <polyline id="back" points="12 6 15 6"></polyline>
-                        <polyline id="front" points="12 6 15 6"></polyline>
-                    </svg>
-                </div> --}}
             </div>
         </div>
         <!-- End Preloader -->
@@ -137,6 +132,86 @@
 			<!--/ End Header Inner -->
 		</header>
 		<!-- End Header Area -->
+
+		<button id="waButton">
+			<img id="buttonIcon" src="{{ asset('user/img/wa.png')}}" alt="WhatsApp" width="30" height="30">
+		</button>
+	
+		<div id="popup" class="popup">
+			<h3><img src="https://ugc.production.linktr.ee/139975e9-b7e3-42aa-bb64-2d900a6c57e2_Logo-PT-Danau-Emas-Gadai-Jatim-01.png" alt="WhatsApp" width="40" height="40">Contact Person</h3>
+			<div class="contact-section">
+				<h4>Pusat</h4>
+				<ul>
+					<li>
+						<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
+						<div class="contact-info">
+							<span class="name">Kantor Pusat</span>
+							<span class="unit">Pusat</span>
+						</div>
+						<button class="waLink" data-phone="6287778312813" data-message="Hallo, Unit Pusat Surabaya">Chat</button>
+					</li>
+				</ul>
+			</div>
+			<hr>
+			<ul>
+				<li>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
+					<div class="contact-info">
+						<span class="name">Penjaringan Sari</span>
+						{{-- <span class="unit">Surabaya</span> --}}
+					</div>
+					<button class="waLink" data-phone="6287778312813" data-message="Hello, Central Office">Chat</button>
+				</li>
+				<li>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
+					<div class="contact-info">
+						<span class="name">Tuban Gajahmada</span>
+						{{-- <span class="unit">Surabaya</span> --}}
+					</div>
+					<button class="waLink" data-phone="6287778312813" data-message="Hello, Central Office">Chat</button>
+				</li>
+				<li>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
+					<div class="contact-info">
+						<span class="name">Tambahrejo</span>
+						{{-- <span class="unit">Surabaya</span> --}}
+					</div>
+					<button class="waLink" data-phone="6287778312813" data-message="Hallo, apaka">Chat</button>
+				</li>
+				<li>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
+					<div class="contact-info">
+						<span class="name">Ronggolawe</span>
+						{{-- <span class="unit">Surabaya</span> --}}
+					</div>
+					<button class="waLink" data-phone="6287778312813" data-message="Hallo, apaka">Chat</button>
+				</li>
+				<li>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
+					<div class="contact-info">
+						<span class="name">Banyuwangi</span>
+						{{-- <span class="unit">Banyuwangi</span> --}}
+					</div>
+					<button class="waLink" data-phone="6287778312813" data-message="Hallo, apaka">Chat</button>
+				</li>
+				<li>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
+					<div class="contact-info">
+						<span class="name">Rogojampi</span>
+						{{-- <span class="unit">Banyuwangi</span> --}}
+					</div>
+					<button class="waLink" data-phone="6287778312813" data-message="Hallo, apaka">Chat</button>
+				</li>
+				<li>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
+					<div class="contact-info">
+						<span class="name">Muncar</span>
+						{{-- <span class="unit">Banyuwangi</span> --}}
+					</div>
+					<button class="waLink" data-phone="6287778312813" data-message="Hallo, apaka">Chat</button>
+				</li>
+			</ul>
+		</div>
 		
         @yield('user')
 
@@ -199,7 +274,7 @@
 						</div>
 						<div class="col-lg-3 col-md-6 col-12">
 							<div class="single-footer">
-								<img style="margin-right: 10px" src="{{ asset('user/img/imgfooter.png')}}"></img>
+								<img style="margin-right: 10px" src="{{ asset('user/img/ojk.png')}}"></img>
 							</div>
 						</div>
 					</div>
@@ -264,26 +339,28 @@
 		<script src="{{ asset('user/js/bootstrap.min.js')}}"></script>
 		<!-- Main JS -->
 		<script src="{{ asset('user/js/main.js')}}"></script>
+		{{-- BtnWhatsApp --}}
+		<script src="{{ asset('user/js/btnwhatsapp.js')}}"></script>
 		<script>
-    $(document).ready(function(){
-        $(".unit-slider").owlCarousel({
-            loop: true,
-            margin: 10,
-            dots: true, // Enable dots navigation
-            nav: false, // Disable next and prev buttons
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 2
-                },
-                1000: {
-                    items: 3
-                }
-            }
-        });
-    });
+				$(document).ready(function(){
+					$(".unit-slider").owlCarousel({
+						loop: true,
+						margin: 10,
+						dots: true, // Enable dots navigation
+						nav: false, // Disable next and prev buttons
+						responsive: {
+							0: {
+								items: 1
+							},
+							600: {
+								items: 2
+							},
+							1000: {
+								items: 3
+							}
+						}
+					});
+				});
 		</script>
     </body>
 </html>

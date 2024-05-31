@@ -202,7 +202,7 @@
 											<img src="{{ asset('user/img/Group 141.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
-											<p>Maecenas vitae luctus nibh.</p>
+											<p>GADAI ELEKTRONIK</p>
 										</div>
 									</div>
 								</div>											
@@ -363,7 +363,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>Lorem ipsum dolor sit amet</h2>
+							<h2>Testimoni Pelanggan</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>
 						</div>
 					</div>
@@ -398,7 +398,7 @@
 					<div class="col-lg-12">
 						<div class="section-title">
 							<h2>Kunjungi Kami Di Unit Terdekatmu.</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.</p>
+							<p>Danau Emas Gadai Jatim dapat kamu akses di beberapa daerah dibawah ini</p>
 						</div>
 					</div>
 				</div>
@@ -431,6 +431,15 @@
 									<div class="card-body">
 										<h3 class="card-title">Tambahrejo</h3>
 										<p class="card-text">Jl. Tambah Rejo Blok B No.17, Tambakrejo, Simokerto, Surabaya <a href="https://www.example.com">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="card">
+									<img src="{{ asset('user/img/unit8.jpeg')}}" class="card-img-left" alt="Unit Ronggolawe">
+									<div class="card-body">
+										<h3 class="card-title">Ronggolawe</h3>
+										<p class="card-text">Jl. Ronggolawe No.34, Sidomulyo, Kec. Tuban, Kabupaten Tuban, Jawa Timur 62312 <a href="https://maps.app.goo.gl/QyM4RSzo5YPtcjFb9">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
 									</div>
 								</div>
 							</div>
@@ -518,28 +527,28 @@
 					<div class="col-lg-12 col-md-12 col-12">
 						<div class="owl-carousel clients-slider">
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client7.png')}}" alt="#"> 
+								<img src="{{ asset('user/img/client10.png')}}" alt="#"> 
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client7.png')}}" alt="#">
+								<img src="{{ asset('user/img/client12.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client7.png')}}" alt="#">
+								<img src="{{ asset('user/img/client10.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client7.png')}}" alt="#">
+								<img src="{{ asset('user/img/client12.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client7.png')}}" alt="#">
+								<img src="{{ asset('user/img/client10.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client7.png')}}" alt="#">
+								<img src="{{ asset('user/img/client12.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client7.png')}}" alt="#">
+								<img src="{{ asset('user/img/client10.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client7.png')}}" alt="#">
+								<img src="{{ asset('user/img/client12.png')}}" alt="#">
 							</div>
 						</div>
 					</div>
@@ -635,8 +644,7 @@
 				</div>
 			</div>
 		</section>
-		<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f1e7a459-985a-4cf7-8bfb-bcbf1bde08c6";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-
+		
 @endsection
 {{-- KODE TIDAK DIPAKAI SEMENTARA --}}
 <!-- Start Why choose -->
