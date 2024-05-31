@@ -4,12 +4,13 @@
 		<section class="slider">
 			<div class="hero-slider">
 				<!-- Start Single Slider -->
-				<div class="single-slider" style="background-image:url('{{ asset('user/img/Frame 74.png')}}')"> 
+
+				<div class="single-slider" style="background-image:url('{{ asset('user/img/slide2new.png')}}')"> 
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
 								<div class="text">
-									<h1>PT. Danau Emas</span> Gadai Jatim -<span>Cabang Banyuwangi</span></h1>
+									<h1>PT. Danau Emas</span> Gadai Jatim</span></h1>
 									<p>Danau Emas, Sumber Solusi Finansialmu! </p>
 								</div>
 							</div>
@@ -18,7 +19,7 @@
 				</div>
 				<!-- End Single Slider -->
 				<!-- Start Single Slider -->
-				<div class="single-slider" style="background-image:url('{{ asset('user/img/Frame 73.png')}}')"> 
+				<div class="single-slider" style="background-image:url('{{ asset('user/img/slide1new.png')}}')"> 
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
@@ -99,7 +100,7 @@
 		<!--/End Card -->
 
 		<!-- Danau Emas facts -->
-		<div id="fun-facts" class="fun-facts section overlay">
+		{{-- <div id="fun-facts" class="fun-facts section overlay">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-3 col-md-6 col-12">
@@ -148,7 +149,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --}}
 		<!--/ End Danau emas facts -->
 
 		<!-- Pengertian danau Emas -->
@@ -228,7 +229,7 @@
 						<div class="promo-text">
 							<h2>{{ $promo->temapromo }}</h2>
 							<p>{{ $promo->despromo }}</p>
-							<span class="link-text" onclick="window.location.href='https://www.example.com'">Lihat Semua Promo</span>						
+							<span class="link-text" onclick="window.location.href='https://www.instagram.com/danauemasid/'">Lihat Semua Promo</span>						
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -411,7 +412,7 @@
 									<img src="{{ asset('user/img/unit1.jpeg')}}" class="card-img-left" alt="Unit Penjaringan Sari">
 									<div class="card-body">
 										<h3 class="card-title">Penjaringan Sari</h3>
-										<p class="card-text">Jl. Penjaringan Sari IID No.31, Rungkut, Surabaya, Jawa Timur <a href="https://www.example.com">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
+										<p class="card-text">Jl. Penjaringan Sari IID No.31, Rungkut, Surabaya, Jawa Timur <a href="https://maps.app.goo.gl/E4XjVtZ9LxAB62zD9">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
 									</div>
 								</div>
 							</div>
@@ -517,31 +518,28 @@
 					<div class="col-lg-12 col-md-12 col-12">
 						<div class="owl-carousel clients-slider">
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client1.png')}}" alt="#"> 
+								<img src="{{ asset('user/img/client7.png')}}" alt="#"> 
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client2.png')}}" alt="#">
+								<img src="{{ asset('user/img/client7.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client3.png')}}" alt="#">
+								<img src="{{ asset('user/img/client7.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client4.png')}}" alt="#">
+								<img src="{{ asset('user/img/client7.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client5.png')}}" alt="#">
+								<img src="{{ asset('user/img/client7.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client1.png')}}" alt="#">
+								<img src="{{ asset('user/img/client7.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client2.png')}}" alt="#">
+								<img src="{{ asset('user/img/client7.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client3.png')}}" alt="#">
-							</div>
-							<div class="single-clients">
-								<img src="{{ asset('user/img/client4.png')}}" alt="#">
+								<img src="{{ asset('user/img/client7.png')}}" alt="#">
 							</div>
 						</div>
 					</div>

@@ -760,22 +760,22 @@ body{
 }
 .schedule .single-schedule span{
 	display:block;
-	color:#fff;
+	color:#000000;
 }
 .schedule .single-schedule h4{
 	font-size: 20px;
 	font-weight:600;
 	display:inline-block;
 	text-transform:capitalize;
-	color:#fff;
+	color:#000000;
 	margin-top:13px;
 }
 .schedule .single-schedule p{
-	color:#fff;
+	color:#000000;
 	margin-top:22px;
 }
 .schedule .single-schedule a {
-	color: #fff;
+	color: #000000;
 	margin-top: 25px;
 	font-weight: 500;
 	display: inline-block;
@@ -809,7 +809,7 @@ body{
 }
 .schedule .single-schedule .time-sidual li {
 	display: block;
-	color: #fff;
+	color: #000000;
 	width: 100%;
 	margin-bottom:3px;
 }
@@ -1924,7 +1924,7 @@ body{
 	background-image:url('img/client-bg.jpg');
 	background-size:cover;
 	background-position:center;
-	padding:100px 0px;
+	padding:50px;
 	position:relative;
 }
 .clients .single-clients{
@@ -1935,7 +1935,7 @@ body{
 	cursor: pointer;
 	text-align: center;
 	float: none;
-	padding: 0 35px;
+	padding: 0 15px;
 }
 /*========================
 	End Clients CSS
