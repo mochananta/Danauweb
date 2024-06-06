@@ -660,8 +660,7 @@
 				</div>
 			</div>
 		</section>
-		<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f1e7a459-985a-4cf7-8bfb-bcbf1bde08c6";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-
+		
 @endsection
 {{-- KODE TIDAK DIPAKAI SEMENTARA --}}
 <!-- Start Why choose -->
