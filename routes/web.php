@@ -6,6 +6,7 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\PromoController;
 use App\Http\Controllers\RecentpostController;
+use App\Http\Controllers\SejarahController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,16 +31,17 @@ Route::get('/berita', [BeritaController::class, 'Berita'])->name('user.berita');
 Route::get('/detailberita/{id}', [BeritaController::class, 'BeritaShow'])->name('user.detailberita');
 Route::get('/detailkegiatan/{id}', [KegiatanController::class, 'KegiatanShow'])->name('user.detailkegiatan');
 
-Route::get('/', [UserController::class,'userview'])->name('user.index');
-Route::get('/about', [UserController::class,'aboutview'])->name('user.about');
-Route::get('/contact', [UserController::class,'contactview'])->name('user.contact');
-Route::get('/faq', [UserController::class,'faqview'])->name('user.faq');
-Route::get('/team', [UserController::class,'teamview'])->name('user.team');
+Route::get('/', [UserController::class, 'userview'])->name('user.index');
+Route::get('/about', [UserController::class, 'aboutview'])->name('user.about');
+Route::get('/contact', [UserController::class, 'contactview'])->name('user.contact');
+Route::get('/faq', [UserController::class, 'faqview'])->name('user.faq');
+Route::get('/team', [UserController::class, 'teamview'])->name('user.team');
 Route::get('/contact', [UserController::class, 'contactview'])->name('user.contact');
 Route::post('/contact', [UserController::class, 'contactstore'])->name('contact.store');
-Route::get('/berita', [BeritaController::class,'Berita'])->name('user.berita');
-Route::get('/detailberita/{id}', [BeritaController::class,'BeritaShow'])->name('user.detailberita');
-Route::get('/detailkegiatan/{id}', [KegiatanController::class,'KegiatanShow'])->name('user.detailkegiatan');
+Route::get('/berita', [BeritaController::class, 'Berita'])->name('user.berita');
+Route::get('/detailberita/{id}', [BeritaController::class, 'BeritaShow'])->name('user.detailberita');
+Route::get('/detailkegiatan/{id}', [KegiatanController::class, 'KegiatanShow'])->name('user.detailkegiatan');
+
 
 Route::post('/subscribe', [UserController::class, 'subscribe'])->name('subscribe');
 Route::post('/komentar', [UserController::class, 'store'])->name('komentar.store');
@@ -76,11 +78,21 @@ Route::middleware([
     Route::post('/promo_update/{id}', [PromoController::class, 'update'])->name('promo.update');
     Route::delete('/deletepromo/{id}', [PromoController::class, 'destroy'])->name('promo.delete');
 
+
+    //CRUD KEGIATAN
     Route::get('/kegiatan', [KegiatanController::class, 'index'])->name('kegiatan.view');
     Route::get('/kegiatan_add', [KegiatanController::class, 'create'])->name('kegiatan.add');
     Route::post('/kegiatan_store', [KegiatanController::class, 'store'])->name('kegiatan.store');
     Route::get('/kegiatan_edit/{id}', [KegiatanController::class, 'edit'])->name('kegiatan.edit');
     Route::post('/kegiatan_update/{id}', [KegiatanController::class, 'update'])->name('kegiatan.update');
     Route::delete('/deletekegiatan/{id}', [KegiatanController::class, 'destroy'])->name('kegiatan.delete');
+
+    //CRUD DATA SEJARAH
+    Route::get('/sejarah', [SejarahController::class, 'index'])->name('sejarah.view');
+    Route::get('/sejarah_add', [SejarahController::class, 'create'])->name('sejarah.add');
+    Route::post('/sejarah_store', [SejarahController::class, 'store'])->name('sejarah.store');
+    Route::get('/sejarah_edit/{id}', [SejarahController::class, 'edit'])->name('sejarah.edit');
+    Route::post('/sejarah_update/{id}', [SejarahController::class, 'update'])->name('sejarah.update');
+    Route::delete('/delete/{id}', [SejarahController::class, 'destroy'])->name('sejarah.delete');
 });
 Route::get('/auth/logout', [AuthController::class, 'logout'])->name('admin.logout')->middleware('auth');

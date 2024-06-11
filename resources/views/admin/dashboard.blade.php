@@ -106,54 +106,7 @@
                 </div>
 
               </div>
-<<<<<<< HEAD
             </div><!-- End Sales Card -->
-=======
-            </div>
-            
-            <div class="col-xxl-4 col-md-6">
-              <div class="card info-card sales-card">
-
-                <div class="card-body">
-                  <h5 class="card-title">Jumlah Data Postingan</h5>
-
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-journal-text"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>{{ $jumlahPostingan }}</h6>
-                      <span class="text-success small pt-1 fw-bold"><span class="text-muted small pt-2 ps-1">postingan</span>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="col-xxl-4 col-md-6">
-              <div class="card info-card sales-card">
-
-                <div class="card-body">
-                  <h5 class="card-title">Jumlah Data Promo</h5>
-
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-journal-text"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>{{ $jumlahPromo }}</h6>
-                      <span class="text-success small pt-1 fw-bold"><span class="text-muted small pt-2 ps-1">promo</span>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-            <!-- End Sales Card -->
-
-   
->>>>>>> ace934e02a33ae0b2bde16a1a1da26717f2090c2
           <!-- Website Traffic -->
           <div class="card">
             <div class="filter">

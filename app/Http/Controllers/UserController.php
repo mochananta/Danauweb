@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\Session;
 use App\Models\Berita;
 use App\Models\Contact;
@@ -8,6 +9,7 @@ use App\Models\Kegiatan;
 use App\Models\Komentar;
 use App\Models\Promo;
 use App\Models\Subscribe;
+use App\Models\Sejarah;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -18,14 +20,14 @@ class UserController extends Controller
         $promos = Promo::all();
         $kegiatans = Kegiatan::all();
         $beritas = Berita::take(3)->get();
-        return view('user.index', compact('promos','beritas','kegiatans'));
-
+        return view('user.index', compact('promos', 'beritas', 'kegiatans'));
     }
 
     //Halaman FAQ View
     public function aboutview()
     {
-        return view('user.about');
+        $sejarahs = Sejarah::all();
+        return view('user.about', compact('sejarahs'));
     }
 
     public function kegiatan()
@@ -78,7 +80,7 @@ class UserController extends Controller
             'teks' => $request->teks,
         ]);
 
-        Session::flash('success', 'Komentar telah berhasil terkirim!');        
+        Session::flash('success', 'Komentar telah berhasil terkirim!');
     }
 
 
@@ -93,8 +95,7 @@ class UserController extends Controller
 
 
         Contact::create($validatedData);
-        Session::flash('success', 'Pesan telah berhasil terkirim!');        
+        Session::flash('success', 'Pesan telah berhasil terkirim!');
         return redirect()->route('user.contact');
     }
 }
-
