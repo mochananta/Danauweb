@@ -10,6 +10,7 @@ use App\Models\Komentar;
 use App\Models\Promo;
 use App\Models\Subscribe;
 use App\Models\Tentang;
+use App\Models\Visimisi;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -27,7 +28,8 @@ class UserController extends Controller
     public function aboutview()
     {
         $tentangs = Tentang::all();
-        return view('user.about', compact('tentangs'));
+        $visimisis = Visimisi::all();
+        return view('user.about', compact('tentangs', 'visimisis'));
     }
 
     public function kegiatan()

@@ -7,7 +7,7 @@ use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\PromoController;
 use App\Http\Controllers\RecentpostController;
 use App\Http\Controllers\TentangController;
-use App\Http\Controllers\SejarahController;
+use App\Http\Controllers\VisimisiController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -64,7 +64,7 @@ Route::middleware([
     Route::post('/berita_store', [BeritaController::class, 'store'])->name('berita.store');
     Route::get('/berita_edit/{id}', [BeritaController::class, 'edit'])->name('berita.edit');
     Route::post('/berita_update/{id}', [BeritaController::class, 'update'])->name('berita.update');
-    Route::delete('/delete/{id}', [BeritaController::class, 'destroy'])->name('berita.delete');
+    Route::delete('/delete{id}', [BeritaController::class, 'destroy'])->name('berita.delete');
 
     //CRUD POSTINGAN TERBARU
     Route::get('/recentpost', [RecentpostController::class, 'index'])->name('recentpost.view');
@@ -96,6 +96,14 @@ Route::middleware([
     Route::post('/tentang_store', [TentangController::class, 'store'])->name('tentang.store');
     Route::get('/tentang_edit/{id}', [TentangController::class, 'edit'])->name('tentang.edit');
     Route::post('/tentang_update/{id}', [TentangController::class, 'update'])->name('tentang.update');
-    Route::delete('/delete/{id}', [TentangController::class, 'destroy'])->name('tentang.delete');
+    Route::delete('/deletetentang/{id}', [TentangController::class, 'destroy'])->name('tentang.delete');
+
+    //CRUD VISI-MISI
+    Route::get('/visimisi', [VisimisiController::class, 'index'])->name('visimisi.view');
+    Route::get('/visimisi_add', [VisimisiController::class, 'create'])->name('visimisi.add');
+    Route::post('/visimisi_store', [VisimisiController::class, 'store'])->name('visimisi.store');
+    Route::get('/visimisi_edit/{id}', [VisimisiController::class, 'edit'])->name('visimisi.edit');
+    Route::post('/visimisi_update/{id}', [VisimisiController::class, 'update'])->name('visimisi.update');
+    Route::delete('/deletevisimisi/{id}', [VisimisiController::class, 'destroy'])->name('visimisi.delete');
 });
 Route::get('/auth/logout', [AuthController::class, 'logout'])->name('admin.logout')->middleware('auth');

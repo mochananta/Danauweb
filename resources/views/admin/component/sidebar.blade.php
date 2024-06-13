@@ -60,7 +60,7 @@
             </a>
           </li>
           <li>
-            <a href="{{ route('recentpost.view') }}">
+            <a href="{{ route('visimisi.view') }}">
               <i class="bi bi-circle"></i><span>Visi & Misi Perusahaan</span>
             </a>
           </li>

@@ -504,6 +504,7 @@
 		<section class="our-team section" id="our-team">
 			<div class="container">
 				<div class="row">
+					
 					<div class="col-lg-12">
 						<div class="section-title">
 							<h2>Our Staff</h2>
@@ -511,27 +512,48 @@
 						</div>
 					</div>
 				</div>
+				@foreach ($beritas as $berita)
 				<div class="row">
+					
 					<div class="col-lg-4 col-md-6 col-12">
 						<!-- Single Team Member -->
 						<div class="single-member">
 							<div class="member-img">
-								<img src="{{ asset('user/img/person.jpg')}}" alt="#">
-								<div class="social-icons">
-									<a href="#"><i class="fa fa-instagram"></i></a>
-									<a href="#"><i class="fa fa-whatsapp"></i></a>
-									<a href="#"><i class="fa fa-linkedin"></i></a>
-								</div>
+								<img src="{{ asset('storage/app/public' . $berita->fotoberita) }}" alt="#">								
 							</div>
 							<div class="member-details">
 								<h2>Name</h2>
 								<p>CEO & Founder</p>
+							</div>
+							<div class="social-icons">
+								<a href="#"><i class="fa fa-instagram"></i></a>
+								<a href="#"><i class="fa fa-whatsapp"></i></a>
+								<a href="#"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+						<!-- End Single Team Member -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12 ">
+						<!-- Single Team Member -->
+						<div class="single-member">
+							<div class="member-img">
+								<img src="{{ asset('storage/app/public' . $berita->fotoberita) }}" alt="#">								
+							</div>
+							<div class="member-details">
+								<h2>Name</h2>
+								<p>CEO & Founder</p>
+							</div>
+							<div class="social-icons">
+								<a href="#"><i class="fa fa-instagram"></i></a>
+								<a href="#"><i class="fa fa-whatsapp"></i></a>
+								<a href="#"><i class="fa fa-linkedin"></i></a>
 							</div>
 						</div>
 						<!-- End Single Team Member -->
 					</div>
 					<!-- Add more team members here -->
 				</div>
+				@endforeach
 			</div>
 		</section>
 		<!-- End Our Team Area -->

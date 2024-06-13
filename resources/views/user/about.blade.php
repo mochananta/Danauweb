@@ -52,6 +52,16 @@
 								@else
 									<p>Data tidak ditemukan.</p>
 								@endif
+
+								<h3>Visi & Misi Kami</h3>
+								@php
+								$visimisi = $visimisis->first(); // Mengambil elemen pertama
+								@endphp
+								@if($visimisi)
+									<p>{{ $visimisi->desvisimisi }}</p>
+								@else
+									<p>Data tidak ditemukan.</p>
+								@endif
 								<div class="share">
 									<h4>Share Now -</h4>
 									<ul>
