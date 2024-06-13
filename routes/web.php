@@ -6,6 +6,7 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\PromoController;
 use App\Http\Controllers\RecentpostController;
+use App\Http\Controllers\TentangController;
 use App\Http\Controllers\SejarahController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -22,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-
+//HALAMAN USER
 Route::get('/', [UserController::class, 'userview'])->name('user.index');
 Route::get('/about', [UserController::class, 'aboutview'])->name('user.about');
 Route::get('/faq', [UserController::class, 'faqview'])->name('user.faq');
@@ -41,12 +42,15 @@ Route::post('/contact', [UserController::class, 'contactstore'])->name('contact.
 Route::get('/berita', [BeritaController::class, 'Berita'])->name('user.berita');
 Route::get('/detailberita/{id}', [BeritaController::class, 'BeritaShow'])->name('user.detailberita');
 Route::get('/detailkegiatan/{id}', [KegiatanController::class, 'KegiatanShow'])->name('user.detailkegiatan');
-
 
 Route::post('/subscribe', [UserController::class, 'subscribe'])->name('subscribe');
 Route::post('/komentar', [UserController::class, 'store'])->name('komentar.store');
 Route::post('/contact', [UserController::class, 'contactview'])->name('user.contact');
 Route::post('/contact', [UserController::class, 'contactstore'])->name('contact.store');
+
+
+
+//HALAMAN ADMIN
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -78,7 +82,6 @@ Route::middleware([
     Route::post('/promo_update/{id}', [PromoController::class, 'update'])->name('promo.update');
     Route::delete('/deletepromo/{id}', [PromoController::class, 'destroy'])->name('promo.delete');
 
-
     //CRUD KEGIATAN
     Route::get('/kegiatan', [KegiatanController::class, 'index'])->name('kegiatan.view');
     Route::get('/kegiatan_add', [KegiatanController::class, 'create'])->name('kegiatan.add');
@@ -87,12 +90,12 @@ Route::middleware([
     Route::post('/kegiatan_update/{id}', [KegiatanController::class, 'update'])->name('kegiatan.update');
     Route::delete('/deletekegiatan/{id}', [KegiatanController::class, 'destroy'])->name('kegiatan.delete');
 
-    //CRUD DATA SEJARAH
-    Route::get('/sejarah', [SejarahController::class, 'index'])->name('sejarah.view');
-    Route::get('/sejarah_add', [SejarahController::class, 'create'])->name('sejarah.add');
-    Route::post('/sejarah_store', [SejarahController::class, 'store'])->name('sejarah.store');
-    Route::get('/sejarah_edit/{id}', [SejarahController::class, 'edit'])->name('sejarah.edit');
-    Route::post('/sejarah_update/{id}', [SejarahController::class, 'update'])->name('sejarah.update');
-    Route::delete('/delete/{id}', [SejarahController::class, 'destroy'])->name('sejarah.delete');
+    //CRUD DATA DIRI
+    Route::get('/tentang', [TentangController::class, 'index'])->name('tentang.view');
+    Route::get('/tentang_add', [TentangController::class, 'create'])->name('tentang.add');
+    Route::post('/tentang_store', [TentangController::class, 'store'])->name('tentang.store');
+    Route::get('/tentang_edit/{id}', [TentangController::class, 'edit'])->name('tentang.edit');
+    Route::post('/tentang_update/{id}', [TentangController::class, 'update'])->name('tentang.update');
+    Route::delete('/delete/{id}', [TentangController::class, 'destroy'])->name('tentang.delete');
 });
 Route::get('/auth/logout', [AuthController::class, 'logout'])->name('admin.logout')->middleware('auth');

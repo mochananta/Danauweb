@@ -9,7 +9,7 @@ use App\Models\Kegiatan;
 use App\Models\Komentar;
 use App\Models\Promo;
 use App\Models\Subscribe;
-use App\Models\Sejarah;
+use App\Models\Tentang;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -26,8 +26,8 @@ class UserController extends Controller
     //Halaman FAQ View
     public function aboutview()
     {
-        $sejarahs = Sejarah::all();
-        return view('user.about', compact('sejarahs'));
+        $tentangs = Tentang::all();
+        return view('user.about', compact('tentangs'));
     }
 
     public function kegiatan()

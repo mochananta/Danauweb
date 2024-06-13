@@ -17,12 +17,15 @@
             <h6 class="m-0 font-weight-bold text-primary">Form Edit Sejarah</h6>
         </div>
         <div class="card-body">
-            <form id="validate" method="POST" action="{{route('sejarah.update',$editData->id)}}" enctype="multipart/form-data">
+            <form id="validate" method="POST" action="{{route('tentang.update',$editData->id)}}" enctype="multipart/form-data">
                 @csrf
+                {{-- @foreach ($tentangs as $tentang) --}}
                     <label for="deskripsi">Deskripsi</label>
-                    <textarea name="deskripsi" class="form-control" id="deskripsi" rows="5" value="{{$editData->deskripsi}}" required></textarea>
+                    <textarea name="deskripsi" class="form-control" id="deskripsi" rows="5" value="{{$editData->deskripsi}}" required>{{$editData->deskripsi}}</textarea>
                 </div>
+                {{-- @endforeach --}}
                 <button type="submit" class="btn btn-primary">Simpan</button>
+               
             </form>
         </div>
     </div>

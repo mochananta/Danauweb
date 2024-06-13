@@ -3,12 +3,12 @@
 <main id="main" class="main">
 
   <div class="pagetitle">
-    <h1>Tabel Upadte Data</h1>
+    <h1>Tabel Update Data</h1>
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{url('/dashboard')}}">Dashboard</a></li>
         <li class="breadcrumb-item">Update Data</li>
-        <li class="breadcrumb-item active">Data Sejarah Perusahaan</li>
+        <li class="breadcrumb-item active">Data Diri Perusahaan</li>
       </ol>
     </nav>
   </div><!-- End Page Title -->
@@ -34,13 +34,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($sejarah as $item)
+                    @foreach ($tentang as $item)
                     <tr class="text-center">
                         <td>{{$item->deskripsi}}</td>
                         <td>
                             <div class="row">
-                                <a href="{{route('sejarah.edit',$item->id)}}" class="col btn btn-success" style="margin:10px">Edit</a>
-                                    <a href="{{route('sejarah.delete',$item->id)}}" class="col btn btn-danger" style="margin:10px" data-confirm-delete="true">Hapus</a>
+                                <a href="{{route('tentang.edit',$item->id)}}" class="col btn btn-success" style="margin:10px">Edit</a>
                             </div>
                         </td>
                     </tr>

@@ -43,12 +43,12 @@
 								</ul> --}}
 							</div>
 							<div class="body-text">
-								<h3>Sejarah berdirinya PT. Danau Emas Gadai Jatim.</h3>
+								<h3>Tentang Kami</h3>
 								@php
-								$sejarah = $sejarahs->first(); // Mengambil elemen pertama
+								$tentang = $tentangs->first(); // Mengambil elemen pertama
 								@endphp
-								@if($sejarah)
-									<p>{{ $sejarah->deskripsi }}</p>
+								@if($tentang)
+									<p>{{ $tentang->deskripsi }}</p>
 								@else
 									<p>Data tidak ditemukan.</p>
 								@endif

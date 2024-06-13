@@ -55,13 +55,13 @@
         </a>
         <ul id="tables-nav-2" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="{{ route('sejarah.view') }}">
-              <i class="bi bi-circle"></i><span>Data Sejarah Perusahaan</span>
+            <a href="{{ route('tentang.view') }}">
+              <i class="bi bi-circle"></i><span>Data Diri Perusahaan</span>
             </a>
           </li>
           <li>
             <a href="{{ route('recentpost.view') }}">
-              <i class="bi bi-circle"></i><span>Data Diri Perusahaan</span>
+              <i class="bi bi-circle"></i><span>Visi & Misi Perusahaan</span>
             </a>
           </li>
           <li>
