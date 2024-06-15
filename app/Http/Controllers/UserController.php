@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use Illuminate\Support\Facades\Session;
 use App\Models\Berita;
 use App\Models\Contact;
@@ -25,7 +26,8 @@ class UserController extends Controller
     //Halaman FAQ View
     public function aboutview()
     {
-        return view('user.about');
+        $abouts = About::all();
+        return view('user.about', compact('abouts'));
     }
 
     public function kegiatan()
@@ -78,7 +80,8 @@ class UserController extends Controller
             'teks' => $request->teks,
         ]);
 
-        Session::flash('success', 'Komentar telah berhasil terkirim!');        
+        Session::flash('success', 'Komentar telah berhasil terkirim!'); 
+        return redirect()->back();       
     }
 
     public function contactstore(Request $request)

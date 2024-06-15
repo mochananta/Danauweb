@@ -240,7 +240,6 @@
 				</div>
 			</div>  
 		</section>		
-		<!--/ End Pricing Table -->				
 		<!--/ End Promo -->			
 		
 		<!-- Start foto kegiatan -->

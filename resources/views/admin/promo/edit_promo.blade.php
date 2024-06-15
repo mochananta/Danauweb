@@ -11,7 +11,7 @@
             <li class="breadcrumb-item active">Promo</li>
           </ol>
         </nav>
-      </div><!-- End Page Title -->
+      </div>
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
