@@ -247,7 +247,7 @@
 									<div class="col-lg-6 col-md-6 col-12">
 										<ul>
 											<li><a href="{{ route('user.index')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
-											<li><a href="{{ route('user.about')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+											{{-- <li><a href="{{ route('user.about')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li> --}}
 											<li><a href="{{ route('user.berita')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Berita</a></li>
 										</ul>
 									</div>

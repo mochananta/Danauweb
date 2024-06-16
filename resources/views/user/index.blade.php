@@ -282,7 +282,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>Keep up with Our Most Recent Medical News.</h2>
+							<h2>Artikel</h2>
 							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
 						</div>
 					</div>
@@ -616,7 +616,7 @@
 		<!-- End Appointment -->
 		
 		<!-- Start Newsletter Area -->
-		 <section class="newsletter section">
+		 {{-- <section class="newsletter section">
 			<div class="container">
 				<div class="row ">
 					<div class="col-lg-6  col-12">
@@ -643,7 +643,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> --}}
 		
 @endsection
 {{-- KODE TIDAK DIPAKAI SEMENTARA --}}

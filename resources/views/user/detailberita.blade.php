@@ -74,7 +74,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-12">
+							{{-- <div class="col-12">
 								<div class="blog-comments">
 									<h2>All Comments</h2>
 									<div class="comments-body">
@@ -137,7 +137,7 @@
 									</form>
 									<!--/ End Form Komentar -->
 								</div>
-							</div>
+							</div> --}}
 						</div>
 					</div>
 					<div class="col-lg-4 col-12">

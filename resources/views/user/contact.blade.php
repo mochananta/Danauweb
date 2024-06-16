@@ -79,9 +79,9 @@
 											<div class="form-group login-btn">
 												<button class="btn" type="submit">Send</button>
 											</div>
-											<div class="checkbox">
+											{{-- <div class="checkbox">
 												<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">Do you want to subscribe our Newsletter ?</label>
-											</div>
+											</div> --}}
 										</div>
 									</div>
 								</form>

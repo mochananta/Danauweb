@@ -6,11 +6,11 @@
 				<div class="bread-inner">
 					<div class="row">
 						<div class="col-12">
-							<h2>About Detail</h2>
+							<h2>About</h2>
 							<ul class="bread-list">
 								<li><a href="/">Home</a></li>
 								<li><i class="icofont-simple-right"></i></li>
-								<li class="active">About Detail</li>
+								<li class="active">About</li>
 							</ul>
 						</div>
 					</div>
@@ -20,22 +20,51 @@
 		<!-- End Breadcrumbs -->
 	
 		<!-- Start Portfolio Details Area -->
+
+		{{-- Kode baru --}}
 		<section class="pf-details section">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
 						<div class="inner-content">
+							@foreach ($abouts as $about)
+							<div class="gambar">
+								<img src="{{ asset('storage/' . $about->foto) }}" alt="#">
+							</div>
+							<div class="body-text">
+								<h3>{{ $about->judul }}</h3>
+								<p>{{ $about->deskripsi }}</p>
+							</div>
+							@endforeach
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+			
+		<!-- End Portfolio Details Area -->
+@endsection	
+
+
+
+
+{{-- Kode Acuan --}}
+		{{-- <section class="pf-details section">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="inner-content">
+							@foreach ($abouts as $about)
 							<div class="image-slider">
 								<div class="pf-details-slider">
-									<img src="{{ asset('user/img/Gajian-Emas.jpeg')}}" alt="#">  
+									<img src="{{ asset('storage/' . $about->foto) }}" alt="#">  
 									<img src="{{ asset('user/img/Gajian-Emas.jpeg')}}" alt="#">
 								</div>
 							</div>
+							
 							<div class="body-text">
-								<h3>Here is the name of this project here</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor a ti incididunt ut labore et dolore to in magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.Lorem ipsum dolor sit amet, in a in to in a consectetur.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna in a aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod</p>
-								<p>ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna to in aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. </p>
-								<p>ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna a aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod. dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.</p>
+								<h3>{{ $about->judul }}</h3>
+								<p>{{ $about->deskripsi }}</p>
 								<div class="share">
 									<h4>Share Now -</h4>
 									<ul>
@@ -45,10 +74,13 @@
 									</ul>
 								</div>
 							</div>
+							@endforeach
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-		<!-- End Portfolio Details Area -->
-@endsection	
+		</section> --}}
+
+
+
+
