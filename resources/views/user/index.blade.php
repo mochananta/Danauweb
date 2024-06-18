@@ -17,6 +17,7 @@
 					</div>
 				</div>
 				<!-- End Single Slider -->
+
 				<!-- Start Single Slider -->
 				<div class="single-slider" style="background-image:url('{{ asset('user/img/slider5.png')}}')"> 
 					<div class="container">
@@ -30,7 +31,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> 
 				<!-- End Single Slider -->
 			</div>
 		</section>
@@ -49,14 +50,14 @@
 										<i class="fa fa-building-o"></i>
 									</div>
 									<div class="single-content">
-										<h4>DANAU EMAS GADAI JATIM</h4>
+										<h4>PT. DANAU EMAS GADAI JATIM</h4>
 										<p>Danau Emas merupakan pegadaian dibawah naungan INKOPPOL dan OJK yang hadir 
 											untuk membantu masyarakat dalam menghadapi masalah keuangan dengan cara mudah, aman dan cepat.</p>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-12 col-12">
+						<div class="col-lg-4 col-md-12 col-12 center-content">
 							<!-- single-schedule -->
 							<div class="single-schedule last">
 								<div class="inner">
@@ -69,7 +70,7 @@
 										<ul class="time-sidual">
 											<li class="day">Senin-Jum’at <span>8.00-17.00</span></li>
 											<li class="day">Sabtu <span>8.00-13.00</span></li>
-											<li class="day">Minggu & Hari Besar, Libur</span></li>
+											<li class="day"><strong>Minggu & Hari Besar, Libur</strong></li>
 										</ul>
 									</div>
 								</div>
@@ -159,7 +160,7 @@
 						<div class="section-title">
 							{{-- <h5>Layanan Tersedia</h5> --}}
 							<h2>Butuh Dana Cepat Dengan Proses yang Aman dan Mudah ?</h2>
-							<p>Danau Emas Solusinya, Yuk Kenalan Dengan Kami Disini</p>
+							<p>DEGJ solusinya, yuk kenalan dengan kami disini!</p>
 						</div>
 					</div>
 				</div>
@@ -181,7 +182,7 @@
 											<img src="{{ asset('user/img/Group 139.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
-											<p>GADAI KENDARAAN BERMOTOR</p>
+											<p>GADAI PERHIASAN</p>
 										</div>
 									</div>
 								</div>	
@@ -191,7 +192,7 @@
 											<img src="{{ asset('user/img/Group 140.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
-											<p>GADAI EMAS</p>
+											<p>GADAI MOBIL & MOTOR</p>
 										</div>
 									</div>
 								</div>
@@ -201,7 +202,7 @@
 											<img src="{{ asset('user/img/Group 141.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
-											<p>Maecenas vitae luctus nibh.</p>
+											<p>GADAI BARANG ELEKTRONIK</p>
 										</div>
 									</div>
 								</div>											
@@ -219,70 +220,14 @@
 			</section>
 		<!--/ End pengertian Danau Emas -->
 
-		<!-- Promo -->
-		<section class="custom-pricing-table section">
-			<div class="container">
-				<div class="row">
-					@foreach ($promos as $promo)
-					<div class="col-md-6">
-						<div class="promo-text">
-							<h2>{{ $promo->temapromo }}</h2>
-							<p>{{ $promo->despromo }}</p>
-							<span class="link-text" onclick="window.location.href='https://www.example.com'">Lihat Semua Promo</span>						
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="image-container">
-							<img src="{{ asset('storage/' . $promo->fotopromo) }}" alt="Right Image">
-						</div>
-					</div>	
-					@endforeach
-				</div>
-			</div>  
-		</section>		
-		<!--/ End Pricing Table -->				
-		<!--/ End Promo -->			
-		
-		<!-- Start foto kegiatan -->
-		<section class="portfolio section" >
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="section-title">
-							<h2>Aktivitas Kami Yang Dapat Anda Ketahui Secara Lengkap</h2>
-							{{-- <img src="{{ asset('user/img/coins.png')}}" alt="#">  --}}
-							<p>Simak berbagai kegiatan yang kami suguhkan untuk Anda disini</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-lg-12 col-12">
-						<div class="owl-carousel portfolio-slider">
-							@foreach ($kegiatans as $kegiatan)
-							<div class="single-pf">
-								<img src="{{ asset('storage/' . $kegiatan->potokegiatan1) }}" alt="#"> 
-								<a href="{{ route('user.detailkegiatan', $kegiatan->id) }}" class="btn">View Details</a>
-							</div>
-							@endforeach
-						</div>
-					</div>
-				</div>
-			</div>
-			
-		</section>
-		<!--/ End foto kegiatan -->
-
-
-		<!-- Start Blog Area -->
+		<!-- Start Artikel -->
 		<section class="blog section" id="blog">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>Keep up with Our Most Recent Medical News.</h2>
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+							<h2>Artikel</h2>
+							<p>Yuk ikuti informasi terbaru kami, melalui artikel di bawah ini!</p>
 						</div>
 					</div>
 				</div>
@@ -309,9 +254,434 @@
 				</div>
 			</div>
 		</section>
-		<!-- End Blog Area -->
+		<!-- End Artikel -->
 
+		<!-- Promo -->
+		<section class="custom-pricing-table section">
+			<div class="container">
+				<div class="row">
+					@foreach ($promos as $promo)
+					<div class="col-md-6">
+						<div class="promo-text">
+							<h2>{{ $promo->temapromo }}</h2>
+							<p>{{ $promo->despromo }}</p>
+							<span class="link-text" onclick="window.location.href='https://www.instagram.com/danauemasid/'">Lihat Semua Promo</span>						
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="image-container">
+							<img src="{{ asset('storage/' . $promo->fotopromo) }}" alt="Right Image">
+						</div>
+					</div>	
+					@endforeach
+				</div>
+			</div>  
+		</section>		
+		<!--/ End Pricing Table -->				
+		<!--/ End Promo -->				
 		
+		<!-- Start testimoni 1 -->
+		{{-- <section class="portfolio section" >
+			<div class="container mt-3">
+				<div class="row mt-3 text-center">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Aktivitas Kami Yang Dapat Anda Ketahui Secara Lengkap</h2>
+							{{-- <img src="{{ asset('user/img/coins.png')}}" alt="#">  --}}
+							{{-- <p>Simak video testimoni pelanggan Danau Emas Gadai Jatim yang kami suguhkan untuk Anda.</p>
+							<div class="container mt-3">
+								<div class="row mt-3 text-center">
+									<iframe width=1000% height="500" src="https://www.youtube.com/embed/rICaYGVPMBY?si=AaRgwGB0c7qUe-s7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+									<div class="text-justify">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12 col-12">
+						<div class="owl-carousel portfolio-slider">
+							@foreach ($kegiatans as $kegiatan)
+							<div class="single-pf">
+								<img src="{{ asset('storage/' . $kegiatan->potokegiatan1) }}" alt="#"> 
+								<a href="{{ route('user.detailkegiatan', $kegiatan->id) }}" class="btn">View Details</a>
+							</div>
+							@endforeach
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</section> --}}
+		<!--/ End testimoni 1 -->
+
+		<!-- Start frame youtube -->
+		<section class="why-choose section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Testimoni Pelanggan</h2>
+							<p>Yuk simak apa pendapat mereka!</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-12">
+						<!-- Start Choose Left -->
+						<div class="choose-pertama">
+							<h3>Danau Emas Gadai Jatim</h3>
+							<p>Selamat datang di YouTube resmi Danau Emas Gadai Jatim! Dalam video ini, kami menampilkan berbagai testimoni dari pelanggan setia kami yang telah merasakan manfaat dan pelayanan terbaik dari Danau Emas Gadai Jatim. Dengarkan langsung pengalaman pelanggan kami yang telah mendapatkan solusi keuangan dengan aman dan nyaman melalui layanan gadai kami. Mulai dari proses gadai yang cepat hingga penilaian yang adil, semua dikupas tuntas dalam video ini!</p>
+						</div>
+						<!-- End Choose Left -->
+					</div>
+					<div class="col-lg-6 col-12">
+						<div class="choose-kedua">
+							<!-- Ganti foto dengan link YouTube -->
+							<div class="embed-responsive embed-responsive-16by9">
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/72H3CF2ZxuI" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Youtube -->
+
+		{{-- <!-- Start Unit -->
+		<section class="unit-details section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Kunjungi Kami Di Unit Terdekatmu.</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12 col-12">
+						<div class="owl-carousel unit-slider owl-theme">
+							<div class="item">
+								<div class="card">
+									<img src="{{ asset('user/img/unit1.jpeg')}}" class="card-img-left" alt="Unit Penjaringan Sari">
+									<div class="card-body">
+										<h3 class="card-title">Penjaringan Sari</h3>
+										<p class="card-text">Jl. Penjaringan Sari IID No.31, Rungkut, Surabaya, Jawa Timur <a href="https://maps.app.goo.gl/E4XjVtZ9LxAB62zD9">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="card">
+									<img src="{{ asset('user/img/unit2.jpeg')}}" class="card-img-left" alt="Unit Tuban Gajahmada">
+									<div class="card-body">
+										<h3 class="card-title">Tuban Gajahmada</h3>
+										<p class="card-text">Jl. Gajahmada No.25, Kebonsari, Tuban, Jawa Timur <a href="https://www.example.com">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="card">
+									<img src="{{ asset('user/img/unit3.jpeg')}}" class="card-img-left" alt="Unit Tambahrejo">
+									<div class="card-body">
+										<h3 class="card-title">Tambahrejo</h3>
+										<p class="card-text">Jl. Tambah Rejo Blok B No.17, Tambakrejo, Simokerto, Surabaya <a href="https://www.example.com">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="card">
+									<img src="{{ asset('user/img/unit4.jpg')}}" class="card-img-left" alt="Unit Tambahrejo">
+									<div class="card-body">
+										<h3 class="card-title">Banyuwangi Kota</h3>
+										<p class="card-text">Jl. Kolonel Sugiono, Kertosari, Tukangkayu, Banyuwangi, Jawa Timur 68462 <a href="https://www.example.com">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="card">
+									<img src="{{ asset('user/img/unit5.jpg')}}" class="card-img-left" alt="Unit Tambahrejo">
+									<div class="card-body">
+										<h3 class="card-title">Muncar</h3>
+										<p class="card-text">Jl. Raya Muncar, Dusun Muncar, Tembokrejo, Muncar, Banyuwangi, Jawa Timur 68472 <a href="https://www.example.com">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="card">
+									<img src="{{ asset('user/img/unit6.jpg')}}" class="card-img-left" alt="Unit Tambahrejo">
+									<div class="card-body">
+										<h3 class="card-title">Rogojampi</h3>
+										<p class="card-text">Jl. Ps. Ruko No.11, Pancoran Kulon, Rogojampi, Banyuwangi, Jawa Timur 68462 <a href="https://www.example.com">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="card">
+									<img src="{{ asset('user/img/unit7.jpg')}}" class="card-img-left" alt="Unit Tambahrejo">
+									<div class="card-body">
+										<h3 class="card-title">Rogojampi</h3>
+										<p class="card-text">Jl. Ps. Ruko No.11, Pancoran Kulon, Rogojampi, Banyuwangi, Jawa Timur 68462 <a href="https://www.example.com">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Unit --> --}}
+
+		<!-- Start unit -->
+		<section class="portfolio section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Kunjungi Kami</h2>
+							<h2>di Unit Terdekatmu</h2>
+							{{-- <img src="user/img/section-img.png" alt="#"> --}}
+							<p>Yuk simak lokasi unit-unit DEGJ di Jawa Timur!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12 col-12">
+						<div class="owl-carousel portfolio-slider owl-theme">
+							<div class="unit">
+								<div class="card-unit">
+									<img src="{{ asset('user/img/unit1.jpeg')}}" class="card-img-left" alt="Unit Penjaringan Sari">
+									<div class="card-body">
+										<h3 class="card-title">Penjaringan Sari</h3>
+										<p class="card-text">Jl. Penjaringan Sari IID No.31, Rungkut, Surabaya, Jawa Timur <a href="https://maps.app.goo.gl/E4XjVtZ9LxAB62zD9" class="btn">Lihat Google Maps<i class="fas fa-map-marker-alt"></i></a></p>
+									</div>
+								</div>
+								{{-- <a href="portfolio-details.html" class="btn">View Details</a> --}}
+							</div>
+							<div class="unit">
+								<div class="card-unit">
+									<img src="{{ asset('user/img/unit1.jpeg')}}" class="card-img-left" alt="Unit Penjaringan Sari">
+									<div class="card-body">
+										<h3 class="card-title">Penjaringan Sari</h3>
+										<p class="card-text">Jl. Penjaringan Sari IID No.31, Rungkut, Surabaya, Jawa Timur <a href="https://maps.app.goo.gl/E4XjVtZ9LxAB62zD9" class="btn">Lihat Google Maps<i class="fas fa-map-marker-alt"></i></a></p>
+									</div>
+								</div>
+								{{-- <a href="portfolio-details.html" class="btn">View Details</a> --}}
+							</div>
+							<div class="unit">
+								<div class="card-unit">
+									<img src="{{ asset('user/img/unit1.jpeg')}}" class="card-img-left" alt="Unit Penjaringan Sari">
+									<div class="card-body">
+										<h3 class="card-title">Penjaringan Sari</h3>
+										<p class="card-text">Jl. Penjaringan Sari IID No.31, Rungkut, Surabaya, Jawa Timur <a href="https://maps.app.goo.gl/E4XjVtZ9LxAB62zD9" class="btn">Lihat Google Maps<i class="fas fa-map-marker-alt"></i></a></p>
+									</div>
+								</div>
+								{{-- <a href="portfolio-details.html" class="btn">View Details</a> --}}
+							</div>
+							<div class="unit">
+								<div class="card-unit">
+									<img src="{{ asset('user/img/unit1.jpeg')}}" class="card-img-left" alt="Unit Penjaringan Sari">
+									<div class="card-body">
+										<h3 class="card-title">Penjaringan Sari</h3>
+										<p class="card-text">Jl. Penjaringan Sari IID No.31, Rungkut, Surabaya, Jawa Timur <a href="https://maps.app.goo.gl/E4XjVtZ9LxAB62zD9" class="btn">Lihat Google Maps<i class="fas fa-map-marker-alt"></i></a></p>
+									</div>
+								</div>
+								{{-- <a href="portfolio-details.html" class="btn">View Details</a> --}}
+							</div>
+							<div class="unit">
+								<div class="card-unit">
+									<img src="{{ asset('user/img/unit1.jpeg')}}" class="card-img-left" alt="Unit Penjaringan Sari">
+									<div class="card-body">
+										<h3 class="card-title">Penjaringan Sari</h3>
+										<p class="card-text">Jl. Penjaringan Sari IID No.31, Rungkut, Surabaya, Jawa Timur <a href="https://maps.app.goo.gl/E4XjVtZ9LxAB62zD9" class="btn">Lihat Google Maps<i class="fas fa-map-marker-alt"></i></a></p>
+									</div>
+								</div>
+								{{-- <a href="portfolio-details.html" class="btn">View Details</a> --}}
+							</div>
+							<div class="unit">
+								<div class="card-unit">
+									<img src="{{ asset('user/img/unit1.jpeg')}}" class="card-img-left" alt="Unit Penjaringan Sari">
+									<div class="card-body">
+										<h3 class="card-title">Penjaringan Sari</h3>
+										<p class="card-text">Jl. Penjaringan Sari IID No.31, Rungkut, Surabaya, Jawa Timur <a href="https://maps.app.goo.gl/E4XjVtZ9LxAB62zD9" class="btn">Lihat Google Maps<i class="fas fa-map-marker-alt"></i></a></p>
+									</div>
+								</div>
+								{{-- <a href="portfolio-details.html" class="btn">View Details</a> --}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script>
+				$(document).ready(function(){
+					$(".owl-carousel").owlCarousel({
+						items: 1, // Atur jumlah item yang ditampilkan dalam satu waktu
+						loop: true,
+						nav: false, // Matikan navigasi bawaan owl-carousel
+					});
+				
+					$(".carousel-control-prev").click(function() {
+						$(".owl-carousel").trigger('prev.owl.carousel');
+					});
+				
+					$(".carousel-control-next").click(function() {
+						$(".owl-carousel").trigger('next.owl.carousel');
+					});
+				});
+				</script>
+		</section>
+		<!-- End unit -->
+
+		<!-- Start dokumentasi kegiatan -->
+		<section class="portfolio section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Dokumentasi Kegiatan</h2>
+							<h2>Danau Emas Gadai Jatim</h2>
+							{{-- <img src="user/img/section-img.png" alt="#"> --}}
+							<p>Kami menyajikan rangkaian momen berharga dari berbagai kegiatan dan program yang telah kami lakukan. Setiap foto adalah bukti nyata komitmen kami dalam memberikan layanan terbaik dan kontribusi positif bagi masyarakat Jawa Timur.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12 col-12">
+						<div class="owl-carousel portfolio-slider">
+							<div class="single-pf">
+								<img src="user/img/img01.jpg" alt="#">
+								{{-- <a href="portfolio-details.html" class="btn">View Details</a> --}}
+							</div>
+							<div class="single-pf">
+								<img src="user/img/img02.jpg" alt="#">
+								{{-- <a href="portfolio-details.html" class="btn">View Details</a> --}}
+							</div>
+							<div class="single-pf">
+								<img src="user/img/img03.jpg" alt="#">
+								{{-- <a href="portfolio-details.html" class="btn">View Details</a> --}}
+							</div>
+							<div class="single-pf">
+								<img src="user/img/img04.jpg" alt="#">
+								{{-- <a href="portfolio-details.html" class="btn">View Details</a> --}}
+							</div>
+							<div class="single-pf">
+								<img src="user/img/img05.jpg" alt="#">
+								{{-- <a href="portfolio-details.html" class="btn">View Details</a> --}}
+							</div>
+							<div class="single-pf">
+								<img src="user/img/img06.jpg" alt="#">
+								{{-- <a href="portfolio-details.html" class="btn">View Details</a> --}}
+							</div>
+							<div class="single-pf">
+								<img src="user/img/img07.jpg" alt="#">
+								{{-- <a href="portfolio-details.html" class="btn">View Details</a> --}}
+							</div>
+							<div class="single-pf">
+								<img src="user/img/img08.jpg" alt="#">
+								{{-- <a href="portfolio-details.html" class="btn">View Details</a> --}}
+							</div>
+							<div class="single-pf">
+								<img src="user/img/img09.jpg" alt="#">
+								{{-- <a href="portfolio-details.html" class="btn">View Details</a> --}}
+							</div>
+							<div class="single-pf">
+								<img src="user/img/img10.jpg" alt="#">
+								{{-- <a href="portfolio-details.html" class="btn">View Details</a> --}}
+							</div>
+							<div class="single-pf">
+								<img src="user/img/img11.jpg" alt="#">
+								{{-- <a href="portfolio-details.html" class="btn">View Details</a> --}}
+							</div>
+							<div class="single-pf">
+								<img src="user/img/img12.jpg" alt="#">
+								{{-- <a href="portfolio-details.html" class="btn">View Details</a> --}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End dokumentasi kegiatan -->
+
+		<!-- Start unit -->
+		{{-- <section class="portfolio section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Unit Danau Emas Gadai Jatim</h2>
+							{{-- <img src="img/section-img.png" alt="#"> --}}
+							{{-- <p>Temukan unit terdekat kami untuk mendapatkan layanan gadai yang cepat, aman, dan terpercaya. Untuk informasi lebih lanjut, hubungi atau kunjungi unit layanan kami yang tertera pada setiap gambar di bawah ini!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12 col-12">
+						<div class="owl-carousel portfolio-slider">
+							<div class="single-pf">
+								<img src="user/img/unitbanyuwangi.jpg" alt="#">
+								<a href="unit.blade.php" class="btn">Unit Banyuwangi</a>
+							</div>
+							<div class="single-pf">
+								<img src="user/img/unitrogojampi.jpg" alt="#">
+								<a href="unit.blade.php" class="btn">Unit Rogojampi</a>
+							</div>
+							<div class="single-pf">
+								<img src="user/img/unitmuncar.jpg" alt="#">
+								<a href="unit.blade.php" class="btn">Unit Muncar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section> --}}
+		<!--/ End unit -->
+
+		<!-- Start Blog Area -->
+		{{-- <section class="blog section" id="blog">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Keep up with Our Most Recent Medical News.</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+						</div>
+					</div>
+				</div> --}}
+				{{-- <div class="row">
+					@foreach ($beritas as $berita)
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<a href="{{ route('user.detailberita', $berita->id) }}">
+								<img src="{{ asset('storage/' . $berita->fotoberita) }}" alt="#">
+								</a>
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div class="date">{{ $berita->tanggal }}</div>
+									<h2><a href="{{ route('user.detailberita', $berita->id) }}">{{ $berita->judulberita }}</a></h2>
+									<p class="text">{{ Str::limit($berita->deskripsi, 116) }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					@endforeach
+				</div>
+			</div>
+		</section>
+		<!-- End Blog Area --> --}}
+
 		<!-- Start layanan -->
 		<section class="services section">
 			<div class="container">
@@ -319,8 +689,8 @@
 					<div class="col-lg-12">
 						<div class="section-title">
 							<h2>Halaman layanan</h2>
-							<img src="{{ asset('user/img/section-img.png')}}" alt="#">
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+							{{-- <img src="{{ asset('user/img/section-img.png')}}" alt="#"> --}}
+							<p>Terdapat 3 layanan yang disediakan oleh Danau Emas Gadai Jatim.</p>
 						</div>
 					</div>
 				</div>
@@ -330,7 +700,7 @@
 						<div class="single-service">
 							<i class="icofont-motor-biker"></i>
 							<h4><a href="service-details.html">Jemput Gadai</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+							<p>Danau Emas Gadai Jatim kini hadir dengan Layanan Jemput Gadai! Tak perlu repot datang ke kantor, petugas kami siap menjemput barang gadai Anda di lokasi. Proses cepat, aman, dan transparan. Solusi praktis untuk kebutuhan dana cepat Anda. Hubungi DEGJ sekarang!</p>	
 						</div>
 						<!-- End Single Service -->
 					</div>
@@ -339,7 +709,7 @@
 						<div class="single-service">
 							<i class="icofont-washing-machine"></i>
 							<h4><a href="service-details.html">Cuci Emas Gratis</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+							<p>Kembalikan kilau emas Anda dengan Layanan Cuci Emas Gratis di Danau Emas Gadai Jatim! Nikmati perhiasan yang bersih dan berkilau tanpa biaya tambahan. Kunjungi DEGJ terdekat dan percayakan perawatan emas Anda pada ahlinya. Segera manfaatkan layanan ini untuk perhiasan yang selalu tampak baru!</p>	
 						</div>
 						<!-- End Single Service -->
 					</div>
@@ -348,7 +718,7 @@
 						<div class="single-service">
 							<i class="icofont-gift"></i>
 							<h4><a href="service-details.html">Hadiah Spesial</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+							<p>Nikmati hadiah menarik di Danau Emas Gadai Jatim! Gadaikan emas Anda dan menangkan barang elektronik, peralatan rumah tangga, dan uang tunai. Setiap transaksi berpeluang menang! Kunjungi sekarang dan dapatkan hadiahnya!</p>	
 						</div>
 						<!-- End Single Service -->
 					</div>
@@ -360,13 +730,13 @@
 		
 	
 		<!-- Start Our Team Area -->
-		<section class="our-team section" id="our-team">
+		{{-- <section class="our-team section" id="our-team">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>Our Staff</h2>
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+							<h2>Tim Kami</h2>
+							<p>Di Danau Emas Gadai Jatim, kami bangga memiliki tim yang berdedikasi dan profesional untuk melayani Anda dengan sepenuh hati.</p>
 						</div>
 					</div>
 				</div>
@@ -383,7 +753,119 @@
 								</div>
 							</div>
 							<div class="member-details">
-								<h2>Name</h2>
+								<h4>Name</h4>
+								<p>CEO & Founder</p>
+							</div>
+						</div>
+						<div class="single-member">
+							<div class="member-img">
+								<img src="{{ asset('user/img/person.jpg')}}" alt="#">
+								<div class="social-icons">
+									<a href="#"><i class="fa fa-instagram"></i></a>
+									<a href="#"><i class="fa fa-whatsapp"></i></a>
+									<a href="#"><i class="fa fa-linkedin"></i></a>
+								</div>
+							</div>
+							<div class="member-details">
+								<h4>Name</h4>
+								<p>CEO & Founder</p>
+							</div>
+						</div>
+						<div class="single-member">
+							<div class="member-img">
+								<img src="{{ asset('user/img/person.jpg')}}" alt="#">
+								<div class="social-icons">
+									<a href="#"><i class="fa fa-instagram"></i></a>
+									<a href="#"><i class="fa fa-whatsapp"></i></a>
+									<a href="#"><i class="fa fa-linkedin"></i></a>
+								</div>
+							</div>
+							<div class="member-details">
+								<h4>Name</h4>
+								<p>CEO & Founder</p>
+							</div>
+						</div>
+						<div class="single-member">
+							<div class="member-img">
+								<img src="{{ asset('user/img/person.jpg')}}" alt="#">
+								<div class="social-icons">
+									<a href="#"><i class="fa fa-instagram"></i></a>
+									<a href="#"><i class="fa fa-whatsapp"></i></a>
+									<a href="#"><i class="fa fa-linkedin"></i></a>
+								</div>
+							</div>
+							<div class="member-details">
+								<h4>Name</h4>
+								<p>CEO & Founder</p>
+							</div>
+						</div>
+						<div class="single-member">
+							<div class="member-img">
+								<img src="{{ asset('user/img/person.jpg')}}" alt="#">
+								<div class="social-icons">
+									<a href="#"><i class="fa fa-instagram"></i></a>
+									<a href="#"><i class="fa fa-whatsapp"></i></a>
+									<a href="#"><i class="fa fa-linkedin"></i></a>
+								</div>
+							</div>
+							<div class="member-details">
+								<h4>Name</h4>
+								<p>CEO & Founder</p>
+							</div>
+						</div>
+						<div class="single-member">
+							<div class="member-img">
+								<img src="{{ asset('user/img/person.jpg')}}" alt="#">
+								<div class="social-icons">
+									<a href="#"><i class="fa fa-instagram"></i></a>
+									<a href="#"><i class="fa fa-whatsapp"></i></a>
+									<a href="#"><i class="fa fa-linkedin"></i></a>
+								</div>
+							</div>
+							<div class="member-details">
+								<h4>Name</h4>
+								<p>CEO & Founder</p>
+							</div>
+						</div>
+						<div class="single-member">
+							<div class="member-img">
+								<img src="{{ asset('user/img/person.jpg')}}" alt="#">
+								<div class="social-icons">
+									<a href="#"><i class="fa fa-instagram"></i></a>
+									<a href="#"><i class="fa fa-whatsapp"></i></a>
+									<a href="#"><i class="fa fa-linkedin"></i></a>
+								</div>
+							</div>
+							<div class="member-details">
+								<h4>Name</h4>
+								<p>CEO & Founder</p>
+							</div>
+						</div>
+						<div class="single-member">
+							<div class="member-img">
+								<img src="{{ asset('user/img/person.jpg')}}" alt="#">
+								<div class="social-icons">
+									<a href="#"><i class="fa fa-instagram"></i></a>
+									<a href="#"><i class="fa fa-whatsapp"></i></a>
+									<a href="#"><i class="fa fa-linkedin"></i></a>
+								</div>
+							</div>
+							<div class="member-details">
+								<h4>Name</h4>
+								<p>CEO & Founder</p>
+							</div>
+						</div>
+						<div class="single-member">
+							<div class="member-img">
+								<img src="{{ asset('user/img/person.jpg')}}" alt="#">
+								<div class="social-icons">
+									<a href="#"><i class="fa fa-instagram"></i></a>
+									<a href="#"><i class="fa fa-whatsapp"></i></a>
+									<a href="#"><i class="fa fa-linkedin"></i></a>
+								</div>
+							</div>
+							<div class="member-details">
+								<h4>Name</h4>
 								<p>CEO & Founder</p>
 							</div>
 						</div>
@@ -392,14 +874,110 @@
 					<!-- Add more team members here -->
 				</div>
 			</div>
-		</section>
+		</section> --}}
+
+		<!-- Start Our Team Area -->
+	<section class="our-team section" id="our-team">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-title">
+						<h2>Tim Kami</h2>
+						<p>Di Danau Emas Gadai Jatim, kami bangga memiliki tim yang berdedikasi dan profesional untuk melayani Anda dengan sepenuh hati!</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<!-- Slider Container -->
+					<div class="slider-container">
+						<div class="slider tim-kami">
+							<!-- Single Team Member -->
+							<div class="single-member">
+								<div class="member-img">
+									<img src="{{ asset('user/img/person.jpg')}}" alt="#">
+									<div class="social-icons">
+										<a href="#"><i class="fa fa-instagram"></i></a>
+										<a href="#"><i class="fa fa-whatsapp"></i></a>
+										<a href="#"><i class="fa fa-linkedin"></i></a>
+									</div>
+								</div>
+								<div class="member-details">
+									<h4>Moh. Ananta</h4>
+									<p>CEO & Founder</p>
+								</div>
+							</div>
+							<!-- Repeat for other team members -->
+							<div class="single-member">
+								<div class="member-img">
+									<img src="{{ asset('user/img/person.jpg')}}" alt="#">
+									<div class="social-icons">
+										<a href="#"><i class="fa fa-instagram"></i></a>
+										<a href="#"><i class="fa fa-whatsapp"></i></a>
+										<a href="#"><i class="fa fa-linkedin"></i></a>
+									</div>
+								</div>
+								<div class="member-details">
+									<h4>Name 2</h4>
+									<p>CTO</p>
+								</div>
+							</div>
+							<div class="single-member">
+								<div class="member-img">
+									<img src="{{ asset('user/img/person.jpg')}}" alt="#">
+									<div class="social-icons">
+										<a href="#"><i class="fa fa-instagram"></i></a>
+										<a href="#"><i class="fa fa-whatsapp"></i></a>
+										<a href="#"><i class="fa fa-linkedin"></i></a>
+									</div>
+								</div>
+								<div class="member-details">
+									<h4>Name 3</h4>
+									<p>CTO</p>
+								</div>
+							</div>
+							<!-- Add more team members as needed -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Our Team Area -->
+
+	<!-- Include jQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- Custom Slider Script -->
+	<script>
+	$(document).ready(function(){
+		const slider = $('.tim-kami');
+		const members = $('.single-member');
+		const memberCount = members.length;
+		let currentIndex = 0;
+
+		function showNextMember() {
+			currentIndex = (currentIndex + 1) % memberCount;
+			const translateXValue = -currentIndex * 100;
+			slider.css('transform', `translateX(${translateXValue}%)`);
+		}
+
+		setInterval(showNextMember, 3000); // Change member every 3 seconds
+	});
+</script>
+
 		<!-- End Our Team Area -->
 
 		<!-- Start clients -->
-		<div class="clients overlay">
+		{{-- <div class="col-lg-12">
+			<div class="section-title">
+				<h2>Kegiatan Transaksi</h2>
+				<p>Selamat datang di bagian Kegiatan Transaksi Danau Emas Gadai Jatim. Kami berkomitmen untuk memberikan layanan gadai yang aman, cepat, dan terpercaya. </p>
+			</div>
+		</div> --}}
+		{{-- <div class="clients overlay">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-12 col-md-12 col-12">
+					<div class="col-lg-12 col-md-6 col-12">
 						<div class="owl-carousel clients-slider">
 							<div class="single-clients">
 								<img src="{{ asset('user/img/client1.png')}}" alt="#"> 
@@ -432,27 +1010,28 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --}}
 		<!--/Ens clients -->
 		
-		<!-- Start Appointment -->
+		<!-- Start Kotak Saran -->
 		<section class="appointment">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>Kami Selalu Siap Untuk Membantu Anda. Hubungi Kami Disini</h2>
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+							<h2>Kami Siap Untuk Membantu Anda</h2>
+							<p>Yuk beritahu kami keluhan anda melalui pesan di bawah ini!</p>
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-6 col-md-12 col-12">
-						<form class="form" action="#">
+						<form class="form" method="POST" action="{{ route('contact.store') }}">
+							@csrf
 							<div class="row">
 								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
-										<input name="name" type="text" placeholder="Name">
+										<input name="nama" type="text" placeholder="Nama">
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6 col-12">
@@ -462,42 +1041,12 @@
 								</div>
 								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
-										<input name="phone" type="text" placeholder="Phone">
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-12">
-									<div class="form-group">
-										<div class="nice-select form-control wide" tabindex="0"><span class="current">Department</span>
-											<ul class="list">
-												<li data-value="1" class="option selected ">Department</li>
-												<li data-value="2" class="option">Cardiac Clinic</li>
-												<li data-value="3" class="option">Neurology</li>
-												<li data-value="4" class="option">Dentistry</li>
-												<li data-value="5" class="option">Gastroenterology</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-12">
-									<div class="form-group">
-										<div class="nice-select form-control wide" tabindex="0"><span class="current">Doctor</span>
-											<ul class="list">
-												<li data-value="1" class="option selected ">Doctor</li>
-												<li data-value="2" class="option">Dr. Akther Hossain</li>
-												<li data-value="3" class="option">Dr. Dery Alex</li>
-												<li data-value="4" class="option">Dr. Jovis Karon</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-12">
-									<div class="form-group">
-										<input type="text" placeholder="Date" id="datepicker">
+										<input name="phone" type="text" placeholder="No.Telp">
 									</div>
 								</div>
 								<div class="col-lg-12 col-md-12 col-12">
 									<div class="form-group">
-										<textarea name="message" placeholder="Write Your Message Here....."></textarea>
+										<textarea name="descontact" placeholder="Ketik Pesanmu Disini....."></textarea>
 									</div>
 								</div>
 							</div>
@@ -505,28 +1054,25 @@
 								<div class="col-lg-5 col-md-4 col-12">
 									<div class="form-group">
 										<div class="button">
-											<button type="submit" class="btn">Book An Appointment</button>
+											<button type="submit" class="btn">Kirim</button>
 										</div>
 									</div>
-								</div>
-								<div class="col-lg-7 col-md-8 col-12">
-									<p>( We will be confirm by an Text Message )</p>
 								</div>
 							</div>
 						</form>
 					</div>
 					<div class="col-lg-6 col-md-12 ">
 						<div class="appointment-image">
-							<img src="img/contact-img.png" alt="#">
+							<img src="{{asset('user/img/imm.png')}}" alt="#">
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- End Appointment -->
+		<!-- End Kotak Saran -->
 		
 		<!-- Start Newsletter Area -->
-		 <section class="newsletter section">
+		 {{-- <section class="newsletter section">
 			<div class="container">
 				<div class="row ">
 					<div class="col-lg-6  col-12">
@@ -545,16 +1091,16 @@
 							@endif
 							<form action="{{ route('subscribe') }}" method="POST">
 								@csrf
-								<input type="email" id="email" name="email" placeholder="Your Email" class="common-input" required>
+								<input type="email" id="email" name="email" placeholder="Email" class="common-input" required>
 								<button type="submit" class="btn">Subscribe</button>
 							</form>
-						</div>
+						</div> --}}
 						<!-- End Newsletter Form -->
 					</div>
 				</div>
 			</div>
 		</section>
-		<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f1e7a459-985a-4cf7-8bfb-bcbf1bde08c6";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+		{{-- <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f1e7a459-985a-4cf7-8bfb-bcbf1bde08c6";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script> --}}
 
 @endsection
 {{-- KODE TIDAK DIPAKAI SEMENTARA --}}

@@ -6,7 +6,6 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\PromoController;
 use App\Http\Controllers\RecentpostController;
-use App\Http\Controllers\SubscribeController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,13 +23,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [UserController::class,'userview'])->name('user.index');
 Route::get('/about', [UserController::class,'aboutview'])->name('user.about');
+Route::get('/contact', [UserController::class,'contactview'])->name('user.contact');
 Route::get('/faq', [UserController::class,'faqview'])->name('user.faq');
 Route::get('/team', [UserController::class,'teamview'])->name('user.team');
+Route::get('/contact', [UserController::class, 'contactview'])->name('user.contact');
+Route::post('/contact', [UserController::class, 'contactstore'])->name('contact.store');
 Route::get('/berita', [BeritaController::class,'Berita'])->name('user.berita');
 Route::get('/detailberita/{id}', [BeritaController::class,'BeritaShow'])->name('user.detailberita');
 Route::get('/detailkegiatan/{id}', [KegiatanController::class,'KegiatanShow'])->name('user.detailkegiatan');
 Route::post('/subscribe', [UserController::class, 'subscribe'])->name('subscribe');
 Route::post('/komentar', [UserController::class, 'store'])->name('komentar.store');
+Route::post('/contact', [UserController::class, 'contactview'])->name('user.contact');
+Route::post('/contact', [UserController::class, 'contactstore'])->name('contact.store');
 
 Route::middleware([
     'auth:sanctum',
@@ -69,5 +73,8 @@ Route::middleware([
     Route::get('/kegiatan_edit/{id}', [KegiatanController::class, 'edit'])->name('kegiatan.edit');
     Route::post('/kegiatan_update/{id}', [KegiatanController::class, 'update'])->name('kegiatan.update');
     Route::delete('/deletekegiatan/{id}', [KegiatanController::class, 'destroy'])->name('kegiatan.delete');
+
+    //Kotak Saran
+    Route::post('/contact', [UserController::class, 'contactstore'])->name('contact.store');
 });
 Route::get('/auth/logout', [AuthController::class, 'logout'])->name('admin.logout')->middleware('auth');
