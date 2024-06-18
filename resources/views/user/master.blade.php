@@ -37,6 +37,8 @@
         <link rel="stylesheet" href="{{ asset('user/css/magnific-popup.css')}}">
 		{{-- BtnWhatsApp --}}
 		<link rel="stylesheet" href="{{ asset('user/css/btnwhatsapp.css')}}">
+		<!-- Include Bootstrap Icons CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
 		
 		<!-- Medipro CSS -->
         <link rel="stylesheet" href="{{ asset('user/css/normalize.css')}}">  
@@ -108,7 +110,7 @@
 												{{-- class="active" --}}
 											</li>
 											<li><a href="{{ route('user.about')}}">About</a></li>
-											<li><a href="{{ route('user.berita')}}">Berita</a></li>											
+											<li><a href="{{ route('user.berita')}}">Artikel</a></li>											
 											<li><a href="#">Our Team<i class="icofont-rounded-down"></i></a>
 												<ul class="dropdown">
 													<li><a href="{{ route('user.team')}}">Team all</a></li>
@@ -134,7 +136,9 @@
 		<!-- End Header Area -->
 
 		<button id="waButton">
-			<img id="buttonIcon" src="{{ asset('user/img/wa.png')}}" alt="WhatsApp" width="30" height="30">
+			<i class="bi bi-whatsapp" style="font-size: 30px;"></i>
+			
+			{{-- <img id="buttonIcon" src="{{ asset('user/img/wa.png')}}" alt="WhatsApp" width="30" height="30"> --}}
 		</button>
 	
 		<div id="popup" class="popup">

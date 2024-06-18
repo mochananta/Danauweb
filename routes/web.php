@@ -75,7 +75,6 @@ Route::middleware([
     Route::post('/kegiatan_update/{id}', [KegiatanController::class, 'update'])->name('kegiatan.update');
     Route::delete('/deletekegiatan/{id}', [KegiatanController::class, 'destroy'])->name('kegiatan.delete');
 
-
     Route::get('/aboutview', [AboutController::class, 'index'])->name('about.view');
     Route::get('/about_add', [AboutController::class, 'create'])->name('about.add');
     Route::post('/about_store', [AboutController::class, 'store'])->name('about.store');

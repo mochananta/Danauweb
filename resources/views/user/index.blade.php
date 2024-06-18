@@ -1,10 +1,9 @@
 @extends('user.master')
 @section('user')		
-        <!-- Slider Area -->
+        <!-- Slider Area Banner-->
 		<section class="slider">
 			<div class="hero-slider">
-				<!-- Start Single Slider -->
-
+				<!-- Start Single Slider Banner -->
 				<div class="single-slider" style="background-image:url('{{ asset('user/img/slide2new.png')}}')"> 
 					<div class="container">
 						<div class="row">
@@ -37,7 +36,7 @@
 		</section>
 		<!--/ End Slider Area -->
 		
-		<!-- Card -->
+		<!-- Card Schedule-->
 		<section class="schedule">
 			<div class="container">
 				<div class="schedule-inner">
@@ -99,66 +98,12 @@
 		</section>
 		<!--/End Card -->
 
-		<!-- Danau Emas facts -->
-		{{-- <div id="fun-facts" class="fun-facts section overlay">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-3 col-md-6 col-12">
-						<!-- Start Single Fun -->
-						<div class="single-fun">
-							<i class="icofont icofont-home"></i>
-							<div class="content">
-								<span class="counter">3</span>
-								<p>Unit Cabang Banyuwangi</p>
-							</div>
-						</div>
-						<!-- End Single Fun -->
-					</div>
-					<div class="col-lg-3 col-md-6 col-12">
-						<!-- Start Single Fun -->
-						<div class="single-fun">
-							<i class="icofont icofont-user-alt-3"></i>
-							<div class="content">
-								<span class="counter">0</span>
-								<p>Nasabah</p>
-							</div>
-						</div>
-						<!-- End Single Fun -->
-					</div>
-					<div class="col-lg-3 col-md-6 col-12">
-						<!-- Start Single Fun -->
-						<div class="single-fun">
-							<i class="icofont-cart"></i>
-							<div class="content">
-								<span class="counter">0</span>
-								<p>Unit Gadai</p>
-							</div>
-						</div>
-						<!-- End Single Fun -->
-					</div>
-					<div class="col-lg-3 col-md-6 col-12">
-						<!-- Start Single Fun -->
-						<div class="single-fun">
-							<i class="icofont icofont-table"></i>
-							<div class="content">
-								<span class="counter">0</span>
-								<p>Pengalaman</p>
-							</div>
-						</div>
-						<!-- End Single Fun -->
-					</div>
-				</div>
-			</div>
-		</div> --}}
-		<!--/ End Danau emas facts -->
-
-		<!-- Pengertian danau Emas -->
+		<!-- Start About Singkat DEGJ -->
 		<section class="why-choose section" >
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							{{-- <h5>Layanan Tersedia</h5> --}}
 							<h2>Butuh Dana Cepat Dengan Proses yang Aman dan Mudah ?</h2>
 							<p>Danau Emas Solusinya, Yuk Kenalan Dengan Kami Disini</p>
 						</div>
@@ -218,9 +163,9 @@
 					</div>
 				</div>
 			</section>
-		<!--/ End pengertian Danau Emas -->
+		<!--/ End About singkat DEGJ -->
 
-		<!-- Promo -->
+		<!-- Start Promo -->
 		<section class="custom-pricing-table section">
 			<div class="container">
 				<div class="row">
@@ -275,8 +220,7 @@
 		</section>
 		<!--/ End foto kegiatan -->
 
-
-		<!-- Start Blog Area -->
+		<!-- Start Artikel Area -->
 		<section class="blog section" id="blog">
 			<div class="container">
 				<div class="row">
@@ -329,7 +273,7 @@
 						<!-- Start Single Service -->
 						<div class="single-service">
 							<i class="icofont-motor-biker"></i>
-							<h4><a href="service-details.html">Jemput Gadai</a></h4>
+							<h4><a href="#">Jemput Gadai</a></h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
 						</div>
 						<!-- End Single Service -->
@@ -338,7 +282,7 @@
 						<!-- Start Single Service -->
 						<div class="single-service">
 							<i class="icofont-washing-machine"></i>
-							<h4><a href="service-details.html">Cuci Emas Gratis</a></h4>
+							<h4><a href="#">Cuci Emas Gratis</a></h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
 						</div>
 						<!-- End Single Service -->
@@ -347,7 +291,7 @@
 						<!-- Start Single Service -->
 						<div class="single-service">
 							<i class="icofont-gift"></i>
-							<h4><a href="service-details.html">Hadiah Spesial</a></h4>
+							<h4><a href="#">Hadiah Spesial</a></h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
 						</div>
 						<!-- End Single Service -->
@@ -357,7 +301,7 @@
 		</section>
 		<!--/ End service -->
 
-		<!-- Start frame youtube -->
+		<!-- Start Video Testimoni -->
 		<section class="why-choose section">
 			<div class="container">
 				<div class="row">
@@ -388,9 +332,9 @@
 				</div>
 			</div>
 		</section>
-		<!-- End Youtube -->
+		<!-- End Video Testimoni -->
 
-		<!-- Start Unit -->
+		<!-- Start Unit  DEGJ-->
 		<section class="unit-details section">
 			<div class="container">
 
@@ -481,10 +425,10 @@
 				</div>
 			</div>
 		</section>
-		<!-- End Unit -->
+		<!-- End Unit DEGJ -->
 
 			
-		<!-- Start Our Team Area -->
+		<!-- Start Our Staff Area -->
 		<section class="our-team section" id="our-team">
 			<div class="container">
 				<div class="row">
@@ -518,9 +462,9 @@
 				</div>
 			</div>
 		</section>
-		<!-- End Our Team Area -->
+		<!-- End Our Staff Area -->
 
-		<!-- Start clients -->
+		<!-- Start sponsor -->
 		<div class="clients overlay">
 			<div class="container">
 				<div class="row">
@@ -555,9 +499,9 @@
 				</div>
 			</div>
 		</div>
-		<!--/Ens clients -->
+		<!--/Ens sponsor -->
 		
-		<!-- Start Appointment -->
+		<!-- Start Contact singkat -->
 		<section class="appointment">
 			<div class="container">
 				<div class="row">
@@ -598,7 +542,7 @@
 								<div class="col-lg-5 col-md-4 col-12">
 									<div class="form-group">
 										<div class="button">
-											<button type="submit" class="btn">Book An Appointment</button>
+											<button type="submit" class="btn">Kirim Pesan</button>
 										</div>
 									</div>
 								</div>
@@ -613,37 +557,7 @@
 				</div>
 			</div>
 		</section>
-		<!-- End Appointment -->
-		
-		<!-- Start Newsletter Area -->
-		 {{-- <section class="newsletter section">
-			<div class="container">
-				<div class="row ">
-					<div class="col-lg-6  col-12">
-						<!-- Start Newsletter Form -->
-						<div class="subscribe-text ">
-							<h6>Subscribe Sekarang</h6>
-							<p class="">Dan Dapatkan Informasi Terbaru dari<br> Danau Emas Gadai Jatim.</p>
-						</div>
-						<!-- End Newsletter Form -->
-					</div>
-					<div class="col-lg-6  col-12">
-						<!-- Start Newsletter Form -->
-						<div class="subscribe-form ">
-							@if(session('success'))
-							<div>{{ session('success') }}</div>
-							@endif
-							<form action="{{ route('subscribe') }}" method="POST">
-								@csrf
-								<input type="email" id="email" name="email" placeholder="Your Email" class="common-input" required>
-								<button type="submit" class="btn">Subscribe</button>
-							</form>
-						</div>
-						<!-- End Newsletter Form -->
-					</div>
-				</div>
-			</div>
-		</section> --}}
+		<!-- End Contact Singkat -->	
 		
 @endsection
 {{-- KODE TIDAK DIPAKAI SEMENTARA --}}
@@ -828,3 +742,88 @@
 			</div>	
 		</section>	 --}}
 		<!--/ End Pricing Table -->
+
+
+		<!-- Danau Emas facts -->
+		{{-- <div id="fun-facts" class="fun-facts section overlay">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont icofont-home"></i>
+							<div class="content">
+								<span class="counter">3</span>
+								<p>Unit Cabang Banyuwangi</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont icofont-user-alt-3"></i>
+							<div class="content">
+								<span class="counter">0</span>
+								<p>Nasabah</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont-cart"></i>
+							<div class="content">
+								<span class="counter">0</span>
+								<p>Unit Gadai</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont icofont-table"></i>
+							<div class="content">
+								<span class="counter">0</span>
+								<p>Pengalaman</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+				</div>
+			</div>
+		</div> --}}
+		<!--/ End Danau emas facts -->
+
+
+		<!-- Start Newsletter Area -->
+		 {{-- <section class="newsletter section">
+			<div class="container">
+				<div class="row ">
+					<div class="col-lg-6  col-12">
+						<!-- Start Newsletter Form -->
+						<div class="subscribe-text ">
+							<h6>Subscribe Sekarang</h6>
+							<p class="">Dan Dapatkan Informasi Terbaru dari<br> Danau Emas Gadai Jatim.</p>
+						</div>
+						<!-- End Newsletter Form -->
+					</div>
+					<div class="col-lg-6  col-12">
+						<!-- Start Newsletter Form -->
+						<div class="subscribe-form ">
+							@if(session('success'))
+							<div>{{ session('success') }}</div>
+							@endif
+							<form action="{{ route('subscribe') }}" method="POST">
+								@csrf
+								<input type="email" id="email" name="email" placeholder="Your Email" class="common-input" required>
+								<button type="submit" class="btn">Subscribe</button>
+							</form>
+						</div>
+						<!-- End Newsletter Form -->
+					</div>
+				</div>
+			</div>
+		</section> --}}
