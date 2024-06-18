@@ -59,6 +59,7 @@
             <div class="loader">
                 <div class="loader-outter"></div>
                 <div class="loader-inner"></div>
+
             </div>
         </div>
         <!-- End Preloader -->
@@ -85,18 +86,19 @@
 					<div class="row">
 						<div class="col-lg-6 col-md-5 col-12">
 							<!-- Contact -->
-							<ul class="top-link">
-								<li><a href="{{ route('user.about') }}">About</a></li>
-								<li><a href="">Contact</a></li>
+							{{-- <ul class="top-link">
+								<li><a href="{{ route('user.about') }}">About</a></li> --}}
+								{{-- <li><a href="#">Berita</a></li> --}}
+								{{-- <li><a href="{{ route ('user.contact')}}">Contact</a></li>
 								<li><a href="{{ route('user.faq') }}">FAQ</a></li>
-							</ul>
+							</ul> --}}
 							<!-- End Contact -->
 						</div>
 						<div class="col-lg-6 col-md-7 col-12">
 							<!-- Top Contact -->
 							<ul class="top-contact">
-								<li><i class="fa fa-phone"></i><a href="https://api.whatsapp.com/send?phone=6281357769681" target="_blank">+62 813-5776-9681</a></li>
-								<li><i class="fa fa-envelope"></i><a href="mailto:Danauemascabangbanyuwangi1@gmail.com" >Danauemascabangbanyuwangi1@gmail.com</a></li>
+								<li><i class="fa fa-phone"></i><a href="https://api.whatsapp.com/send?phone=6281357769681" target="_blank">+62 Nomor di ganti</a></li>
+								<li><i class="fa fa-envelope"></i><a href="mailto: pt.danauemasgadaijatim@gmail.com" >Danau Emas Gadai Jatim</a></li>
 							</ul>
 							<!-- End Top Contact -->
 						</div>
@@ -112,7 +114,7 @@
 							<div class="col-lg-3 col-md-3 col-12">
 								<!-- Start Logo -->
 								<div class="logo">
-									<a href="/"><img src="{{ asset('user/img/danauemas.png')}}" alt="#" height="50%" width="200px" ></a> 
+									<a href="/"><img src="{{ asset('user/img/danaunew.png')}}" alt="#" height="50%" width="200px" ></a> 
 								</div>
 								<!-- End Logo -->
 								<!-- Mobile Nav -->
@@ -158,15 +160,15 @@
 		</button>
 	
 		<div id="popup" class="popup">
-			<h3><img src="https://ugc.production.linktr.ee/139975e9-b7e3-42aa-bb64-2d900a6c57e2_Logo-PT-Danau-Emas-Gadai-Jatim-01.png" alt="WhatsApp" width="40" height="40"> Contact Person</h3>
+			<h3><img src="https://ugc.production.linktr.ee/139975e9-b7e3-42aa-bb64-2d900a6c57e2_Logo-PT-Danau-Emas-Gadai-Jatim-01.png" alt="WhatsApp" width="40" height="40">Contact Person</h3>
 			<div class="contact-section">
 				<h4>Pusat</h4>
 				<ul>
 					<li>
 						<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
 						<div class="contact-info">
-							<span class="name">Central Office</span>
-							<span class="unit">Main</span>
+							<span class="name">Kantor Pusat</span>
+							<span class="unit">Pusat</span>
 						</div>
 						<button class="waLink" data-phone="6287778312813" data-message="Hallo, Unit Pusat Surabaya">Chat</button>
 					</li>
@@ -177,24 +179,56 @@
 				<li>
 					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
 					<div class="contact-info">
-						<span class="name">John Doe</span>
-						<span class="unit">Sales</span>
+						<span class="name">Penjaringan Sari</span>
+						{{-- <span class="unit">Surabaya</span> --}}
 					</div>
 					<button class="waLink" data-phone="6287778312813" data-message="Hello, Central Office">Chat</button>
 				</li>
 				<li>
 					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
 					<div class="contact-info">
-						<span class="name">Jane Smith</span>
-						<span class="unit">Support</span>
+						<span class="name">Tuban Gajahmada</span>
+						{{-- <span class="unit">Surabaya</span> --}}
 					</div>
 					<button class="waLink" data-phone="6287778312813" data-message="Hello, Central Office">Chat</button>
 				</li>
 				<li>
 					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
 					<div class="contact-info">
-						<span class="name">Emily Johnson</span>
-						<span class="unit">Marketing</span>
+						<span class="name">Tambahrejo</span>
+						{{-- <span class="unit">Surabaya</span> --}}
+					</div>
+					<button class="waLink" data-phone="6287778312813" data-message="Hallo, apaka">Chat</button>
+				</li>
+				<li>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
+					<div class="contact-info">
+						<span class="name">Ronggolawe</span>
+						{{-- <span class="unit">Surabaya</span> --}}
+					</div>
+					<button class="waLink" data-phone="6287778312813" data-message="Hallo, apaka">Chat</button>
+				</li>
+				<li>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
+					<div class="contact-info">
+						<span class="name">Banyuwangi</span>
+						{{-- <span class="unit">Banyuwangi</span> --}}
+					</div>
+					<button class="waLink" data-phone="6287778312813" data-message="Hallo, apaka">Chat</button>
+				</li>
+				<li>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
+					<div class="contact-info">
+						<span class="name">Rogojampi</span>
+						{{-- <span class="unit">Banyuwangi</span> --}}
+					</div>
+					<button class="waLink" data-phone="6287778312813" data-message="Hallo, apaka">Chat</button>
+				</li>
+				<li>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
+					<div class="contact-info">
+						<span class="name">Muncar</span>
+						{{-- <span class="unit">Banyuwangi</span> --}}
 					</div>
 					<button class="waLink" data-phone="6287778312813" data-message="Hallo, apaka">Chat</button>
 				</li>
@@ -235,7 +269,7 @@
 									<div class="col-lg-6 col-md-6 col-12">
 										<ul>
 											<li><a href="{{ route('user.index')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
-											<li><a href="{{ route('user.about')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+											{{-- <li><a href="{{ route('user.about')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li> --}}
 											<li><a href="{{ route('user.berita')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Berita</a></li>
 										</ul>
 									</div>
@@ -262,7 +296,7 @@
 						</div>
 						<div class="col-lg-3 col-md-6 col-12">
 							<div class="single-footer">
-								<img style="margin-right: 10px" src="{{ asset('user/img/imgfooter.png')}}"></img>
+								<img style="margin-right: 10px" src="{{ asset('user/img/ojk.png')}}"></img>
 							</div>
 						</div>
 					</div>

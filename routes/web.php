@@ -9,6 +9,8 @@ use App\Http\Controllers\RecentpostController;
 use App\Http\Controllers\TentangController;
 use App\Http\Controllers\VisimisiController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,12 +41,18 @@ Route::get('/faq', [UserController::class, 'faqview'])->name('user.faq');
 Route::get('/team', [UserController::class, 'teamview'])->name('user.team');
 Route::get('/contact', [UserController::class, 'contactview'])->name('user.contact');
 Route::post('/contact', [UserController::class, 'contactstore'])->name('contact.store');
+
 Route::get('/berita', [BeritaController::class, 'Berita'])->name('user.berita');
 Route::get('/detailberita/{id}', [BeritaController::class, 'BeritaShow'])->name('user.detailberita');
 Route::get('/detailkegiatan/{id}', [KegiatanController::class, 'KegiatanShow'])->name('user.detailkegiatan');
 
 Route::post('/subscribe', [UserController::class, 'subscribe'])->name('subscribe');
 Route::post('/komentar', [UserController::class, 'store'])->name('komentar.store');
+Route::get('/berita', [BeritaController::class,'Berita'])->name('user.berita');
+Route::get('/detailberita/{id}', [BeritaController::class,'BeritaShow'])->name('user.detailberita');
+Route::get('/detailkegiatan/{id}', [KegiatanController::class,'KegiatanShow'])->name('user.detailkegiatan');
+// Route::post('/subscribe', [UserController::class, 'subscribe'])->name('subscribe');
+// Route::post('/komentar', [UserController::class, 'store'])->name('komentar.store');
 Route::post('/contact', [UserController::class, 'contactview'])->name('user.contact');
 Route::post('/contact', [UserController::class, 'contactstore'])->name('contact.store');
 
@@ -90,6 +98,7 @@ Route::middleware([
     Route::post('/kegiatan_update/{id}', [KegiatanController::class, 'update'])->name('kegiatan.update');
     Route::delete('/deletekegiatan/{id}', [KegiatanController::class, 'destroy'])->name('kegiatan.delete');
 
+
     //CRUD DATA DIRI
     Route::get('/tentang', [TentangController::class, 'index'])->name('tentang.view');
     Route::get('/tentang_add', [TentangController::class, 'create'])->name('tentang.add');
@@ -105,5 +114,22 @@ Route::middleware([
     Route::get('/visimisi_edit/{id}', [VisimisiController::class, 'edit'])->name('visimisi.edit');
     Route::post('/visimisi_update/{id}', [VisimisiController::class, 'update'])->name('visimisi.update');
     Route::delete('/deletevisimisi/{id}', [VisimisiController::class, 'destroy'])->name('visimisi.delete');
+
+
+    Route::get('/aboutview', [AboutController::class, 'index'])->name('about.view');
+    Route::get('/about_add', [AboutController::class, 'create'])->name('about.add');
+    Route::post('/about_store', [AboutController::class, 'store'])->name('about.store');
+    Route::get('/about_edit/{id}', [AboutController::class, 'edit'])->name('about.edit');
+    Route::post('/about_update/{id}', [AboutController::class, 'update'])->name('about.update');
+    Route::get('/aboutdelete/{id}', [AboutController::class, 'destroy'])->name('about.delete');
+
+
+    Route::get('/admin/contact', [ContactController::class, 'index'])->name('contact.view');
+    Route::get('/admin/contact/{contact}', [ContactController::class, 'show'])->name('contact.show');
+
 });
+
+
+    
+
 Route::get('/auth/logout', [AuthController::class, 'logout'])->name('admin.logout')->middleware('auth');

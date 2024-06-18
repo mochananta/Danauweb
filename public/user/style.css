@@ -760,22 +760,22 @@ body{
 }
 .schedule .single-schedule span{
 	display:block;
-	color:#fff;
+	color:#000000;
 }
 .schedule .single-schedule h4{
 	font-size: 20px;
 	font-weight:600;
 	display:inline-block;
 	text-transform:capitalize;
-	color:#fff;
+	color:#000000;
 	margin-top:13px;
 }
 .schedule .single-schedule p{
-	color:#fff;
+	color:#000000;
 	margin-top:22px;
 }
 .schedule .single-schedule a {
-	color: #fff;
+	color: #000000;
 	margin-top: 25px;
 	font-weight: 500;
 	display: inline-block;
@@ -809,7 +809,7 @@ body{
 }
 .schedule .single-schedule .time-sidual li {
 	display: block;
-	color: #fff;
+	color: #000000;
 	width: 100%;
 	margin-bottom:3px;
 }
@@ -1357,14 +1357,14 @@ body{
 
 
 /* Slider Nav */
-.pf-details .image-slider .owl-nav{
+/* .pf-details .image-slider .owl-nav{
 	margin: 0;
     position: absolute;
     top: 50%;
     width: 100%;
 	margin-top:-25px;
-}
-.pf-details .image-slider .owl-carousel .owl-nav div {
+} */
+/* .pf-details .image-slider .owl-carousel .owl-nav div {
 	height: 50px;
 	width: 50px;
 	line-height: 45px;
@@ -1379,24 +1379,24 @@ body{
 	-moz-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 	box-shadow: 0px 0px 10px #0000001a;
-}
-.pf-details .image-slider .owl-carousel .owl-nav div:hover{
+} */
+/* .pf-details .image-slider .owl-carousel .owl-nav div:hover{
 	color:#fff;
 	background:#FEE315;
-}
-.pf-details .image-slider .owl-carousel .owl-controls .owl-nav .owl-prev{
+} */
+/* .pf-details .image-slider .owl-carousel .owl-controls .owl-nav .owl-prev{
 	left:20px;
-}
-.pf-details .image-slider .owl-carousel .owl-controls .owl-nav .owl-next{
+} */
+/* .pf-details .image-slider .owl-carousel .owl-controls .owl-nav .owl-next{
 	right:20px;
-}
-.pf-details .image-slider{
+} */
+/* .pf-details .image-slider{
 	border-radius:8px 8px 0 0;
-}
-.pf-details .image-slider img{
+} */
+/* .pf-details .image-slider img{
 	height:100%;
 	width:100%;
-}
+} */
 .pf-details .date{
 	background: #FEE315;
 	display: block;
@@ -1465,6 +1465,13 @@ body{
 	border-color:transparent;
 	background:#FEE315;
 }
+.pf-details .gambar img{
+	max-width: 50%; /* Ensures the image does not exceed the container width */
+    height: auto;   /* Maintains the aspect ratio */
+    display: block; /* Removes extra space below the image */
+    margin: 0 auto; /* Centers the image if the container width is smaller */
+}
+
 /*==========================
 	End Portfolio CSS
 ============================*/

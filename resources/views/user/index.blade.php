@@ -4,12 +4,13 @@
 		<section class="slider">
 			<div class="hero-slider">
 				<!-- Start Single Slider -->
-				<div class="single-slider" style="background-image:url('{{ asset('user/img/Frame 73.png')}}')"> 
+
+				<div class="single-slider" style="background-image:url('{{ asset('user/img/slide2new.png')}}')"> 
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
 								<div class="text">
-									<h1>PT. Danau Emas</span> Gadai Jatim -<span>Cabang Banyuwangi</span></h1>
+									<h1>PT. Danau Emas</span> Gadai Jatim</span></h1>
 									<p>Danau Emas, Sumber Solusi Finansialmu! </p>
 								</div>
 							</div>
@@ -18,7 +19,7 @@
 				</div>
 				<!-- End Single Slider -->
 				<!-- Start Single Slider -->
-				<div class="single-slider" style="background-image:url('{{ asset('user/img/Frame 74.png')}}')"> 
+				<div class="single-slider" style="background-image:url('{{ asset('user/img/slide1new.png')}}')"> 
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
@@ -99,7 +100,7 @@
 		<!--/End Card -->
 
 		<!-- Danau Emas facts -->
-		<div id="fun-facts" class="fun-facts section overlay">
+		{{-- <div id="fun-facts" class="fun-facts section overlay">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-3 col-md-6 col-12">
@@ -148,7 +149,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --}}
 		<!--/ End Danau emas facts -->
 
 		<!-- Pengertian danau Emas -->
@@ -201,7 +202,7 @@
 											<img src="{{ asset('user/img/Group 141.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
-											<p>GADAI ALAT ELEKTRONIK.</p>
+											<p>GADAI ELEKTRONIK</p>
 										</div>
 									</div>
 								</div>											
@@ -228,7 +229,7 @@
 						<div class="promo-text">
 							<h2>{{ $promo->temapromo }}</h2>
 							<p>{{ $promo->despromo }}</p>
-							<span class="link-text" onclick="window.location.href='https://www.example.com'">Lihat Semua Promo</span>						
+							<span class="link-text" onclick="window.location.href='https://www.instagram.com/danauemasid/'">Lihat Semua Promo</span>						
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -312,7 +313,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>Keep up with Our Most Recent Medical News.</h2>
+							<h2>Artikel</h2>
 							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
 						</div>
 					</div>
@@ -393,7 +394,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>Lorem ipsum dolor sit amet</h2>
+							<h2>Testimoni Pelanggan</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>
 						</div>
 					</div>
@@ -423,11 +424,12 @@
 		<!-- Start Unit -->
 		<section class="unit-details section">
 			<div class="container">
+
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
 							<h2>Kunjungi Kami Di Unit Terdekatmu.</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.</p>
+							<p>Danau Emas Gadai Jatim dapat kamu akses di beberapa daerah dibawah ini</p>
 						</div>
 					</div>
 				</div>
@@ -463,37 +465,50 @@
 									</div>
 								</div>
 							</div>
-							<div class="card-footer">
-								<!-- Embed Google Maps iframe -->
-								<iframe 
-									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.546932430138!2d106.84599961433347!3d-6.2089089955033985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f164a4e87d17%3A0x2e22b95639d56dd0!2sYour%20Location!5e0!3m2!1sen!2sid!4v1621781775001!5m2!1sen!2sid" 
-									width="100%" 
-									height="200" 
-									style="border:0;" 
-									allowfullscreen="" 
-									loading="lazy">
-								</iframe>
+							<div class="item">
+								<div class="card">
+									<img src="{{ asset('user/img/unit8.jpeg')}}" class="card-img-left" alt="Unit Ronggolawe">
+									<div class="card-body">
+										<h3 class="card-title">Ronggolawe</h3>
+										<p class="card-text">Jl. Ronggolawe No.34, Sidomulyo, Kec. Tuban, Kabupaten Tuban, Jawa Timur 62312 <a href="https://maps.app.goo.gl/QyM4RSzo5YPtcjFb9">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
+									</div>
+								</div>
 							</div>
-						</div>
-					</div>
-					<!-- Continue adding cards for other units as needed -->
-					<!-- Card for Unit 2 -->
-					<div class="col-lg-4 col-md-6 col-sm-12">
-						<div class="card">
-							<div class="card-header">
-								<h4>Unit 2</h4>
+							<div class="item">
+								<div class="card">
+									<img src="{{ asset('user/img/unit5.jpg')}}" class="card-img-left" alt="Unit Tambahrejo">
+									<div class="card-body">
+										<h3 class="card-title">Banyuwangi Kota</h3>
+										<p class="card-text">
+											Jl. Kolonel Sugiono, Kertosari, Tukangkayu, Banyuwangi, Jawa Timur 68462 
+											<a href="https://maps.app.goo.gl/DUqfpWMNxdJGQJ637">
+											Lihat Google Maps <i class="fas fa-map-marker-alt"></i>
+											</a>
+										</p>	
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="card">
+									<img src="{{ asset('user/img/unit6.jpg')}}" class="card-img-left" alt="Unit Tambahrejo">
+									<div class="card-body">
+										<h3 class="card-title">Muncar</h3>
+										<p class="card-text">Jl. Raya Muncar, Dusun Muncar, Tembokrejo, Muncar, Banyuwangi, Jawa Timur 68472 <a href="https://maps.app.goo.gl/px6Q7KWFjP2xFKW5A">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
+									</div>
+								</div>
 							</div>
 							<div class="item">
 								<div class="card">
 									<img src="{{ asset('user/img/unit7.jpg')}}" class="card-img-left" alt="Unit Tambahrejo">
 									<div class="card-body">
 										<h3 class="card-title">Rogojampi</h3>
-										<p class="card-text">Jl. Ps. Ruko No.11, Pancoran Kulon, Rogojampi, Banyuwangi, Jawa Timur 68462 <a href="https://www.example.com">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
+										<p class="card-text">Jl. Ps. Ruko No.11, Pancoran Kulon, Rogojampi, Banyuwangi, Jawa Timur 68462 <a href="https://maps.app.goo.gl/S1ZBWbuGCrqMRYtx5">Lihat Google Maps <i class="fas fa-map-marker-alt"></i></a></p>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+
 				</div>
 			</div>
 		</section>
@@ -565,28 +580,28 @@
 					<div class="col-lg-12 col-md-12 col-12">
 						<div class="owl-carousel clients-slider">
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client7.png')}}" alt="#"> 
+								<img src="{{ asset('user/img/client10.png')}}" alt="#"> 
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client7.png')}}" alt="#">
+								<img src="{{ asset('user/img/client12.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client7.png')}}" alt="#">
+								<img src="{{ asset('user/img/client10.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client7.png')}}" alt="#">
+								<img src="{{ asset('user/img/client12.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client7.png')}}" alt="#">
+								<img src="{{ asset('user/img/client10.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client7.png')}}" alt="#">
+								<img src="{{ asset('user/img/client12.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client7.png')}}" alt="#">
+								<img src="{{ asset('user/img/client10.png')}}" alt="#">
 							</div>
 							<div class="single-clients">
-								<img src="{{ asset('user/img/client7.png')}}" alt="#">
+								<img src="{{ asset('user/img/client12.png')}}" alt="#">
 							</div>
 						</div>
 					</div>
@@ -654,7 +669,7 @@
 		<!-- End Appointment -->
 		
 		<!-- Start Newsletter Area -->
-		 <section class="newsletter section">
+		 {{-- <section class="newsletter section">
 			<div class="container">
 				<div class="row ">
 					<div class="col-lg-6  col-12">
@@ -681,7 +696,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> --}}
 		
 @endsection
 {{-- KODE TIDAK DIPAKAI SEMENTARA --}}

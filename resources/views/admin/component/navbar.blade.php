@@ -22,6 +22,7 @@
 
     
 
+
   <!--KODE TIDAK DIPAKAI-->
   <!--Search Icon-->
         {{-- <li class="nav-item d-block d-lg-none">
@@ -30,6 +31,12 @@
           </a>
         </li> --}}
         <!-- End Search Icon-->
+    <a href="{{ route('user.index')}}" class="logo d-flex align-items-center">
+      <img src="{{ asset('user/img/logo-pt.png')}}" alt="">
+      <span class="d-none d-lg-block">Admin</span>
+    </a>
+    <i class="bi bi-list toggle-sidebar-btn"></i>
+
 
         <!-- Notification Nav -->
         {{-- <li class="nav-item dropdown"> --}}

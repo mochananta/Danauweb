@@ -9,11 +9,11 @@
 				<div class="bread-inner">
 					<div class="row">
 						<div class="col-12">
-							<h2>About Detail</h2>
+							<h2>About</h2>
 							<ul class="bread-list">
 								<li><a href="/">Home</a></li>
 								<li><i class="icofont-simple-right"></i></li>
-								<li class="active">About Detail</li>
+								<li class="active">About</li>
 							</ul>
 						</div>
 					</div>
@@ -23,45 +23,51 @@
 		<!-- End Breadcrumbs -->
 	
 		<!-- Start Portfolio Details Area -->
+
+		{{-- Kode baru --}}
 		<section class="pf-details section">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
 						<div class="inner-content">
+							@foreach ($abouts as $about)
+							<div class="gambar">
+								<img src="{{ asset('storage/' . $about->foto) }}" alt="#">
+							</div>
+							<div class="body-text">
+								<h3>{{ $about->judul }}</h3>
+								<p>{{ $about->deskripsi }}</p>
+							</div>
+							@endforeach
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+			
+		<!-- End Portfolio Details Area -->
+@endsection	
+
+
+
+
+{{-- Kode Acuan --}}
+		{{-- <section class="pf-details section">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="inner-content">
+							@foreach ($abouts as $about)
 							<div class="image-slider">
 								<div class="pf-details-slider">
-									<img src="{{ asset('user/img/danauemas.png')}}" alt="#">  
+									<img src="{{ asset('storage/' . $about->foto) }}" alt="#">  
 									<img src="{{ asset('user/img/Gajian-Emas.jpeg')}}" alt="#">
 								</div>
 							</div>
-							<div class="date">
-								{{-- <ul>
-									<li><span>Category :</span> Heart Surgery</li>
-									<li><span>Date :</span> April 20, 2019</li>
-									<li><span>Client :</span> Suke Agency</li>
-									<li><span>Ags :</span> Typo</li>
-								</ul> --}}
-							</div>
+							
 							<div class="body-text">
-								<h3>Tentang Kami</h3>
-								@php
-								$tentang = $tentangs->first(); // Mengambil elemen pertama
-								@endphp
-								@if($tentang)
-									<p>{{ $tentang->deskripsi }}</p>
-								@else
-									<p>Data tidak ditemukan.</p>
-								@endif
-
-								<h3>Visi & Misi Kami</h3>
-								@php
-								$visimisi = $visimisis->first(); // Mengambil elemen pertama
-								@endphp
-								@if($visimisi)
-									<p>{{ $visimisi->desvisimisi }}</p>
-								@else
-									<p>Data tidak ditemukan.</p>
-								@endif
+								<h3>{{ $about->judul }}</h3>
+								<p>{{ $about->deskripsi }}</p>
 								<div class="share">
 									<h4>Share Now -</h4>
 									<ul>
@@ -71,11 +77,11 @@
 									</ul>
 								</div>
 							</div>
+							@endforeach
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 		<!-- End Portfolio Details Area -->
-@endsection
-
+@endsection	
