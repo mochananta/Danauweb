@@ -9,7 +9,7 @@ document.getElementById('waButton').addEventListener('click', function() {
         popup.classList.remove('show');
         setTimeout(() => {
             popup.style.display = 'none';
-            buttonIcon.src = 'public/user/img/wa.png';
+            buttonIcon.src = 'user/img/wa.png';
         }, 300);
     } else {
         popup.style.display = 'block';
@@ -30,7 +30,7 @@ window.addEventListener('click', function(event) {
         waButton.classList.remove('clicked');
         setTimeout(() => {
             popup.style.display = 'none';
-            buttonIcon.src = 'public/user/img/wa.png';
+            buttonIcon.src = 'user/img/wa.png';
         }, 300);
     }
 });

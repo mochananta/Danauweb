@@ -98,6 +98,7 @@ Route::middleware([
     Route::post('/kegiatan_update/{id}', [KegiatanController::class, 'update'])->name('kegiatan.update');
     Route::delete('/deletekegiatan/{id}', [KegiatanController::class, 'destroy'])->name('kegiatan.delete');
 
+<<<<<<< HEAD
 
     //CRUD DATA DIRI
     Route::get('/tentang', [TentangController::class, 'index'])->name('tentang.view');
@@ -116,6 +117,8 @@ Route::middleware([
     Route::delete('/deletevisimisi/{id}', [VisimisiController::class, 'destroy'])->name('visimisi.delete');
 
 
+=======
+>>>>>>> 868ece8524ca28ce0ed90d6cf8f612845f01d750
     Route::get('/aboutview', [AboutController::class, 'index'])->name('about.view');
     Route::get('/about_add', [AboutController::class, 'create'])->name('about.add');
     Route::post('/about_store', [AboutController::class, 'store'])->name('about.store');

@@ -14,17 +14,17 @@
 
 
     <div class="card shadow mb-4">
-        <div class="card-header py-3">
+        {{-- <div class="card-header py-3">
             <div class="row">
                 <div class="co">
                     <a href="{{route('contact.store')}}" class="btn btn-warning btn-icon-split"><span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
-                        </span>
+                        </span> --}}
                         {{-- <span class="text">Tambah Data</span> --}}
-                    </a>
+                    {{-- </a>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
