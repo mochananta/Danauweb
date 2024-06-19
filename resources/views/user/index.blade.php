@@ -472,8 +472,7 @@
 					</div>
 				</div>
 				@foreach ($beritas as $berita)
-				<div class="row">
-					
+				<div class="row">					
 					<div class="col-lg-4 col-md-6 col-12">
 						<!-- Single Team Member -->
 						<div class="single-member">

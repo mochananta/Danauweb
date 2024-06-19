@@ -48,9 +48,9 @@ Route::get('/detailkegiatan/{id}', [KegiatanController::class, 'KegiatanShow'])-
 
 Route::post('/subscribe', [UserController::class, 'subscribe'])->name('subscribe');
 Route::post('/komentar', [UserController::class, 'store'])->name('komentar.store');
-Route::get('/berita', [BeritaController::class,'Berita'])->name('user.berita');
-Route::get('/detailberita/{id}', [BeritaController::class,'BeritaShow'])->name('user.detailberita');
-Route::get('/detailkegiatan/{id}', [KegiatanController::class,'KegiatanShow'])->name('user.detailkegiatan');
+Route::get('/berita', [BeritaController::class, 'Berita'])->name('user.berita');
+Route::get('/detailberita/{id}', [BeritaController::class, 'BeritaShow'])->name('user.detailberita');
+Route::get('/detailkegiatan/{id}', [KegiatanController::class, 'KegiatanShow'])->name('user.detailkegiatan');
 // Route::post('/subscribe', [UserController::class, 'subscribe'])->name('subscribe');
 // Route::post('/komentar', [UserController::class, 'store'])->name('komentar.store');
 Route::post('/contact', [UserController::class, 'contactview'])->name('user.contact');
@@ -98,7 +98,7 @@ Route::middleware([
     Route::post('/kegiatan_update/{id}', [KegiatanController::class, 'update'])->name('kegiatan.update');
     Route::delete('/deletekegiatan/{id}', [KegiatanController::class, 'destroy'])->name('kegiatan.delete');
 
-<<<<<<< HEAD
+
 
     //CRUD DATA DIRI
     Route::get('/tentang', [TentangController::class, 'index'])->name('tentang.view');
@@ -117,8 +117,6 @@ Route::middleware([
     Route::delete('/deletevisimisi/{id}', [VisimisiController::class, 'destroy'])->name('visimisi.delete');
 
 
-=======
->>>>>>> 868ece8524ca28ce0ed90d6cf8f612845f01d750
     Route::get('/aboutview', [AboutController::class, 'index'])->name('about.view');
     Route::get('/about_add', [AboutController::class, 'create'])->name('about.add');
     Route::post('/about_store', [AboutController::class, 'store'])->name('about.store');
@@ -129,10 +127,9 @@ Route::middleware([
 
     Route::get('/admin/contact', [ContactController::class, 'index'])->name('contact.view');
     Route::get('/admin/contact/{contact}', [ContactController::class, 'show'])->name('contact.show');
-
 });
 
 
-    
+
 
 Route::get('/auth/logout', [AuthController::class, 'logout'])->name('admin.logout')->middleware('auth');
