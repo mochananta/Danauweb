@@ -534,7 +534,7 @@
 						<!-- Single Team Member -->
 						<div class="single-member">
 							<div class="member-img">
-								<img src="{{ asset('storage/app/public' . $berita->fotoberita) }}" alt="#">								
+								<img src="{{ asset('storage/' . $berita->fotoberita) }}" alt="#">								
 							</div>
 							<div class="member-details">
 								<h2>Name</h2>
@@ -552,7 +552,7 @@
 						<!-- Single Team Member -->
 						<div class="single-member">
 							<div class="member-img">
-								<img src="{{ asset('storage/app/public' . $berita->fotoberita) }}" alt="#">								
+								<img src="{{ asset('storage/' . $berita->fotoberita) }}" alt="#">								
 							</div>
 							<div class="member-details">
 								<h2>Name</h2>

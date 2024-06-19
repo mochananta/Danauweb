@@ -93,10 +93,10 @@
    
     <!-- Tables Nav -->
     <li class="nav-item">
-      <a class="nav-link collapsed" data-bs-target="#tables-nav-1" data-bs-toggle="collapse" href="#">
+      <a class="nav-link collapsed" data-bs-target="#tables-nav-2" data-bs-toggle="collapse" href="#">
         <i class="bi bi-layout-text-window-reverse"></i><span>Konten</span><i class="bi bi-chevron-down ms-auto"></i>
       </a>
-      <ul id="tables-nav-1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+      <ul id="tables-nav-2" class="nav-content collapse " data-bs-parent="#sidebar-nav">
         <li>
           <a href="{{ route('berita.view') }}">
             <i class="bi bi-circle"></i><span>Data Artikel</span>
