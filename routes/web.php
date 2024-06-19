@@ -10,6 +10,7 @@ use App\Http\Controllers\TentangController;
 use App\Http\Controllers\VisimisiController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\StaffController;
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
@@ -116,7 +117,16 @@ Route::middleware([
     Route::post('/visimisi_update/{id}', [VisimisiController::class, 'update'])->name('visimisi.update');
     Route::delete('/deletevisimisi/{id}', [VisimisiController::class, 'destroy'])->name('visimisi.delete');
 
+    //CRUD KARYAWAN
+    Route::get('/staff', [StaffController::class, 'index'])->name('staff.view');
+    Route::get('/staff_add', [StaffController::class, 'create'])->name('staff.add');
+    Route::post('/staff_store', [StaffController::class, 'store'])->name('staff.store');
+    Route::get('/staff_edit/{id}', [StaffController::class, 'edit'])->name('staff.edit');
+    Route::post('/staff_update/{id}', [StaffController::class, 'update'])->name('staff.update');
+    Route::delete('/deletestaff/{id}', [StaffController::class, 'destroy'])->name('staff.delete');
 
+
+    
     Route::get('/aboutview', [AboutController::class, 'index'])->name('about.view');
     Route::get('/about_add', [AboutController::class, 'create'])->name('about.add');
     Route::post('/about_store', [AboutController::class, 'store'])->name('about.store');

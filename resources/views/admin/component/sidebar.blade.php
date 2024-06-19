@@ -65,7 +65,7 @@
             </a>
           </li>
           <li>
-            <a href="{{ route('kegiatan.view') }}">
+            <a href="{{ route('staff.view') }}">
               <i class="bi bi-circle"></i><span>Data Karyawan atau Staff</span>
             </a>
           </li>

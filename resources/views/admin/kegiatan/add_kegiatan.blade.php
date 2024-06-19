@@ -22,11 +22,7 @@
                 @csrf
                 <div class="form-group">
                     <label for="topik">Topik Kegiatan</label>
-                    <select name="topik" id="topik" class="form-control" required>
-                        <option value="Pendidikan">Pendidikan</option>
-                        <option value="Budaya">Budaya</option>
-                        <option value="Olahraga">Olahraga</option>
-                    </select>
+                    <input type="text" name="topik" class="form-control" id="topik" required>
                 </div>                
                 <div class="form-group">
                     <label for="judulkegiatan">Judul</label>

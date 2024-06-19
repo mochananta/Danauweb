@@ -111,16 +111,16 @@ class BeritaController extends Controller
         $previousBerita = Berita::where('id', '<', $berita->id)->orderBy('id', 'desc')->first();
         $nextBerita = Berita::where('id', '>', $berita->id)->orderBy('id')->first();
         $recentPosts = Recentpost::all();
-<<<<<<< HEAD
+
         $komentars = Komentar::where('berita_id', $id)->get();
 
         return view('user.detailberita', compact('berita', 'recentPosts', 'komentars', 'previousBerita', 'nextBerita'));
-=======
+
         // $komentars = Komentar::where('berita_id', $id)->get();
     
         return view('user.detailberita', compact('berita', 'recentPosts','previousBerita', 'nextBerita'));
         // return view('user.detailberita', compact('berita', 'recentPosts', 'komentars', 'previousBerita', 'nextBerita'));
->>>>>>> 868ece8524ca28ce0ed90d6cf8f612845f01d750
+
     }
 
 
