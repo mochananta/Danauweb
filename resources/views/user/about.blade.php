@@ -1,7 +1,7 @@
 @extends('user.master')
 @section('user')
 		<!-- Breadcrumbs -->
-		<div class="breadcrumbs overlay">
+		{{-- <div class="breadcrumbs overlay">
 			<div class="container">
 				<div class="bread-inner">
 					<div class="row">
@@ -16,8 +16,16 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --}}
 		<!-- End Breadcrumbs -->
+
+		<div class="container mt-3">
+			<div class="row mt-3 text-center">
+				<iframe width=1000% height="500" src="https://www.youtube.com/embed/rICaYGVPMBY?si=AaRgwGB0c7qUe-s7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				<div class="text-justify">
+				</div>
+			</div>
+		</div>
 	
 		<!-- Start Portfolio Details Area -->
 
@@ -80,7 +88,4 @@
 				</div>
 			</div>
 		</section> --}}
-
-
-
 
