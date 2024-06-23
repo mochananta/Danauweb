@@ -618,7 +618,70 @@
 		<!--/Ens clients -->
 		
 		<!-- Start Appointment -->
-		<section class="appointment">
+
+		<!-- Kontak -->
+		<section id="kontak">
+            <div class="container-fluid overlay h-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3>
+                                Butuh Konsultasi..? 
+                                Silahkan kontak kami 
+                                Kami Siap Membantu 
+                            </h3>
+                            <div class="kontak">
+                                <h6>Kontak</h6>
+                                <div class="mb-3 d-flex align-items-center">
+                                    <div>
+                                        <img src="{{ asset('user/img/Maps.png')}}" alt="">
+                                    </div>
+                                    <a href="#">Jl. Pelajar Pejuang 123 Majalaya Bandung 
+                                        Indonesia</a>
+                                </div>
+                                <div class="mb-3 d-flex align-items-center">
+                                    <div>
+                                        <img src="{{ asset('user/img/Telepon.png')}}" alt="">
+                                    </div>
+                                    <a href="#">022-6545-2041</a>
+                                </div>
+                                <div class="mb-3 d-flex align-items-center">
+                                    <div>
+                                        <img src="{{ asset('user/img/Gmail.png')}}" alt="">
+                                    </div>
+                                    <a href="#">rumahimpian@gmail.com</a>
+                                </div>
+                            </div>
+                            <h6>Social Media</h6>
+                                <a href="#" class="me-lg-3 me-1"><img src="{{ asset('user/img/facebook.png')}}" alt=""></a>
+                                <a href="#" class="me-lg-3 me-1"><img src="{{ asset('user/img/tweeter.png')}}" alt=""></a>
+                                <a href="#" class="me-lg-3 me-1"><img src="{{ asset('user/img/instagram (1).png')}}" alt=""></a>
+                                <a href="https://inkoppol.co.id/" class="linkrumahimpian">inkoppol</a>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-contact w-100">
+                                <form> 
+                                    <h2>
+                                        Ada Pertanyaan?
+                                    </h2>
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <label for="floatingInput " class=" d-flex align-items-center">Masukan email anda disini...</label>
+                                      </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <label for="floatingInput" class="d-flex align-items-center">Pertanyaan anda....</label>
+                                    </div>
+                                    <button type="submit" class="button-kontak">Kirim</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </section>
+
+		<!-- <section class="appointment">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
@@ -675,7 +738,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 		<!-- End Appointment -->
 		
 		<!-- Start Newsletter Area -->
@@ -684,15 +747,15 @@
 				<div class="row ">
 					<div class="col-lg-6  col-12">
 						<!-- Start Newsletter Form -->
-						<div class="subscribe-text ">
+						<!-- <div class="subscribe-text ">
 							<h6>Subscribe Sekarang</h6>
 							<p class="">Dan Dapatkan Informasi Terbaru dari<br> Danau Emas Gadai Jatim.</p>
-						</div>
+						</div> -->
 						<!-- End Newsletter Form -->
-					</div>
-					<div class="col-lg-6  col-12">
+					<!-- </div>
+					<div class="col-lg-6  col-12"> -->
 						<!-- Start Newsletter Form -->
-						<div class="subscribe-form ">
+						<!-- <div class="subscribe-form ">
 							@if(session('success'))
 							<div>{{ session('success') }}</div>
 							@endif
@@ -701,7 +764,7 @@
 								<input type="email" id="email" name="email" placeholder="Your Email" class="common-input" required>
 								<button type="submit" class="btn">Subscribe</button>
 							</form>
-						</div>
+						</div> -->
 						<!-- End Newsletter Form -->
 					</div>
 				</div>
