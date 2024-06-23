@@ -7,6 +7,8 @@ use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\PromoController;
 use App\Http\Controllers\RecentpostController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,10 +33,12 @@ Route::post('/contact', [UserController::class, 'contactstore'])->name('contact.
 Route::get('/berita', [BeritaController::class,'Berita'])->name('user.berita');
 Route::get('/detailberita/{id}', [BeritaController::class,'BeritaShow'])->name('user.detailberita');
 Route::get('/detailkegiatan/{id}', [KegiatanController::class,'KegiatanShow'])->name('user.detailkegiatan');
-Route::post('/subscribe', [UserController::class, 'subscribe'])->name('subscribe');
-Route::post('/komentar', [UserController::class, 'store'])->name('komentar.store');
+
+// Route::post('/subscribe', [UserController::class, 'subscribe'])->name('subscribe');
+// Route::post('/komentar', [UserController::class, 'store'])->name('komentar.store');
 Route::post('/contact', [UserController::class, 'contactview'])->name('user.contact');
 Route::post('/contact', [UserController::class, 'contactstore'])->name('contact.store');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -72,5 +76,23 @@ Route::middleware([
     Route::get('/kegiatan_edit/{id}', [KegiatanController::class, 'edit'])->name('kegiatan.edit');
     Route::post('/kegiatan_update/{id}', [KegiatanController::class, 'update'])->name('kegiatan.update');
     Route::delete('/deletekegiatan/{id}', [KegiatanController::class, 'destroy'])->name('kegiatan.delete');
+
+    Route::get('/aboutview', [AboutController::class, 'index'])->name('about.view');
+    Route::get('/about_add', [AboutController::class, 'create'])->name('about.add');
+    Route::post('/about_store', [AboutController::class, 'store'])->name('about.store');
+    Route::get('/about_edit/{id}', [AboutController::class, 'edit'])->name('about.edit');
+    Route::post('/about_update/{id}', [AboutController::class, 'update'])->name('about.update');
+    Route::get('/aboutdelete/{id}', [AboutController::class, 'destroy'])->name('about.delete');
+
+
+    Route::get('/admin/contact', [ContactController::class, 'index'])->name('contact.view');
+    Route::get('/admin/contact/{contact}', [ContactController::class, 'show'])->name('contact.show');
+
+    //Kotak Saran
+    Route::post('/contact', [UserController::class, 'contactstore'])->name('contact.store');
 });
+
+
+    
+
 Route::get('/auth/logout', [AuthController::class, 'logout'])->name('admin.logout')->middleware('auth');

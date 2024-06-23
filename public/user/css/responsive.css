@@ -47,6 +47,9 @@ Version:	1.1
 #scrollUp {
 	bottom: 55px;
 }
+#waButton {
+	bottom: 55px;
+}
 .header .top-link li a {
 	font-size: 13px;
 }
