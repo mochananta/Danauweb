@@ -30,7 +30,7 @@
                 </div>
                 <div class="form-group">
                     <label for="role">Role</label>
-                    <select name="topik" id="topik" class="form-control" required>
+                    <select name="topik" id="topik" class=" bi bi-chevron-down ms-auto form-control" required>
                         <option value="Pendidikan">Pemimpin</option>
                         <option value="Budaya">Staff</option>
                     </select>
@@ -47,31 +47,25 @@
         $(document).ready(function() {
             $("#validate").validate({
                 rules: {
-                    judulberita: {
+                    name: {
                         required: true,
                     },
-                    tanggal: {
+                    photo: {
                         required: true,
                     },
-                    deskripsi: {
-                        required: true,
-                    },
-                    fotoberita: {
+                    role: {
                         required: true,
                     },
                 },
                 messages: {
-                    judulberita: {
-                        required: "Judul berita harus diisi.",
+                    name: {
+                        required: true,
                     },
-                    tanggal: {
-                        required: "Tanggal harus diisi.",
+                    photo: {
+                        required: true,
                     },
-                    deskripsi: {
-                        required: "Deskripsi berita harus diisi.",
-                    },
-                    fotoberita: {
-                        required: "Foto berita harus diunggah.",
+                    role: {
+                        required: true,
                     },
                 },
             });

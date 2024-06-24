@@ -22,7 +22,7 @@
                 @csrf
                 <div class="form-group">
                     <label for="topik">Topik Kegiatan</label>
-                    <input type="text" name="topik" class="form-control" id="topik" required>
+                    <input type="text" name="topik" class="form-control " id="topik" required>
                 </div>                
                 <div class="form-group">
                     <label for="judulkegiatan">Judul</label>
