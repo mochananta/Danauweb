@@ -25,7 +25,7 @@
               <div class="card info-card sales-card">
 
                 <div class="card-body">
-                  <h5 class="card-title">Jumlah Data Article</h5>
+                  <h5 class="card-title">Jumlah Data Artikel</h5>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -60,7 +60,48 @@
                 </div>
 
               </div>
-            </div><!-- End Sales Card -->
+            </div>
+            
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card sales-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">Jumlah Data Postingan</h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-journal-text"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>{{ $jumlahPostingan }}</h6>
+                      <span class="text-success small pt-1 fw-bold"><span class="text-muted small pt-2 ps-1">postingan</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card sales-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">Jumlah Data Promo</h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-journal-text"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>{{ $jumlahPromo }}</h6>
+                      <span class="text-success small pt-1 fw-bold"><span class="text-muted small pt-2 ps-1">promo</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- End Sales Card -->
 
    
           <!-- Website Traffic -->
@@ -88,9 +129,10 @@
                   // Menyimpan jumlah berita, jumlah kegiatan, dan data promo dari PHP ke JavaScript
                   let jumlahBerita = <?php echo $jumlahBerita; ?>;
                   let jumlahKegiatan = <?php echo $jumlahKegiatan; ?>;
-                  let dataPromo = <?php echo json_encode($dataPromo); ?>;
+                  let jumlahPromo = <?php echo json_encode($jumlahPromo); ?>;
+                  let jumlahPostingan = <?php echo $jumlahPostingan; ?>;
 
-                  let chartColors = ['#FF6B6B', '#FFD166', '#06D6A0']; // Merah, kuning, dan hijau
+                  let chartColors = ['#FF6B6B', '#FFD166', '#06D6A0', '#57A6A1']; // Merah, kuning, dan hijau, biru
                   let chartData = [{
                       value: jumlahBerita,
                       name: 'Berita',
@@ -105,11 +147,20 @@
                         color: chartColors[1]
                       }
                     },
+                    
                     {
-                      value: dataPromo,
+                      value: jumlahPromo,
                       name: 'Promo',
                       itemStyle: {
                         color: chartColors[2]
+                      }
+                    },
+
+                    {
+                      value: jumlahPostingan,
+                      name: 'Postingan',
+                      itemStyle: {
+                        color: chartColors[3]
                       }
                     }
                   ];

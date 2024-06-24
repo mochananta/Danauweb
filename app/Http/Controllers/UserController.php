@@ -100,3 +100,5 @@ class UserController extends Controller
         return redirect()->route('user.contact');
     }
 }
+
+

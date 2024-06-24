@@ -6,11 +6,11 @@
 				<div class="bread-inner">
 					<div class="row">
 						<div class="col-12">
-							<h2>About Detail</h2>
+							<h2>About</h2>
 							<ul class="bread-list">
 								<li><a href="/">Home</a></li>
 								<li><i class="icofont-simple-right"></i></li>
-								<li class="active">About Detail</li>
+								<li class="active">About</li>
 							</ul>
 						</div>
 					</div>
@@ -69,7 +69,14 @@
 									<img src="{{ asset('user/img/Gajian-Emas.jpeg')}}" alt="#">
 								</div>
 							</div>
-							
+							<!-- <div class="date">
+								<ul>
+									<li><span>Category :</span> Heart Surgery</li>
+									<li><span>Date :</span> April 20, 2019</li>
+									<li><span>Client :</span> Suke Agency</li>
+									<li><span>Ags :</span> Typo</li>
+								</ul>
+							</div> -->
 							<div class="body-text">
 								<h3>{{ $about->judul }}</h3>
 								<p>{{ $about->deskripsi }}</p>
@@ -88,3 +95,4 @@
 				</div>
 			</div>
 		</section> --}}
+

@@ -12,3 +12,4 @@ class About extends Model
     protected $primaryKey = 'id';
     public $timestamps = true;
 }
+
