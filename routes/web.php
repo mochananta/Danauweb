@@ -126,7 +126,7 @@ Route::middleware([
     Route::delete('/deletestaff/{id}', [StaffController::class, 'destroy'])->name('staff.delete');
 
 
-    
+
     Route::get('/aboutview', [AboutController::class, 'index'])->name('about.view');
     Route::get('/about_add', [AboutController::class, 'create'])->name('about.add');
     Route::post('/about_store', [AboutController::class, 'store'])->name('about.store');
