@@ -7,10 +7,12 @@ use Illuminate\Support\Facades\Session;
 use App\Models\Berita;
 use App\Models\Contact;
 use App\Models\Kegiatan;
-use App\Models\Komentar;
+// use App\Models\Komentar;
 use App\Models\Promo;
-use App\Models\Subscribe;
+use App\Models\Team;
+// use App\Models\Subscribe;
 use Illuminate\Http\Request;
+
 class UserController extends Controller
 {
 
@@ -43,7 +45,8 @@ class UserController extends Controller
 
     public function teamview()
     {
-        return view('user.team');
+        $teams = Team::all();
+        return view('user.team', compact('teams'));
     }
 
     public function contactview()
@@ -51,38 +54,44 @@ class UserController extends Controller
         return view('user.contact');
     }
 
-    public function subscribe(Request $request)
-    {
-        $request->validate([
-            'email' => 'required|email|unique:subscribers,email'
-        ]);
+    // public function subscribe(Request $request)
+    // {
+    //     $request->validate([
+    //         'email' => 'required|email|unique:subscribers,email'
+    //     ]);
 
-        Subscribe::create([
-            'email' => $request->email
-        ]);
+    //     Subscribe::create([
+    //         'email' => $request->email
+    //     ]);
 
-        return redirect()->back()->with('success', 'Terima Kasih, Tunggu Informasi Selanjutnya');
-    }
+    //     return redirect()->back()->with('success', 'Terima Kasih, Tunggu Informasi Selanjutnya');
+    // }
 
-    public function store(Request $request)
-    {
-        $request->validate([
-            'berita_id' => 'required|exists:beritas,id',
-            'nama' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'teks' => 'required|string',
-        ]);
+    // public function store(Request $request)
+    // {
+    //     $request->validate([
+    //         'berita_id' => 'required|exists:beritas,id',
+    //         'nama' => 'required|string|max:255',
+    //         'email' => 'required|email|max:255',
+    //         'teks' => 'required|string',
+    //     ]);
 
-        Komentar::create([
-            'berita_id' => $request->berita_id,
-            'nama' => $request->nama,
-            'email' => $request->email,
-            'teks' => $request->teks,
-        ]);
+    //     Komentar::create([
+    //         'berita_id' => $request->berita_id,
+    //         'nama' => $request->nama,
+    //         'email' => $request->email,
+    //         'teks' => $request->teks,
+    //     ]);
 
+    //     Session::flash('success', 'Komentar telah berhasil terkirim!');        
+    // }
+
+<<<<<<< HEAD
         Session::flash('success', 'Komentar telah berhasil terkirim!'); 
         return redirect()->back();       
     }
+=======
+>>>>>>> 83680d2b7cf331d9d71c6d2b7f9e2bd4c5677b39
 
     public function contactstore(Request $request)
     {
@@ -93,8 +102,25 @@ class UserController extends Controller
             'descontact' => 'required',
         ]);
 
+
         Contact::create($validatedData);
         Session::flash('success', 'Pesan telah berhasil terkirim!');        
-        return redirect()->route('user.contact');
     }
+
+// Expand vendor frames
+// C:\xampp\htdocs\Danauweb\resources\views\user\team.blade
+// .php
+//  
+// : 13
+// require
+// 54 vendor frames
+// C:\xampp\htdocs\Danauweb\public\index
+// .php
+//  
+// : 51
+// require_once
+// 1 vendor frame return redirect()->route('user.contact');
+//     }
 }
+
+

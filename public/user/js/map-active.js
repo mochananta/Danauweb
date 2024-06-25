@@ -7,9 +7,9 @@ $(document).ready(function(){
 	var map;
 	map = new GMaps({
 		el: '#myMap',
-		lat: 51.507351,
-		lng: -0.127758,
-		scrollwheel:false,
+		lat: 51.507351, // Contoh latitude untuk Jakarta, Indonesia
+		lng: -0.127758, // Contoh longitude untuk Jakarta, Indonesia
+		scrollwheel: false,
 		zoom: 15,
 		zoomControl : false,
 		panControl : false,
