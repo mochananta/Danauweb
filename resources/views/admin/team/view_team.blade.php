@@ -42,12 +42,12 @@
                             <td>{{$item->nama}}</td>
                             <td>{{$item->posisi}}</td>
                             <td>
-                                {{-- <img src="{{asset('storage/'.$item->poto)}}" width="100px" alt="photo"> --}}
-                                @if ($item->poto)
+                                <img src="{{asset('storage/'.$item->poto)}}" width="100px" alt="photo">
+                                {{-- @if ($item->poto)
                                     <img src="{{ asset('storage/'.$item->poto) }}" width="100px" alt="photo">
                                 @else
                                     <img src="{{ asset('path/to/default/photo.jpg') }}" width="100px" alt="default photo">
-                                @endif
+                                @endif --}}
                             </td>
                             <td>
                                 <div class="row">

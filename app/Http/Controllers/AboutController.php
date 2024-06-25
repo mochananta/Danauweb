@@ -105,10 +105,18 @@ class AboutController extends Controller
     public function destroy(string $id)
     {
         $data = About::find($id);
-        if ($data->foto != null || $data->foto ='' ){
+        if ($data->foto) {
             Storage::delete($data->foto);
         }
         $data->delete();
         return redirect()->route('about.view');
     }
+
+        // $data = About::find($id);
+        // if ($data->foto != null || $data->foto ='' ){
+        //     Storage::delete($data->foto);
+        // }
+        // $data->delete();
+        // return redirect()->route('about.view');
+    
 }

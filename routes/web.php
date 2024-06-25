@@ -83,7 +83,7 @@ Route::middleware([
     Route::post('/about_store', [AboutController::class, 'store'])->name('about.store');
     Route::get('/about_edit/{id}', [AboutController::class, 'edit'])->name('about.edit');
     Route::post('/about_update/{id}', [AboutController::class, 'update'])->name('about.update');
-    Route::get('/aboutdelete/{id}', [AboutController::class, 'destroy'])->name('about.delete');
+    Route::delete('/aboutdelete/{id}', [AboutController::class, 'destroy'])->name('about.delete');
 
 
     Route::get('/teamview', [TeamController::class, 'index'])->name('team.view');
@@ -91,7 +91,7 @@ Route::middleware([
     Route::post('/team_store', [TeamController::class, 'store'])->name('team.store');
     Route::get('/team_edit/{id}', [TeamController::class, 'edit'])->name('team.edit');
     Route::post('/team_update/{id}', [TeamController::class, 'update'])->name('team.update');
-    Route::get('/teamdelete/{id}', [TeamController::class, 'destroy'])->name('team.delete');
+    Route::delete('/teamdelete/{id}', [TeamController::class, 'destroy'])->name('team.delete');
 
 
     Route::get('/admin/contact', [ContactController::class, 'index'])->name('contact.view');

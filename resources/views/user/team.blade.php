@@ -30,6 +30,25 @@
 		<!-- End Portfolio Details Area -->
 @endsection	
 
+@push('js')
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(document).ready(function(){
+		const slider = $('.tim-kami');
+		const members = $('.single-member');
+		const memberCount = members.length;
+		let currentIndex = 0;
+
+		function showNextMember() {
+			currentIndex = (currentIndex + 1) % memberCount;
+			const translateXValue = -currentIndex * 100;
+			slider.css('transform', `translateX(${translateXValue}%)`);
+		}
+
+		setInterval(showNextMember, 3000); // Change member every 3 seconds
+	});
+</script>
+@endpush
 
 
 

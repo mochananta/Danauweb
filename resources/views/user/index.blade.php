@@ -461,55 +461,24 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-12">
-					<!-- Slider Container -->
-					<div class="slider-container">
-						<div class="slider tim-kami">
-							<!-- Single Team Member -->
-							<div class="single-member">
-								<div class="member-img">
-									<img src="{{ asset('user/img/person.jpg')}}" alt="#">
-									<div class="social-icons">
-										<a href="#"><i class="fa fa-instagram"></i></a>
-										<a href="#"><i class="fa fa-whatsapp"></i></a>
-										<a href="#"><i class="fa fa-linkedin"></i></a>
+				<div class="pf-details section">
+					<div class="container">
+						<div class="row">
+							@foreach ($teams as $teams)
+							<div class="col-12">
+								<div class="inner-content">
+									
+									<div class="gambar">
+										<img src="{{ asset('storage/' . $teams->poto) }}" alt="#">
 									</div>
-								</div>
-								<div class="member-details">
-									<h4>Moh. Ananta</h4>
-									<p>CEO & Founder</p>
+									<div class="body-text">
+										<h3>{{ $teams->nama }}</h3>
+										<p>{{ $teams->posisi }}</p>
+									</div>
+									
 								</div>
 							</div>
-							<!-- Repeat for other team members -->
-							<div class="single-member">
-								<div class="member-img">
-									<img src="{{ asset('user/img/person.jpg')}}" alt="#">
-									<div class="social-icons">
-										<a href="#"><i class="fa fa-instagram"></i></a>
-										<a href="#"><i class="fa fa-whatsapp"></i></a>
-										<a href="#"><i class="fa fa-linkedin"></i></a>
-									</div>
-								</div>
-								<div class="member-details">
-									<h4>Name 2</h4>
-									<p>CTO</p>
-								</div>
-							</div>
-							<div class="single-member">
-								<div class="member-img">
-									<img src="{{ asset('user/img/person.jpg')}}" alt="#">
-									<div class="social-icons">
-										<a href="#"><i class="fa fa-instagram"></i></a>
-										<a href="#"><i class="fa fa-whatsapp"></i></a>
-										<a href="#"><i class="fa fa-linkedin"></i></a>
-									</div>
-								</div>
-								<div class="member-details">
-									<h4>Name 3</h4>
-									<p>CTO</p>
-								</div>
-							</div>
-							<!-- Add more team members as needed -->
+							@endforeach
 						</div>
 					</div>
 				</div>
@@ -518,9 +487,9 @@
 	</section>
 	<!-- End Our Team Area -->
 	<!-- Include jQuery Our Team Area-->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<!-- Custom Slider Script -->
-	<script>
+	@push('js')
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
 	$(document).ready(function(){
 		const slider = $('.tim-kami');
 		const members = $('.single-member');
@@ -536,6 +505,7 @@
 		setInterval(showNextMember, 3000); // Change member every 3 seconds
 	});
 </script>
+@endpush
 		
 		<!-- Start Kotak Saran -->
 		<section class="appointment">

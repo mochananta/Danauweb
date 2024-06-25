@@ -22,7 +22,8 @@ class UserController extends Controller
         $promos = Promo::all();
         $kegiatans = Kegiatan::all();
         $beritas = Berita::take(3)->get();
-        return view('user.index', compact('promos','beritas','kegiatans'));
+        $teams = Team::all();
+        return view('user.index', compact('promos','beritas','kegiatans','teams',));
     }
 
     //Halaman FAQ View
@@ -43,11 +44,11 @@ class UserController extends Controller
         return view('user.faq');
     }
 
-    public function teamview()
-    {
-        $teams = Team::all();
-        return view('user.team', compact('teams'));
-    }
+    // public function teamview()
+    // {
+    //     $teams = Team::all();
+    //     return view('user.team', compact('teams'));
+    // }
 
     public function contactview()
     {
