@@ -9,8 +9,9 @@ use App\Http\Controllers\RecentpostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\AdminTeamMemberController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -83,14 +84,20 @@ Route::middleware([
     Route::post('/about_store', [AboutController::class, 'store'])->name('about.store');
     Route::get('/about_edit/{id}', [AboutController::class, 'edit'])->name('about.edit');
     Route::post('/about_update/{id}', [AboutController::class, 'update'])->name('about.update');
-    Route::get('/aboutdelete/{id}', [AboutController::class, 'destroy'])->name('about.delete');
+    Route::delete('/aboutdelete/{id}', [AboutController::class, 'destroy'])->name('about.delete');
+
+
+    Route::get('/teamview', [TeamController::class, 'index'])->name('team.view');
+    Route::get('/team_add', [TeamController::class, 'create'])->name('team.add');
+    Route::post('/team_store', [TeamController::class, 'store'])->name('team.store');
+    Route::get('/team_edit/{id}', [TeamController::class, 'edit'])->name('team.edit');
+    Route::post('/team_update/{id}', [TeamController::class, 'update'])->name('team.update');
+    Route::delete('/teamdelete/{id}', [TeamController::class, 'destroy'])->name('team.delete');
 
 
     Route::get('/admin/contact', [ContactController::class, 'index'])->name('contact.view');
     Route::get('/admin/contact/{contact}', [ContactController::class, 'show'])->name('contact.show');
 
-    //our team
-    Route::get('/admin/team-members', [AdminTeamMemberController::class, 'index'])->name('admin.team.members.index');
     
     
     

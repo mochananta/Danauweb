@@ -50,7 +50,7 @@
                         <td>
                             <div class="row">
                                 <a href="{{route('kegiatan.edit',$kegiatan->id)}}" class="col btn btn-success"
-                                    style="margin: 0 10px">Edit</a>
+                                    style="margin:  10px">Edit</a>
                                     <a href="{{route('kegiatan.delete',$kegiatan->id)}}" class="col btn btn-danger" style="margin:10px" data-confirm-delete="true">Hapus</a>
                             </div>
                         </td>

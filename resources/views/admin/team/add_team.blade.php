@@ -3,12 +3,12 @@
 @section('admin')
 <main id="main" class="main">
     <div class="pagetitle">
-        <h1>Tambah Data About</h1>
+        <h1>Tambah Data Struktur Organisasi</h1>
         <nav>
             {{-- Kode uji coba --}}
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="">About</a></li>
+                <li class="breadcrumb-item"><a href="">Team</a></li>
                 <li class="breadcrumb-item"><a href="">Tambah</a></li>
             </ol>
 
@@ -23,29 +23,22 @@
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Form Tambah About</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Form Tambah Posisi</h6>
         </div>
         <div class="card-body">
-            <form id="validate" method="POST" action="{{ route('about.store') }}" enctype="multipart/form-data">
+            <form id="validate" method="POST" action="{{ route('team.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                    <label for="judul">Judul</label>
-                    <input type="text" name="judul" class="form-control" id="judul" required>
+                    <label for="nama">Nama</label>
+                    <input type="text" name="nama" class="form-control" id="nama" required>
                 </div>
                 <div class="form-group">
-                    <label for="link">
-                        Id Video Youtube
-                        (contoh : https://youtu.be/<span class="bg-warning">fSkTpAOXtys?si=--O0Or_xLyGAUugT</span>)
-                    </label>
-                    <input type="text" name="link" class="form-control" id="link" required>
+                    <label for="posisi">Jabatan</label>
+                    <input type="text" name="posisi" class="form-control" id="posisi" required>
                 </div>
                 <div class="form-group">
-                    <label for="deskripsi">Deskripsi</label>
-                    <textarea name="deskripsi" class="form-control" id="deskripsi" rows="5" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="foto">Foto</label>
-                    <input type="file" name="foto" class="form-control-file" id="foto" required>
+                    <label for="poto">Foto</label>
+                    <input type="file" name="poto" class="form-control-file" id="poto">
                 </div>
             
                 <button type="submit" class="btn btn-primary">Tambah</button>
@@ -60,26 +53,26 @@
     $(document).ready(function() {
         $("#validate").validate({
             rules: {
-                judul: {
+                nama: {
                     required: true,
                 },
-                deskripsi: {
+                posisi: {
                     required: true,
                 },
-                foto: {
-                    required: true,
-                },
+                // poto: {
+                //     required: true,
+                // },
             },
             messages: {
-                judul: {
-                    required: "Judul harus diisi",
+                nama: {
+                    required: "Nama harus diisi",
                 },
-                deskripsi: {
-                    required: "Description harus diisi",
+                posisi: {
+                    required: "Jabatan harus diisi",
                 },
-                foto: {
-                    required: "Foto harus diunggah",
-                },
+                // poto: {
+                //     required: "Foto harus diunggah",
+                // },
             },
         });
     });

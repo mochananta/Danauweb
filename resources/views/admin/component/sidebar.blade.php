@@ -60,11 +60,10 @@
           </a>
         </li>
         <li>
-          <a href="{{ route('admin.team.index') }}">
-            <i class="bi bi-circle"></i><span>Tim Kami</span>
+          <a href="{{ route('team.view') }}">
+            <i class="bi bi-circle"></i><span>Team</span>
           </a>
         </li>
-        
 
       </ul>
     </li>
@@ -91,4 +90,3 @@
   
 </aside>
 <!-- End Sidebar-->
-

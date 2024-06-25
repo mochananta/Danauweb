@@ -21,12 +21,8 @@
             <form id="validate" method="POST" action="{{ route('kegiatan.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                    <label for="topik">Topik Kegiatan</label>
-                    <select name="topik" id="topik" class="form-control" required>
-                        <option value="Pendidikan">Pendidikan</option>
-                        <option value="Budaya">Budaya</option>
-                        <option value="Olahraga">Olahraga</option>
-                    </select>
+                    <label for="topik">Topik</label>
+                    <input type="text" name="topik" class="form-control" id="topik" required>
                 </div>                
                 <div class="form-group">
                     <label for="judulkegiatan">Judul</label>

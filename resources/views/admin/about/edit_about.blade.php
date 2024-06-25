@@ -24,6 +24,13 @@
                     <input type="text" name="judul" class="form-control" id="judul" value="{{$editData->judul}}" required>
                 </div>
                 <div class="form-group">
+                    <label for="link">
+                        Id Video Youtube
+                        (contoh : https://youtu.be/<span class="bg-warning">fSkTpAOXtys?si=--O0Or_xLyGAUugT</span>)
+                    </label>
+                    <input type="text" name="link" class="form-control" id="link" value="{{$editData->link}}" required>
+                </div>
+                <div class="form-group">
                     <label for="deskripsi">Deskripsi</label>
                     <textarea name="deskripsi" class="form-control" id="deskripsi" rows="5" value="{{$editData->deskripsi}}" required></textarea>
                 </div>

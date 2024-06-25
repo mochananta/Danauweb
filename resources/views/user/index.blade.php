@@ -167,40 +167,41 @@
 		<!--/ End About singkat DEGJ -->
 
 		<!-- Start Artikel Area -->
-		<section class="blog section" id="blog">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="section-title">
-							<h2>Artikel</h2>
-							<p>Yuk ikuti informasi terbaru kami, melalui artikel di bawah ini!</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					@foreach ($beritas as $berita)
-					<div class="col-lg-4 col-md-6 col-12">
-						<!-- Single Blog -->
-						<div class="single-news">
-							<div class="news-head">
-								<a href="{{ route('user.detailberita', $berita->id) }}">
-								<img src="{{ asset('storage/' . $berita->fotoberita) }}" alt="#">
-								</a>
-							</div>
-							<div class="news-body">
-								<div class="news-content">
-									<div class="date">{{ $berita->tanggal }}</div>
-									<h2><a href="{{ route('user.detailberita', $berita->id) }}">{{ $berita->judulberita }}</a></h2>
-									<p class="text">{{ Str::limit($berita->deskripsi, 116) }}</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					@endforeach
-				</div>
-			</div>
-		</section>
-		<!-- End Artikel Area-->
+<section class="blog section" id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Artikel</h2>
+                    <p>Yuk ikuti informasi terbaru kami, melalui artikel di bawah ini!</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach ($beritas as $berita)
+            <div class="col-lg-4 col-md-6 col-12">
+                <!-- Single Blog -->
+                <div class="single-news">
+                    <div class="news-head">
+                        <a href="{{ route('user.detailberita', $berita->id) }}">
+                            <img src="{{ asset('storage/' . $berita->fotoberita) }}" alt="#">
+                        </a>
+                    </div>
+                    <div class="news-body">
+                        <div class="news-content">
+                            <div class="date">{{ $berita->tanggal }}</div>
+                            <h2><a href="{{ route('user.detailberita', $berita->id) }}">{{ $berita->judulberita }}</a></h2>
+                            <p class="text">{{ Str::limit($berita->deskripsi, 116) }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+<!-- End Artikel Area-->
+
 
 		<!-- Promo -->
 		<section class="custom-pricing-table section">
@@ -286,7 +287,7 @@
 							</div>
 							<div class="unit">
 								<div class="card-unit">
-									<img src="{{ asset('user/img/unit3.jpeg') }}" class="card-img-left" alt="Unit Tuban Gajahmada">
+									<img src="{{ asset('user/img/unit13.jpeg') }}" class="card-img-left" alt="Unit Tuban Gajahmada">
 									<div class="card-body">
 										<h3 class="card-title">Tuban Gajahmada</h3>
 										<p class="card-text">Jl. Gajahmada No.25, Kebonsari, Tuban, Jawa Timur <a href="https://www.example.com" class="btn">Lihat Google Maps<i class="fas fa-map-marker-alt"></i></a></p>
@@ -363,35 +364,40 @@
 		<!-- End unit -->
 
 		<!-- Start dokumentasi kegiatan -->
-		<section class="portfolio section" >
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="section-title">
-							<h2>Dokumentasi Kegiatan</h2>
-							<h2>Danau Emas Gadai Jatim</h2>
-							{{-- <img src="user/img/section-img.png" alt="#"> --}}
-							<p>Kami menyajikan rangkaian momen berharga dari berbagai kegiatan dan program yang telah kami lakukan. Setiap foto adalah bukti nyata komitmen kami dalam memberikan layanan terbaik dan kontribusi positif bagi masyarakat Jawa Timur.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-lg-12 col-12">
-						<div class="owl-carousel portfolio-slider">
-							@foreach ($kegiatans as $kegiatan)
-							<div class="single-pf">
-								<img src="{{ asset('storage/' . $kegiatan->potokegiatan1) }}" alt="#">
-								<a href="{{ route('user.detailkegiatan', $kegiatan->id) }}" class="btn">Lihat Detail</a>
-							</div>
-							@endforeach
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!--/ End dokumentasi kegiatan -->
+<section class="portfolio section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Dokumentasi Kegiatan</h2>
+                    <h2>Danau Emas Gadai Jatim</h2>
+                    {{-- <img src="user/img/section-img.png" alt="#"> --}}
+                    <p>Kami menyajikan rangkaian momen berharga dari berbagai kegiatan dan program yang telah kami lakukan. Setiap foto adalah bukti nyata komitmen kami dalam memberikan layanan terbaik dan kontribusi positif bagi masyarakat Jawa Timur.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <div class="owl-carousel portfolio-slider">
+                    @foreach ($kegiatans as $kegiatan)
+                    <div class="single-pf">
+                        <img src="{{ asset('storage/' . $kegiatan->potokegiatan1) }}" alt="#">
+                        {{-- <div class="btn-container"> --}}
+                            <a href="{{ route('user.detailkegiatan', $kegiatan->id) }}" class="btn">Lihat Detail</a>
+                        {{-- </div> --}}
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ End dokumentasi kegiatan -->
+
+
+
 
 		<!-- Start layanan -->
 		<section class="services section">
@@ -450,7 +456,7 @@
 		<!--/ End Layanan -->
 
 		<!-- Start Our Team Area -->
-	<section class="our-team section" id="our-team">
+	{{-- <section class="our-team section" id="our-team">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -515,27 +521,11 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> --}}
 	<!-- End Our Team Area -->
 	<!-- Include jQuery Our Team Area-->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<!-- Custom Slider Script -->
-	<script>
-	$(document).ready(function(){
-		const slider = $('.tim-kami');
-		const members = $('.single-member');
-		const memberCount = members.length;
-		let currentIndex = 0;
-
-		function showNextMember() {
-			currentIndex = (currentIndex + 1) % memberCount;
-			const translateXValue = -currentIndex * 100;
-			slider.css('transform', `translateX(${translateXValue}%)`);
-		}
-
-		setInterval(showNextMember, 3000); // Change member every 3 seconds
-	});
-</script>
+	
 		
 		<!-- Start Kotak Saran -->
 		<section class="appointment">
