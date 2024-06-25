@@ -10,6 +10,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdminTeamMemberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -87,6 +88,12 @@ Route::middleware([
 
     Route::get('/admin/contact', [ContactController::class, 'index'])->name('contact.view');
     Route::get('/admin/contact/{contact}', [ContactController::class, 'show'])->name('contact.show');
+
+    //our team
+    Route::get('/admin/team-members', [AdminTeamMemberController::class, 'index'])->name('admin.team.members.index');
+    
+    
+    
 
     //Kotak Saran
     Route::post('/contact', [UserController::class, 'contactstore'])->name('contact.store');

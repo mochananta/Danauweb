@@ -59,6 +59,12 @@
             <i class="bi bi-circle"></i><span>Pesan Masuk</span>
           </a>
         </li>
+        <li>
+          <a href="{{ route('admin.team.index') }}">
+            <i class="bi bi-circle"></i><span>Tim Kami</span>
+          </a>
+        </li>
+        
 
       </ul>
     </li>
