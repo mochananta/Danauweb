@@ -87,6 +87,7 @@
                     <thead>
                         <tr class="text-center">
                             <th>Judul</th>
+                            <th>Id Video YouTube</th>
                             <th>Deskripsi</th>
                             <th>Photo</th>
                             <th>Action</th>
@@ -96,6 +97,7 @@
                         @foreach ($data as $item)
                         <tr class="text-center">
                             <td>{{$item->judul}}</td>
+                            <td>{{$item->link}}</td>
                             <td>{{$item->deskripsi}}</td>
                             <td><img src="{{asset('storage/'.$item->foto)}}" width="100px" alt="photo"></td>
                             <td>

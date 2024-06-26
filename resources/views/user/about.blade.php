@@ -18,10 +18,10 @@
 			</div>
 		</div> --}}
 		<!-- End Breadcrumbs -->
-
+		@foreach ($abouts as $about)
 		<div class="container mt-3">
 			<div class="row mt-3 text-center">
-				<iframe width=1000% height="500" src="https://www.youtube.com/embed/rICaYGVPMBY?si=AaRgwGB0c7qUe-s7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				<iframe width=1000% height="500" src="https://www.youtube.com/embed/{{$about->link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 				<div class="text-justify">
 				</div>
 			</div>
@@ -35,6 +35,7 @@
 				<div class="row">
 					<div class="col-12">
 						<div class="inner-content">
+<<<<<<< HEAD
 							@foreach ($abouts as $about)
 <<<<<<< HEAD
 							<div class="image-slider">
@@ -55,6 +56,8 @@
 								<h3>{{ $about->judulabout }}</h3>
 								<p>{{ $about->desabout }}</p>
 =======
+=======
+>>>>>>> ba3948f3ffd34a113b791333f6aba02d5b3b0de1
 							<div class="gambar">
 								<img src="{{ asset('storage/' . $about->foto) }}" alt="#">
 							</div>
@@ -62,13 +65,13 @@
 								<h3>{{ $about->judul }}</h3>
 								<p>{{ $about->deskripsi }}</p>
 							</div>
-							@endforeach
+							
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-			
+		@endforeach
 		<!-- End Portfolio Details Area -->
 @endsection	
 

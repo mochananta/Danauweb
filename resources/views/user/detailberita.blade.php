@@ -1,7 +1,7 @@
 @extends('user.master')
 @section('user')
 		<!-- Breadcrumbs -->
-		<div class="breadcrumbs overlay">
+		{{-- <div class="breadcrumbs overlay">
 			<div class="container">
 				<div class="bread-inner">
 					<div class="row">
@@ -16,7 +16,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --}}
 		<!-- End Breadcrumbs -->
 		
 		<!-- Single News -->

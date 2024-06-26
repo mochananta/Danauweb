@@ -51,18 +51,6 @@ class TeamController extends Controller
             $data->poto = $request->file('poto')->store('potos', 'public');
         }
         $data->save();
-
-
-        // cek foto unggah ato tidak
-        // if ($request->hasFile('poto')) {
-        //     $foto = $request->file('poto')->store('poto');
-        //     $data->poto = $poto;
-        // } else {
-            // Tetapkan nilai default atau tangani ketidakhadiran foto
-        //     $data->poto = 'default.jpg'; // Pastikan nilai default ini ada atau dapat diterima
-        // }
-        // $data->deskripsi = $request->deskripsi;
-        // $data->save();
     
         Alert::success('Success', 'Tambah data Berhasil!')->showConfirmButton('OK');
         return redirect()->route('team.view');
@@ -110,22 +98,24 @@ class TeamController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
-    {
-        if ($data->poto) {
-            Storage::disk('public')->delete($data->poto);
-        }
+    /**
+ * Remove the specified resource from storage.
+ */
+public function destroy(string $id)
+{
+    // Ambil data tim berdasarkan ID
+    $data = Team::find($id);
 
-        $data->delete();
-
-        return redirect()->route('team.view');
+    // Periksa apakah ada foto yang perlu dihapus dari storage
+    if ($data->poto) {
+        Storage::disk('public')->delete($data->poto);
     }
-    // {
-    //     $data = Team::find($id);
-    //     if ($data->poto != null || $data->foto ='' ){
-    //         Storage::delete($data->foto);
-    //     }
-    //     $data->delete();
-    //     return redirect()->route('about.view');
-    // }
+
+    // Hapus data dari database
+    $data->delete();
+
+    // Redirect kembali ke halaman daftar tim
+    return redirect()->route('team.view');
+}
+
 }

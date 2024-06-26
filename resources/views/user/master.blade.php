@@ -289,11 +289,13 @@
 
 											<li><a href="{{route('user.team')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Tim Kami</a></li>
 											<li><a href="{{route('user.contact')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Hubungi Kami</a></li>
+
 										</ul>
 									</div>
 								</div>
 							</div>
 						</div>
+
 						<div class="col-lg-3 col-md-6 col-12">
 							<div class="single-footer">
 								<h2>Jam Buka</h2>
@@ -407,5 +409,23 @@
 				});
 		</script>
 
+			<!-- Custom Slider Script -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			const slider = $('.tim-kami');
+			const members = $('.single-member');
+			const memberCount = members.length;
+			let currentIndex = 0;
+	
+			function showNextMember() {
+				currentIndex = (currentIndex + 1) % memberCount;
+				const translateXValue = -currentIndex * 100;
+				slider.css('transform', `translateX(${translateXValue}%)`);
+			}
+	
+			setInterval(showNextMember, 3000); // Change member every 3 seconds
+		});
+	</script>
     </body>
 </html>
