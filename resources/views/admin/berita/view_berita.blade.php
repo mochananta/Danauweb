@@ -39,7 +39,7 @@
                 <tbody>
                     @foreach ($data as $item)
                     <tr class="text-center">
-                        <td><img src=" {{asset('storage/'.$item->fotoberita)}}" width="100px" alt="photo" /></td>
+                        <td><img src=" {{asset('storage/app/public'.$item->fotoberita)}}" width="100px" alt="photo" /></td>
                         <td>{{$item->judulberita}}</td>
                         <td>{{$item->tanggal}}</td>
                         <td>{{$item->deskripsi}}</td>

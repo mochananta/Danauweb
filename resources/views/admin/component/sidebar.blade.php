@@ -39,11 +39,6 @@
             <i class="bi bi-circle"></i><span>Data Kegiatan</span>
           </a>
         </li>
-        <li>
-          <a href="{{ route('about.view')}}">
-            <i class="bi bi-circle"></i><span>Data About</span>
-          </a>
-        </li>
 
       </ul>
     </li>
@@ -65,11 +60,10 @@
           </a>
         </li>
         <li>
-          <a href="{{ route('admin.team.index') }}">
-            <i class="bi bi-circle"></i><span>Tim Kami</span>
+          <a href="{{ route('team.view') }}">
+            <i class="bi bi-circle"></i><span>Team</span>
           </a>
         </li>
-        
 
       </ul>
     </li>
@@ -96,4 +90,3 @@
   
 </aside>
 <!-- End Sidebar-->
-

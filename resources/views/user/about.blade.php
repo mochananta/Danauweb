@@ -36,7 +36,6 @@
 					<div class="col-12">
 						<div class="inner-content">
 							@foreach ($abouts as $about)
-<<<<<<< HEAD
 							<div class="image-slider">
 								<div class="pf-details-slider">
 									<img src="{{ asset('storage/' . $about->potoabout) }}" alt="#">  
@@ -54,45 +53,6 @@
 							<div class="body-text">
 								<h3>{{ $about->judulabout }}</h3>
 								<p>{{ $about->desabout }}</p>
-=======
-							<div class="gambar">
-								<img src="{{ asset('storage/' . $about->foto) }}" alt="#">
-							</div>
-							<div class="body-text">
-								<h3>{{ $about->judul }}</h3>
-								<p>{{ $about->deskripsi }}</p>
-							</div>
-							@endforeach
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-			
-		<!-- End Portfolio Details Area -->
-@endsection	
-
-
-
-
-{{-- Kode Acuan --}}
-		{{-- <section class="pf-details section">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<div class="inner-content">
-							@foreach ($abouts as $about)
-							<div class="image-slider">
-								<div class="pf-details-slider">
-									<img src="{{ asset('storage/' . $about->foto) }}" alt="#">  
-									<img src="{{ asset('user/img/Gajian-Emas.jpeg')}}" alt="#">
-								</div>
-							</div>
-							
-							<div class="body-text">
-								<h3>{{ $about->judul }}</h3>
-								<p>{{ $about->deskripsi }}</p>
->>>>>>> 83680d2b7cf331d9d71c6d2b7f9e2bd4c5677b39
 								<div class="share">
 									<h4>Share Now -</h4>
 									<ul>
@@ -107,5 +67,5 @@
 					</div>
 				</div>
 			</div>
-		</section> --}}
+		</section>
 
