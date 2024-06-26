@@ -47,6 +47,7 @@
         <link rel="stylesheet" href="{{ asset('user/style.css')}}">
         <link rel="stylesheet" href="{{ asset('user/css/responsive.css')}}">
 
+
 		<link rel="stylesheet" href="{{ asset('user/css/fonts/icomoon/style.css')}}" />
     	<link rel="stylesheet" href="{{ asset('user/css/fonts/flaticon/font/flaticon.css')}}" />
    		 <link rel="stylesheet" href="{{ asset('user/css/tiny-slider.css')}}" />

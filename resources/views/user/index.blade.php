@@ -128,7 +128,11 @@
 											<img src="{{ asset('user/img/Group 139.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
+<<<<<<< HEAD
+											<p>GADAI PERHIASAN</p>
+=======
 											<p>GADAI KENDARAAN BERMOTOR</p>
+>>>>>>> a3ce0eca7dfcba95c9276f3205217127b21c46c8
 										</div>
 									</div>
 								</div>	
@@ -138,7 +142,11 @@
 											<img src="{{ asset('user/img/Group 140.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
+<<<<<<< HEAD
+											<p>GADAI MOBIL & MOTOR</p>
+=======
 											<p>GADAI EMAS</p>
+>>>>>>> a3ce0eca7dfcba95c9276f3205217127b21c46c8
 										</div>
 									</div>
 								</div>
@@ -148,7 +156,11 @@
 											<img src="{{ asset('user/img/Group 141.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
+<<<<<<< HEAD
+											<p>GADAI BARANG ELEKTRONIK</p>
+=======
 											<p>Maecenas vitae luctus nibh.</p>
+>>>>>>> a3ce0eca7dfcba95c9276f3205217127b21c46c8
 										</div>
 									</div>
 								</div>											

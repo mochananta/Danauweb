@@ -27,9 +27,17 @@
 						<div class="section-title">
 							<h2></h2>
 							<img src="{{ asset('user/img/section-img.png')}}" alt="#"> 
+<<<<<<< HEAD
+							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+
+							<h2>Artikel Danau Emas Gadai Jatim</h2>
+							<p>Yuk ikuti informasi terbaru kami, melalui artikel di bawah ini!</p>
+
+=======
 							<!-- <p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p> -->
 							<h2>Artikel Danau Emas Gadai Jatim</h2>
 							<p>Yuk ikuti informasi terbaru kami, melalui artikel di bawah ini!</p>
+>>>>>>> a3ce0eca7dfcba95c9276f3205217127b21c46c8
 						</div>
 					</div>
 				</div>
