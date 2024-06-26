@@ -37,6 +37,7 @@ class AboutController extends Controller
         // validasi data yang diterima
         $request->validate([
             'judul' => 'required|string|max:255',
+            'link' => 'required|string|max:255',
             'deskripsi' => 'required|string',
             'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
@@ -45,7 +46,7 @@ class AboutController extends Controller
         $data = new About();
         // set judul dari request
         $data->judul = $request->judul;
-        // cek foto unggah ato tidak
+        // cek foto unggah atau tidak
         if ($request->hasFile('foto')) {
             $foto = $request->file('foto')->store('foto');
             $data->foto = $foto;
@@ -54,6 +55,7 @@ class AboutController extends Controller
             $data->foto = 'default.jpg'; // Pastikan nilai default ini ada atau dapat diterima
         }
         $data->deskripsi = $request->deskripsi;
+        $data->link = $request->link;
         $data->save();
     
         Alert::success('Success', 'Tambah data Berhasil!')->showConfirmButton('OK');
@@ -73,7 +75,7 @@ class AboutController extends Controller
      */
     public function edit(string $id)
     {
-        $editData = About::Find($id);
+        $editData = About::find($id);
         return view('admin.about.edit_about', compact('editData'));
     }
 
@@ -82,33 +84,71 @@ class AboutController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        // Cari data About berdasarkan ID
         $data = About::find($id);
+
+        // Periksa apakah data ditemukan
+        if (!$data) {
+            // Jika data tidak ditemukan, redirect dengan pesan error atau lakukan penanganan sesuai kebutuhan aplikasi
+            return redirect()->back()->withErrors('Data tidak ditemukan.');
+        }
+
+        // Validasi data yang diterima
+        $request->validate([
+            'judul' => 'required|string|max:255',
+            'link' => 'required|string|max:255',
+            'deskripsi' => 'required|string',
+            'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        // Set nilai judul dan deskripsi dari request
         $data->judul = $request->judul;
+        
+        // Periksa apakah ada foto baru yang diunggah
         if ($request->hasFile('foto')) {
+            // Hapus foto lama jika ada
+            if ($data->foto && $data->foto != 'default.jpg') {
+                Storage::delete($data->foto);
+            }
+            // Simpan foto baru
             $foto = $request->file('foto')->store('foto');
             $data->foto = $foto;
         }
-        $data->deskripsi = $request->deskripsi;
-        $data->update();
-        return redirect()->route('about.view')->with('Success', 'Update Data Berhasil!!');
-    }
 
-    // public function PromoShow(string $id)
-    // {
-    //     $data = Promo::find($id);
-    //     return view('user.index', compact('data'));
-    // }
+        // Set deskripsi dari request
+        $data->deskripsi = $request->deskripsi;
+        $data->link = $request->link;
+
+        // Simpan perubahan ke database
+        $data->save();
+
+        // Redirect kembali dengan pesan sukses
+        return redirect()->route('about.view')->with('success', 'Update data berhasil.');
+    }
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
+        // Cari data About berdasarkan ID
         $data = About::find($id);
-        if ($data->foto != null || $data->foto ='' ){
+
+        // Periksa apakah data ditemukan
+        if (!$data) {
+            // Jika data tidak ditemukan, redirect dengan pesan error atau lakukan penanganan sesuai kebutuhan aplikasi
+            return redirect()->back()->withErrors('Data tidak ditemukan.');
+        }
+
+        // Hapus foto dari storage jika ada
+        if ($data->foto && $data->foto != 'default.jpg') {
             Storage::delete($data->foto);
         }
+
+        // Hapus data dari database
         $data->delete();
-        return redirect()->route('about.view');
+
+        // Redirect kembali dengan pesan sukses
+        return redirect()->route('about.view')->with('success', 'Hapus data berhasil.');
     }
 }

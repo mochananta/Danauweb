@@ -5,29 +5,38 @@
 		<!-- Start Portfolio Details Area -->
 
 		{{-- Kode baru --}}
-		<section class="pf-details section">
+		<!-- Start Our Team Area -->
+		<section class="our-team section" id="our-team">
 			<div class="container">
 				<div class="row">
-					@foreach ($teams as $teams)
-					<div class="col-12">
-						<div class="inner-content">
-							
-							<div class="gambar">
-								<img src="{{ asset('storage/' . $teams->poto) }}" alt="#">
+					<div class="col-lg-12">
+						<!-- Slider Container -->
+						<div class="slider-container">
+							<div class="slider tim-kami">
+								@foreach ($teams as $teams)
+								<!-- Single Team Member -->
+								<div class="single-member">
+									<div class="member-img">
+										<img src="{{ asset('storage/' . $teams->poto) }}" alt="#">
+										<div class="social-icons">
+											<a href="#"><i class="fa fa-instagram"></i></a>
+											<a href="#"><i class="fa fa-whatsapp"></i></a>
+											<a href="#"><i class="fa fa-linkedin"></i></a>
+										</div>
+									</div>
+									<div class="member-details">
+										<h4>{{ $teams->nama }}</h4>
+										<p>{{ $teams->posisi }}</p>
+									</div>
+								</div>
+								@endforeach
 							</div>
-							<div class="body-text">
-								<h3>{{ $teams->nama }}</h3>
-								<p>{{ $teams->posisi }}</p>
-							</div>
-							
 						</div>
 					</div>
-					@endforeach
 				</div>
 			</div>
 		</section>
-			
-		<!-- End Portfolio Details Area -->
+		<!-- End Our Team Area -->
 @endsection	
 
 
