@@ -9,6 +9,7 @@ use App\Models\Contact;
 use App\Models\Kegiatan;
 // use App\Models\Komentar;
 use App\Models\Promo;
+use App\Models\Team;
 // use App\Models\Subscribe;
 use Illuminate\Http\Request;
 
@@ -44,7 +45,8 @@ class UserController extends Controller
 
     public function teamview()
     {
-        return view('user.team');
+        $teams = Team::all();
+        return view('user.team', compact('teams'));
     }
 
     public function contactview()
@@ -84,6 +86,12 @@ class UserController extends Controller
     //     Session::flash('success', 'Komentar telah berhasil terkirim!');        
     // }
 
+<<<<<<< HEAD
+        Session::flash('success', 'Komentar telah berhasil terkirim!'); 
+        return redirect()->back();       
+    }
+=======
+>>>>>>> 83680d2b7cf331d9d71c6d2b7f9e2bd4c5677b39
 
     public function contactstore(Request $request)
     {
@@ -97,8 +105,22 @@ class UserController extends Controller
 
         Contact::create($validatedData);
         Session::flash('success', 'Pesan telah berhasil terkirim!');        
-        return redirect()->route('user.contact');
     }
+
+// Expand vendor frames
+// C:\xampp\htdocs\Danauweb\resources\views\user\team.blade
+// .php
+//  
+// : 13
+// require
+// 54 vendor frames
+// C:\xampp\htdocs\Danauweb\public\index
+// .php
+//  
+// : 51
+// require_once
+// 1 vendor frame return redirect()->route('user.contact');
+//     }
 }
 
 

@@ -19,7 +19,7 @@
 		</div> --}}
 		<!-- End Breadcrumbs -->
 
-        		<!-- Start Blog Area -->
+        <!-- Start Blog Area -->
 		<section class="blog section" id="blog">
 			<div class="container">
 				<div class="row">

@@ -36,6 +36,25 @@
 					<div class="col-12">
 						<div class="inner-content">
 							@foreach ($abouts as $about)
+<<<<<<< HEAD
+							<div class="image-slider">
+								<div class="pf-details-slider">
+									<img src="{{ asset('storage/' . $about->potoabout) }}" alt="#">  
+									<img src="{{ asset('user/img/Gajian-Emas.jpeg')}}" alt="#">
+								</div>
+							</div>
+							{{-- <div class="date">
+								<ul>
+									<li><span>Category :</span> Heart Surgery</li>
+									<li><span>Date :</span> April 20, 2019</li>
+									<li><span>Client :</span> Suke Agency</li>
+									<li><span>Ags :</span> Typo</li>
+								</ul>
+							</div> --}}
+							<div class="body-text">
+								<h3>{{ $about->judulabout }}</h3>
+								<p>{{ $about->desabout }}</p>
+=======
 							<div class="gambar">
 								<img src="{{ asset('storage/' . $about->foto) }}" alt="#">
 							</div>
@@ -73,6 +92,7 @@
 							<div class="body-text">
 								<h3>{{ $about->judul }}</h3>
 								<p>{{ $about->deskripsi }}</p>
+>>>>>>> 83680d2b7cf331d9d71c6d2b7f9e2bd4c5677b39
 								<div class="share">
 									<h4>Share Now -</h4>
 									<ul>

@@ -2,10 +2,17 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
+use App\Models\About;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
+=======
 use Illuminate\Http\Request;
 use App\Models\About;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Storage;
+>>>>>>> 83680d2b7cf331d9d71c6d2b7f9e2bd4c5677b39
 
 class AboutController extends Controller
 {
@@ -21,6 +28,18 @@ class AboutController extends Controller
         return view('admin.about.view_about', compact('data'));
     }
 
+<<<<<<< HEAD
+    /**
+     * Show the form for creating a new resource.
+     */
+
+    //  public function Promo()
+    //  {
+    //      $data = Promo::all();
+    //      return view('user.index', compact('data'));
+    //  }
+=======
+>>>>>>> 83680d2b7cf331d9d71c6d2b7f9e2bd4c5677b39
  
 
     public function create()
@@ -33,6 +52,15 @@ class AboutController extends Controller
      */
     public function store(Request $request)
     {
+<<<<<<< HEAD
+        $data = new About();
+        $data->judulabout = $request->judulabout;
+        if ($request->hasFile('potoabout')) {
+            $poto_about = $request->file('potoabout')->store('potoabout');
+            $data->potoabout = $poto_about;
+        }
+        $data->desabout = $request->desabout;
+=======
 
         // validasi data yang diterima
         $request->validate([
@@ -54,6 +82,7 @@ class AboutController extends Controller
             $data->foto = 'default.jpg'; // Pastikan nilai default ini ada atau dapat diterima
         }
         $data->deskripsi = $request->deskripsi;
+>>>>>>> 83680d2b7cf331d9d71c6d2b7f9e2bd4c5677b39
         $data->save();
     
         Alert::success('Success', 'Tambah data Berhasil!')->showConfirmButton('OK');
@@ -83,12 +112,21 @@ class AboutController extends Controller
     public function update(Request $request, string $id)
     {
         $data = About::find($id);
+<<<<<<< HEAD
+        $data->judulabout = $request->judulabout;
+        if ($request->hasFile('potoabout')) {
+            $poto_about = $request->file('potoabout')->store('potoabout');
+            $data->potoabout = $poto_about;
+        }
+        $data->desabout = $request->desabout;
+=======
         $data->judul = $request->judul;
         if ($request->hasFile('foto')) {
             $foto = $request->file('foto')->store('foto');
             $data->foto = $foto;
         }
         $data->deskripsi = $request->deskripsi;
+>>>>>>> 83680d2b7cf331d9d71c6d2b7f9e2bd4c5677b39
         $data->update();
         return redirect()->route('about.view')->with('Success', 'Update Data Berhasil!!');
     }
@@ -105,10 +143,19 @@ class AboutController extends Controller
     public function destroy(string $id)
     {
         $data = About::find($id);
+<<<<<<< HEAD
+        if ($data->potoabout != null || $data->potoabout ='' ){
+            Storage::delete($data->potoabout);
+=======
         if ($data->foto != null || $data->foto ='' ){
             Storage::delete($data->foto);
+>>>>>>> 83680d2b7cf331d9d71c6d2b7f9e2bd4c5677b39
         }
         $data->delete();
         return redirect()->route('about.view');
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 83680d2b7cf331d9d71c6d2b7f9e2bd4c5677b39

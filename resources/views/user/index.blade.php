@@ -166,7 +166,66 @@
 			</section>
 		<!--/ End About singkat DEGJ -->
 
+<<<<<<< HEAD
+		<!-- Promo -->
+		<section class="custom-pricing-table section">
+			<div class="container">
+				<div class="row">
+					@foreach ($promos as $promo)
+					<div class="col-md-6">
+						<div class="promo-text">
+							<h2>{{ $promo->temapromo }}</h2>
+							<p>{{ $promo->despromo }}</p>
+							<span class="link-text" onclick="window.location.href='https://www.example.com'">Lihat Semua Promo</span>						
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="image-container">
+							<img src="{{ asset('storage/' . $promo->fotopromo) }}" alt="Right Image">
+						</div>
+					</div>	
+					@endforeach
+				</div>
+			</div>  
+		</section>		
+		<!--/ End Promo -->			
+		
+		<!-- Start foto kegiatan -->
+		<section class="portfolio section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Aktivitas Kami Yang Dapat Anda Ketahui Secara Lengkap</h2>
+							{{-- <img src="{{ asset('user/img/coins.png')}}" alt="#">  --}}
+							<p>Simak berbagai kegiatan yang kami suguhkan untuk Anda disini</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12 col-12">
+						<div class="owl-carousel portfolio-slider">
+							@foreach ($kegiatans as $kegiatan)
+							<div class="single-pf">
+								<img src="{{ asset('storage/' . $kegiatan->potokegiatan1) }}" alt="#"> 
+								<a href="{{ route('user.detailkegiatan', $kegiatan->id) }}" class="btn">View Details</a>
+							</div>
+							@endforeach
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</section>
+		<!--/ End foto kegiatan -->
+
+
+		<!-- Start Blog Area -->
+=======
 		<!-- Start Artikel Area -->
+>>>>>>> 83680d2b7cf331d9d71c6d2b7f9e2bd4c5677b39
 		<section class="blog section" id="blog">
 			<div class="container">
 				<div class="row">

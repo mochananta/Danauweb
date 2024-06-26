@@ -39,6 +39,11 @@
             <i class="bi bi-circle"></i><span>Data Kegiatan</span>
           </a>
         </li>
+        <li>
+          <a href="{{ route('about.view')}}">
+            <i class="bi bi-circle"></i><span>Data About</span>
+          </a>
+        </li>
 
       </ul>
     </li>
