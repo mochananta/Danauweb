@@ -47,13 +47,6 @@
         <link rel="stylesheet" href="{{ asset('user/style.css')}}">
         <link rel="stylesheet" href="{{ asset('user/css/responsive.css')}}">
 
-
-		<link rel="stylesheet" href="{{ asset('user/css/fonts/icomoon/style.css')}}" />
-    	<link rel="stylesheet" href="{{ asset('user/css/fonts/flaticon/font/flaticon.css')}}" />
-   		 <link rel="stylesheet" href="{{ asset('user/css/tiny-slider.css')}}" />
-  		 <link rel="stylesheet" href="{{ asset('user/css/aos.css')}}" />
-   		 <link rel="stylesheet" href="{{ asset('user/css/style.css')}}" />
-
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-6Pjw/4YcG3ZM3n5Tc58jqRb+uxA4jDFWn6C5j+SOklRFrlF2pKf6Wg/q5erhKkp1p5QuRYez1sIfY25Pd4/MKw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
@@ -61,13 +54,13 @@
     <body>
 	
 		<!-- Preloader -->
-        <!-- <div class="preloader">
+        <div class="preloader">
             <div class="loader">
                 <div class="loader-outter"></div>
                 <div class="loader-inner"></div>
 
             </div>
-        </div> -->
+        </div>
         <!-- End Preloader -->
 	
 		<!-- Header Area -->

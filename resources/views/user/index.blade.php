@@ -588,7 +588,7 @@
 @endsection
 {{-- KODE TIDAK DIPAKAI SEMENTARA --}}
 <!-- Start Why choose -->
-		{{-- <section class="why-choose section" >
+		<!-- {{-- <section class="why-choose section" >
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
@@ -600,9 +600,9 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-6 col-12">
+					<div class="col-lg-6 col-12"> -->
 						<!-- Start Choose Left -->
-						<div class="choose-left">
+						<!-- <div class="choose-left">
 							<h3>Who We Are</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra antege vel est lobortis, a commodo magna rhoncus. In quis nisi non emet quam pharetra commodo. </p>
 							<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
@@ -623,33 +623,33 @@
 								</div>
 							</div>
 						</div>
-						<!-- End Choose Left -->
-					</div>
-					<div class="col-lg-6 col-12">
+						End Choose Left -->
+					<!-- </div>
+					<div class="col-lg-6 col-12"> -->
 						<!-- Start Choose Rights -->
-						<div class="choose-right">
-							<div class="video-image">
+						<!-- <div class="choose-right">
+							<div class="video-image"> -->
 								<!-- Video Animation -->
-								<div class="promo-video">
+								<!-- <div class="promo-video">
 									<div class="waves-block">
 										<div class="waves wave-1"></div>
 										<div class="waves wave-2"></div>
 										<div class="waves wave-3"></div>
 									</div>
-								</div>
+								</div> -->
 								<!--/ End Video Animation -->
-								<a href="https://www.youtube.com/watch?v=RFVXy6CRVR4" class="video video-popup mfp-iframe"><i class="fa fa-play"></i></a>
+								<!-- <a href="https://www.youtube.com/watch?v=RFVXy6CRVR4" class="video video-popup mfp-iframe"><i class="fa fa-play"></i></a>
 							</div>
-						</div>
+						</div> -->
 						<!-- End Choose Rights -->
-					</div>
+					<!-- </div>
 				</div>
 			</div>
-		</section> --}}
+		</section> --}} -->
 		<!--/ End Why choose -->
 		
 		<!-- Start Call to action -->
-		{{-- <section class="call-action overlay" data-stellar-background-ratio="0.5">
+		<!-- {{-- <section class="call-action overlay" data-stellar-background-ratio="0.5">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-12">
@@ -664,11 +664,11 @@
 					</div>
 				</div>
 			</div>
-		</section> --}}
+		</section> --}} -->
 		<!--/ End Call to action -->
 
 		<!-- Pricing Table -->
-		{{-- <section class="pricing-table section">
+		<!-- {{-- <section class="pricing-table section">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
@@ -679,12 +679,12 @@
 						</div>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row"> -->
 					<!-- Single Table -->
-					<div class="col-lg-4 col-md-12 col-12">
-						<div class="single-table">
+					<!-- <div class="col-lg-4 col-md-12 col-12">
+						<div class="single-table"> -->
 							<!-- Table Head -->
-							<div class="table-head">
+							<!-- <div class="table-head">
 								<div class="icon">
 									<i class="icofont icofont-ui-cut"></i>
 								</div>
@@ -692,9 +692,9 @@
 								<div class="price">
 									<p class="amount">$199<span>/ Per Visit</span></p>
 								</div>	
-							</div>
+							</div> -->
 							<!-- Table List -->
-							<ul class="table-list">
+							<!-- <ul class="table-list">
 								<li><i class="icofont icofont-ui-check"></i>Lorem ipsum dolor sit</li>
 								<li><i class="icofont icofont-ui-check"></i>Cubitur sollicitudin fentum</li>
 								<li class="cross"><i class="icofont icofont-ui-close"></i>Nullam interdum enim</li>
@@ -703,16 +703,16 @@
 							</ul>
 							<div class="table-bottom">
 								<a class="btn" href="#">Book Now</a>
-							</div>
+							</div> -->
 							<!-- Table Bottom -->
-						</div>
-					</div>
+						<!-- </div>
+					</div> -->
 					<!-- End Single Table-->
 					<!-- Single Table -->
-					<div class="col-lg-4 col-md-12 col-12">
-						<div class="single-table">
+					<!-- <div class="col-lg-4 col-md-12 col-12">
+						<div class="single-table"> -->
 							<!-- Table Head -->
-							<div class="table-head">
+							<!-- <div class="table-head">
 								<div class="icon">
 									<i class="icofont icofont-tooth"></i>
 								</div>
@@ -720,9 +720,9 @@
 								<div class="price">
 									<p class="amount">$299<span>/ Per Visit</span></p>
 								</div>	
-							</div>
+							</div> -->
 							<!-- Table List -->
-							<ul class="table-list">
+							<!-- <ul class="table-list">
 								<li><i class="icofont icofont-ui-check"></i>Lorem ipsum dolor sit</li>
 								<li><i class="icofont icofont-ui-check"></i>Cubitur sollicitudin fentum</li>
 								<li><i class="icofont icofont-ui-check"></i>Nullam interdum enim</li>
@@ -731,16 +731,16 @@
 							</ul>
 							<div class="table-bottom">
 								<a class="btn" href="#">Book Now</a>
-							</div>
+							</div> -->
 							<!-- Table Bottom -->
-						</div>
-					</div>
+						<!-- </div>
+					</div> -->
 					<!-- End Single Table-->
 					<!-- Single Table -->
-					<div class="col-lg-4 col-md-12 col-12">
-						<div class="single-table">
+					<!-- <div class="col-lg-4 col-md-12 col-12">
+						<div class="single-table"> -->
 							<!-- Table Head -->
-							<div class="table-head">
+							<!-- <div class="table-head">
 								<div class="icon">
 									<i class="icofont-heart-beat"></i>
 								</div>
@@ -748,9 +748,9 @@
 								<div class="price">
 									<p class="amount">$399<span>/ Per Visit</span></p>
 								</div>	
-							</div>
+							</div> -->
 							<!-- Table List -->
-							<ul class="table-list">
+							<!-- <ul class="table-list">
 								<li><i class="icofont icofont-ui-check"></i>Lorem ipsum dolor sit</li>
 								<li><i class="icofont icofont-ui-check"></i>Cubitur sollicitudin fentum</li>
 								<li><i class="icofont icofont-ui-check"></i>Nullam interdum enim</li>
@@ -759,86 +759,86 @@
 							</ul>
 							<div class="table-bottom">
 								<a class="btn" href="#">Book Now</a>
-							</div>
+							</div> -->
 							<!-- Table Bottom -->
-						</div>
-					</div>
+						<!-- </div>
+					</div> -->
 					<!-- End Single Table-->
-				</div>	
+				<!-- </div>	
 			</div>	
-		</section>	 --}}
+		</section>	 --}} -->
 		<!--/ End Pricing Table -->
 
 
 		<!-- Danau Emas facts -->
-		{{-- <div id="fun-facts" class="fun-facts section overlay">
+		<!-- {{-- <div id="fun-facts" class="fun-facts section overlay">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-3 col-md-6 col-12">
+					<div class="col-lg-3 col-md-6 col-12"> -->
 						<!-- Start Single Fun -->
-						<div class="single-fun">
+						<!-- <div class="single-fun">
 							<i class="icofont icofont-home"></i>
 							<div class="content">
 								<span class="counter">3</span>
 								<p>Unit Cabang Banyuwangi</p>
 							</div>
-						</div>
+						</div> -->
 						<!-- End Single Fun -->
-					</div>
-					<div class="col-lg-3 col-md-6 col-12">
+					<!-- </div>
+					<div class="col-lg-3 col-md-6 col-12"> -->
 						<!-- Start Single Fun -->
-						<div class="single-fun">
+						<!-- <div class="single-fun">
 							<i class="icofont icofont-user-alt-3"></i>
 							<div class="content">
 								<span class="counter">0</span>
 								<p>Nasabah</p>
 							</div>
-						</div>
+						</div> -->
 						<!-- End Single Fun -->
-					</div>
-					<div class="col-lg-3 col-md-6 col-12">
+					<!-- </div>
+					<div class="col-lg-3 col-md-6 col-12"> -->
 						<!-- Start Single Fun -->
-						<div class="single-fun">
+						<!-- <div class="single-fun">
 							<i class="icofont-cart"></i>
 							<div class="content">
 								<span class="counter">0</span>
 								<p>Unit Gadai</p>
 							</div>
-						</div>
+						</div> -->
 						<!-- End Single Fun -->
-					</div>
-					<div class="col-lg-3 col-md-6 col-12">
+					<!-- </div>
+					<div class="col-lg-3 col-md-6 col-12"> -->
 						<!-- Start Single Fun -->
-						<div class="single-fun">
+						<!-- <div class="single-fun">
 							<i class="icofont icofont-table"></i>
 							<div class="content">
 								<span class="counter">0</span>
 								<p>Pengalaman</p>
 							</div>
-						</div>
+						</div> -->
 						<!-- End Single Fun -->
-					</div>
+					<!-- </div>
 				</div>
 			</div>
-		</div> --}}
+		</div> --}} -->
 		<!--/ End Danau emas facts -->
 
 
 		<!-- Start Newsletter Area -->
-		 {{-- <section class="newsletter section">
+		 <!-- <section class="newsletter section">
 			<div class="container">
 				<div class="row ">
-					<div class="col-lg-6  col-12">
+					<div class="col-lg-6  col-12"> -->
 						<!-- Start Newsletter Form -->
-						<div class="subscribe-text ">
+						<!-- <div class="subscribe-text ">
 							<h6>Subscribe Sekarang</h6>
 							<p class="">Dan Dapatkan Informasi Terbaru dari<br> Danau Emas Gadai Jatim.</p>
-						</div>
+						</div> -->
 						<!-- End Newsletter Form -->
-					</div>
-					<div class="col-lg-6  col-12">
+					<!-- </div>
+					<div class="col-lg-6  col-12"> -->
 						<!-- Start Newsletter Form -->
-						<div class="subscribe-form ">
+						<!-- <div class="subscribe-form ">
 							@if(session('success'))
 							<div>{{ session('success') }}</div>
 							@endif
@@ -847,15 +847,15 @@
 								<input type="email" id="email" name="email" placeholder="Your Email" class="common-input" required>
 								<button type="submit" class="btn">Subscribe</button>
 							</form>
-						</div>
+						</div> -->
 						<!-- End Newsletter Form -->
-					</div>
+					<!-- </div>
 				</div>
 			</div>
-		</section> --}}
+		</section> --}} -->
 
 		<!-- Start Promo -->
-		{{-- <section class="custom-pricing-table section">
+		<!-- <section class="custom-pricing-table section">
 			<div class="container">
 				<div class="row">
 					@foreach ($promos as $promo)
@@ -879,14 +879,14 @@
 		<!--/ End Promo -->	
 
 		<!-- Start foto kegiatan -->
-		{{-- <section class="portfolio section" >
+		<!-- <section class="portfolio section" >
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>Aktivitas Kami Yang Dapat Anda Ketahui Secara Lengkap</h2> --}}
-							{{-- <img src="{{ asset('user/img/coins.png')}}" alt="#">  --}}
-							{{-- <p>Simak berbagai kegiatan yang kami suguhkan untuk Anda disini</p>
+							<h2>Aktivitas Kami Yang Dapat Anda Ketahui Secara Lengkap</h2>
+							<img src="{{ asset('user/img/coins.png')}}" alt="#">
+							 <p>Simak berbagai kegiatan yang kami suguhkan untuk Anda disini</p>
 						</div>
 					</div>
 				</div>
@@ -906,11 +906,11 @@
 				</div>
 			</div>
 			
-		</section> --}}
+		</section> -->
 		<!--/ End foto kegiatan -->
 
 		<!-- Start unit -->
-		{{-- <section class="portfolio section" >
+		<!-- <section class="portfolio section" >
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
@@ -942,11 +942,11 @@
 					</div>
 				</div>
 			</div>
-		</section> --}}
+		</section>-->
 		<!--/ End unit -->
 
 		<!-- Start Blog Area -->
-		{{-- <section class="blog section" id="blog">
+		<!-- <section class="blog section" id="blog">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
@@ -955,12 +955,12 @@
 							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
 						</div>
 					</div>
-				</div> --}}
-				{{-- <div class="row">
+				</div> -->
+				<!-- <div class="row">
 					@foreach ($beritas as $berita)
 					<div class="col-lg-4 col-md-6 col-12">
-						<!-- Single Blog -->
-						<div class="single-news">
+						<-- Single Blog -->
+						<!-- <div class="single-news">
 							<div class="news-head">
 								<a href="{{ route('user.detailberita', $berita->id) }}">
 								<img src="{{ asset('storage/' . $berita->fotoberita) }}" alt="#">
@@ -978,11 +978,11 @@
 					@endforeach
 				</div>
 			</div>
-		</section>
-		<!-- End Blog Area --> --}}
+		</section> -->
+		<!-- End Blog Area -->
 
 		<!-- Start Video Testimoni -->
-		{{-- <section class="why-choose section">
+		<!-- <section class="why-choose section">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
@@ -993,29 +993,29 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-6 col-12"> --}}
+					<div class="col-lg-6 col-12"> --}} -->
 						<!-- Start Choose Left -->
-						{{-- <div class="choose-pertama">
+						<!-- <div class="choose-pertama">
 							<h3>Lorem ipsum dolor sit amet,</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						</div> --}}
+						</div> -->
 						<!-- End Choose Left -->
-					{{-- </div>
+					<!-- </div>
 					<div class="col-lg-6 col-12">
-						<div class="choose-kedua"> --}}
+						<div class="choose-kedua"> -->
 							<!-- Ganti foto dengan link YouTube -->
-							{{-- <div class="embed-responsive embed-responsive-16by9">
+							<!-- <div class="embed-responsive embed-responsive-16by9">
 								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/72H3CF2ZxuI" allowfullscreen></iframe>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section> --}}
+		</section> -->
 		<!-- End Video Testimoni -->
 
 		<!-- Start Unit  DEGJ-->
-		{{-- <section class="unit-details section">
+		<!-- <section class="unit-details section">
 			<div class="container">
 
 				<div class="row">
@@ -1104,20 +1104,20 @@
 
 				</div>
 			</div>
-		</section> --}}
+		</section> --}} -->
 		<!-- End Unit DEGJ -->
 
 			
 
 		<!-- Start Our Staff Area -->
-		{{-- <section class="our-team section" id="our-team"> --}}
+		<!-- {{-- <section class="our-team section" id="our-team"> --}} -->
 
 		
 	
 		<!-- Start Our Team Area -->
-		{{-- <section class="our-team section" id="our-team">
+		<!-- {{-- <section class="our-team section" id="our-team"> -->
 
-			<div class="container">
+			<!-- <div class="container">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
@@ -1127,9 +1127,9 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-4 col-md-6 col-12">
+					<div class="col-lg-4 col-md-6 col-12"> -->
 						<!-- Single Team Member -->
-						<div class="single-member">
+						<!-- <div class="single-member">
 							<div class="member-img">
 								<img src="{{ asset('user/img/person.jpg')}}" alt="#">
 								<div class="social-icons">
@@ -1254,29 +1254,29 @@
 								<h4>Name</h4>
 								<p>CEO & Founder</p>
 							</div>
-						</div>
+						</div> -->
 						<!-- End Single Team Member -->
-					</div>
+					<!-- </div> -->
 					<!-- Add more team members here -->
-				</div>
+				<!-- </div>
 			</div>
 
-		</section>
+		</section> -->
 		<!-- End Our Staff Area -->
 
 		<!-- Start sponsor -->
-		<div class="clients overlay">
+		<!-- <div class="clients overlay">
 
-		</section> --}}
+		</section> -->
 
 		<!-- Start clients -->
-		{{-- <div class="col-lg-12">
+		<!-- <div class="col-lg-12">
 			<div class="section-title">
 				<h2>Kegiatan Transaksi</h2>
 				<p>Selamat datang di bagian Kegiatan Transaksi Danau Emas Gadai Jatim. Kami berkomitmen untuk memberikan layanan gadai yang aman, cepat, dan terpercaya. </p>
 			</div>
-		</div> --}}
-		{{-- <div class="clients overlay">
+		</div> -->
+		<!-- <div class="clients overlay">
 
 			<div class="container">
 				<div class="row">
@@ -1311,24 +1311,24 @@
 				</div>
 			</div>
 
-		</div> --}}
+		</div> -->
 		<!--/Ens clients -->
 
 		<!-- Start Newsletter Area -->
-		 {{-- <section class="newsletter section">
+		 <!-- <section class="newsletter section">
 			<div class="container">
 				<div class="row ">
-					<div class="col-lg-6  col-12">
+					<div class="col-lg-6  col-12"> -->
 						<!-- Start Newsletter Form -->
-						<div class="subscribe-text ">
+						<!-- <div class="subscribe-text ">
 							<h6>Subscribe Sekarang</h6>
 							<p class="">Dan Dapatkan Informasi Terbaru dari<br> Danau Emas Gadai Jatim.</p>
-						</div>
+						</div> -->
 						<!-- End Newsletter Form -->
-					</div>
-					<div class="col-lg-6  col-12">
+					<!-- </div>
+					<div class="col-lg-6  col-12"> -->
 						<!-- Start Newsletter Form -->
-						<div class="subscribe-form ">
+						<!-- <div class="subscribe-form ">
 							@if(session('success'))
 							<div>{{ session('success') }}</div>
 							@endif
@@ -1337,10 +1337,10 @@
 								<input type="email" id="email" name="email" placeholder="Email" class="common-input" required>
 								<button type="submit" class="btn">Subscribe</button>
 							</form>
-						</div> --}}
+						</div> -->
 						<!-- End Newsletter Form -->
-					{{-- </div>
+						<!-- </div>
 				</div>
 			</div>
-		</section> --}}
-		{{-- <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f1e7a459-985a-4cf7-8bfb-bcbf1bde08c6";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script> --}}
+		</section> -->
+	 <!-- <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f1e7a459-985a-4cf7-8bfb-bcbf1bde08c6";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script> -->
