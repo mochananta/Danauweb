@@ -255,7 +255,7 @@ body{
 /* Topbar */
 .header .topbar{
 	background-color:#f8f8f8;
-	border-bottom:1px solid #eee;
+	border-bottom:1px solid #eeeeee;
 }
 .header .topbar{
 	padding:19px 0;
@@ -300,7 +300,7 @@ body{
 	margin-right:8px;
 }
 .header .header-inner {
-	background:#fff;
+	background:#ffffff;
 	z-index:999;
 	width:100%;
 }
@@ -308,7 +308,7 @@ body{
 	margin-top:12px;
 }
 .get-quote .btn{
-	color:#fff;
+	color:#ffffff;
 }
 .header .logo {
 	float: left;

@@ -34,8 +34,8 @@ Route::get('/berita', [BeritaController::class,'Berita'])->name('user.berita');
 Route::get('/detailberita/{id}', [BeritaController::class,'BeritaShow'])->name('user.detailberita');
 Route::get('/detailkegiatan/{id}', [KegiatanController::class,'KegiatanShow'])->name('user.detailkegiatan');
 
-// Route::post('/subscribe', [UserController::class, 'subscribe'])->name('subscribe');
-// Route::post('/komentar', [UserController::class, 'store'])->name('komentar.store');
+Route::post('/subscribe', [UserController::class, 'subscribe'])->name('subscribe');
+Route::post('/komentar', [UserController::class, 'store'])->name('komentar.store');
 Route::post('/contact', [UserController::class, 'contactview'])->name('user.contact');
 Route::post('/contact', [UserController::class, 'contactstore'])->name('contact.store');
 
