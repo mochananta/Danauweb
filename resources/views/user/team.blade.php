@@ -1,7 +1,95 @@
 @extends('user.master')
 @section('user')
+		
+	
+		<!-- Start Portfolio Details Area -->
+
+		{{-- Kode baru --}}
 		<!-- Start Our Team Area -->
-	<section class="our-team section" id="our-team">
+		<section class="our-team section" id="our-team">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<!-- Slider Container -->
+						<div class="slider-container">
+							<div class="slider tim-kami">
+								@foreach ($teams as $teams)
+								<!-- Single Team Member -->
+								<div class="single-member">
+									<div class="member-img">
+										<img src="{{ asset('storage/' . $teams->poto) }}" alt="#">
+										<div class="social-icons">
+											<a href="#"><i class="fa fa-instagram"></i></a>
+											<a href="#"><i class="fa fa-whatsapp"></i></a>
+											<a href="#"><i class="fa fa-linkedin"></i></a>
+										</div>
+									</div>
+									<div class="member-details">
+										<h4>{{ $teams->nama }}</h4>
+										<p>{{ $teams->posisi }}</p>
+									</div>
+								</div>
+								@endforeach
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Our Team Area -->
+@endsection	
+
+
+
+
+{{-- Kode Acuan --}}
+		{{-- <section class="pf-details section">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="inner-content">
+							@foreach ($abouts as $about)
+							<div class="image-slider">
+								<div class="pf-details-slider">
+									<img src="{{ asset('storage/' . $about->foto) }}" alt="#">  
+									<img src="{{ asset('user/img/Gajian-Emas.jpeg')}}" alt="#">
+								</div>
+							</div>
+							
+							<div class="body-text">
+								<h3>{{ $about->judul }}</h3>
+								<p>{{ $about->deskripsi }}</p>
+								<div class="share">
+									<h4>Share Now -</h4>
+									<ul>
+										<li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+									</ul>
+								</div>
+							</div>
+							@endforeach
+						</div>
+					</div>
+				</div>
+			</div>
+		</section> --}}
+
+
+
+
+
+
+
+
+
+
+
+
+{{-- @extends('user.master')
+@section('user') --}}
+		<!-- Start Our Team Area -->
+	{{-- <section class="our-team section" id="our-team">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -30,9 +118,9 @@
 									<h4>Moh. Ananta</h4>
 									<p>CEO & Founder</p>
 								</div>
-							</div>
+							</div> --}}
 							<!-- Repeat for other team members -->
-							<div class="single-member">
+							{{-- <div class="single-member">
 								<div class="member-img">
 									<img src="{{ asset('user/img/person.jpg')}}" alt="#">
 									<div class="social-icons">
@@ -59,20 +147,20 @@
 									<h4>Name 3</h4>
 									<p>CTO</p>
 								</div>
-							</div>
+							</div> --}}
 							<!-- Add more team members as needed -->
-						</div>
+						{{-- </div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> --}}
 	<!-- End Our Team Area -->
 
 	<!-- Include jQuery -->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	{{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
 	<!-- Custom Slider Script -->
-	<script>
+	{{-- <script>
 	$(document).ready(function(){
 		const slider = $('.tim-kami');
 		const members = $('.single-member');
@@ -88,5 +176,5 @@
 		setInterval(showNextMember, 3000); // Change member every 3 seconds
 	});
 </script>
-@endsection
+@endsection --}}
 

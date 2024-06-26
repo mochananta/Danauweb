@@ -68,7 +68,7 @@
 										<span>OPERASIONAL JAM</span>
 										<h4>Jam Buka</h4>
 										<ul class="time-sidual">
-											<li class="day">Senin-Jum’at <span>08.00-17.00</span></li>
+											<li class="day">Senin-Jum’at <span>8.00-17.00</span></li>
 											<li class="day">Sabtu <span>8.00-13.00</span></li>
 											<li class="day"><strong>Minggu & Hari Besar, Libur</strong></li>
 										</ul>
@@ -128,11 +128,7 @@
 											<img src="{{ asset('user/img/Group 139.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
-<<<<<<< HEAD
 											<p>GADAI PERHIASAN</p>
-=======
-											<p>GADAI KENDARAAN BERMOTOR</p>
->>>>>>> a3ce0eca7dfcba95c9276f3205217127b21c46c8
 										</div>
 									</div>
 								</div>	
@@ -142,11 +138,7 @@
 											<img src="{{ asset('user/img/Group 140.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
-<<<<<<< HEAD
 											<p>GADAI MOBIL & MOTOR</p>
-=======
-											<p>GADAI EMAS</p>
->>>>>>> a3ce0eca7dfcba95c9276f3205217127b21c46c8
 										</div>
 									</div>
 								</div>
@@ -156,11 +148,7 @@
 											<img src="{{ asset('user/img/Group 141.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
-<<<<<<< HEAD
 											<p>GADAI BARANG ELEKTRONIK</p>
-=======
-											<p>Maecenas vitae luctus nibh.</p>
->>>>>>> a3ce0eca7dfcba95c9276f3205217127b21c46c8
 										</div>
 									</div>
 								</div>											
@@ -171,7 +159,7 @@
 					<div class="col-lg-6 col-12">
 						<div class="choose-kedua">
 							{{-- ganti foto BA --}}
-							<img src="{{ asset('user/img/imm.jpeg')}}" class="choose-right-img" alt="Deskripsi Gambar">
+							<img src="{{ asset('user/img/imm.png')}}" class="choose-right-img" alt="Deskripsi Gambar">
 						</div>					
 					</div>
 				</div>
@@ -179,40 +167,41 @@
 		<!--/ End About singkat DEGJ -->
 
 		<!-- Start Artikel Area -->
-		<section class="blog section" id="blog">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="section-title">
-							<h2>Keep up with Our Most Recent Medical News.</h2>
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					@foreach ($beritas as $berita)
-					<div class="col-lg-4 col-md-6 col-12">
-						<!-- Single Blog -->
-						<div class="single-news">
-							<div class="news-head">
-								<a href="{{ route('user.detailberita', $berita->id) }}">
-								<img src="{{ asset('storage/' . $berita->fotoberita) }}" alt="#">
-								</a>
-							</div>
-							<div class="news-body">
-								<div class="news-content">
-									<div class="date">{{ $berita->tanggal }}</div>
-									<h2><a href="{{ route('user.detailberita', $berita->id) }}">{{ $berita->judulberita }}</a></h2>
-									<p class="text">{{ Str::limit($berita->deskripsi, 116) }}</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					@endforeach
-				</div>
-			</div>
-		</section>
-		<!-- End Artikel Area-->
+<section class="blog section" id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Artikel</h2>
+                    <p>Yuk ikuti informasi terbaru kami, melalui artikel di bawah ini!</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach ($beritas as $berita)
+            <div class="col-lg-4 col-md-6 col-12">
+                <!-- Single Blog -->
+                <div class="single-news">
+                    <div class="news-head">
+                        <a href="{{ route('user.detailberita', $berita->id) }}">
+                            <img src="{{ asset('storage/' . $berita->fotoberita) }}" alt="#">
+                        </a>
+                    </div>
+                    <div class="news-body">
+                        <div class="news-content">
+                            <div class="date">{{ $berita->tanggal }}</div>
+                            <h2><a href="{{ route('user.detailberita', $berita->id) }}">{{ $berita->judulberita }}</a></h2>
+                            <p class="text">{{ Str::limit($berita->deskripsi, 116) }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+<!-- End Artikel Area-->
+
 
 		<!-- Promo -->
 		<section class="custom-pricing-table section">
@@ -298,7 +287,7 @@
 							</div>
 							<div class="unit">
 								<div class="card-unit">
-									<img src="{{ asset('user/img/unit3.jpeg') }}" class="card-img-left" alt="Unit Tuban Gajahmada">
+									<img src="{{ asset('user/img/unit13.jpeg') }}" class="card-img-left" alt="Unit Tuban Gajahmada">
 									<div class="card-body">
 										<h3 class="card-title">Tuban Gajahmada</h3>
 										<p class="card-text">Jl. Gajahmada No.25, Kebonsari, Tuban, Jawa Timur <a href="https://www.example.com" class="btn">Lihat Google Maps<i class="fas fa-map-marker-alt"></i></a></p>
@@ -375,35 +364,40 @@
 		<!-- End unit -->
 
 		<!-- Start dokumentasi kegiatan -->
-		<section class="portfolio section" >
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="section-title">
-							<h2>Dokumentasi Kegiatan</h2>
-							<h2>Danau Emas Gadai Jatim</h2>
-							{{-- <img src="user/img/section-img.png" alt="#"> --}}
-							<p>Kami menyajikan rangkaian momen berharga dari berbagai kegiatan dan program yang telah kami lakukan. Setiap foto adalah bukti nyata komitmen kami dalam memberikan layanan terbaik dan kontribusi positif bagi masyarakat Jawa Timur.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-lg-12 col-12">
-						<div class="owl-carousel portfolio-slider">
-							@foreach ($kegiatans as $kegiatan)
-							<div class="single-pf">
-								<img src="{{ asset('storage/' . $kegiatan->potokegiatan1) }}" alt="#">
-								<a href="{{ route('user.detailkegiatan', $kegiatan->id) }}" class="btn">Lihat Detail</a>
-							</div>
-							@endforeach
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!--/ End dokumentasi kegiatan -->
+<section class="portfolio section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Dokumentasi Kegiatan</h2>
+                    <h2>Danau Emas Gadai Jatim</h2>
+                    {{-- <img src="user/img/section-img.png" alt="#"> --}}
+                    <p>Kami menyajikan rangkaian momen berharga dari berbagai kegiatan dan program yang telah kami lakukan. Setiap foto adalah bukti nyata komitmen kami dalam memberikan layanan terbaik dan kontribusi positif bagi masyarakat Jawa Timur.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <div class="owl-carousel portfolio-slider">
+                    @foreach ($kegiatans as $kegiatan)
+                    <div class="single-pf">
+                        <img src="{{ asset('storage/' . $kegiatan->potokegiatan1) }}" alt="#">
+                        {{-- <div class="btn-container"> --}}
+                            <a href="{{ route('user.detailkegiatan', $kegiatan->id) }}" class="btn">Lihat Detail</a>
+                        {{-- </div> --}}
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ End dokumentasi kegiatan -->
+
+
+
 
 		<!-- Start layanan -->
 		<section class="services section">
@@ -462,7 +456,7 @@
 		<!--/ End Layanan -->
 
 		<!-- Start Our Team Area -->
-	<section class="our-team section" id="our-team">
+	{{-- <section class="our-team section" id="our-team">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -527,29 +521,13 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> --}}
 	<!-- End Our Team Area -->
 	<!-- Include jQuery Our Team Area-->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<!-- Custom Slider Script -->
-	<script>
-	$(document).ready(function(){
-		const slider = $('.tim-kami');
-		const members = $('.single-member');
-		const memberCount = members.length;
-		let currentIndex = 0;
-
-		function showNextMember() {
-			currentIndex = (currentIndex + 1) % memberCount;
-			const translateXValue = -currentIndex * 100;
-			slider.css('transform', `translateX(${translateXValue}%)`);
-		}
-
-		setInterval(showNextMember, 3000); // Change member every 3 seconds
-	});
-</script>
+	
 		
-		<!-- Start Appointment -->
+		<!-- Start Kotak Saran -->
 		<section class="appointment">
 			<div class="container">
 				<div class="row">
@@ -605,38 +583,7 @@
 				</div>
 			</div>
 		</section>
-		<!-- End Appointment -->
-		
-		<!-- Start Newsletter Area -->
-		 <section class="newsletter section">
-			<div class="container">
-				<div class="row ">
-					<div class="col-lg-6  col-12">
-						<!-- Start Newsletter Form -->
-						<div class="subscribe-text ">
-							<h6>Subscribe Sekarang</h6>
-							<p class="">Dan Dapatkan Informasi Terbaru dari<br> Danau Emas Gadai Jatim.</p>
-						</div>
-						<!-- End Newsletter Form -->
-					</div>
-					<div class="col-lg-6  col-12">
-						<!-- Start Newsletter Form -->
-						<div class="subscribe-form ">
-							@if(session('success'))
-							<div>{{ session('success') }}</div>
-							@endif
-							<form action="{{ route('subscribe') }}" method="POST">
-								@csrf
-								<input type="email" id="email" name="email" placeholder="Your Email" class="common-input" required>
-								<button type="submit" class="btn">Subscribe</button>
-							</form>
-						</div>
-						<!-- End Newsletter Form -->
-					</div>
-				</div>
-			</div>
-		</section>
-		<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f1e7a459-985a-4cf7-8bfb-bcbf1bde08c6";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+		<!-- End Kotak Saran -->
 
 @endsection
 {{-- KODE TIDAK DIPAKAI SEMENTARA --}}
@@ -753,6 +700,62 @@
 								<li class="cross"><i class="icofont icofont-ui-close"></i>Nullam interdum enim</li>
 								<li class="cross"><i class="icofont icofont-ui-close"></i>Donec ultricies metus</li>
 								<li class="cross"><i class="icofont icofont-ui-close"></i>Pellentesque eget nibh</li>
+							</ul>
+							<div class="table-bottom">
+								<a class="btn" href="#">Book Now</a>
+							</div>
+							<!-- Table Bottom -->
+						</div>
+					</div>
+					<!-- End Single Table-->
+					<!-- Single Table -->
+					<div class="col-lg-4 col-md-12 col-12">
+						<div class="single-table">
+							<!-- Table Head -->
+							<div class="table-head">
+								<div class="icon">
+									<i class="icofont icofont-tooth"></i>
+								</div>
+								<h4 class="title">Teeth Whitening</h4>
+								<div class="price">
+									<p class="amount">$299<span>/ Per Visit</span></p>
+								</div>	
+							</div>
+							<!-- Table List -->
+							<ul class="table-list">
+								<li><i class="icofont icofont-ui-check"></i>Lorem ipsum dolor sit</li>
+								<li><i class="icofont icofont-ui-check"></i>Cubitur sollicitudin fentum</li>
+								<li><i class="icofont icofont-ui-check"></i>Nullam interdum enim</li>
+								<li class="cross"><i class="icofont icofont-ui-close"></i>Donec ultricies metus</li>
+								<li class="cross"><i class="icofont icofont-ui-close"></i>Pellentesque eget nibh</li>
+							</ul>
+							<div class="table-bottom">
+								<a class="btn" href="#">Book Now</a>
+							</div>
+							<!-- Table Bottom -->
+						</div>
+					</div>
+					<!-- End Single Table-->
+					<!-- Single Table -->
+					<div class="col-lg-4 col-md-12 col-12">
+						<div class="single-table">
+							<!-- Table Head -->
+							<div class="table-head">
+								<div class="icon">
+									<i class="icofont-heart-beat"></i>
+								</div>
+								<h4 class="title">Heart Suggery</h4>
+								<div class="price">
+									<p class="amount">$399<span>/ Per Visit</span></p>
+								</div>	
+							</div>
+							<!-- Table List -->
+							<ul class="table-list">
+								<li><i class="icofont icofont-ui-check"></i>Lorem ipsum dolor sit</li>
+								<li><i class="icofont icofont-ui-check"></i>Cubitur sollicitudin fentum</li>
+								<li><i class="icofont icofont-ui-check"></i>Nullam interdum enim</li>
+								<li><i class="icofont icofont-ui-check"></i>Donec ultricies metus</li>
+								<li><i class="icofont icofont-ui-check"></i>Pellentesque eget nibh</li>
 							</ul>
 							<div class="table-bottom">
 								<a class="btn" href="#">Book Now</a>

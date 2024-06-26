@@ -9,6 +9,7 @@ use App\Models\Contact;
 use App\Models\Kegiatan;
 // use App\Models\Komentar;
 use App\Models\Promo;
+use App\Models\Team;
 // use App\Models\Subscribe;
 use Illuminate\Http\Request;
 
@@ -19,9 +20,10 @@ class UserController extends Controller
     public function userview()
     {
         $promos = Promo::all();
+        $teams = Team::all();
         $kegiatans = Kegiatan::all();
         $beritas = Berita::take(3)->get();
-        return view('user.index', compact('promos','beritas','kegiatans'));
+        return view('user.index', compact('promos','beritas','kegiatans','teams'));
     }
 
     //Halaman FAQ View
@@ -44,7 +46,8 @@ class UserController extends Controller
 
     public function teamview()
     {
-        return view('user.team');
+        $teams = Team::all();
+        return view('user.team', compact('teams'));
     }
 
     public function contactview()
@@ -52,7 +55,40 @@ class UserController extends Controller
         return view('user.contact');
     }
 
-    // public function subscribe(Request $request)
+    
+
+
+    public function contactstore(Request $request)
+    {
+        $validatedData = $request->validate([
+            'nama' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'descontact' => 'required',
+        ]);
+
+
+        Contact::create($validatedData);
+        Session::flash('success', 'Pesan telah berhasil terkirim!');        
+    }
+}
+
+// Expand vendor frames
+// C:\xampp\htdocs\Danauweb\resources\views\user\team.blade
+// .php
+//  
+// : 13
+// require
+// 54 vendor frames
+// C:\xampp\htdocs\Danauweb\public\index
+// .php
+//  
+// : 51
+// require_once
+// 1 vendor frame return redirect()->route('user.contact');
+//     }
+
+// public function subscribe(Request $request)
     // {
     //     $request->validate([
     //         'email' => 'required|email|unique:subscribers,email'
@@ -84,21 +120,5 @@ class UserController extends Controller
     //     Session::flash('success', 'Komentar telah berhasil terkirim!');        
     // }
 
-
-    public function contactstore(Request $request)
-    {
-        $validatedData = $request->validate([
-            'nama' => 'required',
-            'email' => 'required|email',
-            'phone' => 'required',
-            'descontact' => 'required',
-        ]);
-
-
-        Contact::create($validatedData);
-        Session::flash('success', 'Pesan telah berhasil terkirim!');        
-        return redirect()->route('user.contact');
-    }
-}
 
 

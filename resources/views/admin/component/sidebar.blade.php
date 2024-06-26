@@ -59,6 +59,11 @@
             <i class="bi bi-circle"></i><span>Pesan Masuk</span>
           </a>
         </li>
+        <li>
+          <a href="{{ route('team.view') }}">
+            <i class="bi bi-circle"></i><span>Team</span>
+          </a>
+        </li>
 
       </ul>
     </li>
@@ -85,4 +90,3 @@
   
 </aside>
 <!-- End Sidebar-->
-
