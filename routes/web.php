@@ -79,26 +79,11 @@ Route::middleware([
     Route::post('/kegiatan_update/{id}', [KegiatanController::class, 'update'])->name('kegiatan.update');
     Route::delete('/deletekegiatan/{id}', [KegiatanController::class, 'destroy'])->name('kegiatan.delete');
 
-<<<<<<< HEAD
-    //CRUD BERITA
-    Route::get('/beritaview', [BeritaController::class, 'index'])->name('berita.view');
-    Route::get('/berita_add', [BeritaController::class, 'create'])->name('berita.add');
-    Route::post('/berita_store', [BeritaController::class, 'store'])->name('berita.store');
-    Route::get('/berita_edit/{id}', [BeritaController::class, 'edit'])->name('berita.edit');
-    Route::post('/berita_update/{id}', [BeritaController::class, 'update'])->name('berita.update');
-    Route::delete('/delete/{id}', [BeritaController::class, 'destroy'])->name('berita.delete');
-
-    //CRUD BERITA
-=======
->>>>>>> 83680d2b7cf331d9d71c6d2b7f9e2bd4c5677b39
     Route::get('/aboutview', [AboutController::class, 'index'])->name('about.view');
     Route::get('/about_add', [AboutController::class, 'create'])->name('about.add');
     Route::post('/about_store', [AboutController::class, 'store'])->name('about.store');
     Route::get('/about_edit/{id}', [AboutController::class, 'edit'])->name('about.edit');
     Route::post('/about_update/{id}', [AboutController::class, 'update'])->name('about.update');
-<<<<<<< HEAD
-    Route::delete('/delete/{id}', [AboutController::class, 'destroy'])->name('about.delete');
-=======
     Route::get('/aboutdelete/{id}', [AboutController::class, 'destroy'])->name('about.delete');
 
 
@@ -115,7 +100,6 @@ Route::middleware([
 
     //Kotak Saran
     Route::post('/contact', [UserController::class, 'contactstore'])->name('contact.store');
->>>>>>> 83680d2b7cf331d9d71c6d2b7f9e2bd4c5677b39
 });
 
 
