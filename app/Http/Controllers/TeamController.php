@@ -112,6 +112,7 @@ class TeamController extends Controller
      */
     public function destroy(string $id)
     {
+        $data = Team::find($id);
         if ($data->poto) {
             Storage::disk('public')->delete($data->poto);
         }

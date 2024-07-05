@@ -23,7 +23,7 @@ class BeritaController extends Controller
         confirmDelete($title, $text);
         return view('admin.berita.view_berita', compact('data'));
     }
-    
+
     public function Berita()
     {
         $beritas = Berita::all();
@@ -52,22 +52,13 @@ class BeritaController extends Controller
         }
         $data->deskripsi = $request->deskripsi;
         $data->save();
-    
+
         Alert::success('Success', 'Tambah data Berhasil!')->showConfirmButton('OK');
         return redirect()->route('berita.view');
-    }    
+    }
 
     /**
      * Display the specified resource.
-     */
-    // public function userShow(string $id)
-    // {
-    //     $data = Barang::find($id);
-    //     return view('user.detailBarang',compact('data'));
-    // }
-
-    /**
-     * Show the form for editing the specified resource.
      */
     public function edit(string $id)
     {
@@ -91,13 +82,6 @@ class BeritaController extends Controller
         $data->update();
         return redirect()->route('berita.view')->with('Success', 'Update Data Berhasil!!');
     }
-    // public function BeritaShow(string $id)
-    // {
-    //     $berita = Berita::find($id);
-    //     $recentPosts = Recentpost::all();
-        
-    //     return view('user.detailberita', compact('berita', 'recentPosts'));
-    // }
 
     public function BeritaShow($id)
     {
@@ -106,17 +90,15 @@ class BeritaController extends Controller
         if (!$berita) {
             return response()->view('errors.404', [], 404);
         }
-    
+
         $berita->increment('views');
         $previousBerita = Berita::where('id', '<', $berita->id)->orderBy('id', 'desc')->first();
         $nextBerita = Berita::where('id', '>', $berita->id)->orderBy('id')->first();
         $recentPosts = Recentpost::all();
-        // $komentars = Komentar::where('berita_id', $id)->get();
-    
-        return view('user.detailberita', compact('berita', 'recentPosts','previousBerita', 'nextBerita'));
-        // return view('user.detailberita', compact('berita', 'recentPosts', 'komentars', 'previousBerita', 'nextBerita'));
+
+        return view('user.detailberita', compact('berita', 'recentPosts', 'previousBerita', 'nextBerita'));
     }
-        
+
 
     public function showRecentPost($id)
     {
@@ -132,7 +114,7 @@ class BeritaController extends Controller
     public function destroy(string $id)
     {
         $data = Berita::find($id);
-        if ($data->fotoberita != null || $data->fotoberita ='' ){
+        if ($data->fotoberita != null || $data->fotoberita = '') {
             Storage::delete($data->fotoberita);
         }
         $data->delete();
