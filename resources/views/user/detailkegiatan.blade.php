@@ -1,22 +1,14 @@
 @extends('user.master')
 @section('user')
 		<!-- Breadcrumbs -->
-		<div class="breadcrumbs overlay">
+		{{-- <div class="breadcrumbs overlay">
 			<div class="container">
 				<div class="bread-inner">
 					<div class="row">
-						<div class="col-12">
-							<h2>Kegiatan Detail</h2>
-							<ul class="bread-list">
-								<li><a href="/">Home</a></li>
-								<li><i class="icofont-simple-right"></i></li>
-								<li class="active">Kegiatan Detail</li>
-							</ul>
-						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --}}
 		<!-- End Breadcrumbs -->
 
         <!-- Start Portfolio Details Area -->

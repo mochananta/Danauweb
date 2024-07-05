@@ -9,14 +9,11 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+    // input link youtube
     public function up(): void
     {
-        Schema::create('promos', function (Blueprint $table) {
-            $table->id();
-            $table->string('temapromo');
-            $table->text('despromo');
-            $table->string('fotopromo');
-            $table->timestamps();
+        Schema::table('abouts', function (Blueprint $table) {
+            $table->string('link');
         });
     }
 
@@ -25,6 +22,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('promos');
+        Schema::table('abouts', function (Blueprint $table) {
+            $table->dropColumn('link');
+        });
     }
 };

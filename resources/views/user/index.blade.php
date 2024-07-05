@@ -167,6 +167,43 @@
 		<!--/ End About singkat DEGJ -->
 
 		<!-- Start Artikel Area -->
+<<<<<<< HEAD
+>>>>>>> 83680d2b7cf331d9d71c6d2b7f9e2bd4c5677b39
+		<section class="blog section" id="blog">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Artikel</h2>
+							<p>Yuk ikuti informasi terbaru kami, melalui artikel di bawah ini!</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					@foreach ($beritas as $berita)
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<a href="{{ route('user.detailberita', $berita->id) }}">
+								<img src="{{ asset('storage/' . $berita->fotoberita) }}" alt="#">
+								</a>
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div class="date">{{ $berita->tanggal }}</div>
+									<h2><a href="{{ route('user.detailberita', $berita->id) }}">{{ $berita->judulberita }}</a></h2>
+									<p class="text">{{ Str::limit($berita->deskripsi, 116) }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					@endforeach
+				</div>
+			</div>
+		</section>
+		<!-- End Artikel Area-->
+=======
 <section class="blog section" id="blog">
     <div class="container">
         <div class="row">
@@ -202,6 +239,7 @@
 </section>
 <!-- End Artikel Area-->
 
+>>>>>>> ba3948f3ffd34a113b791333f6aba02d5b3b0de1
 
 		<!-- Promo -->
 		<section class="custom-pricing-table section">
