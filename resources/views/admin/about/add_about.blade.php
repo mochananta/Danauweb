@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 @extends('admin.master')
 
 @section('admin')

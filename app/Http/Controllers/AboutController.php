@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\About;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use App\Models\About;
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\Storage;
 
 class AboutController extends Controller
 {
@@ -21,17 +21,6 @@ class AboutController extends Controller
         return view('admin.about.view_about', compact('data'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-
-    //  public function Promo()
-    //  {
-    //      $data = Promo::all();
-    //      return view('user.index', compact('data'));
-    //  }
-
-
     public function create()
     {
         return view('admin.about.add_about');
@@ -42,14 +31,6 @@ class AboutController extends Controller
      */
     public function store(Request $request)
     {
-        $data = new About();
-        $data->judulabout = $request->judulabout;
-        if ($request->hasFile('potoabout')) {
-            $poto_about = $request->file('potoabout')->store('potoabout');
-            $data->potoabout = $poto_about;
-        }
-        $data->desabout = $request->desabout;
-=======
 
         // validasi data yang diterima
         $request->validate([
@@ -72,13 +53,9 @@ class AboutController extends Controller
             $data->foto = 'default.jpg'; // Pastikan nilai default ini ada atau dapat diterima
         }
         $data->deskripsi = $request->deskripsi;
-<<<<<<< HEAD
->>>>>>> 83680d2b7cf331d9d71c6d2b7f9e2bd4c5677b39
-=======
         $data->link = $request->link;
->>>>>>> ba3948f3ffd34a113b791333f6aba02d5b3b0de1
         $data->save();
-
+    
         Alert::success('Success', 'Tambah data Berhasil!')->showConfirmButton('OK');
         return redirect()->route('about.view');
     }
@@ -107,16 +84,6 @@ class AboutController extends Controller
     {
         // Cari data About berdasarkan ID
         $data = About::find($id);
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $data->judulabout = $request->judulabout;
-        if ($request->hasFile('potoabout')) {
-            $poto_about = $request->file('potoabout')->store('potoabout');
-            $data->potoabout = $poto_about;
-        }
-        $data->desabout = $request->desabout;
-=======
-=======
 
         // Periksa apakah data ditemukan
         if (!$data) {
@@ -133,7 +100,6 @@ class AboutController extends Controller
         ]);
 
         // Set nilai judul dan deskripsi dari request
->>>>>>> ba3948f3ffd34a113b791333f6aba02d5b3b0de1
         $data->judul = $request->judul;
         
         // Periksa apakah ada foto baru yang diunggah
@@ -146,14 +112,6 @@ class AboutController extends Controller
             $foto = $request->file('foto')->store('foto');
             $data->foto = $foto;
         }
-<<<<<<< HEAD
-        $data->deskripsi = $request->deskripsi;
->>>>>>> 83680d2b7cf331d9d71c6d2b7f9e2bd4c5677b39
-        $data->update();
-        return redirect()->route('about.view')->with('Success', 'Update Data Berhasil!!');
-    }
-=======
->>>>>>> ba3948f3ffd34a113b791333f6aba02d5b3b0de1
 
         // Set deskripsi dari request
         $data->deskripsi = $request->deskripsi;
@@ -173,13 +131,6 @@ class AboutController extends Controller
     {
         // Cari data About berdasarkan ID
         $data = About::find($id);
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if ($data->potoabout != null || $data->potoabout ='' ){
-            Storage::delete($data->potoabout);
-=======
-        if ($data->foto != null || $data->foto ='' ){
-=======
 
         // Periksa apakah data ditemukan
         if (!$data) {
@@ -189,9 +140,7 @@ class AboutController extends Controller
 
         // Hapus foto dari storage jika ada
         if ($data->foto && $data->foto != 'default.jpg') {
->>>>>>> ba3948f3ffd34a113b791333f6aba02d5b3b0de1
             Storage::delete($data->foto);
->>>>>>> 83680d2b7cf331d9d71c6d2b7f9e2bd4c5677b39
         }
 
         // Hapus data dari database
@@ -200,12 +149,4 @@ class AboutController extends Controller
         // Redirect kembali dengan pesan sukses
         return redirect()->route('about.view')->with('success', 'Hapus data berhasil.');
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 83680d2b7cf331d9d71c6d2b7f9e2bd4c5677b39
-=======
-}
->>>>>>> ba3948f3ffd34a113b791333f6aba02d5b3b0de1
