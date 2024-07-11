@@ -35,8 +35,6 @@
 								<ul>
 									<li><span>Topik :</span> {{$kegiatan->topik}}</li>
 									<li><span>Tanggal :</span> {{$kegiatan->tanggalkegiatan}}</li>
-									<li><span>Client :</span> Suke Agency</li>
-									<li><span>Ags :</span> Typo</li>
 								</ul>
 							</div>
 							<div class="body-text">

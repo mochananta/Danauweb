@@ -65,30 +65,10 @@
 	
 		<!-- Header Area -->
 		<header class="header" >
-			{{-- <!-- Topbar -->
-			<div class="topbar">
+
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6 col-md-5 col-12">
-							<!-- Contact -->
-							{{-- <ul class="top-link">
-								<li><a href="{{ route('user.about') }}">About</a></li> --}}
-								{{-- <li><a href="#">Berita</a></li> --}}
-
-								{{-- <li><a href="{{ route ('user.contact')}}">Contact</a></li>
-
-								{{-- <li><a href="">Contact</a></li>
-
-							
-							<!-- End Contact -->
-						</div>
-						<div class="col-lg-6 col-md-7 col-12">
-							<!-- Top Contact -->
-							<ul class="top-contact">
-								<li><i class="fa fa-phone"></i><a href="https://api.whatsapp.com/send?phone=6281357769681" target="_blank">+62 Nomor di ganti</a></li>
-								<li><i class="fa fa-envelope"></i><a href="mailto: pt.danauemasgadaijatim@gmail.com" >Danau Emas Gadai Jatim</a></li>
-							</ul>
-							<!-- End Top Contact --> --}} 
 						</div>
 					</div>
 				</div>
@@ -136,7 +116,7 @@
 							</div>
 							<div class="col-lg-2 col-12">
 								<div class="get-quote">
-									<a href="{{ route('login') }}" class="btn">Login For Staff</a>
+									<a href="{{ route('login') }}" class="btn">Login Untuk Staff</a>
 								</div>
 							</div>
 						</div>
@@ -234,12 +214,6 @@
 		<div class="alert alert-success">{{ session('success') }}</div>
 		@endif
 
-		{{-- @if(session('success'))
-		<div class="alert alert-success">
-			{{ session('success') }}
-		</div>
-		@endif	 --}}
-
 		
 		<!-- Footer Area -->
 		<footer id="footer" class="footer ">
@@ -252,18 +226,13 @@
 								<h2>Tentang Kami</h2>
 								<p>Danau Emas merupakan pegadaian dibawah naungan INKOPPOL dan OJK yang hadir untuk membantu masyarakat dalam menghadapi masalah keuangan dengan cara mudah, aman dan cepat.</p>
 								<!-- Social -->
-<ul class="social">
-    <li><a href="mailto:pt.danauemasgadaijatim@gmail.com" class="social-link"><img src="{{ asset('user/img/sosmed-01.png') }}" alt="TikTok"></a></li>
-    <li><a href="https://www.instagram.com/danauemasid/" class="social-link"><img src="{{ asset('user/img/sosmed-04.png') }}" alt="TikTok"></a></li>
-    <li><a href="https://www.facebook.com/share/z2aH3SsSzZw3ps6M/?mibextid=qi2Omg" class="social-link"><img src="{{ asset('user/img/sosmed-02.png') }}" alt="TikTok"></a></li>
-    <li><a href="https://www.tiktok.com/@danauemasbanyuwangi" class="social-link"><img src="{{ asset('user/img/sosmed-03.png') }}" alt="TikTok"></a></li>
-</ul>
-<!-- End Social -->
-
-
-
-
-
+								<ul class="social">
+									<li><a href="mailto:pt.danauemasgadaijatim@gmail.com" class="social-link"><img src="{{ asset('user/img/sosmed-01.png') }}" alt="TikTok"></a></li>
+									<li><a href="https://www.instagram.com/danauemasid/" class="social-link"><img src="{{ asset('user/img/sosmed-04.png') }}" alt="TikTok"></a></li>
+									<li><a href="https://www.facebook.com/share/z2aH3SsSzZw3ps6M/?mibextid=qi2Omg" class="social-link"><img src="{{ asset('user/img/sosmed-02.png') }}" alt="TikTok"></a></li>
+									<li><a href="https://www.tiktok.com/@danauemasbanyuwangi" class="social-link"><img src="{{ asset('user/img/sosmed-03.png') }}" alt="TikTok"></a></li>
+								</ul>
+								<!-- End Social -->	
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-6 col-12">
@@ -277,7 +246,7 @@
 											<li><a href="{{ route('user.berita')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Berita</a></li> --}}
 
 											<li><a href="{{ route('user.index')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Beranda</a></li>
-											{{-- <li><a href="{{ route('user.about')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Tentang Kami</a></li> --}}
+											<li><a href="{{ route('user.about')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Tentang Kami</a></li>
 											<li><a href="{{ route('user.berita')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Artikel</a></li>
 										</ul>
 									</div>
@@ -329,7 +298,7 @@
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-12">
 							<div class="copyright-content">
-								<p>© Copyright 2024 | PT. Danau Emas Gadai Jatim</p>
+								<p>© Copyright 2024 | PT. Danau Emas Gadai Jatim | Develop By Poliwangi Team.</p>
 							</div>
 						</div>
 					</div>
@@ -383,6 +352,7 @@
 		<script src="{{ asset('user/js/main.js')}}"></script>
 		{{-- BtnWhatsApp --}}
 		<script src="{{ asset('user/js/btnwhatsapp.js')}}"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script>
 
 			$(document).ready(function(){
@@ -406,6 +376,22 @@
 					});
 				});
 		</script>
+			<script>
+				$(document).ready(function(){
+					const slider = $('.tim-kami');
+					const members = $('.single-member');
+					const memberCount = members.length;
+					let currentIndex = 0;
+			
+					function showNextMember() {
+						currentIndex = (currentIndex + 1) % memberCount;
+						const translateXValue = -currentIndex * 100;
+						slider.css('transform', `translateX(${translateXValue}%)`);
+					}
+			
+					setInterval(showNextMember, 3000); // Change member every 3 seconds
+				});
+			</script>
 
     </body>
 </html>

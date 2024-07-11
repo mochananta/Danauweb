@@ -20,9 +20,10 @@ class UserController extends Controller
     public function userview()
     {
         $promos = Promo::all();
+        $teams = Team::all();
         $kegiatans = Kegiatan::all();
         $beritas = Berita::take(3)->get();
-        return view('user.index', compact('promos','beritas','kegiatans'));
+        return view('user.index', compact('promos','beritas','kegiatans','teams'));
     }
 
     //Halaman FAQ View
@@ -86,12 +87,6 @@ class UserController extends Controller
     //     Session::flash('success', 'Komentar telah berhasil terkirim!');        
     // }
 
-<<<<<<< HEAD
-        Session::flash('success', 'Komentar telah berhasil terkirim!'); 
-        return redirect()->back();       
-    }
-=======
->>>>>>> 83680d2b7cf331d9d71c6d2b7f9e2bd4c5677b39
 
     public function contactstore(Request $request)
     {
@@ -104,7 +99,8 @@ class UserController extends Controller
 
 
         Contact::create($validatedData);
-        Session::flash('success', 'Pesan telah berhasil terkirim!');        
+        Session::flash('success', 'Pesan telah berhasil terkirim!');    
+        return redirect('/');    
     }
 
 // Expand vendor frames
