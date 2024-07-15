@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BeritaController;
@@ -72,14 +73,6 @@ Route::middleware([
     Route::get('/kegiatan_edit/{id}', [KegiatanController::class, 'edit'])->name('kegiatan.edit');
     Route::post('/kegiatan_update/{id}', [KegiatanController::class, 'update'])->name('kegiatan.update');
     Route::delete('/deletekegiatan/{id}', [KegiatanController::class, 'destroy'])->name('kegiatan.delete');
-
-    //CRUD BERITA
-    Route::get('/beritaview', [BeritaController::class, 'index'])->name('berita.view');
-    Route::get('/berita_add', [BeritaController::class, 'create'])->name('berita.add');
-    Route::post('/berita_store', [BeritaController::class, 'store'])->name('berita.store');
-    Route::get('/berita_edit/{id}', [BeritaController::class, 'edit'])->name('berita.edit');
-    Route::post('/berita_update/{id}', [BeritaController::class, 'update'])->name('berita.update');
-    Route::delete('/delete/{id}', [BeritaController::class, 'destroy'])->name('berita.delete');
 
     //CRUD BERITA
     Route::get('/aboutview', [AboutController::class, 'index'])->name('about.view');

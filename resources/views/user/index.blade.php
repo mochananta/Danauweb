@@ -364,7 +364,6 @@
 		<!-- End unit -->
 
 		<!-- Start dokumentasi kegiatan -->
-<<<<<<< HEAD
 		<section class="portfolio section">
 			<div class="container">
 				<div class="row">
@@ -396,43 +395,6 @@
 			</div>
 		</section>
 		<!--/ End dokumentasi kegiatan -->
-=======
-<section class="portfolio section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title">
-                    <h2>Dokumentasi Kegiatan</h2>
-                    <h2>Danau Emas Gadai Jatim</h2>
-                    {{-- <img src="user/img/section-img.png" alt="#"> --}}
-                    <p>Kami menyajikan rangkaian momen berharga dari berbagai kegiatan dan program yang telah kami lakukan. Setiap foto adalah bukti nyata komitmen kami dalam memberikan layanan terbaik dan kontribusi positif bagi masyarakat Jawa Timur.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12 col-12">
-                <div class="owl-carousel portfolio-slider">
-                    @foreach ($kegiatans as $kegiatan)
-                    <div class="single-pf">
-                        <img src="{{ asset('storage/' . $kegiatan->potokegiatan1) }}" alt="#">
-                        {{-- <div class="btn-container"> --}}
-                            <a href="{{ route('user.detailkegiatan', $kegiatan->id) }}" class="btn">Lihat Detail</a>
-                        {{-- </div> --}}
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--/ End dokumentasi kegiatan -->
-
-
-
->>>>>>> 829b21ce27ea1513c34f2ac7b39e919eae42bfbe
-
 
 
 
@@ -491,77 +453,6 @@
 			</div>
 		</section>
 		<!--/ End Layanan -->
-<<<<<<< HEAD
-=======
-
-		<!-- Start Our Team Area -->
-	{{-- <section class="our-team section" id="our-team">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="section-title">
-						<h2>Tim Kami</h2>
-						<p>Di Danau Emas Gadai Jatim, kami bangga memiliki tim yang berdedikasi dan profesional untuk melayani Anda dengan sepenuh hati!</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<!-- Slider Container -->
-					<div class="slider-container">
-						<div class="slider tim-kami">
-							<!-- Single Team Member -->
-							<div class="single-member">
-								<div class="member-img">
-									<img src="{{ asset('user/img/person.jpg')}}" alt="#">
-									<div class="social-icons">
-										<a href="#"><i class="fa fa-instagram"></i></a>
-										<a href="#"><i class="fa fa-whatsapp"></i></a>
-										<a href="#"><i class="fa fa-linkedin"></i></a>
-									</div>
-								</div>
-								<div class="member-details">
-									<h4>Moh. Ananta</h4>
-									<p>CEO & Founder</p>
-								</div>
-							</div>
-							<!-- Repeat for other team members -->
-							<div class="single-member">
-								<div class="member-img">
-									<img src="{{ asset('user/img/person.jpg')}}" alt="#">
-									<div class="social-icons">
-										<a href="#"><i class="fa fa-instagram"></i></a>
-										<a href="#"><i class="fa fa-whatsapp"></i></a>
-										<a href="#"><i class="fa fa-linkedin"></i></a>
-									</div>
-								</div>
-								<div class="member-details">
-									<h4>Name 2</h4>
-									<p>CTO</p>
-								</div>
-							</div>
-							<div class="single-member">
-								<div class="member-img">
-									<img src="{{ asset('user/img/person.jpg')}}" alt="#">
-									<div class="social-icons">
-										<a href="#"><i class="fa fa-instagram"></i></a>
-										<a href="#"><i class="fa fa-whatsapp"></i></a>
-										<a href="#"><i class="fa fa-linkedin"></i></a>
-									</div>
-								</div>
-								<div class="member-details">
-									<h4>Name 3</h4>
-									<p>CTO</p>
-								</div>
-							</div>
-							<!-- Add more team members as needed -->
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> --}}
->>>>>>> 829b21ce27ea1513c34f2ac7b39e919eae42bfbe
 	<!-- End Our Team Area -->
 	<!-- Include jQuery Our Team Area-->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

@@ -133,7 +133,7 @@
 		</button>
 	
 		<div id="popup" class="popup">
-			<h3><img src="https://ugc.production.linktr.ee/139975e9-b7e3-42aa-bb64-2d900a6c57e2_Logo-PT-Danau-Emas-Gadai-Jatim-01.png" alt="WhatsApp" width="40" height="40">Contact Person</h3>
+			<h3 style="text-bold"><img src="https://ugc.production.linktr.ee/139975e9-b7e3-42aa-bb64-2d900a6c57e2_Logo-PT-Danau-Emas-Gadai-Jatim-01.png" alt="WhatsApp" width="40" height="40">Contact Person</h3>
 			<div class="contact-section">
 				<h4>Pusat</h4>
 				<ul>
@@ -141,9 +141,9 @@
 						<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
 						<div class="contact-info">
 							<span class="name">Kantor Pusat</span>
-							<span class="unit">Pusat</span>
+							<span class="unit">Penjaringan Sari</span>
 						</div>
-						<button class="waLink" data-phone="6287778312813" data-message="Hallo, Unit Pusat Surabaya">Chat</button>
+						<button class="waLink" data-phone="6282301333937" data-message="Hallo, Unit Pusat Surabaya">Chat</button>
 					</li>
 				</ul>
 			</div>
@@ -152,26 +152,18 @@
 				<li>
 					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
 					<div class="contact-info">
-						<span class="name">Penjaringan Sari</span>
-						{{-- <span class="unit">Surabaya</span> --}}
-					</div>
-					<button class="waLink" data-phone="6287778312813" data-message="Hello, Central Office">Chat</button>
-				</li>
-				<li>
-					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
-					<div class="contact-info">
 						<span class="name">Tuban Gajahmada</span>
 						{{-- <span class="unit">Surabaya</span> --}}
 					</div>
-					<button class="waLink" data-phone="6287778312813" data-message="Hello, Central Office">Chat</button>
+					<button class="waLink" data-phone="6281218855757" data-message="Hello, Central Office">Chat</button>
 				</li>
 				<li>
 					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
 					<div class="contact-info">
-						<span class="name">Tambahrejo</span>
+						<span class="name">Tambah Rejo</span>
 						{{-- <span class="unit">Surabaya</span> --}}
 					</div>
-					<button class="waLink" data-phone="6287778312813" data-message="Hallo, apaka">Chat</button>
+					<button class="waLink" data-phone="6285745452778" data-message="Hallo, apaka">Chat</button>
 				</li>
 				<li>
 					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
@@ -179,7 +171,7 @@
 						<span class="name">Ronggolawe</span>
 						{{-- <span class="unit">Surabaya</span> --}}
 					</div>
-					<button class="waLink" data-phone="6287778312813" data-message="Hallo, apaka">Chat</button>
+					<button class="waLink" data-phone="62895338006881" data-message="Hallo, apaka">Chat</button>
 				</li>
 				<li>
 					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
@@ -187,7 +179,7 @@
 						<span class="name">Banyuwangi</span>
 						{{-- <span class="unit">Banyuwangi</span> --}}
 					</div>
-					<button class="waLink" data-phone="6287778312813" data-message="Hallo, apaka">Chat</button>
+					<button class="waLink" data-phone="6289504852137" data-message="Hallo, apaka">Chat</button>
 				</li>
 				<li>
 					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
@@ -195,7 +187,7 @@
 						<span class="name">Rogojampi</span>
 						{{-- <span class="unit">Banyuwangi</span> --}}
 					</div>
-					<button class="waLink" data-phone="6287778312813" data-message="Hallo, apaka">Chat</button>
+					<button class="waLink" data-phone="6285806540720" data-message="Hallo, apaka">Chat</button>
 				</li>
 				<li>
 					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
@@ -203,7 +195,7 @@
 						<span class="name">Muncar</span>
 						{{-- <span class="unit">Banyuwangi</span> --}}
 					</div>
-					<button class="waLink" data-phone="6287778312813" data-message="Hallo, apaka">Chat</button>
+					<button class="waLink" data-phone="6282335882304" data-message="Hallo, apaka">Chat</button>
 				</li>
 			</ul>
 		</div>
